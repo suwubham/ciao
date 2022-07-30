@@ -4,6 +4,7 @@ import RegisterLogin from './Register-Login'
 import Homepage from './Homepage'
 import YourArts from './YourArts'
 import Profile from './Profile'
+import Template from './Template'
 
 export default function AppRouter() {
   return (
@@ -13,6 +14,7 @@ export default function AppRouter() {
             <Route path="/signin" element={<RegisterLogin/>}/>
             <Route path="/yourarts" element={<YourArts/>}/>
             <Route path="/profile" element={<Profile/>}/>
+            <Route path="/template" element={<Template/>}/>
         </Routes>
     </BrowserRouter>
   )

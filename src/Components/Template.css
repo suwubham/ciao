@@ -1,0 +1,34 @@
+.templatecards {
+    padding: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: auto;
+    background-color: #121212;
+}
+
+.card {
+    margin: 25px;
+    background-color: rgb(86, 85, 85);
+    transition: 0.75s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    transition: 0.75s;
+}
+
+.card::after {
+    transition-delay: 250ms;
+}
+
+.btn-custom {
+    background-color: rgb(76, 31, 224);
+    border: 1px solid rgb(76, 31, 224);
+}
+
+.btn-custom:hover {
+    color: rgb(76, 31, 224);
+    background-color: rgb(86, 85, 85);
+    border: 1px solid rgb(76, 31, 224);
+}

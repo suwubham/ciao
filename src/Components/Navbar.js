@@ -24,7 +24,7 @@ export default function Navbar() {
                 Draw
               </a>
               <ul class="dropdown-menu navbar-custom">
-                <li><a class="dropdown-item navbar-custom" href="#">From Template</a></li>
+                <li><a class="dropdown-item navbar-custom" href="http://localhost:3000/template">From Template</a></li>
                 <li><a class="dropdown-item navbar-custom" href="#">From Image</a></li>
                 <li><hr class="dropdown-divider" /></li>
                 <li><a class="dropdown-item navbar-custom" href="#">Blah Blah Blah</a></li>
