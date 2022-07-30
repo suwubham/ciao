@@ -1,6 +1,7 @@
-import React, { useState } from "react";
-import Logo from "../assets/logo.png";
-import "./Register-Login.css";
+
+import React, { useState } from 'react'
+import Logo from '../assets/ciaologo3.png';
+import './Register-Login.css'
 
 export default function RegisterLogin() {
   let [RegisterMode, setRegisterMode] = useState("signin");
@@ -53,7 +54,9 @@ export default function RegisterLogin() {
           </form>
         </div>
         <div className="imageArea">
-          <h1>Generate your own Art</h1>
+          <h1 className="slogan">
+            Generate your own Art
+          </h1>
           <h3>
             Work with complex math graphs and <br />
             other image templates to create your art. Lorem ipsum dolor sit amet
@@ -72,7 +75,7 @@ export default function RegisterLogin() {
             pariatur impedit. Fuga perspiciatis pariatur temporibus veniam. Quod
             repudiandae eligendi impedit beatae!
           </h3>
-          <img src={Logo} height={100} width={100} />
+          <img src={Logo} height={30} width={100} />
         </div>
       </div>
     );
@@ -134,7 +137,9 @@ export default function RegisterLogin() {
         </form>
       </div>
       <div className="imageArea">
-        <h1>Generate your own Art</h1>
+        <h1  className="slogan">
+          Generate your own Art
+        </h1>
         <h3>
           Work with complex math graphs and <br />
           other image templates to create your art. Lorem ipsum dolor sit amet
@@ -153,7 +158,7 @@ export default function RegisterLogin() {
           pariatur impedit. Fuga perspiciatis pariatur temporibus veniam. Quod
           repudiandae eligendi impedit beatae!
         </h3>
-        <img src={Logo} height={100} width={100} />
+        <img src={Logo} height={30} width={100} />
       </div>
     </div>
   );

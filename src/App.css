@@ -1,17 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&family=Roboto:wght@100;300;400&display=swap');
 
 .App {
   background-color: rgb(128,128,128);
 }
 
-.navbar-title{
-  text-decoration: none;
-  letter-spacing: 3px;
-  font-weight: bold;
-  color: black;
-  font-size: 20px;
-  padding:15px;
-}
 
 
 
