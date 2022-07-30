@@ -1,7 +1,6 @@
 .navbar-custom{
     background-color: rgb(53, 52, 52);
     color: rgb(136, 136, 136);
-    margin-right: 0px;
 }
 
 .navbar-custom:hover{
@@ -41,3 +40,8 @@
     background-color: rgb(76, 31, 224);
     color:white;
 }  
+
+
+#Profile-btn{
+    padding:0px 30px;
+}

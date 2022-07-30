@@ -1,7 +1,6 @@
 import React from 'react'
 import './Navbar.css'
-import Logo from '../ciaologo3.png';
-
+import Logo from '../assets/ciaologo3.png';
 
 export default function Navbar() {
   return (
@@ -39,7 +38,7 @@ export default function Navbar() {
           {/* <img src={Logo} height={30} width={100}/> */}
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link navbar-custom" href="http://localhost:3000/profile">Profile</a>
+              <a class="nav-link navbar-custom" id="Profile-btn" href="http://localhost:3000/profile">Profile</a>
             </li>
           </ul>
         </div>
