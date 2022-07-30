@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
-import Logo from 'C:/Users/hp/Desktop/react/reactapp/src/Logo.jpg';
+import Logo from '../Logo.jpg';
+import './Register-Login.css'
+
 
 export default function RegisterLogin() {
 
@@ -9,7 +11,7 @@ export default function RegisterLogin() {
     setRegisterMode(RegisterMode == "signin" ? "signup" : "signin")
   }
 
-  if (RegisterMode == "signin") {
+  if (RegisterMode === "signin") {
     return (
       <div className="Main-div">
         <div className="Register-form-container">
@@ -18,7 +20,7 @@ export default function RegisterLogin() {
               <h3 className="Register-form-title">Sign In</h3>
               <div className="text-center">
                 Not registered yet?{" "}
-                <span className="link-primary" onClick={changeRegisterMode}>
+                <span className="signin-link" onClick={changeRegisterMode}>
                   Sign Up
                 </span>
               </div>
@@ -39,8 +41,8 @@ export default function RegisterLogin() {
                 />
               </div>
               <div className="d-grid gap-2 mt-3">
-                <button type="submit" className="btn btn-secondary">
-                  Submit
+                <button type="submit" className="submit-btn" >
+                  Log In
                 </button>
               </div>
               <p className="text-center mt-2">
@@ -81,7 +83,7 @@ export default function RegisterLogin() {
             <h3 className="Register-form-title">Sign Up</h3>
             <div className="text-center">
               Already registered?{" "}
-              <span className="link-primary" onClick={changeRegisterMode}>
+              <span className="signin-link" onClick={changeRegisterMode}>
                 Sign In
               </span>
             </div>
@@ -116,15 +118,15 @@ export default function RegisterLogin() {
                 placeholder="Password"
               />
               <div className="d-grid gap-2 mt-3">
-                <button type="submit" className="btn btn-secondary">
+                <button type="submit" className="submit-btn">
                   Submit
                 </button>
               </div>
               <p className="text-center mt-2">
-                Forgot <a href="#">password?</a>
+                Forgot <a href="#" className="link-pwem">password?</a>
               </p>
             </div>
-          </div>s
+          </div>
         </form>
       </div>
       <div className="imageArea">

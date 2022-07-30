@@ -1,113 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
 
 .App {
-  background-color: white;
-
+  background-color: rgb(128,128,128);
 }
 
-.Main-div{
-  display: flex;
-  justify-content: space-evenly;
-  font-family: 'Roboto', sans-serif;
-  background-color: rgb(81, 81, 81);
-}
-
-.Register-form-container {
-  display: flex;
-  justify-content:center;
-  width: 55%;
-  height: auto;
-  padding-top:50px;
-  /* background-image: linear-gradient(to bottom , rgb(240, 90, 90),rgb(237, 201, 201)); */
-}
-
-.Register-form {
-  width: 420px;
-  box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
-  padding-top: 30px;
-  padding-bottom: 20px;
-  border-radius: 8px;
-  background-color: black; /*white*/
-  color: white;; /**/
-  position: fixed;
-}
-
-.Register-form-content {
-  padding-left: 12%;
-  padding-right: 12%;
-}
-
-.Register-form-title {
-  text-align: center;
-  margin-bottom: 1em;
-  font-size: 24px;
-  /* color: rgb(34, 34, 34);  */
-  color: white;
-  font-weight: 800;
-}
-
-label {
-  font-size: 14px;
-  font-weight: 600;
-  /* color: rgb(34, 34, 34); */
-  color: white;
-  font-weight:lighter;
-}
-
-input[type=password],input[type=email]{
-  background-color: rgb(51, 50, 50);
-  border: 1px solid black;
-}
-
-.link-pwem ,.link-pwem:hover{
-  color: rgb(76, 31, 224);
+.navbar-title{
   text-decoration: none;
-}
-
-.link-primary ,.link-primary:hover{
-  color: rgb(76, 31, 224);
-  text-decoration: none;
-}
-
-
-.link-primary:hover{
-  cursor: pointer;
-}
-
-.imageArea {
-  width:45%;
-  padding:50px;
-  background-color: black;
-  color: beige;
-  border-radius: 15px;
-  margin-right: 10px;
-}
-
-.Routes{
-  top:0;
-  position: fixed;
-  background-color: rgb(81, 81, 81);
-
-}
-
-.Routes ul{
-  list-style: none;
-  display: flex;
-  justify-content: center;
-}
-
-.Routes ul li{
-  padding: 25px;  
+  letter-spacing: 3px;
+  font-weight: bold;
+  color: black;
+  font-size: 20px;
+  padding:15px;
 }
 
 
-@media (max-width: 800px) {
-  .Register-form-container {
-    height: auto;
-  }
 
-  .Register-form {
-    width:fit-content;
-    position: absolute;
-  }
-}
