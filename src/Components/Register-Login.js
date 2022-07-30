@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Logo from '../Logo.jpg';
+import Logo from '../ciaologo3.png';
 import './Register-Login.css'
 
 
@@ -52,7 +52,7 @@ export default function RegisterLogin() {
           </form>
         </div>
         <div className="imageArea">
-          <h1>
+          <h1 className="slogan">
             Generate your own Art
           </h1>
           <h3>
@@ -70,7 +70,7 @@ export default function RegisterLogin() {
             excepturi, architecto amet pariatur impedit. Fuga perspiciatis pariatur temporibus veniam. Quod
             repudiandae eligendi impedit beatae!
           </h3>
-          <img src={Logo} height={100} width={100} />
+          <img src={Logo} height={30} width={100} />
         </div>
       </div>
     )
@@ -130,7 +130,7 @@ export default function RegisterLogin() {
         </form>
       </div>
       <div className="imageArea">
-        <h1>
+        <h1  className="slogan">
           Generate your own Art
         </h1>
         <h3>
@@ -148,7 +148,7 @@ export default function RegisterLogin() {
           excepturi, architecto amet pariatur impedit. Fuga perspiciatis pariatur temporibus veniam. Quod
           repudiandae eligendi impedit beatae!
         </h3>
-        <img src={Logo} height={100} width={100} />
+        <img src={Logo} height={30} width={100} />
       </div>
     </div>
   )

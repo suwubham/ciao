@@ -1,0 +1,43 @@
+.navbar-custom{
+    background-color: rgb(53, 52, 52);
+    color: rgb(136, 136, 136);
+    margin-right: 0px;
+}
+
+.navbar-custom:hover{
+    background-color:rgb(53, 52, 52);
+}
+
+.navbar-title{
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    color: black;
+    font-size: 20px;
+    padding:15px;
+  }
+
+
+  .search-box{
+    background-color: rgb(51, 50, 50);
+    border: 1px solid black;
+  }
+
+  .search-box:focus{
+    background-color: rgb(86, 85, 85);
+    border: 1px solid black;
+  }
+
+.search-btn{
+    border-radius: 5px;
+    padding:0px 20px;
+    border: 1px solid rgb(76, 31, 224);
+    color: rgb(76, 31, 224);;
+    background-color: rgb(128,128,128);
+
+}
+
+.search-btn:hover{
+    background-color: rgb(76, 31, 224);
+    color:white;
+}  

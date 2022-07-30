@@ -2,9 +2,8 @@ import React from 'react'
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import RegisterLogin from './Register-Login'
 import Homepage from './Homepage'
-import Blogs from './Blogs'
-
-
+import YourArts from './YourArts'
+import Profile from './Profile'
 
 export default function AppRouter() {
   return (
@@ -12,7 +11,8 @@ export default function AppRouter() {
         <Routes>
             <Route path="/home" element={<Homepage/>}/>
             <Route path="/signin" element={<RegisterLogin/>}/>
-            <Route path="/blogs" element={<Blogs/>}/>
+            <Route path="/yourarts" element={<YourArts/>}/>
+            <Route path="/profile" element={<Profile/>}/>
         </Routes>
     </BrowserRouter>
   )
