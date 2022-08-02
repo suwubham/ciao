@@ -8,6 +8,29 @@ export default function RegisterLogin() {
   const [lname, setLname] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  function registerUser(event) {
+    event.preventDefault();
+    console.log(fname, lname, email, password);
+    fetch("http://localhost:5000/register", {
+      method: "POST",
+      crossDomain: true,
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+        "Access-Control-Allow-Origin": "*",
+      },
+      body: JSON.stringify({
+        fname,
+        lname,
+        email,
+        password,
+      }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data, "userRegister");
+      });
+  }
 
   const changeRegisterMode = () => {
     setRegisterMode(RegisterMode == "signin" ? "signup" : "signin");
