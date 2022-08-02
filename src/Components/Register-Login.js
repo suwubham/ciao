@@ -1,10 +1,13 @@
-
-import React, { useState } from 'react'
-import Logo from '../assets/ciaologo3.png';
-import './Register-Login.css'
+import React, { useState } from "react";
+import Logo from "../assets/ciaologo3.png";
+import "./Register-Login.css";
 
 export default function RegisterLogin() {
   let [RegisterMode, setRegisterMode] = useState("signin");
+  const [fname, setFname] = useState("");
+  const [lname, setLname] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const changeRegisterMode = () => {
     setRegisterMode(RegisterMode == "signin" ? "signup" : "signin");
@@ -54,9 +57,7 @@ export default function RegisterLogin() {
           </form>
         </div>
         <div className="imageArea">
-          <h1 className="slogan">
-            Generate your own Art
-          </h1>
+          <h1 className="slogan">Generate your own Art</h1>
           <h3>
             Work with complex math graphs and <br />
             other image templates to create your art. Lorem ipsum dolor sit amet
@@ -83,7 +84,7 @@ export default function RegisterLogin() {
   return (
     <div className="Main-div">
       <div className="Register-form-container">
-        <form className="Register-form">
+        <form className="Register-form" onSubmit={registerUser}>
           <div className="Register-form-content">
             <h3 className="Register-form-title">Sign Up</h3>
             <div className="text-center">
@@ -95,15 +96,17 @@ export default function RegisterLogin() {
             <div className="form-group mt-3">
               <label>First Name</label>
               <input
-                type="email"
+                type="text"
                 className="form-control mt-1"
                 placeholder="e.g Max"
+                onChange={(e) => setFname(e.target.value)}
               />
               <label>Last Name</label>
               <input
-                type="email"
+                type="text"
                 className="form-control mt-1"
                 placeholder="e.g Aarons"
+                onChange={(e) => setLname(e.target.value)}
               />
             </div>
             <div className="form-group mt-3">
@@ -112,14 +115,16 @@ export default function RegisterLogin() {
                 type="email"
                 className="form-control mt-1"
                 placeholder="maxaarons@gmail.comm"
+                onChange={(e) => setEmail(e.target.value)}
               />
             </div>
             <div className="form-group mt-3">
               <label>Password</label>
               <input
-                type="password"
+                type="text"
                 className="form-control mt-1"
                 placeholder="Password"
+                onChange={(e) => setPassword(e.target.value)}
               />
               <div className="d-grid gap-2 mt-3">
                 <button type="submit" className="submit-btn">
@@ -137,9 +142,7 @@ export default function RegisterLogin() {
         </form>
       </div>
       <div className="imageArea">
-        <h1  className="slogan">
-          Generate your own Art
-        </h1>
+        <h1 className="slogan">Generate your own Art</h1>
         <h3>
           Work with complex math graphs and <br />
           other image templates to create your art. Lorem ipsum dolor sit amet
