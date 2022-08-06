@@ -23,12 +23,12 @@
 }
 
 .btn-custom {
-    background-color: rgb(76, 31, 224);
-    border: 1px solid rgb(76, 31, 224);
+    background-color: rgb(90, 25, 119);
+    border: 1px solid rgb(90, 25, 119);
 }
 
 .btn-custom:hover {
-    color: rgb(76, 31, 224);
+    color: rgb(90, 25, 119);
     background-color: rgb(86, 85, 85);
-    border: 1px solid rgb(76, 31, 224);
+    border: 1px solid rgb(90, 25, 119);
 }

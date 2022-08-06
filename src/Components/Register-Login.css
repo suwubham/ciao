@@ -1,119 +1,134 @@
 .Main-div {
-    display: flex;
-    padding-top : 35px; 
-    justify-content: space-evenly;
-    font-family: 'Roboto', sans-serif;
-    background-color: #121212;
-  }
-  
-  .Register-form-container {
-    display: flex;
-    justify-content: center;
-    width: 55%;
-    height: auto;
-    padding-top: 50px;
-  }
-  
-  .Register-form {
-    width: 420px;
-    box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
-    padding-top: 30px;
-    padding-bottom: 20px;
-    border-radius: 8px;
-    background-color: black;
-    /*white*/
-    color: white;
-    ;
-    /**/
-    position: fixed;
-  }
-  
-  .Register-form-content {
-    padding-left: 12%;
-    padding-right: 12%;
-  }
-  
-  .Register-form-title {
-    text-align: center;
-    margin-bottom: 1em;
-    font-size: 24px;
-    color: white;
-    font-weight: 800;
-  }
-  
-  label {
-    font-size: 14px;
-    font-weight: 600;
-    /* color: rgb(34, 34, 34); */
-    color: white;
-    font-weight: lighter;
-  }
+  display: flex;
+  padding-top: 35px;
+  justify-content: space-evenly;
+  font-family: 'Roboto', sans-serif;
+  background-color: #121212;
+}
+
+.Register-form-container {
+  display: flex;
+  justify-content: center;
+  width: 55%;
+  height: auto;
+  padding-top: 50px;
+}
+
+.Register-form {
+  width: 420px;
+  box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  border-radius: 8px;
+  background-color: black;
+  /*white*/
+  color: white;
+  position: fixed;
+}
+
+.imageArea {
+  width: 45%;
+  padding: 50px;
+  background-color: black;
+  color: beige;
+  border-radius: 15px;
+  margin-right: 50px;
+}
+
+.Register-form-content {
+  padding-left: 12%;
+  padding-right: 12%;
+}
+
+.Register-form-title {
+  text-align: center;
+  margin-bottom: 1em;
+  font-size: 24px;
+  color: white;
+  font-weight: 800;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 600;
+  /* color: rgb(34, 34, 34); */
+  color: white;
+  font-weight: lighter;
+}
+
 /*   
   input[type=password],
   input[type=email] {
     background-color: rgb(51, 50, 50);
     border: 1px solid black;
   } */
-  
-  input[type=password]:focus,
-  input[type=email]:focus {
-    background-color: rgb(86, 85, 85);
-    border: 1px solid black;
-  }
-  
-  .link-pwem, .link-pwem:hover {
-    color: rgb(76, 31, 224);
-    text-decoration: none;
-  }
-  
-  .signin-link{
-    cursor: pointer;
-    color: rgb(76, 31, 224);
-  }
-  
-  .submit-btn{
-    border-radius: 5px;
-    margin-top:15px;
-    width:100px;
-    padding: 6px;
-    background-color: rgb(128,128,128);
-  }
-  
-  .submit-btn:hover{
-    background-color: rgb(155, 153, 153);
 
+input[type=password]:focus,
+input[type=email]:focus {
+  background-color: rgb(86, 85, 85);
+  border: 1px solid black;
+}
+
+.link-pwem {
+  color: rgb(121, 37, 160);
+  text-decoration: none;
+}
+
+.link-pwem:hover {
+  color: rgb(138, 78, 165);
+}
+
+.signin-link {
+  cursor: pointer;
+  color: rgb(121, 37, 160);
+}
+
+.signin-link:hover {
+  cursor: pointer;
+  color: rgb(138, 78, 165);
+}
+
+.submit-btn {
+  border-radius: 5px;
+  margin-top: 15px;
+  width: 100px;
+  padding: 6px;
+  background-color: rgb(128, 128, 128);
+}
+
+.submit-btn:hover {
+  background-color: rgb(155, 153, 153);
+
+}
+
+.form-control {
+  background-color: rgb(51, 50, 50);
+  border: 1px solid black;
+}
+
+.form-control:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  background-color: rgb(86, 85, 85);
+  border: 1px solid black;
+}
+
+.slogan {
+  color: rgb(90, 25, 119);
+  ;
+}
+
+@media (max-width: 991.5px) {
+  .Register-form-container {
+    width: 60%;
+    height: auto;
   }
 
-  .form-control{
-    background-color: rgb(51, 50, 50);
-    border: 1px solid black;
-  }
-  .form-control:focus {
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-    background-color: rgb(86, 85, 85);
-    border: 1px solid black;
-  }
-
-  .slogan{
-    color: rgb(76, 31, 224);;
+  .Register-form {
+    width:45%;
+    position: absolute;
   }
 
   .imageArea {
-    width: 45%;
-    padding: 50px;
-    background-color: black;
-    color: beige;
-    border-radius: 15px;
-    margin-right: 50px;
+    width:40%;
   }
-
-  @media (max-width: 800px) {
-    .Register-form-container {
-      height: auto;
-    }
-  
-    .Register-form {
-      width: fit-content;
-      position: absolute;
-    }
-  }
+}
