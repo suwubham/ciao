@@ -30,18 +30,38 @@
 .search-btn{
     border-radius: 5px;
     padding:0px 20px;
-    border: 1px solid rgb(76, 31, 224);
-    color: rgb(76, 31, 224);;
+    border: 1px solid rgb(90, 25, 119);
+    color: rgb(90, 25, 119);
     background-color: rgb(128,128,128);
 
 }
 
 .search-btn:hover{
-    background-color: rgb(76, 31, 224);
+    background-color: rgb(90, 25, 119);
     color:white;
 }  
 
 
 #Profile-btn{
-    padding:0px 30px;
+    padding:0px 15px 0px 15px;
 }
+ 
+.navbar-toggler{
+  border: 2px solid rgb(90, 25, 119);
+}
+
+.navbar-toggler:active{
+  border: 2px solid rgb(90, 25, 119);
+}
+
+
+.navbar-toggler-icon{
+  background-image:rgb(90, 25, 119);
+} 
+
+@media (max-width: 991.5px) {
+  #Profile-btn{
+    padding:15px 0px 0px 0px;
+ }
+}
+

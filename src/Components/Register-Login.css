@@ -61,14 +61,23 @@
     border: 1px solid black;
   }
   
-  .link-pwem, .link-pwem:hover {
-    color: rgb(76, 31, 224);
+  .link-pwem {
+    color: rgb(121, 37, 160);
     text-decoration: none;
+  }
+
+  .link-pwem:hover{
+    color: rgb(138, 78, 165);
   }
   
   .signin-link{
     cursor: pointer;
-    color: rgb(76, 31, 224);
+    color: rgb(121, 37, 160);
+  }
+
+  .signin-link:hover{
+    cursor: pointer;
+    color: rgb(138, 78, 165);
   }
   
   .submit-btn{
@@ -95,7 +104,7 @@
   }
 
   .slogan{
-    color: rgb(76, 31, 224);;
+    color: rgb(90, 25, 119);;
   }
 
   .imageArea {
