@@ -150,6 +150,5 @@ export default function RegisterLogin() {
       </div>
     </div>
   )
-
 }
 
