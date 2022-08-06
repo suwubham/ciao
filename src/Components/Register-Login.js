@@ -1,7 +1,7 @@
+
 import React, { useState } from 'react'
 import Logo from '../assets/ciaologo3.png';
 import './Register-Login.css'
-
 
 export default function RegisterLogin() {
 
@@ -10,7 +10,7 @@ export default function RegisterLogin() {
   const changeRegisterMode = () => {
     setRegisterMode(RegisterMode == "signup" ? "signin" : "signup")
   }
-
+  
   if (RegisterMode === "signup") {
     return (
       <div className="Main-div">
@@ -68,18 +68,21 @@ export default function RegisterLogin() {
             Generate your own Art
           </h1>
           <h3>
-            Work with complex math graphs and <br />other image templates to create your art.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem doloremque quis a atque quidem esse
-            excepturi, architecto amet pariatur impedit. Fuga perspiciatis pariatur temporibus veniam. Quod
-            repudiandae eligendi impedit beatae!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem doloremque quis a atque quidem esse
-            excepturi, architecto amet pariatur impedit. Fuga perspiciatis pariatur temporibus veniam. Quod
-            repudiandae eligendi impedit beatae!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem doloremque quis a atque quidem esse
-            excepturi, architecto amet pariatur impedit. Fuga perspiciatis pariatur temporibus veniam. Quod
-            repudiandae eligendi impedit beatae!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem doloremque quis a atque quidem esse
-            excepturi, architecto amet pariatur impedit. Fuga perspiciatis pariatur temporibus veniam. Quod
+            Work with complex math graphs and <br />
+            other image templates to create your art. Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Rem doloremque quis a atque quidem
+            esse excepturi, architecto amet pariatur impedit. Fuga perspiciatis
+            pariatur temporibus veniam. Quod repudiandae eligendi impedit
+            beatae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
+            doloremque quis a atque quidem esse excepturi, architecto amet
+            pariatur impedit. Fuga perspiciatis pariatur temporibus veniam. Quod
+            repudiandae eligendi impedit beatae! Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Rem doloremque quis a atque quidem
+            esse excepturi, architecto amet pariatur impedit. Fuga perspiciatis
+            pariatur temporibus veniam. Quod repudiandae eligendi impedit
+            beatae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
+            doloremque quis a atque quidem esse excepturi, architecto amet
+            pariatur impedit. Fuga perspiciatis pariatur temporibus veniam. Quod
             repudiandae eligendi impedit beatae!
           </h3>
           <img src={Logo} height={30} width={100} />
@@ -132,24 +135,25 @@ export default function RegisterLogin() {
           Generate your own Art
         </h1>
         <h3>
-          Work with complex math graphs and <br />other image templates to create your art.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem doloremque quis a atque quidem esse
-          excepturi, architecto amet pariatur impedit. Fuga perspiciatis pariatur temporibus veniam. Quod
-          repudiandae eligendi impedit beatae!
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem doloremque quis a atque quidem esse
-          excepturi, architecto amet pariatur impedit. Fuga perspiciatis pariatur temporibus veniam. Quod
-          repudiandae eligendi impedit beatae!
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem doloremque quis a atque quidem esse
-          excepturi, architecto amet pariatur impedit. Fuga perspiciatis pariatur temporibus veniam. Quod
-          repudiandae eligendi impedit beatae!
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem doloremque quis a atque quidem esse
-          excepturi, architecto amet pariatur impedit. Fuga perspiciatis pariatur temporibus veniam. Quod
+          Work with complex math graphs and <br />
+          other image templates to create your art. Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Rem doloremque quis a atque quidem esse
+          excepturi, architecto amet pariatur impedit. Fuga perspiciatis
+          pariatur temporibus veniam. Quod repudiandae eligendi impedit beatae!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
+          doloremque quis a atque quidem esse excepturi, architecto amet
+          pariatur impedit. Fuga perspiciatis pariatur temporibus veniam. Quod
+          repudiandae eligendi impedit beatae! Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Rem doloremque quis a atque quidem esse
+          excepturi, architecto amet pariatur impedit. Fuga perspiciatis
+          pariatur temporibus veniam. Quod repudiandae eligendi impedit beatae!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
+          doloremque quis a atque quidem esse excepturi, architecto amet
+          pariatur impedit. Fuga perspiciatis pariatur temporibus veniam. Quod
           repudiandae eligendi impedit beatae!
         </h3>
         <img src={Logo} height={30} width={100} />
       </div>
     </div>
   )
-
 }
-
