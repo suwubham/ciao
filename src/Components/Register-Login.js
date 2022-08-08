@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Logo from "../assets/ciaologo3.png";
 import "./Register-Login.css";
 
+
 export default function RegisterLogin() {
   let [RegisterMode, setRegisterMode] = useState("signin");
   const [fname, setFname] = useState("");
@@ -11,9 +12,7 @@ export default function RegisterLogin() {
 
   function registerUser(event) {
     event.preventDefault();
-
     console.log(fname, lname, email, password);
-    
     fetch("http://localhost:5000/register", {
       method: "POST",
       crossDomain: true,
@@ -53,7 +52,14 @@ export default function RegisterLogin() {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data, "userRegisterd");
+        console.log(data, "Success");
+        if (data.status == "ok"){
+          alert("login successful");
+          window.location.href = '/home'
+        }
+        else{
+          alert("User does not exist");
+        }
       });
   }
 

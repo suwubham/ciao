@@ -1,6 +1,8 @@
 import express from "express";
 import cors from "cors";
 import mongoose from "mongoose";
+import env from "dotenv";
+env.config();
 
 import registerRoute from "./routes/register.js";
 import loginRoute from "./routes/login.js";
@@ -15,15 +17,15 @@ app.use("/register", registerRoute);
 app.use("/login", loginRoute);
 // app.use("/userdata", userData);
 
-app.listen(5000, () => {
-  console.log("app is listening in port 5000");
+app.listen(process.env.PORT, () => {
+  console.log(`app is listening in port ${process.env.PORT}`);
 });
 
 const uri =
   "mongodb+srv://suwubham:suwubham123@ciao.jky7m.mongodb.net/?retryWrites=true&w=majority";
 
 mongoose
-  .connect(uri, {
+  .connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
