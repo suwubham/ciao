@@ -8,6 +8,7 @@ import Template from './Template'
 import About from './About'
 import LandingPage from './LandingPage'
 
+
 export default function AppRouter() {
   return (
     <BrowserRouter>
@@ -21,5 +22,5 @@ export default function AppRouter() {
             <Route path="/landingpage" element={<LandingPage/>}/>
         </Routes>
     </BrowserRouter>
-  )
+  );
 }

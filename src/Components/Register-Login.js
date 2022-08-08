@@ -1,11 +1,68 @@
+import React, { useState } from "react";
+import Logo from "../assets/ciaologo3.png";
+import "./Register-Login.css";
 
-import React, { useState } from 'react'
-import Logo from '../assets/ciaologo3.png';
-import './Register-Login.css'
 
 export default function RegisterLogin() {
 
-  let [RegisterMode, setRegisterMode] = useState("signup")
+  let [RegisterMode, setRegisterMode] = useState("signin");
+  const [fname, setFname] = useState("");
+  const [lname, setLname] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  function registerUser(event) {
+    event.preventDefault();
+    console.log(fname, lname, email, password);
+    fetch("http://localhost:5000/register", {
+      method: "POST",
+      crossDomain: true,
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+        "Access-Control-Allow-Origin": "*",
+      },
+      body: JSON.stringify({
+        fname,
+        lname,
+        email,
+        password,
+      }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data, "userRegisterd");
+      });
+  }
+
+  function loginUser(event) {
+    event.preventDefault();
+    console.log(email, password);
+    fetch("http://localhost:5000/login", {
+      method: "POST",
+      crossDomain: true,
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+        "Access-Control-Allow-Origin": "*",
+      },
+      body: JSON.stringify({
+        email,
+        password,
+      }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data, "Success");
+        if (data.status == "ok"){
+          alert("login successful");
+          window.location.href = '/home'
+        }
+        else{
+          alert("User does not exist");
+        }
+      });
+  }
 
   const changeRegisterMode = () => {
     setRegisterMode(RegisterMode == "signup" ? "signin" : "signup")
@@ -15,7 +72,7 @@ export default function RegisterLogin() {
     return (
       <div className="Main-div">
         <div className="Register-form-container">
-          <form className="Register-form">
+          <form className="Register-form" onSubmit={loginUser}>
             <div className="Register-form-content">
               <h3 className="Register-form-title">Sign Up</h3>
               <div className="text-center">
@@ -44,7 +101,8 @@ export default function RegisterLogin() {
                 <input
                   type="email"
                   className="form-control mt-1"
-                  placeholder="maxaarons@gmail.comm"
+                  placeholder="Enter email"
+                  onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
               <div className="form-group mt-3">
@@ -52,7 +110,8 @@ export default function RegisterLogin() {
                 <input
                   type="password"
                   className="form-control mt-1"
-                  placeholder="Password"
+                  placeholder="Enter password"
+                  onChange={(e) => setPassword(e.target.value)}
                 />
                 <div className="d-grid gap-2 mt-3">
                   <button type="submit" className="submit-btn">
@@ -64,9 +123,7 @@ export default function RegisterLogin() {
           </form>
         </div>
         <div className="imageArea">
-          <h1 className="slogan">
-            Generate your own Art
-          </h1>
+          <h1 className="slogan">Generate your own Art</h1>
           <h3>
             Work with complex math graphs and <br />
             other image templates to create your art. Lorem ipsum dolor sit amet
@@ -94,7 +151,7 @@ export default function RegisterLogin() {
   return (
     <div className="Main-div">
       <div className="Register-form-container">
-        <form className="Register-form">
+        <form className="Register-form" onSubmit={registerUser}>
           <div className="Register-form-content">
             <h3 className="Register-form-title">Sign In</h3>
             <div className="text-center">
@@ -104,19 +161,37 @@ export default function RegisterLogin() {
               </span>
             </div>
             <div className="form-group mt-3">
+              <label>First Name</label>
+              <input
+                type="text"
+                className="form-control mt-1"
+                placeholder="e.g Max"
+                onChange={(e) => setFname(e.target.value)}
+              />
+              <label>Last Name</label>
+              <input
+                type="text"
+                className="form-control mt-1"
+                placeholder="e.g Aarons"
+                onChange={(e) => setLname(e.target.value)}
+              />
+            </div>
+            <div className="form-group mt-3">
               <label>Email address</label>
               <input
                 type="email"
                 className="form-control mt-1"
-                placeholder="Enter email"
+                placeholder="maxaarons@gmail.comm"
+                onChange={(e) => setEmail(e.target.value)}
               />
             </div>
             <div className="form-group mt-3">
               <label>Password</label>
               <input
-                type="password"
+                type="text"
                 className="form-control mt-1"
-                placeholder="Enter password"
+                placeholder="Password"
+                onChange={(e) => setPassword(e.target.value)}
               />
             </div>
             <div className="d-grid gap-2 mt-3">
@@ -134,6 +209,7 @@ export default function RegisterLogin() {
         <h1 className="slogan">
           Generate your own Art
         </h1>
+
         <h3>
           Work with complex math graphs and <br />
           other image templates to create your art. Lorem ipsum dolor sit amet
