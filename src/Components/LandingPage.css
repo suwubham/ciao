@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+
+.landingpage-div{
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+}
+
+header{
+    display: flex;
+    position: relative;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 100px;
+}
+
+
+li,a,.text,h3{
+    color:beige;
+}
+
+
+/*.title{
+    letter-spacing: 10px;
+    margin-left: 50px;
+}
+
+ .logoimage{
+    cursor: pointer;
+}
+
+header ul{
+    list-style: none;
+}
+
+header ul li{
+    display: inline-block;
+    padding-right:50px;
+}
+
+header ul li a{
+    text-decoration: none;
+    font-size: 20px;
+} */
+
+.text{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin:65px;
+}
+
+.maintext{
+    margin:50px;
+}
+
+.main-text{
+    color: rgb(117, 0, 153);
+
+}
+
+.signin{
+    background-color: rgb(117, 0, 153);
+    border: 1px solid rgb(117, 0, 153);
+    border-radius: 10px;
+    text-decoration: none;
+    padding:9px 25px;
+    font-weight: bold;
+    margin-top:30px;
+}
+
+.signin:hover{
+    color: rgb(117, 0, 153);
+    background-color: rgb(86, 85, 85);
+    border: 1px solid rgb(117, 0, 153);
+    cursor: pointer;
+}
+
+.logos{
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+}
+
+#fb, #insta , #tw{
+    margin:0px 25px 0px 25px;
+}
+
+#tw{
+    width:auto;
+    height:auto;
+}
+
+.ciaoimg{
+    height: 200px;
+    width: 450px;
+}
+
+.logos ul{
+    list-style: none;
+}
+
+.logos ul li{
+    display: inline-block;
+    justify-content: space-between;
+}
+
+.logos ul li img{
+    max-width: 30px;
+    max-height: 30px;
+}
