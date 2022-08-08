@@ -1,9 +1,8 @@
-
-import React from 'react'
-import './App.css'
-import "bootstrap/dist/css/bootstrap.min.css"
-import AppRouter from './Components/AppRouter'
-import Navbar from './Components/Navbar'
+import React from "react";
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import AppRouter from "./components/AppRouter";
+import Navbar from "./components/Navbar";
 function App() {
   return (
     <>
