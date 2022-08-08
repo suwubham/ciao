@@ -4,6 +4,7 @@ import "./Register-Login.css";
 
 
 export default function RegisterLogin() {
+
   let [RegisterMode, setRegisterMode] = useState("signin");
   const [fname, setFname] = useState("");
   const [lname, setLname] = useState("");
@@ -64,21 +65,36 @@ export default function RegisterLogin() {
   }
 
   const changeRegisterMode = () => {
-    setRegisterMode(RegisterMode == "signin" ? "signup" : "signin");
-  };
-
-  if (RegisterMode === "signin") {
+    setRegisterMode(RegisterMode == "signup" ? "signin" : "signup")
+  }
+  
+  if (RegisterMode === "signup") {
     return (
       <div className="Main-div">
         <div className="Register-form-container">
           <form className="Register-form" onSubmit={loginUser}>
             <div className="Register-form-content">
-              <h3 className="Register-form-title">Sign In</h3>
+              <h3 className="Register-form-title">Sign Up</h3>
               <div className="text-center">
-                Not registered yet?{" "}
+                Already registered?{" "}
                 <span className="signin-link" onClick={changeRegisterMode}>
-                  Sign Up
+                  Sign In
                 </span>
+              </div>
+              <div className="form-group mt-3">
+                <label>First Name</label>
+                <input
+                  type="email"
+                  className="form-control mt-1"
+                  placeholder="e.g Max"
+                />
+                <label>Last Name</label>
+                <input
+                  type="email"
+                  className="form-control mt-1"
+                  placeholder="e.g Aarons"
+                />
+
               </div>
               <div className="form-group mt-3">
                 <label>Email address</label>
@@ -97,18 +113,12 @@ export default function RegisterLogin() {
                   placeholder="Enter password"
                   onChange={(e) => setPassword(e.target.value)}
                 />
+                <div className="d-grid gap-2 mt-3">
+                  <button type="submit" className="submit-btn">
+                    Submit
+                  </button>
+                </div>
               </div>
-              <div className="d-grid gap-2 mt-3">
-                <button type="submit" className="submit-btn">
-                  Log In
-                </button>
-              </div>
-              <p className="text-center mt-2">
-                Forgot{" "}
-                <a href="#" className="link-pwem">
-                  password?
-                </a>
-              </p>
             </div>
           </form>
         </div>
@@ -135,18 +145,19 @@ export default function RegisterLogin() {
           <img src={Logo} height={30} width={100} />
         </div>
       </div>
-    );
+    )
   }
+
   return (
     <div className="Main-div">
       <div className="Register-form-container">
         <form className="Register-form" onSubmit={registerUser}>
           <div className="Register-form-content">
-            <h3 className="Register-form-title">Sign Up</h3>
+            <h3 className="Register-form-title">Sign In</h3>
             <div className="text-center">
-              Already registered?{" "}
+              Not registered yet?{" "}
               <span className="signin-link" onClick={changeRegisterMode}>
-                Sign In
+                Sign Up
               </span>
             </div>
             <div className="form-group mt-3">
@@ -182,23 +193,23 @@ export default function RegisterLogin() {
                 placeholder="Password"
                 onChange={(e) => setPassword(e.target.value)}
               />
-              <div className="d-grid gap-2 mt-3">
-                <button type="submit" className="submit-btn">
-                  Submit
-                </button>
-              </div>
-              <p className="text-center mt-2">
-                Forgot{" "}
-                <a href="#" className="link-pwem">
-                  password?
-                </a>
-              </p>
             </div>
+            <div className="d-grid gap-2 mt-3">
+              <button type="submit" className="submit-btn" >
+                Log In
+              </button>
+            </div>
+            <p className="text-center mt-2">
+              Forgot <a href="#" className="link-pwem">password?</a>
+            </p>
           </div>
         </form>
       </div>
       <div className="imageArea">
-        <h1 className="slogan">Generate your own Art</h1>
+        <h1 className="slogan">
+          Generate your own Art
+        </h1>
+
         <h3>
           Work with complex math graphs and <br />
           other image templates to create your art. Lorem ipsum dolor sit amet
@@ -220,5 +231,5 @@ export default function RegisterLogin() {
         <img src={Logo} height={30} width={100} />
       </div>
     </div>
-  );
+  )
 }
