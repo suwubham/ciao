@@ -8,9 +8,12 @@ export default function RegisterLogin() {
   const [lname, setLname] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
   function registerUser(event) {
     event.preventDefault();
+
     console.log(fname, lname, email, password);
+    
     fetch("http://localhost:5000/register", {
       method: "POST",
       crossDomain: true,
@@ -28,7 +31,29 @@ export default function RegisterLogin() {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data, "userRegister");
+        console.log(data, "userRegisterd");
+      });
+  }
+
+  function loginUser(event) {
+    event.preventDefault();
+    console.log(email, password);
+    fetch("http://localhost:5000/login", {
+      method: "POST",
+      crossDomain: true,
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+        "Access-Control-Allow-Origin": "*",
+      },
+      body: JSON.stringify({
+        email,
+        password,
+      }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data, "userRegisterd");
       });
   }
 
@@ -40,7 +65,7 @@ export default function RegisterLogin() {
     return (
       <div className="Main-div">
         <div className="Register-form-container">
-          <form className="Register-form">
+          <form className="Register-form" onSubmit={loginUser}>
             <div className="Register-form-content">
               <h3 className="Register-form-title">Sign In</h3>
               <div className="text-center">
@@ -55,6 +80,7 @@ export default function RegisterLogin() {
                   type="email"
                   className="form-control mt-1"
                   placeholder="Enter email"
+                  onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
               <div className="form-group mt-3">
@@ -63,6 +89,7 @@ export default function RegisterLogin() {
                   type="password"
                   className="form-control mt-1"
                   placeholder="Enter password"
+                  onChange={(e) => setPassword(e.target.value)}
                 />
               </div>
               <div className="d-grid gap-2 mt-3">

@@ -3,6 +3,7 @@ import User from "../models/user.model.js";
 import bcrypt from "bcryptjs";
 
 const router = express.Router();
+
 router.post("/", async (req, res) => {
   console.log(req.body);
   const { fname, lname, email, password } = req.body;

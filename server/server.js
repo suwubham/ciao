@@ -1,26 +1,42 @@
 import express from "express";
 import cors from "cors";
 import mongoose from "mongoose";
-import userRoutes from "./routes/register.js";
+
+import registerRoute from "./routes/register.js";
+import loginRoute from "./routes/login.js";
+// import userData from "./routes/userData";
 
 const app = express();
 
 app.use(cors());
 app.use(express.json());
-app.use("/register", userRoutes);
 
-const mongoUrl =
-  "mongodb+srv://suwubham:suwubham1@ciao.jky7m.mongodb.net/?retryWrites=true&w=majority";
+app.use("/register", registerRoute);
+app.use("/login", loginRoute);
+// app.use("/userdata", userData);
 
 app.listen(5000, () => {
-  console.log("app is listening in port 5001");
+  console.log("app is listening in port 5000");
 });
 
+const uri =
+  "mongodb+srv://suwubham:suwubham123@ciao.jky7m.mongodb.net/?retryWrites=true&w=majority";
+
 mongoose
-  .connect(mongoUrl, {
+  .connect(uri, {
     useNewUrlParser: true,
+    useUnifiedTopology: true,
   })
-  .then(console.log("connected to database"))
-  .catch((e) => {
-    console.log(e);
+  .catch(function (error) {
+    console.log(`Unable to connect to the Mongo db  ${error} `);
   });
+
+const connection = mongoose.connection;
+
+connection.once("open", () => {
+  console.log("MongoDB connection established successfully");
+});
+
+mongoose.connection.on("error", (err) => {
+  console.log(`failed to connect to MongoDB ${err}`);
+});
