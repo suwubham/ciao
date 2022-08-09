@@ -14,8 +14,8 @@ CIAO is a webapp for rendering generative art built as a project for COMP 206 co
 
 ```bash
   git clone 'repo-link'
-  npm install
   cd ciao
+  npm install
   npm start
   cd server
   nodemon server.js  
