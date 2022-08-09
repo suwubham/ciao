@@ -3,6 +3,7 @@ import Sketch from "react-p5";
 
 var n = 0;
 var c = 4;
+
 export default function phyllotaxis() {
   const setup = (p5, canvasParentRef) => {
     p5.createCanvas(500, 400).parent(canvasParentRef);
