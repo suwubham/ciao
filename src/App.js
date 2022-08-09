@@ -1,15 +1,14 @@
 import React from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import AppRouter from "./components/AppRouter";
-import Navbar from "./components/Navbar";
+import LandingPage from "./Components/LandingPage";
+
 
 function App() {
   return (
     <>
-      <Navbar />
-      <AppRouter />
-    </>
+      <LandingPage/>
+    </>  
   );
 }
 
