@@ -3,7 +3,7 @@ import Logo from "../assets/ciaologo3.png";
 import "./Register-Login.css";
 
 export default function RegisterLogin() {
-  let [RegisterMode, setRegisterMode] = useState("signin");
+  let [RegisterMode, setRegisterMode] = useState("signup");
   const [fname, setFname] = useState("");
   const [lname, setLname] = useState("");
   const [email, setEmail] = useState("");
@@ -62,7 +62,7 @@ export default function RegisterLogin() {
   }
 
   const changeRegisterMode = () => {
-    setRegisterMode(RegisterMode == "signin" ? "signup" : "signin");
+    setRegisterMode(RegisterMode == "signin" ? "signin" : "signup");
   };
 
   if (RegisterMode === "signin") {
@@ -185,12 +185,6 @@ export default function RegisterLogin() {
                   Submit
                 </button>
               </div>
-              <p className="text-center mt-2">
-                Forgot{" "}
-                <a href="#" className="link-pwem">
-                  password?
-                </a>
-              </p>
             </div>
           </div>
         </form>
