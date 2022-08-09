@@ -34,9 +34,6 @@ export default function Navbar() {
             <li className="nav-item">
               <a className="nav-link navbar-custom" aria-current="page" href="http://localhost:3000/signin">Sign In</a>
             </li>
-            <li className="nav-item">
-              <a className="nav-link navbar-custom" aria-current="page" href="http://localhost:3000/landingpage">Landing Page</a>
-            </li>
           </ul>
           <form className="d-flex" role="search">
             <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
