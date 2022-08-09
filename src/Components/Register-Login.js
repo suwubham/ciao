@@ -63,12 +63,13 @@ export default function RegisterLogin() {
   }
 
   const changeRegisterMode = () => {
-    setRegisterMode(RegisterMode == "signin" ? "signin" : "signup");
+    setRegisterMode(RegisterMode == "signin" ? "signup" : "signin");
   };
 
   if (RegisterMode === "signin") {
       return (
         <>
+        <Navbar />
       <div className="Main-div">
         <div className="Register-form-container">
           <form className="Register-form" onSubmit={loginUser}>
@@ -140,6 +141,7 @@ export default function RegisterLogin() {
   }
       return (
         <>
+        <Navbar />
       <div className="Main-div">
         <div className="Register-form-container">
           <form className="Register-form" onSubmit={registerUser}>
@@ -216,7 +218,7 @@ export default function RegisterLogin() {
           <img src={Logo} height={30} width={100} />
         </div>
       </div>
-      <Navbar />
+      
     </>
   );
   }

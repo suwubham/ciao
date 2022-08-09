@@ -6,9 +6,6 @@ import YourArts from './YourArts'
 import Profile from './Profile'
 import Template from './Template'
 import About from './About'
-import LandingPage from './LandingPage'
-import Footer from './Footer'
-
 
 export default function AppRouter() {
   return (
@@ -20,8 +17,6 @@ export default function AppRouter() {
             <Route path="/yourarts" element={<YourArts/>}/>
             <Route path="/profile" element={<Profile/>}/>
             <Route path="/template" element={<Template/>}/>
-            <Route path="/footer" element={<Footer/>}/>
-            <Route path="/landingpage" element={<LandingPage/>}/>
         </Routes>
     </BrowserRouter>
   );

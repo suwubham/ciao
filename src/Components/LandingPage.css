@@ -3,7 +3,7 @@
 .landingpage-div{
     font-family: 'Roboto', sans-serif;
     background-color: #121212;
-    height:fit-content;
+    height:100vh;
 }
 
 header{
@@ -14,7 +14,7 @@ header{
     justify-content: center;
     align-items: center;
     width: auto;
-    height: 100px;
+    padding:80px;
 }
 
 
@@ -22,35 +22,10 @@ li,a,.text,h3{
     color:beige;
 }
 
-
-/*.title{
-    letter-spacing: 10px;
-    margin-left: 50px;
-}
-
- .logoimage{
-    cursor: pointer;
-}
-
-header ul{
-    list-style: none;
-}
-
-header ul li{
-    display: inline-block;
-    padding-right:50px;
-}
-
-header ul li a{
-    text-decoration: none;
-    font-size: 20px;
-} */
-
 .text{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin:65px;
 }
 
 .maintext{
@@ -59,7 +34,6 @@ header ul li a{
 
 .main-text{
     color: rgb(117, 0, 153);
-
 }
 
 .signin{
@@ -79,10 +53,39 @@ header ul li a{
     cursor: pointer;
 }
 
+.ciaoimg{
+    height: 280px;
+    width: 520px;
+}
+
 .logos{
+    position: relative;
     bottom: 0;
+    top:100px;
+}
+
+.links-list{
     display: flex;
     justify-content: center;
+}
+
+.copyright{
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+.logos ul{
+    list-style: none;
+}
+
+.logos ul li{
+    display:inline-block;
+}
+
+.logos ul li img{
+    max-width: 30px;
+    max-height: 30px;
 }
 
 #fb, #insta , #tw{
@@ -94,27 +97,7 @@ header ul li a{
     height:auto;
 }
 
-
-.ciaoimg{
-    height: 280px;
-    width: 520px;
-}
-
-.logos ul{
-    list-style: none;
-}
-
-.logos ul li{
-    display: inline-block;
-    justify-content: space-between;
-}
-
-.logos ul li img{
-    max-width: 30px;
-    max-height: 30px;
-}
-
-/* @media (max-width: 991.5px) {
+@media (max-width: 991.5px) {
     .main-text{
         width:65%;
     }
@@ -122,11 +105,12 @@ header ul li a{
     .image{
         width:35%;
     }
-} */
+}
 
 
 
-footer{
+
+/* footer{
     width:100%;
     position: fixed;
     bottom: 0;
@@ -136,8 +120,8 @@ footer{
     border-top-left-radius: 125px;
     font-size: 10px;
     line-height: 10px;
-}
-.row{
+} */
+/* .row{
     width:85% ;
     margin: auto;
     display: flex;
@@ -161,13 +145,13 @@ footer{
     width:fit-content;
     margin: bottom 40px;
     position: relative;
-}
+} */
 /* .email-id{
     width:fit-content;
     border-bottom:1px solid #ccc;
     margin: 20px 0;
 } */
-ul li a{
+/* ul li a{
     text-decoration: none;
     margin-bottom: 12px;
 }
@@ -195,7 +179,7 @@ hr{
     .col:nth-child(2),.col:nth-child(3){
         flex-basis:100%;
     }
-}
+} */
 /* Container needed to position the button. Adjust the width as needed */
 .container {
     position: relative;
