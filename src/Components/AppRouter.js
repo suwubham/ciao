@@ -19,6 +19,7 @@ export default function AppRouter() {
       <Route path="/yourarts" element={<YourArts />} />
       <Route path="/profile" element={<Profile />} />
       <Route path="/template" element={<Template />} />
+      <Route path="/phyllotaxis" element={<Phyllotaxis />} />
     </Routes>
   );
 }
