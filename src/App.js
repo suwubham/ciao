@@ -1,13 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import LandingPage from "./Components/LandingPage";
+import AppRouter from "./Components/AppRouter";
+import Navbar from "./Components/Navbar";
+
 
 function App() {
+
   return (
     <>
-      <LandingPage/>
-    </>  
+      <Navbar/>
+      <AppRouter/>
+    </>
   );
 }
 

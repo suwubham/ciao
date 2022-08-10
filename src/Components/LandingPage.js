@@ -4,10 +4,8 @@ import Logo from '../assets/ciao-3.png'
 import Link1 from '../assets/facebook-512.png'
 import Link2 from '../assets/instagram-logo-2433.png'
 import Link3 from '../assets/twlogo2.png'
-import { useNavigate } from "react-router-dom";
-import { Routes, Route } from "react-router-dom"
+import {Routes, Route , useNavigate } from "react-router-dom";
 import RegisterLogin from './Register-Login'
-
 
 export default function LandingPage() {
 
@@ -44,9 +42,9 @@ export default function LandingPage() {
                 <footer className="logos">
                     <div className="links-list">
                         <ul>
-                            <li><a href="#"><img src={Link1} id="fb" className="active" /></a></li>
-                            <li><a href="#"><img src={Link2} id="insta" className="active" /></a></li>
-                            <li><a href="#"><img src={Link3} id="tw" className="active" /></a></li>
+                            <li><a href="#"><img src={Link1} id="fb" /></a></li>
+                            <li><a href="#"><img src={Link2} id="insta" /></a></li>
+                            <li><a href="#"><img src={Link3} id="tw" /></a></li>
                         </ul>
                     </div>
                     <p className="copyright">CIAO 2022 copyright - All rights reserved</p>

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Logo from "../assets/ciaologo3.png";
 import "./Register-Login.css";
 import Navbar from "./Navbar";
+import AppRouter from "./AppRouter";
 
 export default function RegisterLogin() {
   let [RegisterMode, setRegisterMode] = useState("signup");
@@ -69,7 +70,6 @@ export default function RegisterLogin() {
   if (RegisterMode === "signin") {
       return (
         <>
-        <Navbar />
       <div className="Main-div">
         <div className="Register-form-container">
           <form className="Register-form" onSubmit={loginUser}>
@@ -141,7 +141,6 @@ export default function RegisterLogin() {
   }
       return (
         <>
-        <Navbar />
       <div className="Main-div">
         <div className="Register-form-container">
           <form className="Register-form" onSubmit={registerUser}>
