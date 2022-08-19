@@ -1,5 +1,5 @@
 import React from 'react'
-import './LandingPage.css'
+import '../styles/LandingPage.css'
 import Logo from '../assets/ciao-3.png'
 import Link1 from '../assets/facebook-512.png'
 import Link2 from '../assets/instagram-logo-2433.png'
