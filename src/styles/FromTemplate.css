@@ -1,0 +1,36 @@
+.header-title{
+    padding:10px;
+    text-align: center;
+}
+
+.drawfromTemplateArea{
+    padding:20px;
+    display: flex;
+    height:79vh;
+    justify-content: space-between;
+    position: relative;
+}
+
+.box-1{
+    width:20%;
+    position:relative;
+    padding:0px 25px;
+    background-color: brown;
+    overflow-y: scroll;
+}
+
+.box-2{
+    width:60%;
+    display: flex;
+    background-color: aquamarine;
+}
+
+.box-3{
+    width:20%;
+    margin-left:65px;
+    padding:25px;
+    position:relative;
+    color:rgb(230, 87, 31);
+    background-color: brown;
+    align-items: center;
+}

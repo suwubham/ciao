@@ -1,7 +1,11 @@
 import React from 'react'
+import Navbar from './Navbar'
 
 export default function YourArts() {
   return (
-    <div>Your Arts</div>
+    <>
+      <Navbar />
+      <div>Your Arts</div>
+    </>
   )
 }

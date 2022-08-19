@@ -1,0 +1,40 @@
+[
+    {
+        "templateTitle": "Phyllotaxis",
+        "templateImage": "https://www.researchgate.net/profile/Didier-Reinhardt-2/publication/7663446/figure/fig1/AS:277853003370503@1443256726596/Spiral-phyllotaxis-in-flax-Left-11-days-after-germination-the-phyllotactic-pattern-is.png",
+        "redirectTo": "http://localhost:3000/template/fromTemplate"
+    },
+    {
+        "templateTitle": "Template 1",
+        "templateImage": "",
+        "redirectTo": "http://localhost:3000/home"
+    },
+    {
+        "templateTitle": "Template 2",
+        "templateImage": "../assets/ciaologo3.png"
+    },
+    {
+        "templateTitle": "Template 3",
+        "templateImage": "../assets/ciaologo3.png"
+    },
+    {
+        "templateTitle": "Template 4",
+        "templateImage": "../assets/ciaologo3.png"
+    },
+    {
+        "templateTitle": "Template 5",
+        "templateImage": "../assets/ciaologo3.png"
+    },
+    {
+        "templateTitle": "Template 6",
+        "templateImage": "../assets/ciaologo3.png"
+    },
+    {
+        "templateTitle": "Template 7",
+        "templateImage": "../assets/ciaologo3.png"
+    },
+    {
+        "templateTitle": "Template 8",
+        "templateImage": "../assets/ciaologo3.png"
+    }
+]

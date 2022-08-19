@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import Logo from "../assets/ciaologo3.png";
-import "./Register-Login.css";
+import "../styles/Register-Login.css";
 import Navbar from "./Navbar";
-import AppRouter from "./AppRouter";
 
 export default function RegisterLogin() {
   let [RegisterMode, setRegisterMode] = useState("signup");
@@ -68,79 +67,81 @@ export default function RegisterLogin() {
   };
 
   if (RegisterMode === "signin") {
-      return (
-        <>
-      <div className="Main-div">
-        <div className="Register-form-container">
-          <form className="Register-form" onSubmit={loginUser}>
-            <div className="Register-form-content">
-              <h3 className="Register-form-title">Sign In</h3>
-              <div className="text-center">
-                Not registered yet?{" "}
-                <span className="signin-link" onClick={changeRegisterMode}>
-                  Sign Up
-                </span>
+    return (
+      <>
+        <Navbar />
+        <div className="Main-div">
+          <div className="Register-form-container">
+            <form className="Register-form" onSubmit={loginUser}>
+              <div className="Register-form-content">
+                <h3 className="Register-form-title">Sign In</h3>
+                <div className="text-center">
+                  Not registered yet?{" "}
+                  <span className="signin-link" onClick={changeRegisterMode}>
+                    Sign Up
+                  </span>
+                </div>
+                <div className="form-group mt-3">
+                  <label>Email address</label>
+                  <input
+                    type="email"
+                    className="form-control mt-1"
+                    placeholder="Enter email"
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                </div>
+                <div className="form-group mt-3">
+                  <label>Password</label>
+                  <input
+                    type="password"
+                    className="form-control mt-1"
+                    placeholder="Enter password"
+                    onChange={(e) => setPassword(e.target.value)}
+                  />
+                </div>
+                <div className="d-grid gap-2 mt-3">
+                  <button type="submit" className="submit-btn">
+                    Log In
+                  </button>
+                </div>
+                <p className="text-center mt-2">
+                  Forgot{" "}
+                  <a href="#" className="link-pwem">
+                    password?
+                  </a>
+                </p>
               </div>
-              <div className="form-group mt-3">
-                <label>Email address</label>
-                <input
-                  type="email"
-                  className="form-control mt-1"
-                  placeholder="Enter email"
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-              </div>
-              <div className="form-group mt-3">
-                <label>Password</label>
-                <input
-                  type="password"
-                  className="form-control mt-1"
-                  placeholder="Enter password"
-                  onChange={(e) => setPassword(e.target.value)}
-                />
-              </div>
-              <div className="d-grid gap-2 mt-3">
-                <button type="submit" className="submit-btn">
-                  Log In
-                </button>
-              </div>
-              <p className="text-center mt-2">
-                Forgot{" "}
-                <a href="#" className="link-pwem">
-                  password?
-                </a>
-              </p>
-            </div>
-          </form>
+            </form>
+          </div>
+          <div className="imageArea">
+            <h1 className="slogan">Generate your own Art</h1>
+            <h3>
+              Work with complex math graphs and <br />
+              other image templates to create your art. Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Rem doloremque quis a atque quidem
+              esse excepturi, architecto amet pariatur impedit. Fuga perspiciatis
+              pariatur temporibus veniam. Quod repudiandae eligendi impedit
+              beatae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
+              doloremque quis a atque quidem esse excepturi, architecto amet
+              pariatur impedit. Fuga perspiciatis pariatur temporibus veniam. Quod
+              repudiandae eligendi impedit beatae! Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Rem doloremque quis a atque quidem
+              esse excepturi, architecto amet pariatur impedit. Fuga perspiciatis
+              pariatur temporibus veniam. Quod repudiandae eligendi impedit
+              beatae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
+              doloremque quis a atque quidem esse excepturi, architecto amet
+              pariatur impedit. Fuga perspiciatis pariatur temporibus veniam. Quod
+              repudiandae eligendi impedit beatae!
+            </h3>
+            <img src={Logo} height={30} width={100} />
+          </div>
         </div>
-        <div className="imageArea">
-          <h1 className="slogan">Generate your own Art</h1>
-          <h3>
-            Work with complex math graphs and <br />
-            other image templates to create your art. Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Rem doloremque quis a atque quidem
-            esse excepturi, architecto amet pariatur impedit. Fuga perspiciatis
-            pariatur temporibus veniam. Quod repudiandae eligendi impedit
-            beatae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
-            doloremque quis a atque quidem esse excepturi, architecto amet
-            pariatur impedit. Fuga perspiciatis pariatur temporibus veniam. Quod
-            repudiandae eligendi impedit beatae! Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Rem doloremque quis a atque quidem
-            esse excepturi, architecto amet pariatur impedit. Fuga perspiciatis
-            pariatur temporibus veniam. Quod repudiandae eligendi impedit
-            beatae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
-            doloremque quis a atque quidem esse excepturi, architecto amet
-            pariatur impedit. Fuga perspiciatis pariatur temporibus veniam. Quod
-            repudiandae eligendi impedit beatae!
-          </h3>
-          <img src={Logo} height={30} width={100} />
-        </div>
-      </div>
       </>
-      );
+    );
   }
-      return (
-        <>
+  return (
+    <>
+      <Navbar />
       <div className="Main-div">
         <div className="Register-form-container">
           <form className="Register-form" onSubmit={registerUser}>
@@ -217,7 +218,7 @@ export default function RegisterLogin() {
           <img src={Logo} height={30} width={100} />
         </div>
       </div>
-      
+
     </>
   );
-  }
+}
