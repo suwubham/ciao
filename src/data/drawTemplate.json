@@ -1,13 +1,13 @@
 [
     {
         "templateTitle": "Phyllotaxis",
-        "templateImage": "https://www.researchgate.net/profile/Didier-Reinhardt-2/publication/7663446/figure/fig1/AS:277853003370503@1443256726596/Spiral-phyllotaxis-in-flax-Left-11-days-after-germination-the-phyllotactic-pattern-is.png",
-        "redirectTo": "http://localhost:3000/template/fromTemplate"
+        "templateImage": "https://bl.ocks.org/jhubley/raw/48406982f6988b626d9527d75a98b062/322fed41c76c6e46132eceb4917958a6c8ffd9c5/preview.png",
+        "redirectTo": "http://localhost:3000/template/phyllotaxis"
     },
     {
-        "templateTitle": "Template 1",
-        "templateImage": "",
-        "redirectTo": "http://localhost:3000/home"
+        "templateTitle": "Perlin Noise Flow Field",
+        "templateImage": "https://www.tomesoftware.com/wp-content/uploads/2018/03/Screen-Shot-2018-03-29-at-11.14.20-AM.png",
+        "redirectTo": "http://localhost:3000/template/perlinnoise"
     },
     {
         "templateTitle": "Template 2",

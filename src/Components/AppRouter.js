@@ -1,15 +1,14 @@
-
-import React from 'react'
-import { Routes, Route } from "react-router-dom"
-import LandingPage from './LandingPage'
-import RegisterLogin from './Register-Login'
-import Homepage from './Homepage'
-import YourArts from './YourArts'
-import Profile from './Profile'
-import Template from './Template'
-import About from './About'
-import FromTemplate from '../draw/FromTemplate'
-import Phyllotaxis from './art/Phyllotaxis.js'
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import LandingPage from "./LandingPage";
+import RegisterLogin from "./Register-Login";
+import Homepage from "./Homepage";
+import YourArts from "./YourArts";
+import Profile from "./Profile";
+import Template from "./Template";
+import About from "./About";
+import Phyllotaxis from "../draw/Phyllotaxis.draw";
+import Flowfield from "../draw/PerlinNoiseFlowField.draw";
 
 export default function AppRouter() {
   return (
@@ -21,8 +20,8 @@ export default function AppRouter() {
       <Route path="/yourarts" element={<YourArts />} />
       <Route path="/profile" element={<Profile />} />
       <Route path="/template" element={<Template />} />
-      <Route path="/template/fromTemplate" element={<FromTemplate />} />
-      <Route path="/template/fromTemplate/phyllotaxis" element={<Phyllotaxis />} />
+      <Route path="/template/phyllotaxis" element={<Phyllotaxis />} />
+      <Route path="template/perlinnoise" element={<Flowfield />} />
     </Routes>
   );
 }
