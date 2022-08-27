@@ -4,20 +4,12 @@ import Sketch from "react-p5";
 var n = 0;
 var c = 4;
 
-class Lines {
-  constructor(p5) {
-    this.p = p5;
-    this.vec = this.p.height;
-  }
-}
-
 export default function Phyllotaxis() {
   const setup = (p5, canvasParentRef) => {
     p5.createCanvas(500, 400).parent(canvasParentRef);
     p5.angleMode(p5.DEGREES);
     p5.colorMode(p5.HSB);
     p5.background(0);
-    var l1 = new Lines(p5);
   };
 
   const draw = (p5) => {
