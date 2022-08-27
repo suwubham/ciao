@@ -9,6 +9,8 @@ import Template from "./Template";
 import About from "./About";
 import Phyllotaxis from "../draw/Phyllotaxis.draw";
 import Flowfield from "../draw/PerlinNoiseFlowField.draw";
+import Lorentzz from "../draw/LorentzAttractor.draw";
+import Mandelbrot from "../draw/MandelbrotSet.draw";
 
 export default function AppRouter() {
   return (
@@ -22,6 +24,8 @@ export default function AppRouter() {
       <Route path="/template" element={<Template />} />
       <Route path="/template/phyllotaxis" element={<Phyllotaxis />} />
       <Route path="template/perlinnoise" element={<Flowfield />} />
+      <Route path="template/lorentzattractor" element={<Lorentzz />} />
+      <Route path="template/mandelbrotset" element={<Mandelbrot />} />
     </Routes>
   );
 }
