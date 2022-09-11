@@ -21,7 +21,17 @@ export default function Phyllotaxis() {
     p5.noStroke();
     p5.ellipse(x, y, 4, 4);
     n++;
+    a = p5.createVector(5, 5);
   };
-  return <Sketch setup={setup} draw={draw} style ={{display:"flex", justifyContent:"center", alignContent:"center"}}/>;
-
+  return (
+    <Sketch
+      setup={setup}
+      draw={draw}
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignContent: "center",
+      }}
+    />
+  );
 }
