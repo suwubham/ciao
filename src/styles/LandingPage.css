@@ -3,7 +3,8 @@
 .landingpage-div{
     font-family: 'Roboto', sans-serif;
     background-color: #121212;
-    height:100vh;
+    height:100%;
+    width:100%;
 }
 
 header{
@@ -17,6 +18,10 @@ header{
     padding:80px;
 }
 
+footer{
+    width:auto;
+    position: relative;
+}
 
 li,a,.text,h3{
     color:beige;
@@ -26,14 +31,26 @@ li,a,.text,h3{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    position: relative;
 }
 
 .maintext{
     margin:50px;
 }
 
-.main-text{
+.TextArea{
     color: rgb(117, 0, 153);
+}
+
+.image{
+    position: relative;
+}
+
+.ciaoimg{
+    max-height: 280px;
+    max-width: 520px;
+    /* height: auto; 
+    width: auto;  */
 }
 
 .signin{
@@ -53,10 +70,6 @@ li,a,.text,h3{
     cursor: pointer;
 }
 
-.ciaoimg{
-    height: 280px;
-    width: 520px;
-}
 
 .logos{
     position: relative;
@@ -97,30 +110,29 @@ li,a,.text,h3{
     height:auto;
 }
 
+.copyright{
+    text-align: center;
+}
+
 @media (max-width: 991.5px) {
-    .main-text{
-        width:65%;
+    .landingpage-div{
+        font-family: 'Roboto', sans-serif;
+        background-color: #121212;
+        height:auto;
     }
 
+    /* .TextArea{
+        width:65%;
+    }
     .image{
         width:35%;
-    }
+    } */
 }
 
 
 
 
-/* footer{
-    width:100%;
-    position: fixed;
-    bottom: 0;
-    background: linear-gradient(to right,#00093c,#2d0b00);
-    color:#fff;
-    padding: 3px 05 05 px;
-    border-top-left-radius: 125px;
-    font-size: 10px;
-    line-height: 10px;
-} */
+
 /* .row{
     width:85% ;
     margin: auto;
@@ -165,9 +177,7 @@ hr{
     border-bottom: 1px solid#ccc;
     margin: 20px auto;
 }
-.copyright{
-    text-align: center;
-}
+
 @media(max-width:700px){
     footer{
         bottom:unset;
@@ -181,19 +191,19 @@ hr{
     }
 } */
 /* Container needed to position the button. Adjust the width as needed */
-.container {
+/* .container {
     position: relative;
     width: 100%;
   }
   
   /* Make the image responsive */
-  .container img {
+  /* .container img {
     width: 100%;
     height: auto;
-  }
-  
+  } */
+   
   /* Style the button and place it in the middle of the container/image */
-  .container .btn {
+  /* .container .btn {
     position: absolute;
     top: 30%;
     left: 17%;
@@ -210,4 +220,4 @@ hr{
   
   .container .btn:hover {
     background-color: black;
-  }
+  }*/

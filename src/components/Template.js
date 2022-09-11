@@ -10,9 +10,9 @@ export default function Template() {
       <Navbar />
       <div className="templatecards">
         {templates.map((drawTemplate, index) => {
-              return (<TemplateDetail key = {index} cardTitle={drawTemplate.templateTitle} cardImage={drawTemplate.templateImage} cardLink={drawTemplate.redirectTo}/>)
-            }
-          )
+          return (<TemplateDetail key={index} cardTitle={drawTemplate.templateTitle} cardImage={drawTemplate.templateImage} cardLink={drawTemplate.redirectTo} />)
+        }
+        )
         }
       </div>
     </>

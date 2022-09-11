@@ -5,6 +5,7 @@
 
 .navbar-custom:hover {
   background-color: rgb(53, 52, 52);
+  cursor: pointer;
 }
 
 .navbar-title {
