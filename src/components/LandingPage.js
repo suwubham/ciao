@@ -4,22 +4,19 @@ import Logo from '../assets/ciao-3.png'
 import Link1 from '../assets/facebook-512.png'
 import Link2 from '../assets/instagram-logo-2433.png'
 import Link3 from '../assets/twlogo2.png'
-import {Routes, Route , useNavigate } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import RegisterLogin from './Register-Login'
 
 export default function LandingPage() {
 
     let navigate = useNavigate();
-    const routeChange = () => {
-        let path = '/signin';
-        navigate(path);
-    }
 
     return (
         <>
             <Routes>
                 <Route path="/signin" element={<RegisterLogin />} />
             </Routes>
+
             <div className="landingpage-div">
                 <header>
                     <h3 className="title">C I A O</h3>
@@ -27,13 +24,13 @@ export default function LandingPage() {
                 </header>
                 <div className="text">
                     <div className="maintext">
-                        <h1 className="main-text">
+                        <h1 className="TextArea">
                             Generate your own art
                         </h1>
                         <h3>
                             Work with complex math graphs and <br />other image templates to create your art.
                         </h3>
-                        <button type="submit" className="signin" onClick={routeChange}>Get Started</button>
+                        <button type="submit" className="signin" onClick={()=>navigate('/signin')}>Get Started</button>
                     </div>
                     <div className="image">
                         <img src={Logo} className="ciaoimg" />
@@ -49,7 +46,8 @@ export default function LandingPage() {
                     </div>
                     <p className="copyright">CIAO 2022 copyright - All rights reserved</p>
                 </footer>
-                {/* <footer>
+            </div>
+            {/* <footer>
                 <div className="row">
                     <div className="col">
                         <p>A web tool that enables the users to produce generative art of different kinds</p>
@@ -73,7 +71,7 @@ export default function LandingPage() {
                 <hr/>
 
             </footer> */}
-            </div>
+
         </>
     )
 }

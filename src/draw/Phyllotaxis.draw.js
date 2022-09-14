@@ -1,6 +1,8 @@
 import React from "react";
 import "../styles/FromTemplate.css";
 import Navbar from "../components/Navbar";
+import Template from "../components/Template";
+import TemplateDetail from "../components/TemplateDetail";
 import Phyllotaxis from "../components/art/Phyllotaxis";
 
 export default function FromTemplate() {
@@ -30,8 +32,8 @@ export default function FromTemplate() {
           pariatur temporibus veniam. Quod repudiandae eligendi impedit beatae!
         </div>
         <div className="box-2">
-          {" "}
-          <Phyllotaxis />{" "}
+          if ()
+          <Phyllotaxis />
         </div>
         <div className="box-3">
           <h1>Sliders</h1>
