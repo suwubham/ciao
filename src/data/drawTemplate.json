@@ -20,8 +20,9 @@
         "redirectTo": "/template/mandelbrotset"
     },
     {
-        "templateTitle": "Template 4",
-        "templateImage": "../assets/ciaologo3.png"
+        "templateTitle": "Recursive Tree",
+        "templateImage": "https://vuo.org/sites/default/files/composition/Basic%20Recursive%20Tree.jpg",
+        "redirectTo": "/template/recursivetree"
     },
     {
         "templateTitle": "Template 5",

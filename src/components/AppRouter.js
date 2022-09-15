@@ -11,7 +11,7 @@ import Phyllotaxis from "../draw/Phyllotaxis.draw";
 import Flowfield from "../draw/PerlinNoiseFlowField.draw";
 import Lorentzz from "../draw/LorentzAttractor.draw";
 import Mandelbrot from "../draw/MandelbrotSet.draw";
-
+import RecursiveTree from "../draw/RecursiveTree.draw";
 export default function AppRouter() {
   return (
     <Routes>
@@ -26,6 +26,7 @@ export default function AppRouter() {
       <Route path="template/perlinnoise" element={<Flowfield />} />
       <Route path="template/lorentzattractor" element={<Lorentzz />} />
       <Route path="template/mandelbrotset" element={<Mandelbrot />} />
+      <Route path="template/recursivetree" element={<RecursiveTree />} />
     </Routes>
   );
 }
