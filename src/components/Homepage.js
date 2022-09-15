@@ -37,7 +37,7 @@ export default function Homepage() {
           <h1 className="quote">We provide the best for you</h1>
 
           <div className="services">
-            <div className="service1"><p>helloworld</p><div className="text"><p>hello</p></div></div>
+            <div className="service1"><p>helloworld</p><div className="nothing"><p>hello</p></div></div>
             <div className="service1"><p>helloworld</p></div>
             <div className="service1"><p>helloworld</p></div>
             <div className="service1"><p>helloworld</p></div>
