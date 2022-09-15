@@ -1,30 +1,52 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Navbar from "./Navbar";
 import '../styles/HomePage.css'
+import Logo from '../assets/Logo.jpg'
+import Link1 from '../assets/logo.png'
+import Link2 from '../assets/phyllotaxis.png'
+import Link3 from '../assets/twlogo2.png'
+import { Link } from "react-router-dom";
 
 export default function Homepage() {
   return (
     <>
       <Navbar />
-        <header className="bg-dark">
-          <div className="container pt-4 pt-xl-5">
-            <div className="row pt-5">
-              <div className="col-md-8 col-xl-6 text-center text-md-start mx-auto">
-                <div className="text-center">
-                  <p className="fw-bold text-success mb-2">Voted #1 Worldwide</p>
-                  <h1 className="fw-bold">The best solution for you and your customers</h1>
-                </div>
-              </div>
-              <div className="col-12 col-lg-10 mx-auto">
-                <div className="position-relative">
-                  <div style={{ position: "relative" , flex: "0 0 45%" , transform: "translate3d(-15%, 35%, 0)"}}><img className="img-fluid" data-bss-parallax data-bss-parallax-speed={0.8} src="products/3.jpg" /></div>
-                  <div style={{position: "relative" , flex: "0 0 45%" , transform: "translate3d(-5%, 20%, 0)"}}><img className="img-fluid" data-bss-parallax data-bss-parallax-speed="0.4" src="products/2.jpg" /></div>
-                  <div style={{position: "relative" , flex: "0 0 60%" , transform: "translate3d(0, 0%, 0)"}}><img className="img-fluid" data-bss-parallax data-bss-parallax-speed="0.25" src="products/1.jpg" /></div>
-                </div>
-              </div>
+      <div className="homepage">
+
+        <div className="top-page">
+          <div className="main-page-left">
+            <div className="shape"></div>
+            <div className="divi">
+              <h3 className="divi-title">Glassmorphism is awesome</h3>
+              <p>A modern CSS UI library based on the glassmorphism design principles that will help you quickly design and build beautiful websites and applications.</p>
+              <a href="https://ui.glass">Read more</a>
             </div>
           </div>
-        </header>
+
+          <div className="main-page-right">
+            <div className="shape2"></div>
+            <div className="divi">
+              <h3 className="divi-title">Glassmorphism is awesome</h3>
+              <p>A modern CSS UI library based on the glassmorphism design principles that will help you quickly design and build beautiful websites and applications.</p>
+              <a href="https://ui.glass">Read more</a>
+            </div>
+          </div>
+        </div>
+
+        <div className="bottom-page">
+          <h1 className="quote">We provide the best for you</h1>
+
+          <div className="services">
+            <div className="service1"><p>helloworld</p><div className="text"><p>hello</p></div></div>
+            <div className="service1"><p>helloworld</p></div>
+            <div className="service1"><p>helloworld</p></div>
+            <div className="service1"><p>helloworld</p></div>
+          </div>
+
+        </div>
+
+      </div>
     </>
   )
 }
+

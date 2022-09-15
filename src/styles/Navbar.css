@@ -1,10 +1,12 @@
 .navbar-custom {
-  background-color: rgb(53, 52, 52);
+  /* background-color: rgb(53, 52, 52); */
+  background-color: rgb(37, 31, 40);
   color: rgb(136, 136, 136);
 }
 
 .navbar-custom:hover {
-  background-color: rgb(53, 52, 52);
+  /* background-color: rgb(53, 52, 52); */
+  background-color: rgb(37, 31, 40);
   cursor: pointer;
 }
 

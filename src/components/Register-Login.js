@@ -115,25 +115,13 @@ export default function RegisterLogin() {
           </div>
           <div className="imageArea">
             <h1 className="slogan">Generate your own Art</h1>
-            <h3>
-              Work with complex math graphs and <br />
-              other image templates to create your art. Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Rem doloremque quis a atque quidem
-              esse excepturi, architecto amet pariatur impedit. Fuga perspiciatis
-              pariatur temporibus veniam. Quod repudiandae eligendi impedit
-              beatae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
-              doloremque quis a atque quidem esse excepturi, architecto amet
-              pariatur impedit. Fuga perspiciatis pariatur temporibus veniam. Quod
-              repudiandae eligendi impedit beatae! Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Rem doloremque quis a atque quidem
-              esse excepturi, architecto amet pariatur impedit. Fuga perspiciatis
-              pariatur temporibus veniam. Quod repudiandae eligendi impedit
-              beatae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
-              doloremque quis a atque quidem esse excepturi, architecto amet
-              pariatur impedit. Fuga perspiciatis pariatur temporibus veniam. Quod
-              repudiandae eligendi impedit beatae!
-            </h3>
-            <img src={Logo} height={30} width={100} />
+            <div className="infographics">
+              <div className="infogaphics-box-1"></div>
+              <div className="infogaphics-box-2"></div>
+              <div className="infogaphics-box-3"></div>
+              <div className="infogaphics-box-4"></div>
+              <div className="infogaphics-box-5"></div>
+            </div>
           </div>
         </div>
       </>
@@ -153,7 +141,7 @@ export default function RegisterLogin() {
                   Sign In
                 </span>
               </div>
-              <div className="form-group mt-3">
+              <div className="form-group mt-1">
                 <label>First Name</label>
                 <input
                   type="text"
@@ -161,10 +149,12 @@ export default function RegisterLogin() {
                   placeholder="e.g Max"
                   onChange={(e) => setFname(e.target.value)}
                 />
+              </div>
+              <div className="form-group mt-3">
                 <label>Last Name</label>
                 <input
                   type="text"
-                  className="form-control mt-1"
+                  className="form-control mt-2"
                   placeholder="e.g Aarons"
                   onChange={(e) => setLname(e.target.value)}
                 />
@@ -197,28 +187,15 @@ export default function RegisterLogin() {
         </div>
         <div className="imageArea">
           <h1 className="slogan">Generate your own Art</h1>
-          <h3>
-            Work with complex math graphs and <br />
-            other image templates to create your art. Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Rem doloremque quis a atque quidem esse
-            excepturi, architecto amet pariatur impedit. Fuga perspiciatis
-            pariatur temporibus veniam. Quod repudiandae eligendi impedit beatae!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
-            doloremque quis a atque quidem esse excepturi, architecto amet
-            pariatur impedit. Fuga perspiciatis pariatur temporibus veniam. Quod
-            repudiandae eligendi impedit beatae! Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Rem doloremque quis a atque quidem esse
-            excepturi, architecto amet pariatur impedit. Fuga perspiciatis
-            pariatur temporibus veniam. Quod repudiandae eligendi impedit beatae!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
-            doloremque quis a atque quidem esse excepturi, architecto amet
-            pariatur impedit. Fuga perspiciatis pariatur temporibus veniam. Quod
-            repudiandae eligendi impedit beatae!
-          </h3>
-          <img src={Logo} height={30} width={100} />
+          <div className="infographics">
+              <div className="infogaphics-box-1"></div>
+              <div className="infogaphics-box-2"></div>
+              <div className="infogaphics-box-3"></div>
+              <div className="infogaphics-box-4"></div>
+              <div className="infogaphics-box-5"></div>
+            </div>
         </div>
       </div>
-
     </>
   );
 }
