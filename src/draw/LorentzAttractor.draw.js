@@ -31,7 +31,7 @@ export default function LorentzAttractor() {
         </div>
         <div className="box-2">
           {" "}
-          <Lorentz />{" "}
+          <Lorentz bgcolor="red" />{" "}
         </div>
         <div className="box-3">
           <h1>Sliders</h1>

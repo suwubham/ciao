@@ -105,7 +105,7 @@ export default function Navbar() {
                   onClick={() => navigate("/signin")}
                 >
                   Login
-                  <span class="material-symbols-outlined">login</span>
+                  <span className="material-symbols-outlined">login</span>
                 </a>
               </li>
             </ul>

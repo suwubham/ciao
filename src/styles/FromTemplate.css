@@ -1,8 +1,61 @@
-.header-title{
-    padding:10px;
-    text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;800&display=swap');
+
+body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0px;
+  color: white;
+  background-color: #001220;
+  font-family: 'Montserrat', sans-serif;
 }
 
+.flip{
+  transform: rotate(180deg);
+}
+
+.header-title {
+  padding: 10px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.editor-area{
+  display: flex;
+}
+.containerrrrr{
+  /* background-image: url(../assets/blob/layered-waves-haikei.svg);
+  background-repeat: no-repeat;
+  background-size: cover; */
+}
+.main-area {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.description {
+  padding: 20px;
+  font-size: 20px;
+  flex: 1;
+
+}
+
+.main-art {
+  flex: 3;
+}
+
+.editor {
+  flex: 1;
+  padding-right: 10px;
+  height: 100%;
+}
+
+.brancheditor{
+  display: flex;
+  height: 50px;
+}
+/* 
 .drawfromTemplateArea{
     padding:20px;
     display: flex;
@@ -33,4 +86,4 @@
     color:rgb(230, 87, 31);
     background-color: brown;
     align-items: center;
-}
+} */

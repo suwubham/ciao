@@ -6,15 +6,15 @@ export default function Homepage() {
   return (
     <div id="wrapper">
       <Navbar />
-      <div class="spacer layer1 flip"></div>
+      <div className="spacer layer1 flip"></div>
       <section className="darkgreen">
         <h1 className="title">Welcome to CIAO</h1>
         <p className="subtitle">
           A webapp for creating interactive and dynamic generative art.
         </p>
-        <button class="btn-1">Not a user? Signup</button>
+        <button className="btn-1">Not a user? Signup</button>
       </section>
-      <div class="spacer layer1"></div>
+      <div className="spacer layer1"></div>
       <section className="green">
         <h1>Nice Curves</h1>
         <p>
@@ -24,7 +24,7 @@ export default function Homepage() {
           omnis veritatis?
         </p>
       </section>
-      <div class="spacer layer1 flip"></div>
+      <div className="spacer layer1 flip"></div>
       <section className="yellow">
         <h1>Nice Curves</h1>
         <p>
@@ -34,7 +34,7 @@ export default function Homepage() {
           tenetur! Explicabo, nihil eos!
         </p>
       </section>
-      <div class="spacer layer1"></div>
+      <div className="spacer layer1"></div>
       <section className="orange">
         <h1>Nice Curves</h1>
         <p>
@@ -44,7 +44,7 @@ export default function Homepage() {
           necessitatibus adipisci iusto accusamus.
         </p>
       </section>
-      <div class="spacer layer1"></div>
+      <div className="spacer layer1"></div>
       <section className="darkorange">
         <h1>Nice Curves</h1>
         <p>
@@ -54,7 +54,7 @@ export default function Homepage() {
           cupiditate, veritatis quaerat!
         </p>
       </section>
-      <div class="spacer layer1"></div>
+      <div className="spacer layer1"></div>
       <section className="red">
         <h1>Nice Curves</h1>
         <p>

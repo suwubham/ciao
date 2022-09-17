@@ -1,7 +1,8 @@
 import React from "react";
 import Sketch from "react-p5";
 
-export default function LorentzAttractor() {
+export default function LorentzAttractor(props) {
+  console.log(props.bgcolor);
   let x = 0.01;
   let y = 0;
   let z = 0;
