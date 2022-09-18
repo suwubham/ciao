@@ -25,8 +25,9 @@
         "redirectTo": "/template/recursivetree"
     },
     {
-        "templateTitle": "Template 5",
-        "templateImage": "../assets/ciaologo3.png"
+        "templateTitle": "10PRINT LINE",
+        "templateImage": "../assets/ciaologo3.png",
+        "redirectTo": "/template/Tenprint"
     },
     {
         "templateTitle": "Template 6",
@@ -38,6 +39,10 @@
     },
     {
         "templateTitle": "Template 8",
+        "templateImage": "../assets/ciaologo3.png"
+    },
+    {
+        "templateTitle": "Template 9",
         "templateImage": "../assets/ciaologo3.png"
     }
 ]
