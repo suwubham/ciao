@@ -13,6 +13,10 @@ import Lorentzz from "../draw/LorentzAttractor.draw";
 import Mandelbrot from "../draw/MandelbrotSet.draw";
 import RecursiveTree from "../draw/RecursiveTree.draw";
 import Tenprint from "../draw/Tenprint-line.draw";
+// import Supershape from "./art/Tenprint-Circle";
+import TenprintCircle from "../draw/TenprintCircle.draw";
+import RecursionCircle from "../draw/RecursionCircle.draw";
+import RotatedBox from "../draw/RotatedBox.draw";
 export default function AppRouter() {
   return (
     <Routes>
@@ -29,6 +33,9 @@ export default function AppRouter() {
       <Route path="template/mandelbrotset" element={<Mandelbrot />} />
       <Route path="template/recursivetree" element={<RecursiveTree />} />
       <Route path="template/Tenprint" element={<Tenprint />} />
+      <Route path="template/tenprintcircle" element={<TenprintCircle />} />
+      <Route path="template/recursioncircle" element={<RecursionCircle />} />
+      <Route path="template/rotatedbox" element={<RotatedBox />} />
     </Routes>
   );
 }
