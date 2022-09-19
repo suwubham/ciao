@@ -1,12 +1,11 @@
 import { useRef, useEffect } from "react";
 import p5 from "p5";
-let a = [];
+
 export default function Tree(props) {
   const containerRef = useRef();
-
+  console.log(props.trunk.rgb.r);
   const Sketch = (p5) => {
     p5.setup = () => {
-      p5.print("Tree Initializing");
       p5.createCanvas(800, 700);
       p5.angleMode(p5.DEGREES);
       p5.noLoop();
@@ -22,7 +21,7 @@ export default function Tree(props) {
       p5.push();
       if (len > 10) {
         p5.strokeWeight(p5.map(len, 10, 100, 1, 15));
-        p5.stroke(70, 40, 20);
+        p5.stroke(props.trunk.rgb.r, props.trunk.rgb.g, props.trunk.rgb.b);
         p5.line(0, 0, 0, -len);
         p5.translate(0, -len);
         p5.rotate(p5.random(-20, -30));
@@ -31,10 +30,9 @@ export default function Tree(props) {
         p5.branch(len * p5.random(0.7, 0.9));
       } else {
         p5.fill(
-          p5.random(80, 100),
-          p5.random(100, 140),
-          p5.random(20, 80),
-          200
+          p5.random(props.leaf.rgb.r - 20, props.leaf.rgb.r + 20),
+          p5.random(props.leaf.rgb.g - 20, props.leaf.rgb.g + 20),
+          p5.random(props.leaf.rgb.b - 20, props.leaf.rgb.b + 20)
         );
         p5.noStroke();
         p5.beginShape();
@@ -53,7 +51,7 @@ export default function Tree(props) {
   useEffect(() => {
     let inst = new p5(Sketch, containerRef.current);
     return () => inst.remove();
-  }, [props.text]);
+  }, [props]);
 
   return <div ref={containerRef}></div>;
 }

@@ -4,6 +4,8 @@ import Navbar from "../components/Navbar";
 import Recursivetree from "../components/art/RecursiveTree";
 import Slider from "@mui/material/Slider";
 import { styled } from "@mui/material/styles";
+import { SketchPicker } from "react-color";
+import { CirclePicker } from "react-color";
 
 const PrettoSlider = styled(Slider)({
   color: "#fff",
@@ -46,9 +48,21 @@ const PrettoSlider = styled(Slider)({
 
 export default function Tree() {
   const [value, setvalue] = useState(100);
+  const [leafcolor, setleafcolor] = useState({ rgb: { r: 51, g: 51, b: 51 } });
+  const [trunkcolor, settrunkcolor] = useState({
+    rgb: { r: 51, g: 51, b: 51 },
+  });
+
   const handleChange = (e) => {
     setvalue(e.target.value);
-    console.log(value);
+  };
+
+  const handleleafcolor = (color) => {
+    setleafcolor(color);
+  };
+
+  const handletrunkcolor = (color) => {
+    settrunkcolor(color);
   };
   return (
     <>
@@ -86,62 +100,42 @@ export default function Tree() {
             nulla sit amet lorem laoreet, consequat mollis odio fringilla.
           </div>
           <div className="main-art">
-            <Recursivetree text={value} />
+            <Recursivetree text={value} leaf={leafcolor} trunk={trunkcolor} />
           </div>
           <div className="editor">
             <h2>Editor</h2>
             <h5>Branch Length</h5>
-            <div class="brancheditor">
-              50
-              <PrettoSlider
-                min={50}
-                max={200}
-                valueLabelDisplay="auto"
-                aria-label="pretto slider"
-                defaultValue={100}
-                onChange={handleChange}
+            <div className="brancheditor">
+              <div className="slider">
+                50
+                <PrettoSlider
+                  min={50}
+                  max={200}
+                  valueLabelDisplay="auto"
+                  aria-label="pretto slider"
+                  defaultValue={100}
+                  onChange={handleChange}
+                />
+                100
+              </div>
+            </div>
+            <div className="leafcolor">
+              <h5>Leaf color</h5>
+              <SketchPicker
+                color={leafcolor}
+                onChangeComplete={handleleafcolor}
               />
-              100
+            </div>
+            <div className="leafcolor">
+              <h5>Trunk color</h5>
+              <CirclePicker
+                color={trunkcolor}
+                onChangeComplete={handletrunkcolor}
+              />
             </div>
           </div>
         </div>
       </div>
     </>
-    // <div className="header">
-    //   <h2 className="header-title">Recursive Tree</h2>
-    // </div>
-    // <div className="drawfromTemplateArea">
-    //   <div className="box-1">
-    //     <b>Description</b>
-    //     <br />
-    //     Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
-    //     doloremque quis a atque quidem esse excepturi, architecto amet
-    //     pariatur impedit. Fuga perspiciatis pariatur temporibus veniam. Quod
-    //     repudiandae eligendi impedit beatae! Lorem ipsum dolor sit amet
-    //     consectetur adipisicing elit. Rem doloremque quis a atque quidem esse
-    //     excepturi, architecto amet pariatur impedit. Fuga perspiciatis
-    //     pariatur temporibus veniam. Quod repudiandae eligendi impedit beatae!
-    //     Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
-    //     doloremque quis a atque quidem esse excepturi, architecto amet
-    //     pariatur impedit. Fuga perspiciatis pariatur temporibus veniam. Quod
-    //     repudiandae eligendi impedit beatae! Lorem ipsum dolor sit amet
-    //     consectetur adipisicing elit. Rem doloremque quis a atque quidem esse
-    //     excepturi, architecto amet pariatur impedit. Fuga perspiciatis
-    //     pariatur temporibus veniam. Quod repudiandae eligendi impedit beatae!
-    //   </div>
-    //   <div className="box-2">
-    //     {" "}
-    //     <Recursivetree />{" "}
-    //   </div>
-    //   <div className="box-3">
-    //     <h1>Sliders</h1>
-    //     <h2>Button-1</h2>
-    //     <h2>Button-2</h2>
-    //     <h2>Button-3</h2>
-    //     <h2>Button-4</h2>
-    //     <h2>Button-5</h2>
-    //     <h2>Button-6</h2>
-    //   </div>
-    // </div>
   );
 }
