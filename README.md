@@ -31,7 +31,7 @@ CIAO is a webapp for rendering generative art built as a project for COMP 206 co
 ## Authors
 
 - [@Prasiddhi Dahal](https://www.github.com/Prasiddhidahal)
-- Kriti Gautam
+- [@Kriti Gautam] (https://www.github.com/15gk)
 - [@Saral Sainju](https://www.github.com/prg6useless)
 - [@Shubham Shakya](https://www.github.com/suwubham)
 
