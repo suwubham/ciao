@@ -25,19 +25,27 @@
         "redirectTo": "/template/recursivetree"
     },
     {
-        "templateTitle": "Template 5",
-        "templateImage": "../assets/ciaologo3.png"
+        "templateTitle": "10PRINT LINE",
+        "templateImage": "",
+        "redirectTo": "/template/Tenprint"
     },
     {
-        "templateTitle": "Template 6",
-        "templateImage": "../assets/ciaologo3.png"
+        "templateTitle": "TEN-PRINT Circle",
+        "templateImage": "../assets/ciaologo3.png",
+        "redirectTo": "/template/tenprintcircle"
     },
     {
-        "templateTitle": "Template 7",
-        "templateImage": "../assets/ciaologo3.png"
+        "templateTitle": "Recursion Circle",
+        "templateImage": "../assets/ciaologo3.png",
+        "redirectTo": "/template/recursioncircle"
     },
     {
-        "templateTitle": "Template 8",
+        "templateTitle": "Rotated Box",
+        "templateImage": "../assets/ciaologo3.png",
+        "redirectTo": "/template/rotatedbox"
+    },
+    {
+        "templateTitle": "Template 9",
         "templateImage": "../assets/ciaologo3.png"
     }
 ]
