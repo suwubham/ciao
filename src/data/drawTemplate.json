@@ -25,19 +25,27 @@
         "redirectTo": "/template/recursivetree"
     },
     {
-        "templateTitle": "Template 5",
-        "templateImage": "../assets/ciaologo3.png"
+        "templateTitle": "10PRINT LINE",
+        "templateImage": "https://res.cloudinary.com/practicaldev/image/fetch/s--jS6XD10b--/c_imagga_scale,f_auto,fl_progressive,h_1080,q_auto,w_1080/https://dev-to-uploads.s3.amazonaws.com/i/dd707r3swyqoa1e0giqz.png",
+        "redirectTo": "/template/Tenprint"
     },
     {
-        "templateTitle": "Template 6",
-        "templateImage": "../assets/ciaologo3.png"
+        "templateTitle": "TEN-PRINT Circle",
+        "templateImage": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTBmBpt7OPeP9E5GjzYayA4l-N3i08dhksZTjEzQV-TkMjf4qkz",
+        "redirectTo": "/template/tenprintcircle"
     },
     {
-        "templateTitle": "Template 7",
-        "templateImage": "../assets/ciaologo3.png"
+        "templateTitle": "Recursion Circle",
+        "templateImage": "https://i.stack.imgur.com/RStyg.jpg",
+        "redirectTo": "/template/recursioncircle"
     },
     {
-        "templateTitle": "Template 8",
+        "templateTitle": "Rotated Box",
+        "templateImage": "https://c4.wallpaperflare.com/wallpaper/244/736/34/pattern-texture-square-pastel-wallpaper-preview.jpg",
+        "redirectTo": "/template/rotatedbox"
+    },
+    {
+        "templateTitle": "Template 9",
         "templateImage": "../assets/ciaologo3.png"
     }
 ]
