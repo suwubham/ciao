@@ -5,7 +5,7 @@ export default function About() {
   return (
     <>
       <Navbar />
-      <div>About</div>
+      <div>About Subham Shrestha</div>
     </>
   )
 }
