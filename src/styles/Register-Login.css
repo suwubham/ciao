@@ -3,7 +3,7 @@
   padding-top: 35px;
   justify-content: space-evenly;
   font-family: 'Roboto', sans-serif;
-  background-color: #121212;
+  background-color: var(--primary-background);
 }
 
 .Register-form-container {

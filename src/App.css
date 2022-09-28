@@ -1,10 +1,5 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&family=Roboto:wght@100;300;400&display=swap');
-
-.App {
-  background-color: rgb(128,128,128);
-} */
-
-
-
-
+:root{
+  --primary-background: #001220;
+  --purple1: #7b2cbf;
+  --purple2: #c77dff
+}

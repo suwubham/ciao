@@ -117,108 +117,109 @@ export default function RegisterLogin() {
             <h1 className="slogan">Generate your own Art</h1>
             <h3>
               Work with complex math graphs and <br />
-              other image templates to create your art. Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Rem doloremque quis a atque quidem
-              esse excepturi, architecto amet pariatur impedit. Fuga perspiciatis
-              pariatur temporibus veniam. Quod repudiandae eligendi impedit
-              beatae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
-              doloremque quis a atque quidem esse excepturi, architecto amet
-              pariatur impedit. Fuga perspiciatis pariatur temporibus veniam. Quod
+              other image templates to create your art. Lorem ipsum dolor sit
+              amet consectetur adipisicing elit. Rem doloremque quis a atque
+              quidem esse excepturi, architecto amet pariatur impedit. Fuga
+              perspiciatis pariatur temporibus veniam. Quod repudiandae eligendi
+              impedit beatae! Lorem ipsum dolor sit amet consectetur adipisicing
+              elit. Rem doloremque quis a atque quidem esse excepturi,
+              architecto amet pariatur impedit. Fuga perspiciatis pariatur
+              temporibus veniam. Quod repudiandae eligendi impedit beatae! Lorem
+              ipsum dolor sit amet consectetur adipisicing elit. Rem doloremque
+              quis a atque quidem esse excepturi, architecto amet pariatur
+              impedit. Fuga perspiciatis pariatur temporibus veniam. Quod
               repudiandae eligendi impedit beatae! Lorem ipsum dolor sit amet
               consectetur adipisicing elit. Rem doloremque quis a atque quidem
-              esse excepturi, architecto amet pariatur impedit. Fuga perspiciatis
-              pariatur temporibus veniam. Quod repudiandae eligendi impedit
-              beatae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
-              doloremque quis a atque quidem esse excepturi, architecto amet
-              pariatur impedit. Fuga perspiciatis pariatur temporibus veniam. Quod
-              repudiandae eligendi impedit beatae!
+              esse excepturi, architecto amet pariatur impedit. Fuga
+              perspiciatis pariatur temporibus veniam. Quod repudiandae eligendi
+              impedit beatae!
             </h3>
             <img src={Logo} height={30} width={100} />
           </div>
         </div>
       </>
     );
-  }
-  return (
-    <>
-      <Navbar />
-      <div className="Main-div">
-        <div className="Register-form-container">
-          <form className="Register-form" onSubmit={registerUser}>
-            <div className="Register-form-content">
-              <h3 className="Register-form-title">Sign Up</h3>
-              <div className="text-center">
-                Already registered?{" "}
-                <span className="signin-link" onClick={changeRegisterMode}>
-                  Sign In
-                </span>
-              </div>
-              <div className="form-group mt-3">
-                <label>First Name</label>
-                <input
-                  type="text"
-                  className="form-control mt-1"
-                  placeholder="e.g Max"
-                  onChange={(e) => setFname(e.target.value)}
-                />
-                <label>Last Name</label>
-                <input
-                  type="text"
-                  className="form-control mt-1"
-                  placeholder="e.g Aarons"
-                  onChange={(e) => setLname(e.target.value)}
-                />
-              </div>
-              <div className="form-group mt-3">
-                <label>Email address</label>
-                <input
-                  type="email"
-                  className="form-control mt-1"
-                  placeholder="maxaarons@gmail.comm"
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-              </div>
-              <div className="form-group mt-3">
-                <label>Password</label>
-                <input
-                  type="text"
-                  className="form-control mt-1"
-                  placeholder="Password"
-                  onChange={(e) => setPassword(e.target.value)}
-                />
-                <div className="d-grid gap-2 mt-3">
-                  <button type="submit" className="submit-btn">
-                    Submit
-                  </button>
+  } else
+    return (
+      <>
+        <Navbar />
+        <div className="Main-div">
+          <div className="Register-form-container">
+            <form className="Register-form" onSubmit={registerUser}>
+              <div className="Register-form-content">
+                <h3 className="Register-form-title">Sign Up</h3>
+                <div className="text-center">
+                  Already registered?{" "}
+                  <span className="signin-link" onClick={changeRegisterMode}>
+                    Sign In
+                  </span>
+                </div>
+                <div className="form-group mt-3">
+                  <label>First Name</label>
+                  <input
+                    type="text"
+                    className="form-control mt-1"
+                    placeholder="e.g Max"
+                    onChange={(e) => setFname(e.target.value)}
+                  />
+                  <label>Last Name</label>
+                  <input
+                    type="text"
+                    className="form-control mt-1"
+                    placeholder="e.g Aarons"
+                    onChange={(e) => setLname(e.target.value)}
+                  />
+                </div>
+                <div className="form-group mt-3">
+                  <label>Email address</label>
+                  <input
+                    type="email"
+                    className="form-control mt-1"
+                    placeholder="maxaarons@gmail.comm"
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                </div>
+                <div className="form-group mt-3">
+                  <label>Password</label>
+                  <input
+                    type="text"
+                    className="form-control mt-1"
+                    placeholder="Password"
+                    onChange={(e) => setPassword(e.target.value)}
+                  />
+                  <div className="d-grid gap-2 mt-3">
+                    <button type="submit" className="submit-btn">
+                      Submit
+                    </button>
+                  </div>
                 </div>
               </div>
-            </div>
-          </form>
+            </form>
+          </div>
+          <div className="imageArea">
+            <h1 className="slogan">Generate your own Art</h1>
+            <h3>
+              Work with complex math graphs and <br />
+              other image templates to create your art. Lorem ipsum dolor sit
+              amet consectetur adipisicing elit. Rem doloremque quis a atque
+              quidem esse excepturi, architecto amet pariatur impedit. Fuga
+              perspiciatis pariatur temporibus veniam. Quod repudiandae eligendi
+              impedit beatae! Lorem ipsum dolor sit amet consectetur adipisicing
+              elit. Rem doloremque quis a atque quidem esse excepturi,
+              architecto amet pariatur impedit. Fuga perspiciatis pariatur
+              temporibus veniam. Quod repudiandae eligendi impedit beatae! Lorem
+              ipsum dolor sit amet consectetur adipisicing elit. Rem doloremque
+              quis a atque quidem esse excepturi, architecto amet pariatur
+              impedit. Fuga perspiciatis pariatur temporibus veniam. Quod
+              repudiandae eligendi impedit beatae! Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Rem doloremque quis a atque quidem
+              esse excepturi, architecto amet pariatur impedit. Fuga
+              perspiciatis pariatur temporibus veniam. Quod repudiandae eligendi
+              impedit beatae!
+            </h3>
+            <img src={Logo} height={30} width={100} />
+          </div>
         </div>
-        <div className="imageArea">
-          <h1 className="slogan">Generate your own Art</h1>
-          <h3>
-            Work with complex math graphs and <br />
-            other image templates to create your art. Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Rem doloremque quis a atque quidem esse
-            excepturi, architecto amet pariatur impedit. Fuga perspiciatis
-            pariatur temporibus veniam. Quod repudiandae eligendi impedit beatae!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
-            doloremque quis a atque quidem esse excepturi, architecto amet
-            pariatur impedit. Fuga perspiciatis pariatur temporibus veniam. Quod
-            repudiandae eligendi impedit beatae! Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Rem doloremque quis a atque quidem esse
-            excepturi, architecto amet pariatur impedit. Fuga perspiciatis
-            pariatur temporibus veniam. Quod repudiandae eligendi impedit beatae!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
-            doloremque quis a atque quidem esse excepturi, architecto amet
-            pariatur impedit. Fuga perspiciatis pariatur temporibus veniam. Quod
-            repudiandae eligendi impedit beatae!
-          </h3>
-          <img src={Logo} height={30} width={100} />
-        </div>
-      </div>
-
-    </>
-  );
+      </>
+    );
 }

@@ -3,18 +3,21 @@ import p5 from "p5";
 
 export default function Tree(props) {
   const containerRef = useRef();
-  console.log(props.trunk.rgb.r);
   const Sketch = (p5) => {
     p5.setup = () => {
-      p5.createCanvas(800, 700);
+      p5.createCanvas(900, 650);
       p5.angleMode(p5.DEGREES);
       p5.noLoop();
     };
 
     p5.draw = () => {
-      p5.background(255, 194, 209);
-      p5.translate(p5.width / 2, p5.height / 2 + 200);
-      p5.branch(props.text);
+      p5.background(
+        props.background.rgb.r,
+        props.background.rgb.g,
+        props.background.rgb.b
+      );
+      p5.translate(p5.width / 2, p5.height / 2 + 250);
+      p5.branch(props.branch);
     };
 
     p5.branch = (len) => {

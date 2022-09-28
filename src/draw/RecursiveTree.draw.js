@@ -6,9 +6,11 @@ import Slider from "@mui/material/Slider";
 import { styled } from "@mui/material/styles";
 import { SketchPicker } from "react-color";
 import { CirclePicker } from "react-color";
+import { BlockPicker } from "react-color";
+import Stack from "@mui/material/Stack";
 
 const PrettoSlider = styled(Slider)({
-  color: "#fff",
+  color: "#7b2cbf",
   height: 8,
   "& .MuiSlider-track": {
     border: "none",
@@ -31,9 +33,11 @@ const PrettoSlider = styled(Slider)({
     background: "unset",
     padding: 0,
     width: 32,
+    FontFace: "Roboto",
+    fontWeight: "bold",
     height: 32,
     borderRadius: "50% 50% 50% 0",
-    backgroundColor: "#c77dff",
+    backgroundColor: "#7b2cbf",
     transformOrigin: "bottom left",
     transform: "translate(50%, -100%) rotate(-45deg) scale(0)",
     "&:before": { display: "none" },
@@ -47,14 +51,21 @@ const PrettoSlider = styled(Slider)({
 });
 
 export default function Tree() {
-  const [value, setvalue] = useState(100);
-  const [leafcolor, setleafcolor] = useState({ rgb: { r: 51, g: 51, b: 51 } });
+  const [branchlength, setbranchlength] = useState(100);
+  const [leafcolor, setleafcolor] = useState({
+    rgb: { r: 191, g: 63, b: 63 },
+  });
+
   const [trunkcolor, settrunkcolor] = useState({
     rgb: { r: 51, g: 51, b: 51 },
   });
 
-  const handleChange = (e) => {
-    setvalue(e.target.value);
+  const [backgroundcolor, setbackgroundcolor] = useState({
+    rgb: { r: 255, g: 194, b: 209 },
+  });
+
+  const handlebranchlength = (e) => {
+    setbranchlength(e.target.value);
   };
 
   const handleleafcolor = (color) => {
@@ -64,72 +75,95 @@ export default function Tree() {
   const handletrunkcolor = (color) => {
     settrunkcolor(color);
   };
+
+  const handlebackgroundcolor = (color) => {
+    setbackgroundcolor(color);
+  };
+
   return (
     <>
       <Navbar />
       <div className="containerrrrr">
         <h1 className="header-title">Recursive Tree</h1>
         <div className="main-area">
-          <div className="description">
-            <h1>Description</h1>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac
-            facilisis leo, ac sodales mi. Praesent id libero a urna porttitor
-            auctor vitae vel nibh. Suspendisse potenti. Aliquam ac tellus quis
-            turpis placerat facilisis. Phasellus quam leo, placerat in viverra
-            id, aliquam congue felis. Fusce non mauris purus. Suspendisse
-            condimentum rutrum justo, sed tempor enim. Morbi vitae eros cursus,
-            dictum massa vel, rhoncus quam. Fusce nibh nisi, eleifend eget
-            dignissim vel, sodales nec justo. Nunc tincidunt orci ut nunc
-            vulputate sagittis. Cras elit erat, dapibus eget mollis sed,
-            fringilla a sapien. Integer pulvinar eleifend ex, quis facilisis dui
-            lacinia facilisis. Suspendisse quis erat id elit vehicula lacinia
-            sollicitudin id elit. Ut nec lobortis sem, in ornare sapien. Sed
-            sodales, odio luctus vulputate tempor, libero magna tempor arcu,
-            quis tincidunt arcu justo congue tortor. Suspendisse quis tortor
-            rhoncus mi cursus tincidunt. Aliquam a dolor lorem. Aenean
-            ullamcorper mattis lorem sit amet aliquet. In dignissim metus sit
-            amet justo porta commodo. Integer sit amet leo lectus. Quisque
-            iaculis odio in tellus porttitor, ac finibus risus sollicitudin.
-            Donec aliquet, quam nec consectetur consectetur, tortor tellus
-            pulvinar odio, at aliquet dui sem quis erat. Proin est tortor,
-            placerat vitae justo vitae, congue molestie neque. Vestibulum at
-            sapien et turpis efficitur ultrices. Vivamus at eros a mi porttitor
-            tristique ut eu urna. Aenean dapibus enim eu venenatis porttitor.
-            Sed erat arcu, tincidunt et imperdiet sed, pellentesque at risus.
-            Duis semper scelerisque justo non egestas. Suspendisse vehicula
-            nulla sit amet lorem laoreet, consequat mollis odio fringilla.
-          </div>
+          <nav className="descriptionbar">
+            <div className="logo description-link">
+              <span className="link-text">Description</span>
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                data-prefix="fad"
+                data-icon="angle-double-right"
+                role="img"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+                className="svg-inline--fa fa-angle-double-right fa-w-14 fa-5x"
+              >
+                <g className="fa-group">
+                  <path
+                    fill="currentColor"
+                    d="M224 273L88.37 409a23.78 23.78 0 0 1-33.8 0L32 386.36a23.94 23.94 0 0 1 0-33.89l96.13-96.37L32 159.73a23.94 23.94 0 0 1 0-33.89l22.44-22.79a23.78 23.78 0 0 1 33.8 0L223.88 239a23.94 23.94 0 0 1 .1 34z"
+                    className="fa-secondary"
+                  ></path>
+                  <path
+                    fill="currentColor"
+                    d="M415.89 273L280.34 409a23.77 23.77 0 0 1-33.79 0L224 386.26a23.94 23.94 0 0 1 0-33.89L320.11 256l-96-96.47a23.94 23.94 0 0 1 0-33.89l22.52-22.59a23.77 23.77 0 0 1 33.79 0L416 239a24 24 0 0 1-.11 34z"
+                    className="fa-primary"
+                  ></path>
+                </g>
+              </svg>
+            </div>
+            <span className="link-text">
+              Recursive Tree (also known as fractal tree) bla bla
+            </span>
+          </nav>
           <div className="main-art">
-            <Recursivetree text={value} leaf={leafcolor} trunk={trunkcolor} />
+            <Recursivetree
+              branch={branchlength}
+              leaf={leafcolor}
+              trunk={trunkcolor}
+              background={backgroundcolor}
+            />
           </div>
           <div className="editor">
             <h2>Editor</h2>
-            <h5>Branch Length</h5>
-            <div className="brancheditor">
-              <div className="slider">
-                50
+            <div className="branch">
+              <h5>Branch Length</h5>
+              <Stack direction="row" alignItems="center" className="slider">
+                0
                 <PrettoSlider
-                  min={50}
-                  max={200}
+                  min={0}
+                  max={120}
                   valueLabelDisplay="auto"
                   aria-label="pretto slider"
-                  defaultValue={100}
-                  onChange={handleChange}
+                  defaultValue={branchlength}
+                  onChange={handlebranchlength}
                 />
-                100
+                120
+              </Stack>
+            </div>
+            <div className="editrow1">
+              <div className="leafcolor">
+                <h5>Leaf color</h5>
+                <SketchPicker
+                  color={leafcolor.rgb}
+                  onChangeComplete={handleleafcolor}
+                />
+              </div>
+              <div className="backgroundcolor">
+                <h5>Background color</h5>
+                <SketchPicker
+                  color={backgroundcolor.rgb}
+                  onChangeComplete={handlebackgroundcolor}
+                  triangle={"hide"}
+                />
               </div>
             </div>
-            <div className="leafcolor">
-              <h5>Leaf color</h5>
-              <SketchPicker
-                color={leafcolor}
-                onChangeComplete={handleleafcolor}
-              />
-            </div>
-            <div className="leafcolor">
+
+            <div className="trunkcolor">
               <h5>Trunk color</h5>
               <CirclePicker
-                color={trunkcolor}
+                color={trunkcolor.rgb}
                 onChangeComplete={handletrunkcolor}
               />
             </div>

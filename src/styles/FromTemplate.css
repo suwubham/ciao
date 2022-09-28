@@ -1,6 +1,136 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;800&display=swap');
 
+.main-area{
+  display: flex;
+}
+
+:root {
+  font-size: 16px;
+  font-family: 'Open Sans';
+  --text-primary: #b6b6b6;
+  --text-secondary: #ececec;
+  --bg-secondary: #141418;
+}
+
+*::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+*::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #6649b8;
+}
+
+.editrow1{
+  display:flex;
+  flex-direction:row;
+  gap: 50px;
+}
+
+.descriptionbar {
+  background-color: #001220;
+  transition: width 800ms ease;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background-image: url(../assets/backgrounds/description-bar.svg);
+  background-repeat: no-repeat;
+}
+
+.description-link {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  filter: grayscale(100%) opacity(0.7);
+}
+
+.description-link:hover {
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  filter: grayscale(0%) opacity(1);
+}
+
+.link-text {
+  display: none;
+  margin-left: 1rem;
+}
+
+.description-link svg {
+  width: 2rem;
+  min-width: 2rem;
+  margin: 0 1.5rem;
+}
+
+.fa-primary {
+  color: #c77dff;
+}
+
+.fa-secondary {
+  color: #7b2cbf;
+}
+
+.fa-primary,
+.fa-secondary {
+  transition: 600ms;
+}
+
+.logo {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  font-size: 1.5rem;
+  letter-spacing: 0.3ch;
+  width: 100%;
+}
+
+.logo svg {
+  transform: rotate(0deg);
+  transition: 600ms;
+}
+
+.descriptionbar:hover .logo svg {
+  transform: rotate(-180deg);
+}
+
+/* Large screens */
+@media only screen and (min-width: 600px) {
+  .descriptionbar {
+    top: 0;
+    width: 5rem;
+    height: 100vh;
+  }
+
+  .descriptionbar:hover {
+    width: 20rem;
+    background-image: none;
+    background-color: #7b2cbf;
+  }
+
+  .descriptionbar:hover .link-text {
+    display: inline;
+  }
+
+  .descriptionbar:hover .logo svg
+  {
+    margin-left: 2rem;
+  }
+
+  .descriptionbar:hover .logo-text
+  {
+    left: 0px;
+  }
+}
+
 body {
   height: 100%;
   width: 100%;
@@ -19,45 +149,27 @@ body {
   padding: 10px;
   text-align: center;
   font-weight: 700;
+  text-transform: uppercase;
 }
 
 .editor{
-  display: grid;
-  padding: 10px;
-  flex: 2;
-  padding-right: 10px;
+  display: flex;
   height: 100%;
+  margin-left: 2rem;
+  flex-direction: column;
+  overflow: hidden;
+  gap: 20px;
 }
 
 .slider{
-  min-width: 350px;
+  width: 400px;
   display:flex;
-  background-color: #7b2cbf;
+  background-color: #ffffff;
   border-radius: 10px;
   padding: 10px;
   gap: 10px;
+  color: #7b2cbf;
+  font-weight: bold;
 }
 
 
-.main-area {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.description {
-  padding: 20px;
-  font-size: 20px;
-  flex: 1;
-
-}
-
-.main-art {
-  flex: 3;
-}
-
-
-
-.brancheditor{
-  display: flex;
-  height: 50px;
-}

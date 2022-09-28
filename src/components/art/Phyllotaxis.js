@@ -1,37 +1,42 @@
-import React from "react";
-import Sketch from "react-p5";
+import { useRef, useEffect } from "react";
+import p5 from "p5";
 
-var n = 0;
-var c = 4;
+export default function Tree(props) {
+  console.log(props.down);
+  var n = 1;
+  var c = props.pgap;
+  var col = 1;
+  const containerRef = useRef();
+  const Sketch = (p5) => {
+    p5.setup = () => {
+      p5.createCanvas(900, 650);
+      p5.angleMode(p5.DEGREES);
+      p5.background(
+        props.background.rgb.r,
+        props.background.rgb.g,
+        props.background.rgb.b
+      );
+      p5.colorMode(p5.HSB);
+    };
 
-export default function Phyllotaxis() {
-  const setup = (p5, canvasParentRef) => {
-    p5.createCanvas(500, 400).parent(canvasParentRef);
-    p5.angleMode(p5.DEGREES);
-    p5.colorMode(p5.HSB);
-    p5.background(0);
+    p5.draw = () => {
+      p5.translate(p5.width / 2, p5.height / 2);
+      var a = n * 137.5;
+      var r = c * p5.sqrt(n);
+      var x = r * p5.cos(a);
+      var y = r * p5.sin(a);
+      p5.fill(col % 256, 255, 255);
+      p5.noStroke();
+      p5.circle(x, y, props.pradius);
+      n++;
+      col++;
+    };
   };
 
-  const draw = (p5) => {
-    var a = n * 137.5;
-    var r = c * p5.sqrt(n);
-    var x = r * p5.cos(a) + p5.width / 2;
-    var y = r * p5.sin(a) + p5.height / 2;
-    p5.fill(n % 256, 255, 255);
-    p5.noStroke();
-    p5.ellipse(x, y, 4, 4);
-    n++;
-    a = p5.createVector(5, 5);
-  };
-  return (
-    <Sketch
-      setup={setup}
-      draw={draw}
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignContent: "center",
-      }}
-    />
-  );
+  useEffect(() => {
+    let inst = new p5(Sketch, containerRef.current);
+    return () => inst.remove();
+  }, [props.background, props.pradius, props.pgap]);
+
+  return <div ref={containerRef}></div>;
 }
