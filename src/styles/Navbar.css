@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0');
-.navbar-custom {
-  background-color: #001220;
-  color: rgb(255, 253, 253);
-}
 
-.navbar-custom:hover {
-  cursor: pointer;
+.navbar-custom {
+  background: linear-gradient(
+    135deg,
+    rgba(0,18,32,0.4),
+    rgba(0,18,32,0.2)
+  );
+  backdrop-filter: blur(2px);
+  color: rgb(255, 253, 253);
 }
 
 .nav-link{
@@ -16,7 +18,8 @@
 }
 
 .nav-link:hover{
-  box-shadow: inset 100px 0 0 0 #7b2cbf;
+  background: #7b2cbf;
+  cursor: pointer;
 }
 
 .nav-link:focus{
@@ -48,16 +51,22 @@
   padding: 0px 20px;
   background-color: #7b2cbf;
   color: white;
+  border: none;
 }
 
 .special{
   display: flex;
   margin-right: 10px;
   gap: 5px;
+  background-color: #7b2cbf00;
+  border: none;
+  color: white;
+  
+
 }
 
 .search-btn:hover {
-  background-color: rgb(90, 25, 119);
+  background-color: #c77dff;
   color: white;
 }
 

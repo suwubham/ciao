@@ -16,7 +16,6 @@ export default function Navbar() {
           className="navbar-title navbar-custom"
           onClick={() => navigate("/home")}
         >
-          {/* <img src={Logo} height={30} width={75} /> */}
           CIAO
         </a>
 
@@ -100,7 +99,7 @@ export default function Navbar() {
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
                 <a
-                  className="nav-link navbar-custom navvv special"
+                  className="nav-link special"
                   aria-current="page"
                   onClick={() => navigate("/signin")}
                 >

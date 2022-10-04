@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import Logo from "../assets/ciaologo3.png";
 import "../styles/Register-Login.css";
 import Navbar from "./Navbar";
+import pic from "../assets/illustrations/undraw_color_palette_re_dwy7.svg";
 
 export default function RegisterLogin() {
-  let [RegisterMode, setRegisterMode] = useState("signup");
+  let [RegisterMode, setRegisterMode] = useState("signin");
   const [fname, setFname] = useState("");
   const [lname, setLname] = useState("");
   const [email, setEmail] = useState("");
@@ -70,72 +70,26 @@ export default function RegisterLogin() {
     return (
       <>
         <Navbar />
-        <div className="Main-div">
-          <div className="Register-form-container">
-            <form className="Register-form" onSubmit={loginUser}>
-              <div className="Register-form-content">
-                <h3 className="Register-form-title">Sign In</h3>
-                <div className="text-center">
-                  Not registered yet?{" "}
-                  <span className="signin-link" onClick={changeRegisterMode}>
-                    Sign Up
-                  </span>
-                </div>
-                <div className="form-group mt-3">
-                  <label>Email address</label>
-                  <input
-                    type="email"
-                    className="form-control mt-1"
-                    placeholder="Enter email"
-                    onChange={(e) => setEmail(e.target.value)}
-                  />
-                </div>
-                <div className="form-group mt-3">
-                  <label>Password</label>
-                  <input
-                    type="password"
-                    className="form-control mt-1"
-                    placeholder="Enter password"
-                    onChange={(e) => setPassword(e.target.value)}
-                  />
-                </div>
-                <div className="d-grid gap-2 mt-3">
-                  <button type="submit" className="submit-btn">
-                    Log In
-                  </button>
-                </div>
-                <p className="text-center mt-2">
-                  Forgot{" "}
-                  <a href="#" className="link-pwem">
-                    password?
-                  </a>
-                </p>
-              </div>
-            </form>
-          </div>
-          <div className="imageArea">
-            <h1 className="slogan">Generate your own Art</h1>
-            <h3>
-              Work with complex math graphs and <br />
-              other image templates to create your art. Lorem ipsum dolor sit
-              amet consectetur adipisicing elit. Rem doloremque quis a atque
-              quidem esse excepturi, architecto amet pariatur impedit. Fuga
-              perspiciatis pariatur temporibus veniam. Quod repudiandae eligendi
-              impedit beatae! Lorem ipsum dolor sit amet consectetur adipisicing
-              elit. Rem doloremque quis a atque quidem esse excepturi,
-              architecto amet pariatur impedit. Fuga perspiciatis pariatur
-              temporibus veniam. Quod repudiandae eligendi impedit beatae! Lorem
-              ipsum dolor sit amet consectetur adipisicing elit. Rem doloremque
-              quis a atque quidem esse excepturi, architecto amet pariatur
-              impedit. Fuga perspiciatis pariatur temporibus veniam. Quod
-              repudiandae eligendi impedit beatae! Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Rem doloremque quis a atque quidem
-              esse excepturi, architecto amet pariatur impedit. Fuga
-              perspiciatis pariatur temporibus veniam. Quod repudiandae eligendi
-              impedit beatae!
-            </h3>
-            <img src={Logo} height={30} width={100} />
-          </div>
+        <div className="signuppannel">
+          <div className="sstitle">New here?</div>
+          Sign up now to make awesome arts!
+          <button className="signin-link" onClick={changeRegisterMode}>
+            Sign Up
+          </button>
+        </div>
+        <div className="container-si">
+          <form action="#" class="sign-in-form">
+            <h2 className="title">Sign in</h2>
+            <div className="input-field">
+              <i className="fas fa-user"></i>
+              <input type="text" placeholder="Username" />
+            </div>
+            <div className="input-field">
+              <i className="fas fa-lock"></i>
+              <input type="password" placeholder="Password" />
+            </div>
+            <input type="submit" value="Login" class="btn solid" />
+          </form>
         </div>
       </>
     );
@@ -143,82 +97,33 @@ export default function RegisterLogin() {
     return (
       <>
         <Navbar />
-        <div className="Main-div">
-          <div className="Register-form-container">
-            <form className="Register-form" onSubmit={registerUser}>
-              <div className="Register-form-content">
-                <h3 className="Register-form-title">Sign Up</h3>
-                <div className="text-center">
-                  Already registered?{" "}
-                  <span className="signin-link" onClick={changeRegisterMode}>
-                    Sign In
-                  </span>
-                </div>
-                <div className="form-group mt-3">
-                  <label>First Name</label>
-                  <input
-                    type="text"
-                    className="form-control mt-1"
-                    placeholder="e.g Max"
-                    onChange={(e) => setFname(e.target.value)}
-                  />
-                  <label>Last Name</label>
-                  <input
-                    type="text"
-                    className="form-control mt-1"
-                    placeholder="e.g Aarons"
-                    onChange={(e) => setLname(e.target.value)}
-                  />
-                </div>
-                <div className="form-group mt-3">
-                  <label>Email address</label>
-                  <input
-                    type="email"
-                    className="form-control mt-1"
-                    placeholder="maxaarons@gmail.comm"
-                    onChange={(e) => setEmail(e.target.value)}
-                  />
-                </div>
-                <div className="form-group mt-3">
-                  <label>Password</label>
-                  <input
-                    type="text"
-                    className="form-control mt-1"
-                    placeholder="Password"
-                    onChange={(e) => setPassword(e.target.value)}
-                  />
-                  <div className="d-grid gap-2 mt-3">
-                    <button type="submit" className="submit-btn">
-                      Submit
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </form>
+        <div className="signuppannel">
+          <div style={{ fontSize: 30, fontWeight: 600 }}>
+            Already have an account?
           </div>
-          <div className="imageArea">
-            <h1 className="slogan">Generate your own Art</h1>
-            <h3>
-              Work with complex math graphs and <br />
-              other image templates to create your art. Lorem ipsum dolor sit
-              amet consectetur adipisicing elit. Rem doloremque quis a atque
-              quidem esse excepturi, architecto amet pariatur impedit. Fuga
-              perspiciatis pariatur temporibus veniam. Quod repudiandae eligendi
-              impedit beatae! Lorem ipsum dolor sit amet consectetur adipisicing
-              elit. Rem doloremque quis a atque quidem esse excepturi,
-              architecto amet pariatur impedit. Fuga perspiciatis pariatur
-              temporibus veniam. Quod repudiandae eligendi impedit beatae! Lorem
-              ipsum dolor sit amet consectetur adipisicing elit. Rem doloremque
-              quis a atque quidem esse excepturi, architecto amet pariatur
-              impedit. Fuga perspiciatis pariatur temporibus veniam. Quod
-              repudiandae eligendi impedit beatae! Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Rem doloremque quis a atque quidem
-              esse excepturi, architecto amet pariatur impedit. Fuga
-              perspiciatis pariatur temporibus veniam. Quod repudiandae eligendi
-              impedit beatae!
-            </h3>
-            <img src={Logo} height={30} width={100} />
-          </div>
+          <button className="signin-link" onClick={changeRegisterMode}>
+            Log in
+          </button>
+        </div>
+        <div className="container-su">
+          <form action="#" class="sign-up-form">
+            <h2 class="title">Sign up</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="Username" />
+            </div>
+
+            <div class="input-field">
+              <i class="fas fa-envelope"></i>
+              <input type="email" placeholder="Email" />
+            </div>
+
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Password" />
+            </div>
+            <input type="submit" class="btn" value="Sign up" />
+          </form>
         </div>
       </>
     );
