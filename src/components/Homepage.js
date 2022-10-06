@@ -1,8 +1,14 @@
 import React from "react";
 import Navbar from "./Navbar";
 import "../styles/Home.css";
-
+import { useNavigate } from "react-router-dom";
 export default function Homepage() {
+  const navigate = useNavigate();
+  const handleClick = (e) => {
+    navigate("/signin", {
+      state: false,
+    });
+  };
   return (
     <>
       <Navbar />
@@ -13,7 +19,9 @@ export default function Homepage() {
           <p className="subtitle">
             A webapp for creating interactive and dynamic generative art.
           </p>
-          <button className="btn-1">Not a user? Signup</button>
+          <button className="btn-1" onClick={handleClick}>
+            Not a user? Signup
+          </button>
         </section>
         <div className="spacer layer1"></div>
         <section className="green">

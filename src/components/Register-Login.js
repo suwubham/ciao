@@ -1,18 +1,19 @@
 import React, { useState } from "react";
+import { useLocation } from "react-router-dom";
 import "../styles/Register-Login.css";
 import Navbar from "./Navbar";
-import pic from "../assets/illustrations/undraw_color_palette_re_dwy7.svg";
+import * as Components from "../styles/signincontainer";
 
 export default function RegisterLogin() {
-  let [RegisterMode, setRegisterMode] = useState("signin");
-  const [fname, setFname] = useState("");
-  const [lname, setLname] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const location = useLocation();
+  const [name, setname] = useState("");
+  const [username, setusername] = useState("");
+  const [email, setemail] = useState("");
+  const [password, setpassword] = useState("");
+  const [signIn, toggle] = useState(location.state);
 
   function registerUser(event) {
     event.preventDefault();
-    console.log(fname, lname, email, password);
     fetch("http://localhost:5000/register", {
       method: "POST",
       crossDomain: true,
@@ -22,21 +23,21 @@ export default function RegisterLogin() {
         "Access-Control-Allow-Origin": "*",
       },
       body: JSON.stringify({
-        fname,
-        lname,
+        name,
+        username,
         email,
         password,
       }),
     })
       .then((res) => res.json())
       .then((data) => {
+        alert("signup successful");
         console.log(data, "userRegisterd");
       });
   }
 
   function loginUser(event) {
     event.preventDefault();
-    console.log(email, password);
     fetch("http://localhost:5000/login", {
       method: "POST",
       crossDomain: true,
@@ -46,7 +47,7 @@ export default function RegisterLogin() {
         "Access-Control-Allow-Origin": "*",
       },
       body: JSON.stringify({
-        email,
+        username,
         password,
       }),
     })
@@ -55,76 +56,118 @@ export default function RegisterLogin() {
         console.log(data, "Success");
         if (data.status == "ok") {
           alert("login successful");
-          window.location.href = "/home";
+          window.location.href = "/template";
         } else {
           alert("User does not exist");
         }
       });
   }
 
-  const changeRegisterMode = () => {
-    setRegisterMode(RegisterMode == "signin" ? "signup" : "signin");
-  };
-
-  if (RegisterMode === "signin") {
-    return (
-      <>
-        <Navbar />
-        <div className="signuppannel">
-          <div className="sstitle">New here?</div>
-          Sign up now to make awesome arts!
-          <button className="signin-link" onClick={changeRegisterMode}>
-            Sign Up
-          </button>
-        </div>
-        <div className="container-si">
-          <form action="#" class="sign-in-form">
-            <h2 className="title">Sign in</h2>
-            <div className="input-field">
+  return (
+    <>
+      <Navbar />
+      <Components.Container>
+        <Components.SignUpContainer signinIn={signIn}>
+          <Components.Form>
+            <Components.Title>Register</Components.Title>
+            <Components.InputField>
+              <i className="fa-solid fa-id-card"></i>
+              <Components.Input
+                type="text"
+                placeholder="Fullname"
+                onChange={(e) => {
+                  setname(e.target.value);
+                }}
+              />
+            </Components.InputField>
+            <Components.InputField>
               <i className="fas fa-user"></i>
-              <input type="text" placeholder="Username" />
-            </div>
-            <div className="input-field">
+              <Components.Input
+                type="text"
+                placeholder="Username"
+                onChange={(e) => {
+                  setusername(e.target.value);
+                }}
+              />
+            </Components.InputField>
+            <Components.InputField>
+              <i className="fas fa-envelope"></i>
+              <Components.Input
+                type="email"
+                placeholder="Email"
+                onChange={(e) => {
+                  setemail(e.target.value);
+                }}
+              />
+            </Components.InputField>
+            <Components.InputField>
               <i className="fas fa-lock"></i>
-              <input type="password" placeholder="Password" />
-            </div>
-            <input type="submit" value="Login" class="btn solid" />
-          </form>
-        </div>
-      </>
-    );
-  } else
-    return (
-      <>
-        <Navbar />
-        <div className="signuppannel">
-          <div style={{ fontSize: 30, fontWeight: 600 }}>
-            Already have an account?
-          </div>
-          <button className="signin-link" onClick={changeRegisterMode}>
-            Log in
-          </button>
-        </div>
-        <div className="container-su">
-          <form action="#" class="sign-up-form">
-            <h2 class="title">Sign up</h2>
-            <div class="input-field">
-              <i class="fas fa-user"></i>
-              <input type="text" placeholder="Username" />
-            </div>
+              <Components.Input
+                type="passsword"
+                placeholder="Password"
+                onChange={(e) => {
+                  setpassword(e.target.value);
+                }}
+              />
+            </Components.InputField>
+            <Components.Button onClick={registerUser}>
+              Sign Up
+            </Components.Button>
+          </Components.Form>
+        </Components.SignUpContainer>
+        <Components.SignInContainer signinIn={signIn}>
+          <Components.Form>
+            <Components.Title>Sign in</Components.Title>
+            <Components.InputField>
+              <i className="fas fa-user"></i>
+              <Components.Input
+                type="text"
+                placeholder="Username"
+                onChange={(e) => {
+                  setusername(e.target.value);
+                }}
+              />
+            </Components.InputField>
 
-            <div class="input-field">
-              <i class="fas fa-envelope"></i>
-              <input type="email" placeholder="Email" />
-            </div>
+            <Components.InputField>
+              <i className="fas fa-lock"></i>
+              <Components.Input
+                type="password"
+                placeholder="Password"
+                onChange={(e) => {
+                  setpassword(e.target.value);
+                }}
+              />
+            </Components.InputField>
 
-            <div class="input-field">
-              <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password" />
-            </div>
-            <input type="submit" class="btn" value="Sign up" />
-          </form>
-        </div>
-      </>
-    );
+            <Components.Button onClick={loginUser}>Sign In</Components.Button>
+          </Components.Form>
+        </Components.SignInContainer>
+
+        <Components.OverlayContainer signinIn={signIn}>
+          <Components.Overlay signinIn={signIn}>
+            <Components.LeftOverlayPanel signinIn={signIn}>
+              <Components.Title>Already have an account?</Components.Title>
+              <Components.Paragraph>
+                Log in now and make awesome arts!
+              </Components.Paragraph>
+              <Components.GhostButton onClick={() => toggle(true)}>
+                Sign In
+              </Components.GhostButton>
+            </Components.LeftOverlayPanel>
+
+            <Components.RightOverlayPanel signinIn={signIn}>
+              <Components.Title>Don't have an account?</Components.Title>
+              <Components.Paragraph>
+                Register now and discover awesome generative arts!
+              </Components.Paragraph>
+              <Components.GhostButton onClick={() => toggle(false)}>
+                Sigin Up
+              </Components.GhostButton>
+            </Components.RightOverlayPanel>
+          </Components.Overlay>
+        </Components.OverlayContainer>
+      </Components.Container>
+    </>
+  );
 }

@@ -1,8 +1,8 @@
 import mongoose from "mongoose";
 const UserDetailSchema = new mongoose.Schema(
   {
-    fname: String,
-    lname: String,
+    name: String,
+    username: { type: String, unique: true },
     email: { type: String, unique: true },
     password: String,
   },
@@ -10,6 +10,7 @@ const UserDetailSchema = new mongoose.Schema(
     collection: "UserInfo",
   }
 );
+
 const model = mongoose.model("UserInfo", UserDetailSchema);
 
 export default model;

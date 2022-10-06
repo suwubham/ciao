@@ -1,11 +1,12 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/Navbar.css";
-import Logo from "../assets/ciao-3.png";
 
 export default function Navbar() {
   let navigate = useNavigate();
-
+  const handleClick = (e) => {
+    navigate("/signin", { state: true });
+  };
   return (
     <nav
       className="navbar navbar-custom sticky-top navbar-expand-lg "
@@ -101,7 +102,7 @@ export default function Navbar() {
                 <a
                   className="nav-link special"
                   aria-current="page"
-                  onClick={() => navigate("/signin")}
+                  onClick={handleClick}
                 >
                   Login
                   <span className="material-symbols-outlined">login</span>
