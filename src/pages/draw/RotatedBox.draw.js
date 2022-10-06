@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import "../styles/FromTemplate.css";
-import Navbar from "../components/Navbar";
-import Tenprintline from "../components/art/Tenprint-line";
+import "../../styles/FromTemplate.css";
+import Navbar from "../../components/Navbar";
+import Rotatedbox from "../../components/art/RotatedBox";
 import Slider from "@mui/material/Slider";
 import { styled } from "@mui/material/styles";
 
@@ -9,6 +9,7 @@ const PrettoSlider = styled(Slider)({
   color: "#fff",
   height: 8,
   "& .MuiSlider-track": {
+    
     border: "none",
   },
   "& .MuiSlider-thumb": {
@@ -44,7 +45,7 @@ const PrettoSlider = styled(Slider)({
   },
 });
 
-export default function Tree() {
+export default function Rbox() {
   const [value, setvalue] = useState(100);
   const handleChange = (e) => {
     setvalue(e.target.value);
@@ -54,7 +55,7 @@ export default function Tree() {
     <>
       <Navbar />
       <div className="containerrrrr">
-        <h1 className="header-title">Tenprintline</h1>
+        <h1 className="header-title">Rotated Box</h1>
         <div className="main-area">
           <div className="description">
             <h1>Description</h1>
@@ -86,7 +87,7 @@ export default function Tree() {
             nulla sit amet lorem laoreet, consequat mollis odio fringilla.
           </div>
           <div className="main-art">
-            <Tenprintline text={value} />
+            <Rotatedbox text={value} />
           </div>
           <div className="editor">
             <h2>Editor</h2>

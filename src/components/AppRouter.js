@@ -1,22 +1,21 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import LandingPage from "./LandingPage";
-import RegisterLogin from "./Register-Login";
-import Homepage from "./Homepage";
-import YourArts from "./YourArts";
-import Profile from "./Profile";
-import Template from "./Template";
-import About from "./About";
-import Phyllotaxis from "../draw/Phyllotaxis.draw";
-import Flowfield from "../draw/PerlinNoiseFlowField.draw";
-import Lorentzz from "../draw/LorentzAttractor.draw";
-import Mandelbrot from "../draw/MandelbrotSet.draw";
-import RecursiveTree from "../draw/RecursiveTree.draw";
-import Tenprint from "../draw/Tenprint-line.draw";
-// import Supershape from "./art/Tenprint-Circle";
-import TenprintCircle from "../draw/TenprintCircle.draw";
-import RecursionCircle from "../draw/RecursionCircle.draw";
-import RotatedBox from "../draw/RotatedBox.draw";
+import LandingPage from "../pages/LandingPage";
+import RegisterLogin from "../pages/Register-Login";
+import Homepage from "../pages/Homepage";
+import YourArts from "../pages/YourArts";
+import Profile from "../pages/Profile";
+import Template from "../pages/Template";
+import About from "../pages/About";
+import Phyllotaxis from "../pages/draw/Phyllotaxis.draw";
+import Flowfield from "../pages/draw/PerlinNoiseFlowField.draw";
+import Lorentzz from "../pages/draw/LorentzAttractor.draw";
+import Mandelbrot from "../pages/draw/MandelbrotSet.draw";
+import RecursiveTree from "../pages/draw/RecursiveTree.draw";
+import Tenprint from "../pages/draw/Tenprint-line.draw";
+import TenprintCircle from "../pages/draw/TenprintCircle.draw";
+import RecursionCircle from "../pages/draw/RecursionCircle.draw";
+import RotatedBox from "../pages/draw/RotatedBox.draw";
 export default function AppRouter() {
   return (
     <Routes>

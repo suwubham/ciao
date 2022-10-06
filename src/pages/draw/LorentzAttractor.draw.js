@@ -1,7 +1,7 @@
 import React from "react";
-import "../styles/FromTemplate.css";
-import Navbar from "../components/Navbar";
-import Lorentz from "../components/art/LorentzAttractor";
+import "../../styles/FromTemplate.css";
+import Navbar from "../../components/Navbar";
+import Lorentz from "../../components/art/LorentzAttractor";
 
 export default function LorentzAttractor() {
   return (

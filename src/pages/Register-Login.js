@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
 import "../styles/Register-Login.css";
-import Navbar from "./Navbar";
+import Navbar from "../components/Navbar";
 import * as Components from "../styles/signincontainer";
 
 export default function RegisterLogin() {

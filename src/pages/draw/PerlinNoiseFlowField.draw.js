@@ -1,14 +1,14 @@
 import React from "react";
-import "../styles/FromTemplate.css";
-import Navbar from "../components/Navbar";
-import Mandelbrot from "../components/art/MandelbrotSet";
+import "../../styles/FromTemplate.css";
+import Navbar from "../../components/Navbar";
+import Perlin from "../../components/art/PerlinNoeseFlowField";
 
-export default function MandelbrotSet() {
+export default function PerlinNoise() {
   return (
     <>
       <Navbar />
       <div className="header">
-        <h2 className="header-title">Mandelbrot Set</h2>
+        <h2 className="header-title">Perlin Noise Flow Field</h2>
       </div>
       <div className="drawfromTemplateArea">
         <div className="box-1">
@@ -31,7 +31,7 @@ export default function MandelbrotSet() {
         </div>
         <div className="box-2">
           {" "}
-          <Mandelbrot />{" "}
+          <Perlin />{" "}
         </div>
         <div className="box-3">
           <h1>Sliders</h1>

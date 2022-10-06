@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import "../styles/FromTemplate.css";
-import Navbar from "../components/Navbar";
-import Rotatedbox from "../components/art/RotatedBox";
+import "../../styles/FromTemplate.css";
+import Navbar from "../../components/Navbar";
+import Recursioncircle from "../../components/art/RecursionCircle";
 import Slider from "@mui/material/Slider";
 import { styled } from "@mui/material/styles";
 
@@ -45,7 +45,7 @@ const PrettoSlider = styled(Slider)({
   },
 });
 
-export default function Rbox() {
+export default function Rcircle() {
   const [value, setvalue] = useState(100);
   const handleChange = (e) => {
     setvalue(e.target.value);
@@ -55,7 +55,7 @@ export default function Rbox() {
     <>
       <Navbar />
       <div className="containerrrrr">
-        <h1 className="header-title">Rotated Box</h1>
+        <h1 className="header-title">Recursion Circle</h1>
         <div className="main-area">
           <div className="description">
             <h1>Description</h1>
@@ -87,7 +87,7 @@ export default function Rbox() {
             nulla sit amet lorem laoreet, consequat mollis odio fringilla.
           </div>
           <div className="main-art">
-            <Rotatedbox text={value} />
+            <Recursioncircle text={value} />
           </div>
           <div className="editor">
             <h2>Editor</h2>

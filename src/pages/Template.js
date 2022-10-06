@@ -1,6 +1,6 @@
 import React from "react";
-import Navbar from "./Navbar";
-import TemplateDetail from "./TemplateDetail";
+import Navbar from "../components/Navbar";
+import TemplateDetail from "../components/TemplateDetail";
 import templates from "../data/drawTemplate.json";
 import "../styles/Template.css";
 
