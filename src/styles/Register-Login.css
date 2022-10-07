@@ -1,133 +1,150 @@
-.Main-div {
-  display: flex;
-  padding-top: 35px;
-  justify-content: space-evenly;
-  font-family: 'Roboto', sans-serif;
-  background-color: var(--primary-background);
+
+.input-field {
+  max-width: 380px;
+  width: 500px;
+  background-color: #f0f0f0;
+  margin: 10px 0;
+  height: 55px;
+  border-radius: 55px;
+  display: grid;
+  grid-template-columns: 15% 85%;
+  padding: 0 0.4rem;
+  position: relative;
+} 
+
+i {
+  color: #acacac;
+  position: absolute;
+  top:24px;
+  left:15px;
+  z-index:1;
 }
 
-.Register-form-container {
+.input-field input {
+  background: none;
+  outline: none;
+  border: none;
+  line-height: 1;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.input-field input::placeholder {
+  color: #aaa;
+  font-weight: 500;
+}
+
+.btn {
+  width: 150px;
+  background-color: #7b2cbf;
+  border: none;
+  outline: none;
+  height: 49px;
+  border-radius: 49px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.btn:hover {
+  background-color: #c77dff;
+}
+
+body{
+  background-image: url(../assets/backgrounds/loginregister.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container-si{
+  background: linear-gradient(
+    135deg,
+    rgba(0,18,32,0.4),
+    rgba(0,18,32,0.2)
+  );
+  border: 1px solid rgba(255,255,255, 0.2);
+  backdrop-filter: blur(2px);
+  border-radius: 50px;
   display: flex;
   justify-content: center;
-  width: 55%;
-  height: auto;
-  padding-top: 50px;
+  align-items: center;
+  width: 550px;
+  height: 400px;
+  position: absolute;
+  left: 55%;
+  top: 30%;
 }
 
-.Register-form {
-  width: 420px;
-  box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
-  padding-top: 30px;
-  padding-bottom: 20px;
-  border-radius: 8px;
-  background-color: black;
-  /*white*/
-  color: white;
-  position: fixed;
+.container-su{
+  background: linear-gradient(
+    135deg,
+    rgba(0,18,32,0.4),
+    rgba(0,18,32,0.2)
+  );
+  border: 1px solid rgba(255,255,255, 0.2);
+  backdrop-filter: blur(2px);
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 550px;
+  height: 700px;
+  position: absolute;
+  left: 55%;
+  top: 10%;
 }
 
-.imageArea {
-  width: 45%;
-  padding: 50px;
-  background-color: black;
-  color: beige;
-  border-radius: 15px;
-  margin-right: 50px;
+.illus1{
+  margin-bottom: 80px;
+  width: 400px;
+  height: 400px;
 }
 
-.Register-form-content {
-  padding-left: 12%;
-  padding-right: 12%;
-}
-
-.Register-form-title {
+.signuppannel{
+  position: absolute;
+  border: 1px solid rgba(255,255,255, 0.2);
+  background: linear-gradient(
+    135deg,
+    rgba(0,18,32,0.4),
+    rgba(0,18,32,0.2)
+  );
+  backdrop-filter: blur(2px);
+  border-radius: 20px;
   text-align: center;
-  margin-bottom: 1em;
-  font-size: 24px;
-  color: white;
-  font-weight: 800;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  align-items: center;
+  width: 500px;
+  margin: 20px;
+  bottom: 0;
+
 }
 
-label {
-  font-size: 14px;
+.signin-link{
+  width: 150px;
+  background-color: #7b2cbf;
+  border: none;
+  outline: none;
+  height: 49px;
+  border-radius: 49px;
+  color: #fff;
+  text-transform: uppercase;
   font-weight: 600;
-  /* color: rgb(34, 34, 34); */
-  color: white;
-  font-weight: lighter;
-}
-
-/*   
-  input[type=password],
-  input[type=email] {
-    background-color: rgb(51, 50, 50);
-    border: 1px solid black;
-  } */
-
-input[type=password]:focus,
-input[type=email]:focus {
-  background-color: rgb(86, 85, 85);
-  border: 1px solid black;
-}
-
-.link-pwem {
-  color: rgb(121, 37, 160);
-  text-decoration: none;
-}
-
-.link-pwem:hover {
-  color: rgb(138, 78, 165);
-}
-
-.signin-link {
+  margin: 10px 0;
   cursor: pointer;
-  color: rgb(121, 37, 160);
 }
 
 .signin-link:hover {
-  cursor: pointer;
-  color: rgb(138, 78, 165);
+  background-color: #c77dff;
 }
 
-.submit-btn {
-  border-radius: 5px;
-  margin-top: 15px;
-  width: 100px;
-  padding: 6px;
-  background-color: rgb(128, 128, 128);
-}
-
-.submit-btn:hover {
-  background-color: rgb(155, 153, 153);
-
-}
-
-.form-control {
-  background-color: rgb(51, 50, 50);
-  border: 1px solid black;
-}
-
-.form-control:focus {
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  background-color: rgb(86, 85, 85);
-  border: 1px solid black;
-}
-
-.slogan {
-  color: rgb(90, 25, 119);
-}
-
-@media (max-width: 991.5px) {
-  .Register-form-container {
-    width: 60%;
-    height: auto;
-  }
-
-  .Register-form {
-    width:45%;
-    position: absolute;
-  }
-
-  .imageArea {
-    width:40%;
-  }
+.sstitle{
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: 600;
 }

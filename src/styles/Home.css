@@ -4,7 +4,6 @@
   margin:0px;
   color:white;
   background:#202731;
-  
 }
 
 .btn-1{
@@ -38,13 +37,14 @@ section{
 .title{
   font-weight: bold;
   font-size: 50px;
+  color:white;
 }
 
 .subtitle{
   font-size: 20px;
 }
 
-.darkgreen{
+.purple{
   background: #7b2cbf;
 }
 

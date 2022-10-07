@@ -1,11 +1,12 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/Navbar.css";
-import Logo from "../assets/ciao-3.png";
 
 export default function Navbar() {
   let navigate = useNavigate();
-
+  const handleClick = (e) => {
+    navigate("/signin", { state: true });
+  };
   return (
     <nav
       className="navbar navbar-custom sticky-top navbar-expand-lg "
@@ -16,7 +17,6 @@ export default function Navbar() {
           className="navbar-title navbar-custom"
           onClick={() => navigate("/home")}
         >
-          {/* <img src={Logo} height={30} width={75} /> */}
           CIAO
         </a>
 
@@ -100,9 +100,9 @@ export default function Navbar() {
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
                 <a
-                  className="nav-link navbar-custom navvv special"
+                  className="nav-link special"
                   aria-current="page"
-                  onClick={() => navigate("/signin")}
+                  onClick={handleClick}
                 >
                   Login
                   <span className="material-symbols-outlined">login</span>

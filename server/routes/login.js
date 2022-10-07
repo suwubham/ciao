@@ -8,8 +8,8 @@ env.config();
 const router = express.Router();
 
 router.post("/", async (req, res) => {
-  const { email, password } = req.body;
-  const user = await User.findOne({ email });
+  const { username, password } = req.body;
+  const user = await User.findOne({ username });
   if (!user) {
     return res.json({ error: "User not found" });
   }

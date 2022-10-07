@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from "react";
-import "../styles/FromTemplate.css";
-import Navbar from "../components/Navbar";
-import Recursivetree from "../components/art/RecursiveTree";
+import "../../styles/FromTemplate.css";
+import Navbar from "../../components/Navbar";
+import Phyllotaxis from "../../components/art/Phyllotaxis";
 import Slider from "@mui/material/Slider";
 import { styled } from "@mui/material/styles";
-import { SketchPicker } from "react-color";
-import { CirclePicker } from "react-color";
-import { BlockPicker } from "react-color";
+import { SwatchesPicker } from "react-color";
 import Stack from "@mui/material/Stack";
 
 const PrettoSlider = styled(Slider)({
@@ -50,32 +48,19 @@ const PrettoSlider = styled(Slider)({
   },
 });
 
-export default function Tree() {
-  const [branchlength, setbranchlength] = useState(100);
-  const [leafcolor, setleafcolor] = useState({
-    rgb: { r: 191, g: 63, b: 63 },
-  });
-
-  const [trunkcolor, settrunkcolor] = useState({
-    rgb: { r: 51, g: 51, b: 51 },
-  });
-
+export default function Phyllotaxisdraw() {
+  const [pelletgap, setpelletgap] = useState(3);
+  const [pelletradius, setpelletradius] = useState(3);
   const [backgroundcolor, setbackgroundcolor] = useState({
     rgb: { r: 255, g: 194, b: 209 },
   });
 
-  const handlebranchlength = (e) => {
-    setbranchlength(e.target.value);
+  const handlepelletgap = (e) => {
+    setpelletgap(e.target.value);
   };
-
-  const handleleafcolor = (color) => {
-    setleafcolor(color);
+  const handlepelletradius = (e) => {
+    setpelletradius(e.target.value);
   };
-
-  const handletrunkcolor = (color) => {
-    settrunkcolor(color);
-  };
-
   const handlebackgroundcolor = (color) => {
     setbackgroundcolor(color);
   };
@@ -84,7 +69,7 @@ export default function Tree() {
     <>
       <Navbar />
       <div className="containerrrrr">
-        <h1 className="header-title">Recursive Tree</h1>
+        <h1 className="header-title">Phyllotaxis</h1>
         <div className="main-area">
           <nav className="descriptionbar">
             <div className="logo description-link">
@@ -114,57 +99,56 @@ export default function Tree() {
               </svg>
             </div>
             <span className="link-text">
-              Recursive Tree (also known as fractal tree) bla bla
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat
+              fugit beatae, dignissimos, ducimus exercitationem culpa a quo
+              aperiam quibusdam aliquid autem delectus quos soluta eos sint ex
+              vero doloribus. Iste?
             </span>
           </nav>
           <div className="main-art">
-            <Recursivetree
-              branch={branchlength}
-              leaf={leafcolor}
-              trunk={trunkcolor}
+            <Phyllotaxis
+              pgap={pelletgap}
+              pradius={pelletradius}
               background={backgroundcolor}
             />
           </div>
           <div className="editor">
             <h2>Editor</h2>
-            <div className="branch">
-              <h5>Branch Length</h5>
+            <div className="slider1">
+              <h5>Pellet Gap</h5>
               <Stack direction="row" alignItems="center" className="slider">
                 0
                 <PrettoSlider
                   min={0}
-                  max={120}
+                  max={10}
                   valueLabelDisplay="auto"
                   aria-label="pretto slider"
-                  defaultValue={branchlength}
-                  onChange={handlebranchlength}
+                  value={pelletgap}
+                  onChange={handlepelletgap}
                 />
-                120
+                10
               </Stack>
             </div>
-            <div className="editrow1">
-              <div className="leafcolor">
-                <h5>Leaf color</h5>
-                <SketchPicker
-                  color={leafcolor.rgb}
-                  onChangeComplete={handleleafcolor}
+            <div className="slider2">
+              <h5>Pellet Radius</h5>
+              <Stack direction="row" alignItems="center" className="slider">
+                0
+                <PrettoSlider
+                  min={0}
+                  max={10}
+                  valueLabelDisplay="auto"
+                  aria-label="pretto slider"
+                  value={pelletradius}
+                  onChange={handlepelletradius}
                 />
-              </div>
-              <div className="backgroundcolor">
-                <h5>Background color</h5>
-                <SketchPicker
-                  color={backgroundcolor.rgb}
-                  onChangeComplete={handlebackgroundcolor}
-                  triangle={"hide"}
-                />
-              </div>
+                10
+              </Stack>
             </div>
-
-            <div className="trunkcolor">
-              <h5>Trunk color</h5>
-              <CirclePicker
-                color={trunkcolor.rgb}
-                onChangeComplete={handletrunkcolor}
+            <div className="colorpicker">
+              <h5>Background Color</h5>
+              <SwatchesPicker
+                color={backgroundcolor.rgb}
+                onChangeComplete={handlebackgroundcolor}
               />
             </div>
           </div>

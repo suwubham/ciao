@@ -6,7 +6,7 @@ const router = express.Router();
 
 router.post("/", async (req, res) => {
   console.log(req.body);
-  const { fname, lname, email, password } = req.body;
+  const { name, username, email, password } = req.body;
   const encryptedPassword = await bcrypt.hash(password, 10);
   console.log(encryptedPassword);
   try {
@@ -15,8 +15,8 @@ router.post("/", async (req, res) => {
       return res.send({ error: "User exists" });
     }
     await User.create({
-      fname,
-      lname,
+      name,
+      username,
       email,
       password: encryptedPassword,
     });
