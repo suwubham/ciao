@@ -11,14 +11,37 @@ router.post("/", async (req, res) => {
   const { username, password } = req.body;
   const user = await User.findOne({ username });
   if (!user) {
-    return res.json({ error: "User not found" });
+    return res.status(201).json({
+      errors: [
+        {
+          msg: "Invalid credentials",
+        },
+      ],
+    });
   }
-  if (await bcrypt.compare(password, user.password)) {
-    const token = jwt.sign({ user }, process.env.ACCESS_TOKEN_SECRET);
-    return res.json({ status: "ok", data: token });
-  } else {
-    res.json({ status: "error", error: "Invalid password" });
+
+  let isMatch = await bcrypt.compare(password, user.password);
+
+  if (!isMatch) {
+    return res.status(202).json({
+      errors: [
+        {
+          msg: "Email or password is invalid",
+        },
+      ],
+    });
   }
+
+  const accessToken = await jwt.sign(
+    { username },
+    process.env.ACCESS_TOKEN_SECRET,
+    {
+      expiresIn: "1m",
+    }
+  );
+  res.status(200).json({
+    accessToken,
+  });
 });
 
 export default router;

@@ -16,6 +16,8 @@ import Tenprint from "../pages/draw/Tenprint-line.draw";
 import TenprintCircle from "../pages/draw/TenprintCircle.draw";
 import RecursionCircle from "../pages/draw/RecursionCircle.draw";
 import RotatedBox from "../pages/draw/RotatedBox.draw";
+import Dashboard from "../pages/Dashboard";
+
 export default function AppRouter() {
   return (
     <Routes>
@@ -35,6 +37,7 @@ export default function AppRouter() {
       <Route path="template/tenprintcircle" element={<TenprintCircle />} />
       <Route path="template/recursioncircle" element={<RecursionCircle />} />
       <Route path="template/rotatedbox" element={<RotatedBox />} />
+      <Route path="dashboard" element={<Dashboard />} />
     </Routes>
   );
 }

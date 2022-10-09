@@ -6,7 +6,6 @@ env.config();
 
 import registerRoute from "./routes/register.js";
 import loginRoute from "./routes/login.js";
-// import userData from "./routes/userData";
 
 const app = express();
 
@@ -15,7 +14,6 @@ app.use(express.json());
 
 app.use("/register", registerRoute);
 app.use("/login", loginRoute);
-// app.use("/userdata", userData);
 
 app.listen(process.env.PORT, () => {
   console.log(`app is listening in port ${process.env.PORT}`);
