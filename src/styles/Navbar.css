@@ -12,10 +12,16 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+.dropdown-item{
+  color: white;
+}
+
 .nav-link{
   box-shadow: inset 0 0 0 0 #10002b;
   transition: ease-out 0.4s;
   border-radius: 20px;
+  border: none;
+  color: white;
 }
 
 .nav-link:hover{

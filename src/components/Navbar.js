@@ -14,7 +14,7 @@ export default function Navbar() {
     >
       <div className="container-fluid">
         <a
-          className="navbar-title navbar-custom"
+          className="navbar-title"
           onClick={() => navigate("/home")}
         >
           CIAO
@@ -36,7 +36,7 @@ export default function Navbar() {
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
               <a
-                className="nav-link navbar-custom navvv"
+                className="nav-link"
                 aria-current="page"
                 onClick={() => navigate("/home")}
               >
@@ -45,7 +45,7 @@ export default function Navbar() {
             </li>
             <li className="nav-item">
               <a
-                className="nav-link navbar-custom navvv"
+                className="nav-link"
                 aria-current="page"
                 onClick={() => navigate("/about")}
               >
@@ -54,7 +54,7 @@ export default function Navbar() {
             </li>
             <li className="nav-item">
               <a
-                className="nav-link navbar-custom"
+                className="nav-link"
                 onClick={() => navigate("/yourarts")}
               >
                 Your Arts{" "}
@@ -62,7 +62,7 @@ export default function Navbar() {
             </li>
             <li className="nav-item dropdown">
               <a
-                className="nav-link dropdown-toggle  navbar-custom"
+                className="nav-link dropdown-toggle"
                 href="#"
                 role="button"
                 data-bs-toggle="dropdown"
@@ -73,14 +73,14 @@ export default function Navbar() {
               <ul className="dropdown-menu navbar-custom">
                 <li>
                   <a
-                    className="dropdown-item navbar-custom"
+                    className="dropdown-item"
                     onClick={() => navigate("/template")}
                   >
                     From Template
                   </a>
                 </li>
                 <li>
-                  <a className="dropdown-item navbar-custom" href="#">
+                  <a className="dropdown-item" href="#">
                     From Image
                   </a>
                 </li>
@@ -88,7 +88,7 @@ export default function Navbar() {
                   <hr className="dropdown-divider" />
                 </li>
                 <li>
-                  <a className="dropdown-item navbar-custom" href="#">
+                  <a className="dropdown-item" href="#">
                     ASCII art
                   </a>
                 </li>
