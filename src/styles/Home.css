@@ -3,7 +3,7 @@
   font-family: 'Montserrat', sans-serif;
   margin:0px;
   color:white;
-  background:#202731;
+  background: #001220;
 }
 
 .btn-1{
@@ -32,6 +32,106 @@ section{
   align-items: center; 
   min-height: 100px;
   padding: 60px 20vw;
+}
+
+
+.second-div-start{
+  text-align: center;
+  width: 100%;
+  background: #001220;
+  margin-top:30px;
+}
+
+.template-descp {
+  top:0px;
+  background-color: #001220;
+  padding: 4.5rem;
+  display: flex;
+  justify-content: space-between;
+/* flex-wrap: nowrap; */
+}
+
+ .main-page-left , .main-page-right, .main-page-down{
+  position: relative;
+  padding: 4.5rem;
+}
+
+
+.shape, .shape2{ 
+  position: absolute;
+  height: 125px;
+  width: 125px;
+  top: .3rem;
+  left: .5rem;
+  background-color: rgb(73, 15, 112);
+  border-radius: 50%;
+  transition: 1s;
+}
+
+.shape-text{
+  position: relative;
+  left:15px;
+  top:30px;
+}
+
+.shape:hover, .shape2:hover{
+  transform: scale(1.05);
+  transition: 1s;
+}
+
+.divi {
+  padding: 2rem;
+  border-radius: 1rem;
+  background: rgba(38, 31, 47, 0.5);
+  --webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.divi-title {
+  margin-top: 0;
+  margin-bottom: .5rem;
+  font-size: 1.2rem;
+  color: rgb(131, 130, 157);
+}
+
+
+.bottom-page{
+  background-color:  #001220;
+  padding-top:25px;
+}
+
+.quote{
+  text-align: center;
+}
+
+.services{
+  display:grid;
+  row-gap: 15px;
+  grid-template-columns: 450px 450px;
+  column-gap: 15px;
+  align-items: center;
+  justify-content: center;
+}
+
+.service1{
+  position: relative;
+  background-color: rgb(49, 47, 47);
+  opacity: 0.5;
+  height:250px;
+  margin: 15px;
+  padding:15px;
+  border-radius: 15px;
+  color:black;
+}
+
+.nothing{
+  position: absolute ;
+  bottom: 25px;
+  right:25px;
+  background-color: black;
+  padding:5px 25px;
+  border-radius: 5px;
 }
 
 .title{
