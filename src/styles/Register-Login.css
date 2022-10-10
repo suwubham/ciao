@@ -54,11 +54,6 @@ i {
   background-color: #c77dff;
 }
 
-body{
-  background-image: url(../assets/backgrounds/loginregister.svg);
-  background-size: cover;
-  background-repeat: no-repeat;
-}
 
 .container-si{
   background: linear-gradient(

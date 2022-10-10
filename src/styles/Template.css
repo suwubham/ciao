@@ -4,6 +4,8 @@
     justify-content: space-evenly;
     flex-wrap: wrap;
     width: auto;
+    background-image: url(../assets/backgrounds/blob-scene-haikei.svg);
+    background-size: cover;
 }
 
 

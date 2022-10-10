@@ -3,6 +3,7 @@
 
 .main-area{
   display: flex;
+  background-image: url(../assets/backgrounds/blob-scene-haikei.svg);
 }
 
 :root {
