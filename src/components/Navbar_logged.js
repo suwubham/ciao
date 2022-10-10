@@ -1,12 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/Navbar.css";
+import Authservice from "../services/auth.service";
 
 export default function Navbar() {
   let navigate = useNavigate();
+  console.log(Authservice.getCurrentUser());
+
   const handleClick = (e) => {
-    navigate("/signin", { state: true });
+    Authservice.logout();
+    navigate("/home", { state: true });
   };
+
+  useEffect(() => {
+    if (Authservice.getCurrentUser() === null) {
+      navigate("/signin", { state: true });
+    }
+  });
+
   return (
     <nav
       className="navbar navbar-custom sticky-top navbar-expand-lg "
@@ -47,6 +58,11 @@ export default function Navbar() {
                 onClick={() => navigate("/about")}
               >
                 About
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" onClick={() => navigate("/yourarts")}>
+                Your Arts{" "}
               </a>
             </li>
             <li className="nav-item dropdown">
@@ -93,8 +109,8 @@ export default function Navbar() {
                   aria-current="page"
                   onClick={handleClick}
                 >
-                  Login
-                  <span className="material-symbols-outlined">login</span>
+                  Logout
+                  <span className="material-symbols-outlined">logout</span>
                 </a>
               </li>
             </ul>

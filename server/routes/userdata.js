@@ -1,21 +1,15 @@
 import express from "express";
-import User from "../models/user.model";
-import env from "dotenv";
-env.config();
-
+import User from "../models/user.model.js";
+import authToken from "../middleware/authenticateToken.js";
 const router = express.Router();
-
-router.post("/", async (req, res) => {
-  const { token } = req.body;
-  try {
-    const user = jwt.verify(token, process.env.ACCESS_TOKEN_SECRET);
-    const useremail = user.email;
-    User.findOne({ email: useremail })
-      .then((data) => {
-        res.send({ status: "ok", data: data });
-      })
-      .catch((error) => {
-        res.send({ stauts: "error", data: error });
-      });
-  } catch (error) {}
+router.get("/", authToken, async (req, res) => {
+  let username = "";
+  username = req.user;
+  const currentUser = await User.findOne({ username });
+  console.log(currentUser);
+  return res.status(200).json({
+    currentUser,
+  });
 });
+
+export default router;

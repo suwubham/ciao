@@ -7,7 +7,7 @@ const login = (username, password) => {
     })
     .then((response) => {
       if (response.data.accessToken) {
-        localStorage.setItem("user", JSON.stringify(response.data));
+        sessionStorage.setItem("user", JSON.stringify(response.data));
       }
       return response;
     });
@@ -28,9 +28,19 @@ const signup = (name, username, email, password) => {
     });
 };
 
+const logout = () => {
+  sessionStorage.removeItem("user");
+};
+
+const getCurrentUser = () => {
+  return JSON.parse(sessionStorage.getItem("user"));
+};
+
 const authService = {
   login,
   signup,
+  logout,
+  getCurrentUser,
 };
 
 export default authService;
