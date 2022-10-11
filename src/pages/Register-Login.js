@@ -73,6 +73,7 @@ export default function RegisterLogin() {
   return (
     <>
       <Navbar />
+      <Components.Background>
       <Components.Container>
         <Components.SignUpContainer signinIn={signIn}>
           <Components.Form>
@@ -175,6 +176,7 @@ export default function RegisterLogin() {
           </Components.Overlay>
         </Components.OverlayContainer>
       </Components.Container>
+      </Components.Background>
     </>
   );
 }

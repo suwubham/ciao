@@ -24,6 +24,52 @@ export default function Homepage() {
           </button>
         </section>
         <div className="spacer layer1"></div>
+        
+        <h1 className="second-div-start">What you can do in CIAO</h1>
+
+        <div className="template-descp">
+
+          <div className="main-page-left">
+            <div className="shape"><h2 className="shape-text">Template</h2></div>
+            <div className="divi">
+              <h2 className="divi-title">Draw From Template</h2>
+              <p>A modern CSS UI library based on the glassmorphism design principles that will help you quickly design and build beautiful websites and applications.</p>
+              <a href="https://ui.glass">Read more</a>
+            </div>
+          </div>
+
+          <div className="main-page-right">
+            <div className="shape2"><h2 className="shape-text">Image</h2></div>
+            <div className="divi">
+              <h2 className="divi-title">Draw from Image</h2>
+              <p>A modern CSS UI library based on the glassmorphism design principles that will help you quickly design and build beautiful websites and applications.</p>
+              <a href="https://ui.glass">Read more</a>
+            </div>
+          </div>
+
+
+          <div className="main-page-down">
+            <div className="shape2"><h2 className="shape-text">ASCII</h2></div>
+            <div className="divi">
+              <h2 className="divi-title">ASCII Art</h2>
+              <p>A modern CSS UI library based on the glassmorphism design principles that will help you quickly design and build beautiful websites and applications.</p>
+              <a href="https://ui.glass">Read more</a>
+            </div>
+          </div>
+        </div>
+
+        <div className="bottom-page">
+          <h1 className="quote">Popular Arts</h1>
+
+          <div className="services">
+            <div className="service1"><p>Review</p><div className="nothing"><p>hello</p></div></div>
+            <div className="service1"><p>Review</p></div>
+            <div className="service1"><p>Review</p></div>
+            <div className="service1"><p>Review</p></div>
+          </div>
+
+        </div>
+        
         <section className="green">
           <h1>Nice Curves</h1>
           <p>

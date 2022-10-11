@@ -1,13 +1,6 @@
-.templatecards {
-    padding: 50px;
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    width: auto;
+.about {
     background-image: url(../assets/backgrounds/blob-scene-haikei.svg);
     background-repeat: no-repeat;
     background-size: cover;
+    height:91.5vh; /*not responsive*/
 }
-
-
-
