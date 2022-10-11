@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Checkbox from "@material-ui/core/Checkbox";
-import Favorite from "@material-ui/icons/Favorite";
-import FavoriteBorder from "@material-ui/icons/FavoriteBorder";
-import ShareIcon from "@material-ui/icons/Share";
+import Checkbox from "@mui/material/Checkbox";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import ShareIcon from "@mui/icons-material/Share";
 import "../styles/TemplateDetails.css";
 import { useNavigate } from "react-router-dom";
 import IconButton from "@mui/material/IconButton";
@@ -48,8 +48,8 @@ export default function TemplateDetail(props) {
               checked={checked}
               onChange={handleChange}
               inputProps={{ "aria-label": "controlled" }}
-              icon={<FavoriteBorder color="primary" />}
-              checkedIcon={<Favorite />}
+              icon={<FavoriteBorderIcon color="primary" />}
+              checkedIcon={<FavoriteIcon />}
             />
             <IconButton color="yyy" aria-label="share" component="label">
               <ShareIcon onClick={handleClick} />
