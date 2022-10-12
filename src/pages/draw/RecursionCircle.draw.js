@@ -9,7 +9,6 @@ const PrettoSlider = styled(Slider)({
   color: "#fff",
   height: 8,
   "& .MuiSlider-track": {
-    
     border: "none",
   },
   "& .MuiSlider-thumb": {
@@ -49,7 +48,6 @@ export default function Rcircle() {
   const [value, setvalue] = useState(100);
   const handleChange = (e) => {
     setvalue(e.target.value);
-    console.log(value);
   };
   return (
     <>

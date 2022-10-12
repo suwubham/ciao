@@ -1,5 +1,14 @@
 import styled from "styled-components";
 import img from "../assets/backgrounds/loginbox.svg";
+import img2 from "../assets/backgrounds/loginregister.svg";
+
+export const Background = styled.div`
+  background-image: url(${img2});
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 91.5vh;
+`;
+
 export const Container = styled.div`
   border-radius: 50px;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);

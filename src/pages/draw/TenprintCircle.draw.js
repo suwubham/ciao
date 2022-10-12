@@ -8,8 +8,7 @@ import { styled } from "@mui/material/styles";
 const PrettoSlider = styled(Slider)({
   color: "#fff",
   height: 8,
-  "& .MuiSlider-track": {   
-    
+  "& .MuiSlider-track": {
     border: "none",
   },
   "& .MuiSlider-thumb": {
@@ -49,7 +48,6 @@ export default function Printcircle() {
   const [value, setvalue] = useState(100);
   const handleChange = (e) => {
     setvalue(e.target.value);
-    console.log(value);
   };
   return (
     <>
@@ -108,6 +106,5 @@ export default function Printcircle() {
         </div>
       </div>
     </>
-    
   );
 }

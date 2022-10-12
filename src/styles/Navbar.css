@@ -8,12 +8,14 @@
     rgba(0,18,32,0.2)
   );
   backdrop-filter: blur(2px);
+  background-color: #001220; 
   color: rgb(255, 253, 253);
   font-family: 'Montserrat', sans-serif;
 }
 
 .dropdown-item{
   color: white;
+  cursor: pointer;
 }
 
 .nav-link{
@@ -27,10 +29,12 @@
 .nav-link:hover{
   background: #7b2cbf;
   cursor: pointer;
+  color: white;
 }
 
 .nav-link:focus{
   background: #7b2cbf;
+
 }
 
 .navbar-title {

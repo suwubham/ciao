@@ -31,6 +31,18 @@
   gap: 50px;
 }
 
+.containerrrrr{
+  background-image: url(../assets/backgrounds/blob-scene-haikei.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: scroll;
+  height: 100%;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0px;
+  color: white;
+}
+
 .descriptionbar {
   background-color: #001220;
   transition: width 800ms ease;
@@ -129,16 +141,6 @@
   {
     left: 0px;
   }
-}
-
-body {
-  height: 100%;
-  width: 100%;
-  font-family: 'Montserrat', sans-serif;
-  margin: 0px;
-  color: white;
-  background-color: #001220;
-  font-family: 'Montserrat', sans-serif;
 }
 
 .flip{

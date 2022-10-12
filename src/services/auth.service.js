@@ -22,8 +22,6 @@ const signup = (name, username, email, password) => {
       password,
     })
     .then((response) => {
-      if (response.data.accessToken) {
-      }
       return response;
     });
 };
