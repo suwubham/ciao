@@ -62,3 +62,7 @@ h5{
   letter-spacing: 0.3ch;
   width: 100%;
 }
+
+.card-text{
+  color: #a8a5aa;
+}
