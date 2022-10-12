@@ -2,7 +2,6 @@ import { useRef, useEffect } from "react";
 import p5 from "p5";
 
 export default function Tree(props) {
-  console.log(props.down);
   var n = 1;
   var c = props.pgap;
   var col = 1;

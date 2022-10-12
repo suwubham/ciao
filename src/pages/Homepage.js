@@ -1,7 +1,10 @@
 import React from "react";
 import Navbar from "../components/Navbar";
+import LoggedNavbar from "../components/Navbar_logged";
 import "../styles/Home.css";
 import { useNavigate } from "react-router-dom";
+import authService from "../services/auth.service";
+
 export default function Homepage() {
   const navigate = useNavigate();
   const handleClick = (e) => {
@@ -11,7 +14,7 @@ export default function Homepage() {
   };
   return (
     <>
-      <Navbar />
+      {authService.getCurrentUser() ? <LoggedNavbar /> : <Navbar />}
       <div id="wrapper">
         <div className="spacer layer1 flip"></div>
         <section className="purple">

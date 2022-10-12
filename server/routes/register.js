@@ -14,7 +14,7 @@ router.post("/", async (req, res) => {
   }
 
   const encryptedPassword = await bcrypt.hash(password, 10);
-  console.log(encryptedPassword);
+
   try {
     const oldUser = await User.findOne({ email });
     if (oldUser) {
@@ -32,6 +32,7 @@ router.post("/", async (req, res) => {
       email,
       password: encryptedPassword,
     });
+
     res.status(200).json({ status: "Ok" });
   } catch (err) {
     console.log(err);

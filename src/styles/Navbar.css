@@ -14,6 +14,7 @@
 
 .dropdown-item{
   color: white;
+  cursor: pointer;
 }
 
 .nav-link{
@@ -27,10 +28,12 @@
 .nav-link:hover{
   background: #7b2cbf;
   cursor: pointer;
+  color: white;
 }
 
 .nav-link:focus{
   background: #7b2cbf;
+
 }
 
 .navbar-title {

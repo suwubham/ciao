@@ -9,7 +9,6 @@ export default function Dashboard() {
   useEffect(() => {
     getUserData().then(
       (res) => {
-        console.log(res.data.currentUser);
         setCurrentUser(res.data.currentUser);
       },
       (error) => {

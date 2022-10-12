@@ -48,7 +48,6 @@ export default function Tree() {
   const [value, setvalue] = useState(100);
   const handleChange = (e) => {
     setvalue(e.target.value);
-    console.log(value);
   };
   return (
     <>

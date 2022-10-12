@@ -5,7 +5,6 @@ import Authservice from "../services/auth.service";
 
 export default function Navbar() {
   let navigate = useNavigate();
-  console.log(Authservice.getCurrentUser());
 
   const handleClick = (e) => {
     Authservice.logout();

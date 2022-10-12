@@ -2,6 +2,7 @@ import jwt from "jsonwebtoken";
 
 const authToken = async (req, res, next) => {
   const token = req.header("x-auth-token");
+
   if (!token) {
     res.status(401).json({
       errors: [
@@ -11,6 +12,7 @@ const authToken = async (req, res, next) => {
       ],
     });
   }
+
   try {
     const user = await jwt.verify(token, process.env.ACCESS_TOKEN_SECRET);
     req.user = user.username;
