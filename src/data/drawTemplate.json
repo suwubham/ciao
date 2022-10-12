@@ -52,5 +52,35 @@
         "templateImage": "https://c4.wallpaperflare.com/wallpaper/244/736/34/pattern-texture-square-pastel-wallpaper-preview.jpg",
         "redirectTo": "/template/rotatedbox",
         "id" : 9
+    },
+    {
+        "templateTitle": "Wavy",
+        "templateImage":"https://www.pinterest.com/pin/813533120165549298/" ,
+        "redirectTo": "/template/Wavy"
+    },
+
+    {
+        "templateTitle": "Mandala",
+        "templateImage":"https://www.shutterstock.com/image-vector/new-flower-mandala-design-background-vector-1826619995" ,
+        "redirectTo": "/template/Mandala"
+    },
+
+    {
+        "templateTitle": "Perlin Noise Randomness",
+        "templateImage":"https://theibbster.medium.com/a-gentle-introduction-to-coding-by-making-generative-art-c7f0a7b744a6" ,
+        "redirectTo": "/template/perlinrandomness"
+    },
+
+    {
+        "templateTitle": "Grid",
+        "templateImage":"https://csee.bangor.ac.uk/wp-content/uploads/2022/01/line-art-set-of-horizontal-vert-lines.png" ,
+        "redirectTo": "/template/Grid"
+    },
+
+    {
+        "templateTitle": "ASCII Fabric",
+        "templateImage":"https://www.pinterest.com/pin/773704411002083217/" ,
+        "redirectTo": "/template/ASCIIFabric"
     }
+
 ]
