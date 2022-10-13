@@ -18,6 +18,11 @@ export default function Template() {
     7: false,
     8: false,
     9: false,
+    10: false,
+    11: false,
+    12: false,
+    13: false,
+    14: false,
   });
   const [isLoading, setLoading] = useState(true);
 
@@ -41,22 +46,24 @@ export default function Template() {
 
   return (
     <>
-      {authService.getCurrentUser() ? <LoggedNavbar /> : <Navbar />}
-      <div className="templatecards">
-        {templates.map((drawTemplate, index) => {
-          return (
-            <TemplateDetail
-              key={index}
-              cardTitle={drawTemplate.templateTitle}
-              cardImage={drawTemplate.templateImage}
-              cardLink={drawTemplate.redirectTo}
-              id={drawTemplate.id}
-              favs={favorites}
-              setfavs={setFavorites}
-              isLoading={isLoading}
-            />
-          );
-        })}
+      <div className="wrapper-template">
+        {authService.getCurrentUser() ? <LoggedNavbar /> : <Navbar />}
+        <div className="templatecards">
+          {templates.map((drawTemplate, index) => {
+            return (
+              <TemplateDetail
+                key={index}
+                cardTitle={drawTemplate.templateTitle}
+                cardImage={drawTemplate.templateImage}
+                cardLink={drawTemplate.redirectTo}
+                id={drawTemplate.id}
+                favs={favorites}
+                setfavs={setFavorites}
+                isLoading={isLoading}
+              />
+            );
+          })}
+        </div>
       </div>
     </>
   );

@@ -4,6 +4,8 @@ import Navbar from "../../components/Navbar";
 import Tenprintcircle from "../../components/art/TenprintCircle";
 import Slider from "@mui/material/Slider";
 import { styled } from "@mui/material/styles";
+import authService from "../../services/auth.service";
+import LoggedNavbar from "../../components/Navbar_logged";
 
 const PrettoSlider = styled(Slider)({
   color: "#fff",
@@ -51,8 +53,8 @@ export default function Printcircle() {
   };
   return (
     <>
-      <Navbar />
       <div className="containerrrrr">
+        {authService.getCurrentUser() ? <LoggedNavbar /> : <Navbar />}
         <h1 className="header-title">Ten PRINT Circle</h1>
         <div className="main-area">
           <div className="description">

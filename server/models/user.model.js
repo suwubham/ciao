@@ -16,6 +16,11 @@ const UserDetailSchema = new mongoose.Schema(
       7: { type: Boolean, default: false },
       8: { type: Boolean, default: false },
       9: { type: Boolean, default: false },
+      10: { type: Boolean, default: false },
+      11: { type: Boolean, default: false },
+      12: { type: Boolean, default: false },
+      13: { type: Boolean, default: false },
+      14: { type: Boolean, default: false },
     },
   },
   {

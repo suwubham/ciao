@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../../styles/FromTemplate.css";
 import Navbar from "../../components/Navbar";
-import Lorentz from "../../components/art/LorentzAttractor";
+import ASCIIFabric from "../../components/art/ASCIIFabric";
 import Slider from "@mui/material/Slider";
 import { styled } from "@mui/material/styles";
 import { SketchPicker } from "react-color";
@@ -86,7 +86,7 @@ export default function Tree() {
     <>
       <div className="containerrrrr">
         {authService.getCurrentUser() ? <LoggedNavbar /> : <Navbar />}
-        <h1 className="header-title">Lorentz Attractor</h1>
+        <h1 className="header-title">Recursive Tree</h1>
         <div className="main-area">
           <nav className="descriptionbar">
             <div className="logo description-link">
@@ -116,11 +116,16 @@ export default function Tree() {
               </svg>
             </div>
             <span className="link-text">
-              Recursive Tree (also known as fractal tree) bla bla
+              ASCIIFabric (fabric like images using ascii text) bla bla
             </span>
           </nav>
           <div className="main-art">
-            <Lorentz />
+            <ASCIIFabric
+              branch={branchlength}
+              leaf={leafcolor}
+              trunk={trunkcolor}
+              background={backgroundcolor}
+            />
           </div>
           <div className="editor">
             <h2>Editor</h2>

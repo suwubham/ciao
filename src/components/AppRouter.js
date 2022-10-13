@@ -16,6 +16,11 @@ import Tenprint from "../pages/draw/Tenprint-line.draw";
 import TenprintCircle from "../pages/draw/TenprintCircle.draw";
 import RecursionCircle from "../pages/draw/RecursionCircle.draw";
 import RotatedBox from "../pages/draw/RotatedBox.draw";
+import Wavy from "../pages/draw/Wavy.draw";
+import Mandala from "../pages/draw/Mandala.draw";
+import PerlinNoiseRandomness from "../pages/draw/PerlinNoiseRandomness.draw";
+import Grid from "../pages/draw/Grid.draw";
+import ASCIIFabric from "../pages/draw/ASCIIFabric.draw";
 import Dashboard from "../pages/Dashboard";
 
 export default function AppRouter() {
@@ -37,7 +42,12 @@ export default function AppRouter() {
       <Route path="template/tenprintcircle" element={<TenprintCircle />} />
       <Route path="template/recursioncircle" element={<RecursionCircle />} />
       <Route path="template/rotatedbox" element={<RotatedBox />} />
-      <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="template/wavy" element={<Wavy />} />
+      <Route path="template/Mandala" element={<Mandala />} />
+      <Route path="template/pnrandom" element={<PerlinNoiseRandomness />} />
+      <Route path="template/Grid" element={<Grid />} />
+      <Route path="template/ASCIIFabric" element={<ASCIIFabric />} />
+      <Route path="dashboard" element={<Dashboard />} />
     </Routes>
   );
 }
