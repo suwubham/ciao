@@ -21,6 +21,7 @@ import Mandala from "../pages/draw/Mandala.draw";
 import PerlinNoiseRandomness from "../pages/draw/PerlinNoiseRandomness.draw";
 import Grid from "../pages/draw/Grid.draw";
 import ASCIIFabric from "../pages/draw/ASCIIFabric.draw";
+import RosePetals2d from "../pages/draw/RosePetals2d.draw";
 import Dashboard from "../pages/Dashboard";
 
 export default function AppRouter() {
@@ -47,6 +48,7 @@ export default function AppRouter() {
       <Route path="template/pnrandom" element={<PerlinNoiseRandomness />} />
       <Route path="template/Grid" element={<Grid />} />
       <Route path="template/ASCIIFabric" element={<ASCIIFabric />} />
+      <Route path="template/rosepetals2d" element={<RosePetals2d />} />
       <Route path="dashboard" element={<Dashboard />} />
     </Routes>
   );

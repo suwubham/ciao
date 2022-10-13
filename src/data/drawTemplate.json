@@ -86,6 +86,13 @@
         "templateImage":"https://i.pinimg.com/564x/49/cb/8a/49cb8aecacec5088248722d3397531a2.jpg" ,
         "redirectTo": "/template/ASCIIFabric",
         "id": 14
+    },
+    {
+        "templateTitle": "Rose Petals 2d",
+        "templateImage":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsXk3CONQ6NU3YXaQGzTVwtPbNy4uMt5yC9g&usqp=CAU" ,
+        "redirectTo": "/template/rosepetals2d",
+        "id": 15
     }
+   
 
 ]
