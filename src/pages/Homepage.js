@@ -18,7 +18,9 @@ export default function Homepage() {
       <div id="wrapper">
         <div className="spacer layer1 flip"></div>
         <section className="purple">
-          <h1 className="title">Welcome to CIAO</h1>
+          <h1 className="title">
+            Welcome to <div className="headers">CIAO</div>
+          </h1>
           <p className="subtitle">
             A webapp for creating interactive and dynamic generative art.
           </p>
@@ -27,7 +29,7 @@ export default function Homepage() {
           </button>
         </section>
         <div className="spacer layer1"></div>
-        
+
         <h1 className="second-div-start">What you can do in CIAO</h1>
 
         <div className="template-descp">
@@ -72,7 +74,7 @@ export default function Homepage() {
           </div>
 
         </div>
-        
+
         <section className="green">
           <h1>Nice Curves</h1>
           <p>

@@ -6,7 +6,16 @@ export const Background = styled.div`
   background-image: url(${img2});
   background-size: cover;
   background-repeat: no-repeat;
-  height: 91.5vh;
+  position: relative;
+`;
+
+export const wrapper = styled.div`
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif;
 `;
 
 export const Container = styled.div`

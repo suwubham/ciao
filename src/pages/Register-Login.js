@@ -72,110 +72,112 @@ export default function RegisterLogin() {
 
   return (
     <>
-      <Navbar />
       <Components.Background>
-      <Components.Container>
-        <Components.SignUpContainer signinIn={signIn}>
-          <Components.Form>
-            <Components.Title>Register</Components.Title>
-            <Components.InputField>
-              <i className="fa-solid fa-id-card"></i>
-              <Components.Input
-                type="text"
-                placeholder="Fullname"
-                onChange={(e) => {
-                  setname(e.target.value);
-                }}
-              />
-            </Components.InputField>
-            <Components.InputField>
-              <i className="fas fa-user"></i>
-              <Components.Input
-                type="text"
-                placeholder="Username"
-                onChange={(e) => {
-                  setusername(e.target.value);
-                }}
-              />
-            </Components.InputField>
-            <Components.InputField>
-              <i className="fas fa-envelope"></i>
-              <Components.Input
-                type="email"
-                placeholder="Email"
-                onChange={(e) => {
-                  setemail(e.target.value);
-                }}
-              />
-            </Components.InputField>
-            <Components.InputField>
-              <i className="fas fa-lock"></i>
-              <Components.Input
-                type="passsword"
-                placeholder="Password"
-                onChange={(e) => {
-                  setpassword(e.target.value);
-                }}
-              />
-            </Components.InputField>
-            <Components.Button onClick={registerUser}>
-              Sign Up
-            </Components.Button>
-          </Components.Form>
-        </Components.SignUpContainer>
-        <Components.SignInContainer signinIn={signIn}>
-          <Components.Form>
-            <Components.Title>Sign in</Components.Title>
-            <Components.InputField>
-              <i className="fas fa-user"></i>
-              <Components.Input
-                type="text"
-                placeholder="Username"
-                onChange={(e) => {
-                  setusername(e.target.value);
-                }}
-              />
-            </Components.InputField>
+        <Navbar />
+        <Components.wrapper>
+          <Components.Container>
+            <Components.SignUpContainer signinIn={signIn}>
+              <Components.Form>
+                <Components.Title>Register</Components.Title>
+                <Components.InputField>
+                  <i className="fa-solid fa-id-card"></i>
+                  <Components.Input
+                    type="text"
+                    placeholder="Fullname"
+                    onChange={(e) => {
+                      setname(e.target.value);
+                    }}
+                  />
+                </Components.InputField>
+                <Components.InputField>
+                  <i className="fas fa-user"></i>
+                  <Components.Input
+                    type="text"
+                    placeholder="Username"
+                    onChange={(e) => {
+                      setusername(e.target.value);
+                    }}
+                  />
+                </Components.InputField>
+                <Components.InputField>
+                  <i className="fas fa-envelope"></i>
+                  <Components.Input
+                    type="email"
+                    placeholder="Email"
+                    onChange={(e) => {
+                      setemail(e.target.value);
+                    }}
+                  />
+                </Components.InputField>
+                <Components.InputField>
+                  <i className="fas fa-lock"></i>
+                  <Components.Input
+                    type="passsword"
+                    placeholder="Password"
+                    onChange={(e) => {
+                      setpassword(e.target.value);
+                    }}
+                  />
+                </Components.InputField>
+                <Components.Button onClick={registerUser}>
+                  Sign Up
+                </Components.Button>
+              </Components.Form>
+            </Components.SignUpContainer>
+            <Components.SignInContainer signinIn={signIn}>
+              <Components.Form>
+                <Components.Title>Sign in</Components.Title>
+                <Components.InputField>
+                  <i className="fas fa-user"></i>
+                  <Components.Input
+                    type="text"
+                    placeholder="Username"
+                    onChange={(e) => {
+                      setusername(e.target.value);
+                    }}
+                  />
+                </Components.InputField>
 
-            <Components.InputField>
-              <i className="fas fa-lock"></i>
-              <Components.Input
-                type="password"
-                placeholder="Password"
-                onChange={(e) => {
-                  setpassword(e.target.value);
-                }}
-              />
-            </Components.InputField>
+                <Components.InputField>
+                  <i className="fas fa-lock"></i>
+                  <Components.Input
+                    type="password"
+                    placeholder="Password"
+                    onChange={(e) => {
+                      setpassword(e.target.value);
+                    }}
+                  />
+                </Components.InputField>
 
-            <Components.Button onClick={loginUser}>Sign In</Components.Button>
-          </Components.Form>
-        </Components.SignInContainer>
+                <Components.Button onClick={loginUser}>Sign In</Components.Button>
+              </Components.Form>
+            </Components.SignInContainer>
 
-        <Components.OverlayContainer signinIn={signIn}>
-          <Components.Overlay signinIn={signIn}>
-            <Components.LeftOverlayPanel signinIn={signIn}>
-              <Components.Title>Already have an account?</Components.Title>
-              <Components.Paragraph>
-                Log in now and make awesome arts!
-              </Components.Paragraph>
-              <Components.GhostButton onClick={() => toggle(true)}>
-                Sign In
-              </Components.GhostButton>
-            </Components.LeftOverlayPanel>
+            <Components.OverlayContainer signinIn={signIn}>
+              <Components.Overlay signinIn={signIn}>
+                <Components.LeftOverlayPanel signinIn={signIn}>
+                  <Components.Title>Already have an account?</Components.Title>
+                  <Components.Paragraph>
+                    Log in now and make awesome arts!
+                  </Components.Paragraph>
+                  <Components.GhostButton onClick={() => toggle(true)}>
+                    Sign In
+                  </Components.GhostButton>
+                </Components.LeftOverlayPanel>
 
-            <Components.RightOverlayPanel signinIn={signIn}>
-              <Components.Title>Don't have an account?</Components.Title>
-              <Components.Paragraph>
-                Register now and discover awesome generative arts!
-              </Components.Paragraph>
-              <Components.GhostButton onClick={() => toggle(false)}>
-                Sigin Up
-              </Components.GhostButton>
-            </Components.RightOverlayPanel>
-          </Components.Overlay>
-        </Components.OverlayContainer>
-      </Components.Container>
+                <Components.RightOverlayPanel signinIn={signIn}>
+                  <Components.Title>Don't have an account?</Components.Title>
+                  <Components.Paragraph>
+                    Register now and discover awesome generative arts!
+                  </Components.Paragraph>
+                  <Components.GhostButton onClick={() => toggle(false)}>
+                    Sign Up
+                  </Components.GhostButton>
+                </Components.RightOverlayPanel>
+              </Components.Overlay>
+            </Components.OverlayContainer>
+          </Components.Container>
+        </Components.wrapper>
       </Components.Background>
     </>
   );

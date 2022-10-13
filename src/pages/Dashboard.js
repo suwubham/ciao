@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar_logged";
 import getUserData from "../services/test.service";
 import AuthService from "../services/auth.service";
+import "../styles/Dashboard.css";
+
 export default function Dashboard() {
   let navigate = useNavigate();
   const [currentUser, setCurrentUser] = useState({});
@@ -23,9 +25,11 @@ export default function Dashboard() {
   }, []);
   return (
     <>
-      <Navbar />
-      <div>Dashboard</div>
-      <h1>Welcome {currentUser.username}</h1>
+      <div className="wrapper">
+        <Navbar />
+        <h1>Dashboard</h1>
+        <h3>Welcome {currentUser.username}</h3>
+      </div>
     </>
   );
 }
