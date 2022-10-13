@@ -18,6 +18,11 @@ export default function Template() {
     7: false,
     8: false,
     9: false,
+    10: false,
+    11: false,
+    12: false,
+    13: false,
+    14: false,
   });
   const [isLoading, setLoading] = useState(true);
 

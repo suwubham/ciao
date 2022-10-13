@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "../components/Navbar";
 import LoggedNavbar from "../components/Navbar_logged";
 import "../styles/Home.css";
@@ -12,6 +12,14 @@ export default function Homepage() {
       state: false,
     });
   };
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  const handleUpload = (e) => {
+    console.log(e.target.files[0]);
+  };
+
   return (
     <>
       <div id="wrapper">

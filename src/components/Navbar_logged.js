@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/Navbar.css";
 import Authservice from "../services/auth.service";
@@ -98,7 +98,6 @@ export default function Navbar() {
                 </li>
               </ul>
             </li>
-
           </ul>
 
           <form className="d-flex" role="search">
@@ -110,34 +109,32 @@ export default function Navbar() {
                   hfer="#"
                   role="button"
                   data-bs-toggle="dropdown"
-                aria-expanded="false"
+                  aria-expanded="false"
                   /*onClick={handleClick}*/
                 >
                   Profile
                 </a>
                 <ul className="dropdown-menu navbar-custom">
-                <li>
-                  <a
-                    className="dropdown-item" href="#"
-                  >
-                    UserName
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Settings
-                  </a>
-                </li>
-                <li>
-                  <hr className="dropdown-divider" />
-                </li>
-                <li>
-                  <a className="dropdown-item" onClick={handleClick}>
-                  Log Out
-                  <span className="material-symbols-outlined">logout</span>
-                  </a>
-                </li>
-              </ul>
+                  <li>
+                    <a className="dropdown-item" href="#">
+                      UserName
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="#">
+                      Settings
+                    </a>
+                  </li>
+                  <li>
+                    <hr className="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a className="dropdown-item" onClick={handleClick}>
+                      Log Out
+                      <span className="material-symbols-outlined">logout</span>
+                    </a>
+                  </li>
+                </ul>
               </li>
             </ul>
             <input
