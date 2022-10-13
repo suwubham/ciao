@@ -42,12 +42,12 @@ export default function AppRouter() {
       <Route path="template/tenprintcircle" element={<TenprintCircle />} />
       <Route path="template/recursioncircle" element={<RecursionCircle />} />
       <Route path="template/rotatedbox" element={<RotatedBox />} />
+      <Route path="/dashboard" element={<Dashboard />} />
       <Route path="template/wavy" element={<Wavy />} />
       <Route path="template/Mandala" element={<Mandala />} />
       <Route path="template/pnrandom" element={<PerlinNoiseRandomness />} />
       <Route path="template/Grid" element={<Grid />} />
       <Route path="template/ASCIIFabric" element={<ASCIIFabric />} />
-      <Route path="dashboard" element={<Dashboard />} />
     </Routes>
   );
 }

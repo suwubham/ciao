@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import getUserData from "../services/test.service";
 import "../styles/Navbar.css";
 import Authservice from "../services/auth.service";
 
@@ -16,6 +17,16 @@ export default function Navbar() {
       navigate("/signin", { state: true });
     }
   });
+
+  const [currentUser, setCurrentUser] = useState({});
+
+  useEffect(() => {
+    getUserData().then(
+      (res) => {
+        setCurrentUser(res.data.currentUser);
+      }
+    );
+  }, []);
 
   return (
     <nav
@@ -48,6 +59,15 @@ export default function Navbar() {
                 onClick={() => navigate("/home")}
               >
                 Home
+              </a>
+            </li>
+            <li className="nav-item">
+              <a
+                className="nav-link"
+                aria-current="page"
+                onClick={() => navigate("/dashboard")}
+              >
+                Dashboard
               </a>
             </li>
             <li className="nav-item">
@@ -100,7 +120,7 @@ export default function Navbar() {
             </li>
           </ul>
 
-          <form className="d-flex" role="search">
+          <div className="d-flex" role="search">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item dropdown">
                 <a
@@ -117,7 +137,7 @@ export default function Navbar() {
                 <ul className="dropdown-menu navbar-custom">
                   <li>
                     <a className="dropdown-item" href="#">
-                      UserName
+                      {currentUser.username}
                     </a>
                   </li>
                   <li>
@@ -146,7 +166,7 @@ export default function Navbar() {
             <button className="search-btn" type="submit">
               Search
             </button>
-          </form>
+          </div>
 
           {/* <ul className="navbar-nav">
             <li className="nav-item">

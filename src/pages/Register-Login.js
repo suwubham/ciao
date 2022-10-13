@@ -148,7 +148,6 @@ export default function RegisterLogin() {
                     }}
                   />
                 </Components.InputField>
-
                 <Components.Button onClick={loginUser}>
                   Sign In
                 </Components.Button>
