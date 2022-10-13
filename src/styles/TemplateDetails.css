@@ -11,8 +11,8 @@ h5{
   border: none;
   background-color: #7b2cbf;
   color: #ffffff;
-  font-size: 12px;
-  font-weight: bold;
+  font-size: 13px;
+  font-weight: 700;
   padding: 12px 45px;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -65,4 +65,8 @@ h5{
 
 .card-text{
   color: #a8a5aa;
+}
+
+.card{
+  font-family: 'Montserrat', sans-serif;
 }

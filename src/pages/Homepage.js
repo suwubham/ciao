@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "../components/Navbar";
 import LoggedNavbar from "../components/Navbar_logged";
 import "../styles/Home.css";
@@ -12,50 +12,78 @@ export default function Homepage() {
       state: false,
     });
   };
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  const handleUpload = (e) => {
+    console.log(e.target.files[0]);
+  };
+
   return (
     <>
-      {authService.getCurrentUser() ? <LoggedNavbar /> : <Navbar />}
       <div id="wrapper">
+        {authService.getCurrentUser() ? <LoggedNavbar /> : <Navbar />}
         <div className="spacer layer1 flip"></div>
         <section className="purple">
-          <h1 className="title">Welcome to CIAO</h1>
-          <p className="subtitle">
-            A webapp for creating interactive and dynamic generative art.
-          </p>
-          <button className="btn-1" onClick={handleClick}>
-            Not a user? Signup
-          </button>
+          <div className="ani">
+            <h1 className="title">
+              Welcome to<div className="headers"> CIAO</div>
+            </h1>
+            <p className="subtitle">
+              A webapp for creating interactive and dynamic generative art.
+            </p>
+            <button className="btn-1" onClick={handleClick}>
+              Not a user? Signup
+            </button>
+          </div>
         </section>
         <div className="spacer layer1"></div>
-        
+
         <h1 className="second-div-start">What you can do in CIAO</h1>
 
         <div className="template-descp">
-
           <div className="main-page-left">
-            <div className="shape"><h2 className="shape-text">Template</h2></div>
+            <div className="shape">
+              <h2 className="shape-text">Template</h2>
+            </div>
             <div className="divi">
               <h2 className="divi-title">Draw From Template</h2>
-              <p>A modern CSS UI library based on the glassmorphism design principles that will help you quickly design and build beautiful websites and applications.</p>
+              <p>
+                A modern CSS UI library based on the glassmorphism design
+                principles that will help you quickly design and build beautiful
+                websites and applications.
+              </p>
               <a href="https://ui.glass">Read more</a>
             </div>
           </div>
 
           <div className="main-page-right">
-            <div className="shape2"><h2 className="shape-text">Image</h2></div>
+            <div className="shape2">
+              <h2 className="shape-text">Image</h2>
+            </div>
             <div className="divi">
               <h2 className="divi-title">Draw from Image</h2>
-              <p>A modern CSS UI library based on the glassmorphism design principles that will help you quickly design and build beautiful websites and applications.</p>
+              <p>
+                A modern CSS UI library based on the glassmorphism design
+                principles that will help you quickly design and build beautiful
+                websites and applications.
+              </p>
               <a href="https://ui.glass">Read more</a>
             </div>
           </div>
 
-
           <div className="main-page-down">
-            <div className="shape2"><h2 className="shape-text">ASCII</h2></div>
+            <div className="shape2">
+              <h2 className="shape-text">ASCII</h2>
+            </div>
             <div className="divi">
               <h2 className="divi-title">ASCII Art</h2>
-              <p>A modern CSS UI library based on the glassmorphism design principles that will help you quickly design and build beautiful websites and applications.</p>
+              <p>
+                A modern CSS UI library based on the glassmorphism design
+                principles that will help you quickly design and build beautiful
+                websites and applications.
+              </p>
               <a href="https://ui.glass">Read more</a>
             </div>
           </div>
@@ -65,14 +93,24 @@ export default function Homepage() {
           <h1 className="quote">Popular Arts</h1>
 
           <div className="services">
-            <div className="service1"><p>Review</p><div className="nothing"><p>hello</p></div></div>
-            <div className="service1"><p>Review</p></div>
-            <div className="service1"><p>Review</p></div>
-            <div className="service1"><p>Review</p></div>
+            <div className="service1">
+              <p>Review</p>
+              <div className="nothing">
+                <p>hello</p>
+              </div>
+            </div>
+            <div className="service1">
+              <p>Review</p>
+            </div>
+            <div className="service1">
+              <p>Review</p>
+            </div>
+            <div className="service1">
+              <p>Review</p>
+            </div>
           </div>
-
         </div>
-        
+
         <section className="green">
           <h1>Nice Curves</h1>
           <p>

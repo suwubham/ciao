@@ -1,12 +1,15 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import "../styles/About.css";
+import LoggedNavbar from "../components/Navbar_logged";
+import authService from "../services/auth.service";
 
 export default function About() {
   return (
     <>
-      <Navbar />
+      {authService.getCurrentUser() ? <LoggedNavbar /> : <Navbar />}
       <div className="about">
+        <Navbar />
         <div>About</div>
         <button
           class="btn btn-primary"

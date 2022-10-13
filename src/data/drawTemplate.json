@@ -52,5 +52,40 @@
         "templateImage": "https://c4.wallpaperflare.com/wallpaper/244/736/34/pattern-texture-square-pastel-wallpaper-preview.jpg",
         "redirectTo": "/template/rotatedbox",
         "id" : 9
+    },
+    {
+        "templateTitle": "Wavy",
+        "templateImage":"https://i.pinimg.com/564x/b8/44/86/b8448666885c0324010bce0d1f38ea27.jpg" ,
+        "redirectTo": "/template/Wavy",
+        "id" : 10
+    },
+
+    {
+        "templateTitle": "Mandala",
+        "templateImage":"https://image.shutterstock.com/image-vector/new-flower-mandala-design-background-600w-1826619995.jpg" ,
+        "redirectTo": "/template/Mandala",
+        "id" : 11
+    },
+
+    {
+        "templateTitle": "Perlin Noise Randomness",
+        "templateImage":"https://miro.medium.com/max/720/1*0xdJqtsSCh0W081Vw9GcUQ.png" ,
+        "redirectTo": "/template/pnrandom",
+        "id" : 12
+    },
+
+    {
+        "templateTitle": "Grid",
+        "templateImage":"https://csee.bangor.ac.uk/wp-content/uploads/2022/01/line-art-set-of-horizontal-vert-lines.png" ,
+        "redirectTo": "/template/Grid",
+        "id" : 13
+    },
+
+    {
+        "templateTitle": "ASCII Fabric",
+        "templateImage":"https://i.pinimg.com/564x/49/cb/8a/49cb8aecacec5088248722d3397531a2.jpg" ,
+        "redirectTo": "/template/ASCIIFabric",
+        "id": 14
     }
+
 ]

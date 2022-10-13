@@ -6,6 +6,8 @@ import Slider from "@mui/material/Slider";
 import { styled } from "@mui/material/styles";
 import { SwatchesPicker } from "react-color";
 import Stack from "@mui/material/Stack";
+import authService from "../../services/auth.service";
+import LoggedNavbar from "../../components/Navbar_logged";
 
 const PrettoSlider = styled(Slider)({
   color: "#7b2cbf",
@@ -67,8 +69,8 @@ export default function Phyllotaxisdraw() {
 
   return (
     <>
-      <Navbar />
       <div className="containerrrrr">
+        {authService.getCurrentUser() ? <LoggedNavbar /> : <Navbar />}
         <h1 className="header-title">Phyllotaxis</h1>
         <div className="main-area">
           <nav className="descriptionbar">
