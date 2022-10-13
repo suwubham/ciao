@@ -8,6 +8,8 @@ import { SketchPicker } from "react-color";
 import { CirclePicker } from "react-color";
 import { BlockPicker } from "react-color";
 import Stack from "@mui/material/Stack";
+import authService from "../../services/auth.service";
+import LoggedNavbar from "../../components/Navbar_logged";
 
 const PrettoSlider = styled(Slider)({
   color: "#7b2cbf",
@@ -82,9 +84,9 @@ export default function Tree() {
 
   return (
     <>
-      <Navbar />
       <div className="containerrrrr">
-        <h1 className="header-title">Recursive Tree</h1>
+        {authService.getCurrentUser() ? <LoggedNavbar /> : <Navbar />}
+        <h1 className="header-title">Lorentz Attractor</h1>
         <div className="main-area">
           <nav className="descriptionbar">
             <div className="logo description-link">

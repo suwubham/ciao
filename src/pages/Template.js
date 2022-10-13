@@ -41,22 +41,24 @@ export default function Template() {
 
   return (
     <>
-      {authService.getCurrentUser() ? <LoggedNavbar /> : <Navbar />}
-      <div className="templatecards">
-        {templates.map((drawTemplate, index) => {
-          return (
-            <TemplateDetail
-              key={index}
-              cardTitle={drawTemplate.templateTitle}
-              cardImage={drawTemplate.templateImage}
-              cardLink={drawTemplate.redirectTo}
-              id={drawTemplate.id}
-              favs={favorites}
-              setfavs={setFavorites}
-              isLoading={isLoading}
-            />
-          );
-        })}
+      <div className="wrapper-template">
+        {authService.getCurrentUser() ? <LoggedNavbar /> : <Navbar />}
+        <div className="templatecards">
+          {templates.map((drawTemplate, index) => {
+            return (
+              <TemplateDetail
+                key={index}
+                cardTitle={drawTemplate.templateTitle}
+                cardImage={drawTemplate.templateImage}
+                cardLink={drawTemplate.redirectTo}
+                id={drawTemplate.id}
+                favs={favorites}
+                setfavs={setFavorites}
+                isLoading={isLoading}
+              />
+            );
+          })}
+        </div>
       </div>
     </>
   );

@@ -9,6 +9,7 @@ export default function About() {
     <>
       {authService.getCurrentUser() ? <LoggedNavbar /> : <Navbar />}
       <div className="about">
+        <Navbar />
         <div>About</div>
         <button
           class="btn btn-primary"
