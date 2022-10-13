@@ -6,7 +6,6 @@ export const Background = styled.div`
   background-image: url(${img2});
   background-size: cover;
   background-repeat: no-repeat;
-  position: relative;
 `;
 
 export const wrapper = styled.div`
@@ -21,12 +20,12 @@ export const wrapper = styled.div`
 export const Container = styled.div`
   border-radius: 50px;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-  position: absolute;
-  left: 45vw;
-  top: 30%;
-  width: 800px;
+  position: relative;
+  overflow: hidden;
+  width: 678px;
   max-width: 100%;
   min-height: 400px;
+  margin-right: 50px;
 `;
 
 export const SignUpContainer = styled.div`

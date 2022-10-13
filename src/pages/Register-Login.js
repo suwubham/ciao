@@ -75,7 +75,7 @@ export default function RegisterLogin() {
       <Components.Background>
         <Navbar />
         <Components.wrapper>
-          <Components.Container>
+          <Components.Container className="itsmemario">
             <Components.SignUpContainer signinIn={signIn}>
               <Components.Form>
                 <Components.Title>Register</Components.Title>
@@ -148,8 +148,9 @@ export default function RegisterLogin() {
                     }}
                   />
                 </Components.InputField>
-
-                <Components.Button onClick={loginUser}>Sign In</Components.Button>
+                <Components.Button onClick={loginUser}>
+                  Sign In
+                </Components.Button>
               </Components.Form>
             </Components.SignInContainer>
 
@@ -164,14 +165,13 @@ export default function RegisterLogin() {
                     Sign In
                   </Components.GhostButton>
                 </Components.LeftOverlayPanel>
-
                 <Components.RightOverlayPanel signinIn={signIn}>
                   <Components.Title>Don't have an account?</Components.Title>
                   <Components.Paragraph>
                     Register now and discover awesome generative arts!
                   </Components.Paragraph>
                   <Components.GhostButton onClick={() => toggle(false)}>
-                    Sign Up
+                    Sigin Up
                   </Components.GhostButton>
                 </Components.RightOverlayPanel>
               </Components.Overlay>

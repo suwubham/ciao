@@ -130,7 +130,7 @@ export default function Navbar() {
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
-                /*onClick={handleClick}*/
+                  /*onClick={handleClick}*/
                 >
                   Profile
                 </a>
