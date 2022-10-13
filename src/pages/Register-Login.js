@@ -166,7 +166,6 @@ export default function RegisterLogin() {
                     Sign In
                   </Components.GhostButton>
                 </Components.LeftOverlayPanel>
-
                 <Components.RightOverlayPanel signinIn={signIn}>
                   <Components.Title>Don't have an account?</Components.Title>
                   <Components.Paragraph>
