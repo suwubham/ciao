@@ -5,8 +5,8 @@ import "../styles/About.css";
 export default function About() {
   return (
     <>
-      <Navbar />
       <div className="about">
+        <Navbar />
         <div>About</div>
         <button
           class="btn btn-primary"

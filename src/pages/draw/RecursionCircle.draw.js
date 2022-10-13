@@ -4,6 +4,8 @@ import Navbar from "../../components/Navbar";
 import Recursioncircle from "../../components/art/RecursionCircle";
 import Slider from "@mui/material/Slider";
 import { styled } from "@mui/material/styles";
+import authService from "../../services/auth.service";
+import LoggedNavbar from "../../components/Navbar_logged";
 
 const PrettoSlider = styled(Slider)({
   color: "#fff",
@@ -51,8 +53,8 @@ export default function Rcircle() {
   };
   return (
     <>
-      <Navbar />
       <div className="containerrrrr">
+        {authService.getCurrentUser() ? <LoggedNavbar /> : <Navbar />}
         <h1 className="header-title">Recursion Circle</h1>
         <div className="main-area">
           <div className="description">

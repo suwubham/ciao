@@ -4,10 +4,10 @@
     justify-content: space-evenly;
     flex-wrap: wrap;
     width: auto;
-    background-image: url(../assets/backgrounds/blob-scene-haikei.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
-
-
+.wrapper-template{
+    background-image: url("../assets/backgrounds/template-page.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
