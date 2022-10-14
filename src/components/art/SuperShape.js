@@ -92,4 +92,3 @@ var osc = 0;
 
   return <div ref={containerRef}></div>;
 }
-
