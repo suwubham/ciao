@@ -25,6 +25,7 @@ import RosePetals2d from "../pages/draw/RosePetals2d.draw";
 import SuperShape from "../pages/draw/SuperShape.draw";
 import PerlinTriangle from "../pages/draw/PerlinTriangle.draw";
 import FlowerThree from "../pages/draw/FlowerThree.draw";
+import DrawSnowflake from "../pages/draw/DrawSnowflake.draw";
 import Dashboard from "../pages/Dashboard";
 
 export default function AppRouter() {
@@ -55,6 +56,7 @@ export default function AppRouter() {
       <Route path="template/supershape2d" element={<SuperShape />} />
       <Route path="template/perlintriangle" element={<PerlinTriangle />} />
       <Route path="template/flowerthree" element={<FlowerThree />} />
+      <Route path="template/drawsnowflake" element={<DrawSnowflake />} />
       <Route path="dashboard" element={<Dashboard />} />
     </Routes>
   );
