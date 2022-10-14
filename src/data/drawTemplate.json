@@ -95,9 +95,15 @@
     },
     {
         "templateTitle": "Supershape",
-        "templateImage":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsXk3CONQ6NU3YXaQGzTVwtPbNy4uMt5yC9g&usqp=CAU" ,
+        "templateImage":"https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQXccFp9a2RfEQ-mdT9V56qDMUoaQxchyFCYW1Ul8W7u_sk8CK4" ,
         "redirectTo": "/template/supershape2d",
         "id": 16
+    },
+    {
+        "templateTitle": "Perlin triangle",
+        "templateImage":"https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQSFdC7Y8g7tDDN-xi-0EoOcxLSuqcmrbdcTF-4gk41HZmLBlqX" ,
+        "redirectTo": "/template/perlintriangle",
+        "id": 17
     }
     
 
