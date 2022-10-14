@@ -1,6 +1,6 @@
 import { useRef, useEffect } from "react";
 import p5 from "p5";
-var slider1;
+// var slider1;
 export default function Rdraw(props) {
     let i=1;
     let n=1;
@@ -10,12 +10,6 @@ export default function Rdraw(props) {
   const Sketch = (p5) => {
     p5.setup = () => {
         p5.createCanvas(700,700);
-      
-        // p5.background(
-        //     props.background.rgb.r,
-        //     props.background.rgb.g,
-        //     props.background.rgb.b
-        //   );
           p5.colorMode(p5.RGB);
     };
 
@@ -30,7 +24,6 @@ export default function Rdraw(props) {
         let k=n/d;
         p5.translate(p5.width/2,p5.height/2);
         p5.frameRate(1);
-        //fill(250,0,100);
         p5.beginShape(p5.POINTS);
         for(var theta=0;theta<360;theta+=0.02){
         let r=200*p5.cos(k*theta);

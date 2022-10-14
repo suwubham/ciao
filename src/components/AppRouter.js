@@ -22,6 +22,7 @@ import PerlinNoiseRandomness from "../pages/draw/PerlinNoiseRandomness.draw";
 import Grid from "../pages/draw/Grid.draw";
 import ASCIIFabric from "../pages/draw/ASCIIFabric.draw";
 import RosePetals2d from "../pages/draw/RosePetals2d.draw";
+import SuperShape from "../pages/draw/SuperShape.draw";
 import Dashboard from "../pages/Dashboard";
 
 export default function AppRouter() {
@@ -49,6 +50,7 @@ export default function AppRouter() {
       <Route path="template/Grid" element={<Grid />} />
       <Route path="template/ASCIIFabric" element={<ASCIIFabric />} />
       <Route path="template/rosepetals2d" element={<RosePetals2d />} />
+      <Route path="template/supershape2d" element={<SuperShape />} />
       <Route path="dashboard" element={<Dashboard />} />
     </Routes>
   );

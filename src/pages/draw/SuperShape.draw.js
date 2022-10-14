@@ -51,14 +51,23 @@ const PrettoSlider = styled(Slider)({
 });
 
 export default function Rdraw() {
-  const [bordercolor2d, setbordercolor2d] = useState({
+  const [increment2d,setincrement2d] = useState(3);
+  const [bold2d, setbold2d] = useState(3);
+  const [bordercolor, setbordercolor] = useState({
     rgb: { r: 25, g: 194, b: 209 },
   });
   const [backgroundcolor, setbackgroundcolor] = useState({
     rgb: { r: 255, g: 194, b: 209 },
   });
-  const handlebordercolor2d  = (color) => {
-    setbordercolor2d(color);
+
+  const handleincrement2d= (e) => {
+    setincrement2d(e.target.value);
+  };
+  const handlebold2d= (e) => {
+    setbold2d(e.target.value);
+  };
+  const handlebordercolor  = (color) => {
+    setbordercolor(color);
   };
   const handlebackgroundcolor = (color) => {
     setbackgroundcolor(color);
@@ -106,16 +115,49 @@ export default function Rdraw() {
           </nav>
           <div className="main-art">
             <Supershape
-              flowercolor={bordercolor2d}
+              increment={increment2d}
+              bold={bold2d}
+              border={bordercolor}
               background={backgroundcolor}
             />
           </div>
-         
+          <div className="editor">
+            <h2>Editor</h2>
+            <div className="slider1">
+              <h5>Increment</h5>
+              <Stack direction="row" alignItems="center" className="slider">
+                0
+                <PrettoSlider
+                  min={0}
+                  max={10}
+                  valueLabelDisplay="auto"
+                  aria-label="pretto slider"
+                  value={increment2d}
+                  onChange={handleincrement2d}
+                />
+                10
+              </Stack>
+            </div>
+            <div className="slider1">
+              <h5>BOLDNESS OF BORDER</h5>
+              <Stack direction="row" alignItems="center" className="slider">
+                0
+                <PrettoSlider
+                  min={0}
+                  max={5}
+                  valueLabelDisplay="auto"
+                  aria-label="pretto slider"
+                  value={bold2d}
+                  onChange={handlebold2d}
+                />
+                5
+              </Stack>
+            </div>
             <div className="colorpicker">
               <h5>Border Color</h5>
               <SwatchesPicker
-                color={bordercolor2d.rgb}
-                onChangeComplete={handlebordercolor2d}
+                color={bordercolor.rgb}
+                onChangeComplete={handlebordercolor}
               />
             </div>
             <div className="colorpicker">
@@ -126,6 +168,7 @@ export default function Rdraw() {
               />
             </div>
           </div>
+        </div>
       </div>
     </>
   );
