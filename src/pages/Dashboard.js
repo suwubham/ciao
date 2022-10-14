@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar_logged";
 import getUserData from "../services/test.service";
 import AuthService from "../services/auth.service";
 import "../styles/Dashboard.css";
+
 export default function Dashboard() {
   let navigate = useNavigate();
   const [currentUser, setCurrentUser] = useState({});
