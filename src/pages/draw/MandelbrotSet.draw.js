@@ -4,9 +4,7 @@ import Navbar from "../../components/Navbar";
 import Mandelbrot from "../../components/art/MandelbrotSet";
 import Slider from "@mui/material/Slider";
 import { styled } from "@mui/material/styles";
-import { SketchPicker } from "react-color";
-import { CirclePicker } from "react-color";
-import { BlockPicker } from "react-color";
+import { SwatchesPicker } from "react-color";
 import Stack from "@mui/material/Stack";
 import authService from "../../services/auth.service";
 import LoggedNavbar from "../../components/Navbar_logged";
@@ -52,32 +50,19 @@ const PrettoSlider = styled(Slider)({
   },
 });
 
-export default function Tree() {
-  const [branchlength, setbranchlength] = useState(100);
-  const [leafcolor, setleafcolor] = useState({
-    rgb: { r: 191, g: 63, b: 63 },
-  });
-
-  const [trunkcolor, settrunkcolor] = useState({
-    rgb: { r: 51, g: 51, b: 51 },
-  });
-
+export default function Mdraw() {
+  const [incrementm, setincrementm] = useState(100);
+  const [transparencym, settransparencym] = useState(255);
   const [backgroundcolor, setbackgroundcolor] = useState({
     rgb: { r: 255, g: 194, b: 209 },
   });
 
-  const handlebranchlength = (e) => {
-    setbranchlength(e.target.value);
+  const handleincrementm = (e) => {
+    setincrementm(e.target.value);
   };
-
-  const handleleafcolor = (color) => {
-    setleafcolor(color);
+  const handletransparencym = (e) => {
+    settransparencym(e.target.value);
   };
-
-  const handletrunkcolor = (color) => {
-    settrunkcolor(color);
-  };
-
   const handlebackgroundcolor = (color) => {
     setbackgroundcolor(color);
   };
@@ -86,7 +71,7 @@ export default function Tree() {
     <>
       <div className="containerrrrr">
         {authService.getCurrentUser() ? <LoggedNavbar /> : <Navbar />}
-        <h1 className="header-title">Recursive Tree</h1>
+        <h1 className="header-title">Mandelbrot Set</h1>
         <div className="main-area">
           <nav className="descriptionbar">
             <div className="logo description-link">
@@ -116,52 +101,56 @@ export default function Tree() {
               </svg>
             </div>
             <span className="link-text">
-              Recursive Tree (also known as fractal tree) bla bla
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat
+              fugit beatae, dignissimos, ducimus exercitationem culpa a quo
+              aperiam quibusdam aliquid autem delectus quos soluta eos sint ex
+              vero doloribus. Iste?
             </span>
           </nav>
           <div className="main-art">
-            <Mandelbrot />
+            <Mandelbrot
+              increment={incrementm}
+              transparency={transparencym}
+              background={backgroundcolor}
+            />
           </div>
           <div className="editor">
             <h2>Editor</h2>
-            <div className="branch">
-              <h5>Branch Length</h5>
+            <div className="slider1">
+              <h5>Brightness Of Border</h5>
+              <Stack direction="row" alignItems="center" className="slider">
+                40
+                <PrettoSlider
+                  min={40}
+                  max={200}
+                  valueLabelDisplay="auto"
+                  aria-label="pretto slider"
+                  value={incrementm}
+                  onChange={handleincrementm}
+                />
+                200
+              </Stack>
+            </div>
+            <div className="slider2">
+              <h5>Alpha Value Of Background</h5>
               <Stack direction="row" alignItems="center" className="slider">
                 0
                 <PrettoSlider
-                  min={0}
-                  max={120}
+                  min={50}
+                  max={250}
                   valueLabelDisplay="auto"
                   aria-label="pretto slider"
-                  defaultValue={branchlength}
-                  onChange={handlebranchlength}
+                  value={transparencym}
+                  onChange={handletransparencym}
                 />
-                120
+                10
               </Stack>
             </div>
-            <div className="editrow1">
-              <div className="leafcolor">
-                <h5>Leaf color</h5>
-                <SketchPicker
-                  color={leafcolor.rgb}
-                  onChangeComplete={handleleafcolor}
-                />
-              </div>
-              <div className="backgroundcolor">
-                <h5>Background color</h5>
-                <SketchPicker
-                  color={backgroundcolor.rgb}
-                  onChangeComplete={handlebackgroundcolor}
-                  triangle={"hide"}
-                />
-              </div>
-            </div>
-
-            <div className="trunkcolor">
-              <h5>Trunk color</h5>
-              <CirclePicker
-                color={trunkcolor.rgb}
-                onChangeComplete={handletrunkcolor}
+            <div className="colorpicker">
+              <h5>Background Color</h5>
+              <SwatchesPicker
+                color={backgroundcolor.rgb}
+                onChangeComplete={handlebackgroundcolor}
               />
             </div>
           </div>
