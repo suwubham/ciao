@@ -23,7 +23,13 @@ export default function Template() {
     12: false,
     13: false,
     14: false,
+    15: false,
+    16: false,
+    17: false,
+    18: false,
+    19: false,
   });
+
   const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
