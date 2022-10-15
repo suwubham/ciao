@@ -86,6 +86,35 @@
         "templateImage":"https://i.pinimg.com/564x/49/cb/8a/49cb8aecacec5088248722d3397531a2.jpg" ,
         "redirectTo": "/template/ASCIIFabric",
         "id": 14
+    },
+    {
+        "templateTitle": "Rose Petals 2d",
+        "templateImage":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsXk3CONQ6NU3YXaQGzTVwtPbNy4uMt5yC9g&usqp=CAU" ,
+        "redirectTo": "/template/rosepetals2d",
+        "id": 15
+    },
+    {
+        "templateTitle": "Supershape",
+        "templateImage":"https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQXccFp9a2RfEQ-mdT9V56qDMUoaQxchyFCYW1Ul8W7u_sk8CK4" ,
+        "redirectTo": "/template/supershape2d",
+        "id": 16
+    },
+    {
+        "templateTitle": "Perlin triangle",
+        "templateImage":"https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQSFdC7Y8g7tDDN-xi-0EoOcxLSuqcmrbdcTF-4gk41HZmLBlqX" ,
+        "redirectTo": "/template/perlintriangle",
+        "id": 17
+    },
+    {
+        "templateTitle": "FLOWER 3D",
+        "templateImage":"https://scontent.xx.fbcdn.net/v/t1.15752-9/309778968_933339757639317_4773149813201402798_n.jpg?stp=dst-jpg_p403x403&_nc_cat=103&ccb=1-7&_nc_sid=aee45a&_nc_ohc=ATstkvM4nQ0AX8916cF&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdSChXCNMsQI1sSQYAVQaSltqdjEjIOja3cNghkC3Ol_dQ&oe=636E8FD1" ,
+        "redirectTo": "/template/flowerthree",
+        "id": 18
+    },
+    {
+        "templateTitle": "DRAW SNOWFLAKE",
+        "templateImage":"https://png.pngtree.com/png-clipart/20201216/original/pngtree-islamic-geometrical-floral-design-with-arabic-style-repeat-pattern-and-invitation-png-image_5717998.jpg" ,
+        "redirectTo": "/template/drawsnowflake",
+        "id": 19
     }
-
 ]
