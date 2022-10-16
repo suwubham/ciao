@@ -1,15 +1,19 @@
 import { useRef, useEffect } from "react";
 import p5 from "p5";
 
-export default function Tree(props) {
+export default function Adraw(props) {
   const containerRef = useRef();
-  let f = 50; //font for asii code
+  let f = props.size; //font for asii code-50
   let col = ["red", "yellow", "green", "orange", "purple"]; //array // colors
 
   const Sketch = (p5) => {
     p5.setup = () => {
       p5.createCanvas(700, 700); //size
-      p5.background(0); //Sets color for the background RGB
+      p5.background(
+        props.background.rgb.r,
+        props.background.rgb.g,
+        props.background.rgb.b
+      ); //Sets color for the background RGB
       //background(random(255));
       p5.textSize(f);
       for (let x = 0; x < p5.width + f; x += f * 0.7) {
@@ -38,7 +42,7 @@ export default function Tree(props) {
   useEffect(() => {
     let inst = new p5(Sketch, containerRef.current);
     return () => inst.remove();
-  }, [props]);
+  }, [props.size,props.background]);
 
   return <div ref={containerRef}></div>;
 }

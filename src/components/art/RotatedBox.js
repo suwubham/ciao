@@ -1,12 +1,12 @@
 import { useRef, useEffect } from "react";
 import p5 from "p5";
-let size = 30;
-let x;
-let y;
-let c;
+
 export default function Rbox(props) {
   const containerRef = useRef();
-
+  let size = props.increment;
+  let x;
+  let y;
+  let c;
   const Sketch = (p5) => {
     p5.setup = () => {
     p5.createCanvas(700, 700);
@@ -14,11 +14,15 @@ export default function Rbox(props) {
     // //  p5.saveButton.p5.position(10, p5.height+10);
     //  p5.saveButton.p5.mousePressed(p5.saveArt);
      p5.angleMode(p5.DEGREES);
-     p5.strokeWeight(3);
-    p5.background(200);
+     p5.strokeWeight(props.bold);//1-10
+    p5.background(props.background.rgb.r
+      ,props.background.rgb.g,
+      props.background.rgb.b);
     for(x=-size;x<p5.width;x+=size){
     for (y=-size;y<p5.height;y+=size){
-      p5.fill(p5.random(20),p5.random(60),p5.random(255));
+      p5.fill(p5.random(props.border.rgb.r)
+      ,p5.random(props.border.rgb.g),
+      p5.random(props.border.rgb.b));//20,60,255
       c=p5.random(0,4); 
       p5.push();
       p5.translate(x+size/2,y+size/2);
@@ -52,7 +56,7 @@ export default function Rbox(props) {
   useEffect(() => {
     let inst = new p5(Sketch, containerRef.current);
     return () => inst.remove();
-  }, [props.text]);
+  }, [props.border,props.background,props.bold,props.increment]);
 
   return <div ref={containerRef}></div>;
 }

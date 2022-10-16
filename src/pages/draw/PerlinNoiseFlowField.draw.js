@@ -3,11 +3,9 @@ import "../../styles/FromTemplate.css";
 import Navbar from "../../components/Navbar";
 import Perlin from "../../components/art/PerlinNoeseFlowField";
 import Slider from "@mui/material/Slider";
-import { styled } from "@mui/material/styles";
-import { SketchPicker } from "react-color";
-import { CirclePicker } from "react-color";
-import { BlockPicker } from "react-color";
+import { SwatchesPicker } from "react-color";
 import Stack from "@mui/material/Stack";
+import { styled } from "@mui/material/styles";
 import authService from "../../services/auth.service";
 import LoggedNavbar from "../../components/Navbar_logged";
 
@@ -52,41 +50,26 @@ const PrettoSlider = styled(Slider)({
   },
 });
 
-export default function Tree() {
-  const [branchlength, setbranchlength] = useState(100);
-  const [leafcolor, setleafcolor] = useState({
-    rgb: { r: 191, g: 63, b: 63 },
-  });
-
-  const [trunkcolor, settrunkcolor] = useState({
-    rgb: { r: 51, g: 51, b: 51 },
-  });
-
-  const [backgroundcolor, setbackgroundcolor] = useState({
-    rgb: { r: 255, g: 194, b: 209 },
-  });
-
-  const handlebranchlength = (e) => {
-    setbranchlength(e.target.value);
+export default function Pdraw() {
+  const [increment2d,setincrement2d] = useState(20);
+  const [bold2d, setbold2d] = useState(2);
+  const [layers, setlayers] = useState(10);
+  
+  const handleincrement2d= (e) => {
+    setincrement2d(e.target.value);
   };
-
-  const handleleafcolor = (color) => {
-    setleafcolor(color);
+  const handlebold2d= (e) => {
+    setbold2d(e.target.value);
   };
-
-  const handletrunkcolor = (color) => {
-    settrunkcolor(color);
-  };
-
-  const handlebackgroundcolor = (color) => {
-    setbackgroundcolor(color);
+  const handlelayers= (e) => {
+    setlayers(e.target.value);
   };
 
   return (
     <>
       <div className="containerrrrr">
         {authService.getCurrentUser() ? <LoggedNavbar /> : <Navbar />}
-        <h1 className="header-title">Perlin Noise Flow Field</h1>
+        <h1 className="header-title">Perlin noise flowfield</h1>
         <div className="main-area">
           <nav className="descriptionbar">
             <div className="logo description-link">
@@ -116,53 +99,67 @@ export default function Tree() {
               </svg>
             </div>
             <span className="link-text">
-              Recursive Tree (also known as fractal tree) bla bla
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat
+              fugit beatae, dignissimos, ducimus exercitationem culpa a quo
+              aperiam quibusdam aliquid autem delectus quos soluta eos sint ex
+              vero doloribus. Iste?
             </span>
           </nav>
           <div className="main-art">
-            <Perlin />
+            <Perlin
+              increment={increment2d}
+              bold={bold2d}
+              layer={layers}
+              // rotate={rotate3d}
+              // border={bordercolor}
+            />
           </div>
           <div className="editor">
             <h2>Editor</h2>
-            <div className="branch">
-              <h5>Branch Length</h5>
+            <div className="slider1">
+              <h5>Speed Increment</h5>
               <Stack direction="row" alignItems="center" className="slider">
-                0
+                1
                 <PrettoSlider
-                  min={0}
-                  max={120}
+                  min={1}
+                  max={30}
                   valueLabelDisplay="auto"
                   aria-label="pretto slider"
-                  defaultValue={branchlength}
-                  onChange={handlebranchlength}
+                  value={increment2d}
+                  onChange={handleincrement2d}
                 />
-                120
+                30
               </Stack>
             </div>
-            <div className="editrow1">
-              <div className="leafcolor">
-                <h5>Leaf color</h5>
-                <SketchPicker
-                  color={leafcolor.rgb}
-                  onChangeComplete={handleleafcolor}
+            <div className="slider2">
+              <h5>StrokeWeight</h5>
+              <Stack direction="row" alignItems="center" className="slider">
+                1
+                <PrettoSlider
+                  min={1.4}
+                  max={8}
+                  valueLabelDisplay="auto"
+                  aria-label="pretto slider"
+                  value={bold2d}
+                  onChange={handlebold2d}
                 />
-              </div>
-              <div className="backgroundcolor">
-                <h5>Background color</h5>
-                <SketchPicker
-                  color={backgroundcolor.rgb}
-                  onChangeComplete={handlebackgroundcolor}
-                  triangle={"hide"}
-                />
-              </div>
+                8
+              </Stack>
             </div>
-
-            <div className="trunkcolor">
-              <h5>Trunk color</h5>
-              <CirclePicker
-                color={trunkcolor.rgb}
-                onChangeComplete={handletrunkcolor}
-              />
+            <div className="slider3">
+              <h5>Layers Increment</h5>
+              <Stack direction="row" alignItems="center" className="slider">
+                5
+                <PrettoSlider
+                  min={5}
+                  max={50}
+                  valueLabelDisplay="auto"
+                  aria-label="pretto slider"
+                  value={layers}
+                  onChange={handlelayers}
+                />
+                50
+              </Stack>
             </div>
           </div>
         </div>

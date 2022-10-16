@@ -7,21 +7,21 @@ export default function Tree(props) {
   const Sketch = (p5) => {
     p5.setup = () => {
       p5.createCanvas(500, 500);
-      //fill(200,50,40);
-      p5.strokeWeight(1); //create line
-      p5.rectMode(5);
-      let space = 20;
+      // p5.fill(200,50,40);
+      p5.strokeWeight(props.bold/10); //create line 1-30
+      p5.rectMode(1);
+      let space = 20;//20
       for (let x = 0; x < p5.width + 50; x += space) {
         //starts from top left part of canvas             //grid width
         for (let y = 0; y < p5.height + 50; y += space) {
           // height
-          p5.stroke(x, 200, 200);
+          p5.stroke(props.border.rgb.r, props.border.rgb.g,props.border.rgb.b);
           p5.line(x, y, x + space, y); //row line
-          p5.stroke(y, x, 30);
+          p5.stroke( props.border.rgb.r, props.border.rgb.g,props.border.rgb.b);
           p5.line(x, y, x, y + space); //column line
-          p5.stroke(200, y, x / 2);
+          p5.stroke(props.border.rgb.r, props.border.rgb.g, x / 2);
           p5.square(x, y, 10); //squares of the box edges
-          p5.fill(200, p5.map(y, 0, 1000, 0, 244), x / 2); //map creates
+          p5.fill(props.background.rgb.r, p5.map(y, 0, 1000, 0, 244), props.background.rgb.b); //map creates
           p5.square(x + space / 2, y + space / 2, 10); //squares of the box at the center
         }
       }
@@ -31,7 +31,7 @@ export default function Tree(props) {
   useEffect(() => {
     let inst = new p5(Sketch, containerRef.current);
     return () => inst.remove();
-  }, [props]);
+  }, [props.background,props.border,props.bold]);
 
   return <div ref={containerRef}></div>;
 }

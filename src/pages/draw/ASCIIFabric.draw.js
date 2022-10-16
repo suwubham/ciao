@@ -4,9 +4,7 @@ import Navbar from "../../components/Navbar";
 import ASCIIFabric from "../../components/art/ASCIIFabric";
 import Slider from "@mui/material/Slider";
 import { styled } from "@mui/material/styles";
-import { SketchPicker } from "react-color";
-import { CirclePicker } from "react-color";
-import { BlockPicker } from "react-color";
+import { SwatchesPicker } from "react-color";
 import Stack from "@mui/material/Stack";
 import authService from "../../services/auth.service";
 import LoggedNavbar from "../../components/Navbar_logged";
@@ -52,41 +50,28 @@ const PrettoSlider = styled(Slider)({
   },
 });
 
-export default function Tree() {
-  const [branchlength, setbranchlength] = useState(100);
-  const [leafcolor, setleafcolor] = useState({
-    rgb: { r: 191, g: 63, b: 63 },
-  });
+export default function Adraw() {
 
-  const [trunkcolor, settrunkcolor] = useState({
-    rgb: { r: 51, g: 51, b: 51 },
-  });
+  const [sizef, setsizef] = useState(30);
 
   const [backgroundcolor, setbackgroundcolor] = useState({
-    rgb: { r: 255, g: 194, b: 209 },
+    rgb: { r: 0, g: 19, b: 20 },
   });
-
-  const handlebranchlength = (e) => {
-    setbranchlength(e.target.value);
+  
+  const handlesizef= (e) => {
+    setsizef(e.target.value);
   };
-
-  const handleleafcolor = (color) => {
-    setleafcolor(color);
-  };
-
-  const handletrunkcolor = (color) => {
-    settrunkcolor(color);
-  };
-
   const handlebackgroundcolor = (color) => {
     setbackgroundcolor(color);
   };
+
+
 
   return (
     <>
       <div className="containerrrrr">
         {authService.getCurrentUser() ? <LoggedNavbar /> : <Navbar />}
-        <h1 className="header-title">Recursive Tree</h1>
+        <h1 className="header-title">ASCII Fabric</h1>
         <div className="main-area">
           <nav className="descriptionbar">
             <div className="logo description-link">
@@ -116,57 +101,43 @@ export default function Tree() {
               </svg>
             </div>
             <span className="link-text">
-              ASCIIFabric (fabric like images using ascii text) bla bla
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat
+              fugit beatae, dignissimos, ducimus exercitationem culpa a quo
+              aperiam quibusdam aliquid autem delectus quos soluta eos sint ex
+              vero doloribus. Iste?
             </span>
           </nav>
           <div className="main-art">
-            <ASCIIFabric
-              branch={branchlength}
-              leaf={leafcolor}
-              trunk={trunkcolor}
+            <ASCIIFabric 
+              size={sizef}
               background={backgroundcolor}
+              
             />
           </div>
           <div className="editor">
             <h2>Editor</h2>
-            <div className="branch">
-              <h5>Branch Length</h5>
+         
+            <div className="slider1">
+              <h5>Size Increment</h5>
               <Stack direction="row" alignItems="center" className="slider">
-                0
+                10
                 <PrettoSlider
-                  min={0}
-                  max={120}
+                  min={10}
+                  max={50}
                   valueLabelDisplay="auto"
                   aria-label="pretto slider"
-                  defaultValue={branchlength}
-                  onChange={handlebranchlength}
+                  value={sizef}
+                  onChange={handlesizef}
                 />
-                120
+                50
               </Stack>
             </div>
-            <div className="editrow1">
-              <div className="leafcolor">
-                <h5>Leaf color</h5>
-                <SketchPicker
-                  color={leafcolor.rgb}
-                  onChangeComplete={handleleafcolor}
-                />
-              </div>
-              <div className="backgroundcolor">
-                <h5>Background color</h5>
-                <SketchPicker
-                  color={backgroundcolor.rgb}
-                  onChangeComplete={handlebackgroundcolor}
-                  triangle={"hide"}
-                />
-              </div>
-            </div>
-
-            <div className="trunkcolor">
-              <h5>Trunk color</h5>
-              <CirclePicker
-                color={trunkcolor.rgb}
-                onChangeComplete={handletrunkcolor}
+          
+            <div className="colorpicker">
+              <h5>Background Color</h5>
+              <SwatchesPicker
+                color={backgroundcolor.rgb}
+                onChangeComplete={handlebackgroundcolor}
               />
             </div>
           </div>
