@@ -1,7 +1,7 @@
 import { useRef, useEffect } from "react";
 import p5 from "p5";
 
-export default function Tree(props) {
+export default function Rdraw(props) {
   const containerRef = useRef();
   let x = 0.01;//0.01
   let y = 0;
