@@ -6,6 +6,11 @@ import "../styles/Template.css";
 import authService from "../services/auth.service";
 import LoggedNavbar from "../components/Navbar_logged";
 import favService from "../services/fav.service";
+import InputLabel from "@mui/material/InputLabel";
+import MenuItem from "@mui/material/MenuItem";
+import FormControl from "@mui/material/FormControl";
+import Select, { SelectChangeEvent } from "@mui/material/Select";
+import { maxWidth } from "@mui/system";
 
 export default function Template() {
   const [favorites, setFavorites] = useState({
@@ -32,6 +37,18 @@ export default function Template() {
 
   const [isLoading, setLoading] = useState(true);
 
+  const [filter, setFilter] = useState(templates);
+
+  const handleFilter = () => {
+    const check = (template) => {
+      if (favorites[template.id]) {
+        return true;
+      }
+    };
+    const filtered = templates.filter(check);
+    setFilter(filtered);
+  };
+
   useEffect(() => {
     const fetchData = () => {
       favService.getFav().then(
@@ -54,8 +71,33 @@ export default function Template() {
     <>
       <div className="wrapper-template">
         {authService.getCurrentUser() ? <LoggedNavbar /> : <Navbar />}
+        <div className="filter">
+          Filter
+          <FormControl sx={{ m: 1, minWidth: 100, maxWidth: 100 }} size="small">
+            <InputLabel id="demo-select-small">
+              <span class="material-symbols-outlined">filter_alt</span>
+            </InputLabel>
+            <Select>
+              <MenuItem
+                value={1}
+                onClick={() => {
+                  setFilter(templates);
+                }}
+              >
+                All
+                <span class="material-symbols-outlined ico">
+                  filter_alt_off
+                </span>
+              </MenuItem>
+              <MenuItem value={2} onClick={handleFilter}>
+                Favorites
+                <span class="material-symbols-outlined ico">favorite</span>
+              </MenuItem>
+            </Select>
+          </FormControl>
+        </div>
         <div className="templatecards">
-          {templates.map((drawTemplate, index) => {
+          {filter.map((drawTemplate, index) => {
             return (
               <TemplateDetail
                 key={index}
