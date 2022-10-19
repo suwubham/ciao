@@ -31,7 +31,7 @@ import Dashboard from "../pages/Dashboard";
 export default function AppRouter() {
   return (
     <Routes>
-      <Route path="/" element={<LandingPage />} />
+      <Route path="*" element={<LandingPage />} />
       <Route path="/home" element={<Homepage />} />
       <Route path="/signin" element={<RegisterLogin />} />
       <Route path="/about" element={<About />} />
