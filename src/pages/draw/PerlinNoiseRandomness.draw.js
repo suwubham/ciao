@@ -51,7 +51,7 @@ const PrettoSlider = styled(Slider)({
 });
 
 export default function Pdraw() {
-  const [increment2d,setincrement2d] = useState(15);
+  const [increment2d,setincrement2d] = useState(3);
   const [bold2d, setbold2d] = useState(9);
   const [sizef, setsizef] = useState(15);
   const [bordercolor, setbordercolor] = useState({
@@ -131,16 +131,16 @@ export default function Pdraw() {
             <div className="slider1">
               <h5>Speed Increment</h5>
               <Stack direction="row" alignItems="center" className="slider">
-                10
+                3
                 <PrettoSlider
-                  min={10}
-                  max={60}
+                  min={3}
+                  max={10}
                   valueLabelDisplay="auto"
                   aria-label="pretto slider"
                   value={increment2d}
                   onChange={handleincrement2d}
                 />
-                60
+                10
               </Stack>
             </div>
             <div className="slider1">
@@ -149,13 +149,13 @@ export default function Pdraw() {
                 2
                 <PrettoSlider
                   min={2}
-                  max={10}
+                  max={7}
                   valueLabelDisplay="auto"
                   aria-label="pretto slider"
                   value={bold2d}
                   onChange={handlebold2d}
                 />
-                10
+                7
               </Stack>
             </div>
             <div className="slider1">

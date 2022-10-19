@@ -4,9 +4,7 @@ import Navbar from "../../components/Navbar";
 import Lorentz from "../../components/art/LorentzAttractor";
 import Slider from "@mui/material/Slider";
 import { styled } from "@mui/material/styles";
-import { SketchPicker } from "react-color";
-import { CirclePicker } from "react-color";
-import { BlockPicker } from "react-color";
+import { SwatchesPicker } from "react-color";
 import Stack from "@mui/material/Stack";
 import authService from "../../services/auth.service";
 import LoggedNavbar from "../../components/Navbar_logged";
@@ -52,35 +50,28 @@ const PrettoSlider = styled(Slider)({
   },
 });
 
-export default function Tree() {
-  const [branchlength, setbranchlength] = useState(100);
-  const [leafcolor, setleafcolor] = useState({
-    rgb: { r: 191, g: 63, b: 63 },
-  });
+export default function Rdraw() {
+  const [increment2d,setincrement2d] = useState(60);
+  const [sizef, setsizef] = useState(60);
+  // const [bordercolor, setbordercolor] = useState({
+  //   rgb: { r: 25, g: 194, b: 209 },
+  // });
+  // const [backgroundcolor, setbackgroundcolor] = useState({
+  //   rgb: { r: 255, g: 194, b: 209 },
+  // });
 
-  const [trunkcolor, settrunkcolor] = useState({
-    rgb: { r: 51, g: 51, b: 51 },
-  });
-
-  const [backgroundcolor, setbackgroundcolor] = useState({
-    rgb: { r: 255, g: 194, b: 209 },
-  });
-
-  const handlebranchlength = (e) => {
-    setbranchlength(e.target.value);
+  const handleincrement2d= (e) => {
+    setincrement2d(e.target.value);
   };
-
-  const handleleafcolor = (color) => {
-    setleafcolor(color);
+  const handlesizef= (e) => {
+    setsizef(e.target.value);
   };
-
-  const handletrunkcolor = (color) => {
-    settrunkcolor(color);
-  };
-
-  const handlebackgroundcolor = (color) => {
-    setbackgroundcolor(color);
-  };
+  // const handlebordercolor  = (color) => {
+  //   setbordercolor(color);
+  // };
+  // const handlebackgroundcolor = (color) => {
+  //   setbackgroundcolor(color);
+  // };
 
   return (
     <>
@@ -116,54 +107,66 @@ export default function Tree() {
               </svg>
             </div>
             <span className="link-text">
-              Recursive Tree (also known as fractal tree) bla bla
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat
+              fugit beatae, dignissimos, ducimus exercitationem culpa a quo
+              aperiam quibusdam aliquid autem delectus quos soluta eos sint ex
+              vero doloribus. Iste?
             </span>
           </nav>
           <div className="main-art">
-            <Lorentz />
+            <Lorentz
+              increment={increment2d}
+              size={sizef}
+              // border={bordercolor}
+              // background={backgroundcolor}
+            />
           </div>
           <div className="editor">
             <h2>Editor</h2>
-            <div className="branch">
-              <h5>Branch Length</h5>
+            <div className="slider1">
+              <h5>Speed Increment</h5>
               <Stack direction="row" alignItems="center" className="slider">
-                0
+                40
                 <PrettoSlider
-                  min={0}
-                  max={120}
+                  min={40}
+                  max={100}
                   valueLabelDisplay="auto"
                   aria-label="pretto slider"
-                  defaultValue={branchlength}
-                  onChange={handlebranchlength}
+                  value={increment2d}
+                  onChange={handleincrement2d}
                 />
-                120
+                100
               </Stack>
             </div>
-            <div className="editrow1">
-              <div className="leafcolor">
-                <h5>Leaf color</h5>
-                <SketchPicker
-                  color={leafcolor.rgb}
-                  onChangeComplete={handleleafcolor}
+            <div className="slider1">
+              <h5>Size</h5>
+              <Stack direction="row" alignItems="center" className="slider">
+                50
+                <PrettoSlider
+                  min={50}
+                  max={90}
+                  valueLabelDisplay="auto"
+                  aria-label="pretto slider"
+                  value={sizef}
+                  onChange={handlesizef}
                 />
-              </div>
-              <div className="backgroundcolor">
-                <h5>Background color</h5>
-                <SketchPicker
-                  color={backgroundcolor.rgb}
-                  onChangeComplete={handlebackgroundcolor}
-                  triangle={"hide"}
-                />
-              </div>
+                90
+              </Stack>
             </div>
-
-            <div className="trunkcolor">
-              <h5>Trunk color</h5>
-              <CirclePicker
-                color={trunkcolor.rgb}
-                onChangeComplete={handletrunkcolor}
+            {/* <div className="colorpicker">
+              <h5>Border Color</h5>
+              <SwatchesPicker
+                color={bordercolor.rgb}
+                onChangeComplete={handlebordercolor}
               />
             </div>
+            <div className="colorpicker">
+              <h5>Background Color</h5>
+              <SwatchesPicker
+                color={backgroundcolor.rgb}
+                onChangeComplete={handlebackgroundcolor}
+              />
+            </div> */}
           </div>
         </div>
       </div>
