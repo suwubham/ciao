@@ -14,14 +14,19 @@ export default function About() {
   return (
   <>
    <Navbar />
-   <div id="wrapper">
-        </div>
+
+
+            
+             
    <div className="spacer layer1 flip"></div>
         
         <div className="ani">
+        <h1 className="title">
+              About US<div className="headers"></div>
+            </h1>
         </div>
+
    <div class="about-section">
-  <h1>About Us Page</h1>
   
   <p>We create generative art bla bla</p>
   <p>bla bla</p>
