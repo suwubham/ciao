@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;800&display=swap');
 
 body {
-  font-family: 'Times New Roman', Times, serif, Helvetica, sans-serif;
+  font-family: 'Montserrat', Times, serif, Helvetica, sans-serif;
   margin: 0;
 }
 
@@ -15,8 +15,8 @@ html {
 
 .column {
   float: left;
-  width: 33.3%;
-  margin-bottom: 16px;
+  width: 22.3%;
+  margin-bottom: 20px;
   padding: 0 8px;
 }
 .headers
@@ -47,6 +47,9 @@ html {
     opacity: 1;
   }
 }
+
+
+
 body {
   background-color:  #121212;
 }
@@ -56,9 +59,9 @@ body {
 }
 
 .about-section {
-  padding: 50px;
+  padding: 10px;
   text-align: center;
-  background-color: rgb(117, 0, 153) ;
+  background-color: rgb(29, 28, 30) ;
   color: rgb(223, 226, 231);
 }
 
@@ -66,7 +69,7 @@ body {
   padding: 0 16px;
 }
 
-.container::after, .row::after {
+.container::after, .row::after { 
   content: "";
   clear: both;
   display: table;
@@ -92,7 +95,7 @@ body {
   background-color: rgb(47, 44, 44);
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 600px) {
   .column {
     width: 100%;
     display: block;
@@ -118,17 +121,5 @@ body {
     rgba(0,172,193,1) 100%);
     }
 
-    .footert{
-position:relative;
 
-    }
-
-    .footert>div{
-      position:absolute;
-      left:0;
-      bottom:0;
-      width:100%;
-      height: 100px;
-      background:url(/../wave2.jpg);
-    }
-    
+  

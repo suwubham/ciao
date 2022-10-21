@@ -13,23 +13,23 @@ import logo from"../assets/ciaologo3.png"
 export default function About() {
   return (
   <>
-   <Navbar />
-
-
-            
-             
+   <Navbar />         
    <div className="spacer layer1 flip"></div>
-        
+   <section className="purple">
         <div className="ani">
         <h1 className="title">
-              About US<div className="headers"></div>
+              About US<div className="headers"> </div>
             </h1>
+            <p className="subtitle">
+              what we do 
+            </p>
+            
+            
+          
         </div>
-
+        </section>
+        <div className="spacer layer1"></div>
    <div class="about-section">
-  
-  <p>We create generative art bla bla</p>
-  <p>bla bla</p>
   
 </div>
 
