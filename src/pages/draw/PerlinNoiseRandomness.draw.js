@@ -10,32 +10,29 @@ import authService from "../../services/auth.service";
 import LoggedNavbar from "../../components/Navbar_logged";
 import { PrettoSlider } from "../../styles/PrettoSlider";
 
-export default function Tree() {
-  const [branchlength, setbranchlength] = useState(100);
-  const [leafcolor, setleafcolor] = useState({
-    rgb: { r: 191, g: 63, b: 63 },
+export default function Pdraw() {
+  const [increment2d,setincrement2d] = useState(3);
+  const [bold2d, setbold2d] = useState(9);
+  const [sizef, setsizef] = useState(15);
+  const [bordercolor, setbordercolor] = useState({
+    rgb: { r: 25, g: 19, b: 209 },
   });
-
-  const [trunkcolor, settrunkcolor] = useState({
-    rgb: { r: 51, g: 51, b: 51 },
-  });
-
   const [backgroundcolor, setbackgroundcolor] = useState({
     rgb: { r: 255, g: 194, b: 209 },
   });
 
-  const handlebranchlength = (e) => {
-    setbranchlength(e.target.value);
+  const handleincrement2d= (e) => {
+    setincrement2d(e.target.value);
   };
-
-  const handleleafcolor = (color) => {
-    setleafcolor(color);
+  const handlebold2d= (e) => {
+    setbold2d(e.target.value);
   };
-
-  const handletrunkcolor = (color) => {
-    settrunkcolor(color);
+  const handlesizef= (e) => {
+    setsizef(e.target.value);
   };
-
+  const handlebordercolor  = (color) => {
+    setbordercolor(color);
+  };
   const handlebackgroundcolor = (color) => {
     setbackgroundcolor(color);
   };
@@ -44,7 +41,7 @@ export default function Tree() {
     <>
       <div className="containerrrrr">
         {authService.getCurrentUser() ? <LoggedNavbar /> : <Navbar />}
-        <h1 className="header-title">Recursive Tree</h1>
+        <h1 className="header-title">Perlin Noise Randomness</h1>
         <div className="main-area">
           <nav className="descriptionbar">
             <div className="logo description-link">
@@ -74,57 +71,80 @@ export default function Tree() {
               </svg>
             </div>
             <span className="link-text">
-              PerlinNoiseRandomness (perlin noise in grid pattern) bla bla
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat
+              fugit beatae, dignissimos, ducimus exercitationem culpa a quo
+              aperiam quibusdam aliquid autem delectus quos soluta eos sint ex
+              vero doloribus. Iste?
             </span>
           </nav>
           <div className="main-art">
             <PerlinNoiseRandomness
-              branch={branchlength}
-              leaf={leafcolor}
-              trunk={trunkcolor}
+              increment={increment2d}
+              bold={bold2d}
+              size={sizef}
+              border={bordercolor}
               background={backgroundcolor}
             />
           </div>
           <div className="editor">
             <h2>Editor</h2>
-            <div className="branch">
-              <h5>Branch Length</h5>
+            <div className="slider1">
+              <h5>Speed Increment</h5>
               <Stack direction="row" alignItems="center" className="slider">
-                0
+                3
                 <PrettoSlider
-                  min={0}
-                  max={120}
+                  min={3}
+                  max={10}
                   valueLabelDisplay="auto"
                   aria-label="pretto slider"
-                  defaultValue={branchlength}
-                  onChange={handlebranchlength}
+                  value={increment2d}
+                  onChange={handleincrement2d}
                 />
-                120
+                10
               </Stack>
             </div>
-            <div className="editrow1">
-              <div className="leafcolor">
-                <h5>Leaf color</h5>
-                <SketchPicker
-                  color={leafcolor.rgb}
-                  onChangeComplete={handleleafcolor}
+            <div className="slider1">
+              <h5>Boldness Of Border</h5>
+              <Stack direction="row" alignItems="center" className="slider">
+                2
+                <PrettoSlider
+                  min={2}
+                  max={7}
+                  valueLabelDisplay="auto"
+                  aria-label="pretto slider"
+                  value={bold2d}
+                  onChange={handlebold2d}
                 />
-              </div>
-              <div className="backgroundcolor">
-                <h5>Background color</h5>
-                <SketchPicker
-                  color={backgroundcolor.rgb}
-                  onChangeComplete={handlebackgroundcolor}
-                  triangle={"hide"}
-                />
-              </div>
+                7
+              </Stack>
             </div>
-
-            <div className="trunkcolor">
-              <h5>Trunk color</h5>
-              <CirclePicker
-                color={trunkcolor.rgb}
-                onChangeComplete={handletrunkcolor}
+            <div className="slider1">
+              <h5>Size Increment</h5>
+              <Stack direction="row" alignItems="center" className="slider">
+                15
+                <PrettoSlider
+                  min={15}
+                  max={50}
+                  valueLabelDisplay="auto"
+                  aria-label="pretto slider"
+                  value={sizef}
+                  onChange={handlesizef}
+                />
+                50
+              </Stack>
+            </div>
+            <div className="colorpicker">
+              <h5>Border Color</h5>
+              <SwatchesPicker
+                color={bordercolor.rgb}
+                onChangeComplete={handlebordercolor}
+              />
+            </div>
+            <div className="colorpicker">
+              <h5>Background Color</h5>
+              <SwatchesPicker
+                color={backgroundcolor.rgb}
+                onChangeComplete={handlebackgroundcolor}
               />
             </div>
           </div>
