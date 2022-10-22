@@ -1,71 +1,26 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "../../styles/FromTemplate.css";
 import Navbar from "../../components/Navbar";
 import ASCIIFabric from "../../components/art/ASCIIFabric";
-import Slider from "@mui/material/Slider";
-import { styled } from "@mui/material/styles";
+import { PrettoSlider } from "../../styles/PrettoSlider";
 import { SwatchesPicker } from "react-color";
 import Stack from "@mui/material/Stack";
 import authService from "../../services/auth.service";
 import LoggedNavbar from "../../components/Navbar_logged";
 
-const PrettoSlider = styled(Slider)({
-  color: "#7b2cbf",
-  height: 8,
-  "& .MuiSlider-track": {
-    border: "none",
-  },
-  "& .MuiSlider-thumb": {
-    height: 24,
-    width: 24,
-    backgroundColor: "#7b2cbf",
-    border: "2px solid currentColor",
-    "&:focus, &:hover, &.Mui-active, &.Mui-focusVisible": {
-      boxShadow: "inherit",
-    },
-    "&:before": {
-      display: "none",
-    },
-  },
-  "& .MuiSlider-valueLabel": {
-    lineHeight: 1.2,
-    fontSize: 12,
-    background: "unset",
-    padding: 0,
-    width: 32,
-    FontFace: "Roboto",
-    fontWeight: "bold",
-    height: 32,
-    borderRadius: "50% 50% 50% 0",
-    backgroundColor: "#7b2cbf",
-    transformOrigin: "bottom left",
-    transform: "translate(50%, -100%) rotate(-45deg) scale(0)",
-    "&:before": { display: "none" },
-    "&.MuiSlider-valueLabelOpen": {
-      transform: "translate(50%, -100%) rotate(-45deg) scale(1)",
-    },
-    "& > *": {
-      transform: "rotate(45deg)",
-    },
-  },
-});
-
 export default function Adraw() {
-
   const [sizef, setsizef] = useState(30);
 
   const [backgroundcolor, setbackgroundcolor] = useState({
     rgb: { r: 0, g: 19, b: 20 },
   });
-  
-  const handlesizef= (e) => {
+
+  const handlesizef = (e) => {
     setsizef(e.target.value);
   };
   const handlebackgroundcolor = (color) => {
     setbackgroundcolor(color);
   };
-
-
 
   return (
     <>
@@ -108,15 +63,11 @@ export default function Adraw() {
             </span>
           </nav>
           <div className="main-art">
-            <ASCIIFabric 
-              size={sizef}
-              background={backgroundcolor}
-              
-            />
+            <ASCIIFabric size={sizef} background={backgroundcolor} />
           </div>
           <div className="editor">
             <h2>Editor</h2>
-         
+
             <div className="slider1">
               <h5>Size Increment</h5>
               <Stack direction="row" alignItems="center" className="slider">
@@ -132,7 +83,7 @@ export default function Adraw() {
                 50
               </Stack>
             </div>
-          
+
             <div className="colorpicker">
               <h5>Background Color</h5>
               <SwatchesPicker
