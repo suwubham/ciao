@@ -2,76 +2,31 @@ import React, { useState, useEffect } from "react";
 import "../../styles/FromTemplate.css";
 import Navbar from "../../components/Navbar";
 import Grid from "../../components/art/Grid";
-import Slider from "@mui/material/Slider";
-import { styled } from "@mui/material/styles";
 import { SwatchesPicker } from "react-color";
 import Stack from "@mui/material/Stack";
 import authService from "../../services/auth.service";
 import LoggedNavbar from "../../components/Navbar_logged";
-
-const PrettoSlider = styled(Slider)({
-  color: "#7b2cbf",
-  height: 8,
-  "& .MuiSlider-track": {
-    border: "none",
-  },
-  "& .MuiSlider-thumb": {
-    height: 24,
-    width: 24,
-    backgroundColor: "#7b2cbf",
-    border: "2px solid currentColor",
-    "&:focus, &:hover, &.Mui-active, &.Mui-focusVisible": {
-      boxShadow: "inherit",
-    },
-    "&:before": {
-      display: "none",
-    },
-  },
-  "& .MuiSlider-valueLabel": {
-    lineHeight: 1.2,
-    fontSize: 12,
-    background: "unset",
-    padding: 0,
-    width: 32,
-    FontFace: "Roboto",
-    fontWeight: "bold",
-    height: 32,
-    borderRadius: "50% 50% 50% 0",
-    backgroundColor: "#7b2cbf",
-    transformOrigin: "bottom left",
-    transform: "translate(50%, -100%) rotate(-45deg) scale(0)",
-    "&:before": { display: "none" },
-    "&.MuiSlider-valueLabelOpen": {
-      transform: "translate(50%, -100%) rotate(-45deg) scale(1)",
-    },
-    "& > *": {
-      transform: "rotate(45deg)",
-    },
-  },
-});
+import { PrettoSlider } from "../../styles/PrettoSlider";
 
 export default function Rdraw() {
-
   const [boldness, setboldness] = useState(30);
- 
+
   const [backgroundcolor, setbackgroundcolor] = useState({
     rgb: { r: 26, g: 26, b: 26 },
   });
   const [bordercolor, setbordercolor] = useState({
     rgb: { r: 0, g: 19, b: 20 },
   });
-  
-  const handleboldness= (e) => {
+
+  const handleboldness = (e) => {
     setboldness(e.target.value);
   };
-  const handlebordercolor  = (color) => {
+  const handlebordercolor = (color) => {
     setbordercolor(color);
   };
   const handlebackgroundcolor = (color) => {
     setbackgroundcolor(color);
   };
-
-
 
   return (
     <>
@@ -114,7 +69,7 @@ export default function Rdraw() {
             </span>
           </nav>
           <div className="main-art">
-            <Grid 
+            <Grid
               bold={boldness}
               background={backgroundcolor}
               border={bordercolor}
@@ -122,7 +77,7 @@ export default function Rdraw() {
           </div>
           <div className="editor">
             <h2>Editor</h2>
-         
+
             <div className="slider1">
               <h5>StrokeWeight of Border</h5>
               <Stack direction="row" alignItems="center" className="slider">

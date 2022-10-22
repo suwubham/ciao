@@ -1,29 +1,51 @@
 
 # CIAO - Code In Art Out
 
-CIAO is a webapp for rendering generative art built as a project for COMP 206 course by 3rd semester students in CS program at Kathmanu University, Dhulikhel.
+CIAO is a webapp for rendering generative art built as a project for COMP 206 course by 3rd semester CS students at Kathmanu University, Dhulikhel.
 
-## Contributing
+## Demo
+
+Live Hosted on: https://suwubham.github.io/ciao/
 
 
-- Fork the project
-- Clone the repository
-- Install the dependencies with npm
-- Run the project by starting client and server.
+## Run Locally
 
+Clone the project
 
 ```bash
-  git clone 'repo-link'
+  git clone https://github.com/suwubham/ciao.git
+```
+
+Go to the project directory and install client dependencies
+
+```bash
   cd ciao
   npm install
-  npm start
-  cd server
-  nodemon server.js  
 ```
-    
+
+Start Client server
+
+```bash
+  npm start
+```
+
+Go to the server directory and install server dependencies
+
+```bash
+  cd server
+  npm install
+```
+
+Start the server
+
+```bash
+  npm start
+```
+
+
 ## Tech Stack
 
-**Frontend:** React, Bootstrap
+**Frontend:** React, Bootstrap, Material UI
 
 **Backend:** Node, Express, MongoDB
 

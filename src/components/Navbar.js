@@ -69,7 +69,10 @@ export default function Navbar() {
                   </a>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="#">
+                  <a
+                    className="dropdown-item"
+                    onClick={() => navigate("/image")}
+                  >
                     From Image
                   </a>
                 </li>
