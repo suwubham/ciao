@@ -27,6 +27,7 @@ import PerlinTriangle from "../pages/draw/PerlinTriangle.draw";
 import FlowerThree from "../pages/draw/FlowerThree.draw";
 import DrawSnowflake from "../pages/draw/DrawSnowflake.draw";
 import Dashboard from "../pages/Dashboard";
+import FromImage from "../pages/FromImage";
 
 export default function AppRouter() {
   return (
@@ -59,6 +60,7 @@ export default function AppRouter() {
       <Route path="template/flowerthree" element={<FlowerThree />} />
       <Route path="template/drawsnowflake" element={<DrawSnowflake />} />
       <Route path="dashboard" element={<Dashboard />} />
+      <Route path="image" element={<FromImage />} />
     </Routes>
   );
 }

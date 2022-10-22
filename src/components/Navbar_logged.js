@@ -21,11 +21,9 @@ export default function Navbar() {
   const [currentUser, setCurrentUser] = useState({});
 
   useEffect(() => {
-    getUserData().then(
-      (res) => {
-        setCurrentUser(res.data.currentUser);
-      }
-    );
+    getUserData().then((res) => {
+      setCurrentUser(res.data.currentUser);
+    });
   }, []);
 
   return (
@@ -104,7 +102,10 @@ export default function Navbar() {
                   </a>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="#">
+                  <a
+                    className="dropdown-item"
+                    onClick={() => navigate("/image")}
+                  >
                     From Image
                   </a>
                 </li>
