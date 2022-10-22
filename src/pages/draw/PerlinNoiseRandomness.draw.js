@@ -2,16 +2,15 @@ import React, { useState, useEffect } from "react";
 import "../../styles/FromTemplate.css";
 import Navbar from "../../components/Navbar";
 import PerlinNoiseRandomness from "../../components/art/PerlinNoiseRandomness";
-import { SketchPicker } from "react-color";
-import { CirclePicker } from "react-color";
-import { BlockPicker } from "react-color";
+import { SwatchesPicker } from "react-color";
+
 import Stack from "@mui/material/Stack";
 import authService from "../../services/auth.service";
 import LoggedNavbar from "../../components/Navbar_logged";
 import { PrettoSlider } from "../../styles/PrettoSlider";
 
 export default function Pdraw() {
-  const [increment2d,setincrement2d] = useState(3);
+  const [increment2d, setincrement2d] = useState(3);
   const [bold2d, setbold2d] = useState(9);
   const [sizef, setsizef] = useState(15);
   const [bordercolor, setbordercolor] = useState({
@@ -21,16 +20,16 @@ export default function Pdraw() {
     rgb: { r: 255, g: 194, b: 209 },
   });
 
-  const handleincrement2d= (e) => {
+  const handleincrement2d = (e) => {
     setincrement2d(e.target.value);
   };
-  const handlebold2d= (e) => {
+  const handlebold2d = (e) => {
     setbold2d(e.target.value);
   };
-  const handlesizef= (e) => {
+  const handlesizef = (e) => {
     setsizef(e.target.value);
   };
-  const handlebordercolor  = (color) => {
+  const handlebordercolor = (color) => {
     setbordercolor(color);
   };
   const handlebackgroundcolor = (color) => {

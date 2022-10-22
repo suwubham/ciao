@@ -10,7 +10,7 @@ export default function FromImage() {
   };
 
   return (
-    <div className="wrapper-template">
+    <div className="wrapper-image">
       <input type="file" accept="image/*" onChange={handleImageUpload} />
       <div>FromImage</div>
       <Process src={url} />
