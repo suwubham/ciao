@@ -1,42 +1,45 @@
 import { useRef, useEffect } from "react";
 import p5 from "p5";
 
-export default function Tree(props) {
+export default function Rdraw(props) {
   const containerRef = useRef();
-  let minYchange = 0; //these two ranges determine line overlap and width
-  let maxYchange = 50;
-  let layers = 5;
-  let rotStripe = 0; //rotation of each stripe; try 10 or 90;
+  let minYchange = 5; //these two ranges determine line overlap and width
+  let maxYchange = props.increment;//5,50,150,increment
+  let layers = props.layer;//15-50
+  let rotStripe = props.rotate; //rotation of each stripe; try 10 or 90;
   // try lines = true with high alph or lines = false with low alph (100)
   let lines = true;
-  let alph = 255; //out of 255
+  let alph = 250; //out of 255
   let colRand = false; //true = random color; false = color from palette table
   let filling = true;
   let colorLines = false; //false for black lines
-  let sw = 3; //line width
+  let sw = props.bold/10; //line width,0-30
   let extraBlack = 0; //1 for some black line and white fills; 0 for neither; -2 for fewer colors;
   let extraBlackAlph = 255; //out of 255 - used if extraBlack=1 & lines, filling, colorLines all true, low alph, high sw
   let r, g, b;
-  let table;
+  // let table;
 
   const Sketch = (p5) => {
-    p5.preload = () => {
-      p5.table = p5.loadTable("../../data/colors.csv", "csv", "header");
-    };
+    // p5.preload = () => {
+    //   p5.table = p5.loadTable("../../data/colors.csv", "csv", "header");
+    // };
 
     p5.setup = () => {
-      p5.createCanvas(900, 650);
+      p5.createCanvas(650, 650);// eslint-disable-next-line 
       if (lines == true) {
-        p5.stroke(0, 0, 0, extraBlackAlph);
+        p5.stroke(
+          props.border.rgb.r,
+          props.border.rgb.g,
+          props.border.rgb.b, extraBlackAlph);
         p5.strokeWeight(sw);
       } else {
         p5.noStroke();
       }
       p5.angleMode(p5.DEGREES);
       let end = p5.height / 2 + 500; //where lines stop
-      let palette = p5.floor(p5.random(676));
+      // let palette = p5.floor(p5.random(676));
       for (let i = 0; i < layers; i++) {
-        let y1;
+        let y1;// eslint-disable-next-line 
         if (i == 0) {
           y1 = -p5.height / 2 - 300;
         } else {
@@ -65,12 +68,12 @@ export default function Tree(props) {
           y3 += p5.random(minYchange, maxYchange);
           y4 += p5.random(minYchange, maxYchange);
           y5 += p5.random(minYchange, maxYchange);
-          y6 += p5.random(minYchange, maxYchange);
+          y6 += p5.random(minYchange, maxYchange);// eslint-disable-next-line 
           if (colRand == true) {
             r = p5.random(256);
             g = p5.random(256);
             b = p5.random(256);
-          } else {
+          } else {// eslint-disable-next-line 
             let col = p5.floor(p5.random(5 + extraBlack));
             r = p5.random(256);
             g = p5.random(256);
@@ -78,12 +81,12 @@ export default function Tree(props) {
             // r = p5.get(table, palette, col * 3);
             // g = p5.get(table, palette, col * 3 + 1);
             // b = p5.get(table, palette, col * 3 + 2);
-          }
+          }// eslint-disable-next-line 
           if (filling == true) {
             p5.fill(r, g, b, alph);
           } else {
             p5.noFill();
-          }
+          }// eslint-disable-next-line 
           if (colorLines == true) {
             p5.stroke(r, g, b, alph);
           }
@@ -110,8 +113,8 @@ export default function Tree(props) {
 
   useEffect(() => {
     let inst = new p5(Sketch, containerRef.current);
-    return () => inst.remove();
-  }, [props]);
+    return () => inst.remove();// eslint-disable-next-line 
+  }, [props.increment,props.layer,props.bold,props.border,props.rotate]);
 
   return <div ref={containerRef}></div>;
 }

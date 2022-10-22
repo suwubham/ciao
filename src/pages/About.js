@@ -23,9 +23,6 @@ export default function About() {
             <p className="subtitle">
               what we do 
             </p>
-            
-            
-          
         </div>
         </section>
         <div className="spacer layer1"></div>

@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "../../styles/FromTemplate.css";
 import Navbar from "../../components/Navbar";
-import Perlin from "../../components/art/PerlinNoeseFlowField";
+import  Rosepetals2d from "../../components/art/RosePetals2d";
 import Slider from "@mui/material/Slider";
+import { styled } from "@mui/material/styles";
 import { SwatchesPicker } from "react-color";
 import Stack from "@mui/material/Stack";
-import { styled } from "@mui/material/styles";
 import authService from "../../services/auth.service";
 import LoggedNavbar from "../../components/Navbar_logged";
 
@@ -50,26 +50,30 @@ const PrettoSlider = styled(Slider)({
   },
 });
 
-export default function Pdraw() {
-  const [increment2d,setincrement2d] = useState(20);
-  const [bold2d, setbold2d] = useState(2);
-  const [layers, setlayers] = useState(10);
-  
-  const handleincrement2d= (e) => {
-    setincrement2d(e.target.value);
+export default function Rdraw() {
+  const [dflower2d, setdflower2d] = useState(3);
+  const [flowercolor2d, setflowercolor2d] = useState({
+    rgb: { r: 25, g: 194, b: 209 },
+  });
+  const [backgroundcolor, setbackgroundcolor] = useState({
+    rgb: { r: 255, g: 194, b: 209 },
+  });
+
+  const handledflower2d= (e) => {
+    setdflower2d(e.target.value);
   };
-  const handlebold2d= (e) => {
-    setbold2d(e.target.value);
+  const handleflowercolor2d  = (color) => {
+    setflowercolor2d(color);
   };
-  const handlelayers= (e) => {
-    setlayers(e.target.value);
+  const handlebackgroundcolor = (color) => {
+    setbackgroundcolor(color);
   };
 
   return (
     <>
       <div className="containerrrrr">
         {authService.getCurrentUser() ? <LoggedNavbar /> : <Navbar />}
-        <h1 className="header-title">Perlin noise flowfield</h1>
+        <h1 className="header-title">ROSE PETALS 2D</h1>
         <div className="main-area">
           <nav className="descriptionbar">
             <div className="logo description-link">
@@ -106,60 +110,42 @@ export default function Pdraw() {
             </span>
           </nav>
           <div className="main-art">
-            <Perlin
-              increment={increment2d}
-              bold={bold2d}
-              layer={layers}
-              // rotate={rotate3d}
-              // border={bordercolor}
+            <Rosepetals2d
+              dflower={dflower2d}
+              flowercolor={flowercolor2d}
+              background={backgroundcolor}
             />
           </div>
           <div className="editor">
             <h2>Editor</h2>
             <div className="slider1">
-              <h5>Speed Increment</h5>
+              <h5>Value of d in k=n/d</h5>
               <Stack direction="row" alignItems="center" className="slider">
-                1
+                0
                 <PrettoSlider
-                  min={1}
-                  max={30}
+                  min={0}
+                  max={10}
                   valueLabelDisplay="auto"
                   aria-label="pretto slider"
-                  value={increment2d}
-                  onChange={handleincrement2d}
+                  value={dflower2d}
+                  onChange={handledflower2d}
                 />
-                30
+                10
               </Stack>
             </div>
-            <div className="slider2">
-              <h5>StrokeWeight</h5>
-              <Stack direction="row" alignItems="center" className="slider">
-                1
-                <PrettoSlider
-                  min={1.4}
-                  max={8}
-                  valueLabelDisplay="auto"
-                  aria-label="pretto slider"
-                  value={bold2d}
-                  onChange={handlebold2d}
-                />
-                8
-              </Stack>
+            <div className="colorpicker">
+              <h5>Border Color</h5>
+              <SwatchesPicker
+                color={flowercolor2d.rgb}
+                onChangeComplete={handleflowercolor2d}
+              />
             </div>
-            <div className="slider3">
-              <h5>Layers Increment</h5>
-              <Stack direction="row" alignItems="center" className="slider">
-                5
-                <PrettoSlider
-                  min={5}
-                  max={50}
-                  valueLabelDisplay="auto"
-                  aria-label="pretto slider"
-                  value={layers}
-                  onChange={handlelayers}
-                />
-                50
-              </Stack>
+            <div className="colorpicker">
+              <h5>Background Color</h5>
+              <SwatchesPicker
+                color={backgroundcolor.rgb}
+                onChangeComplete={handlebackgroundcolor}
+              />
             </div>
           </div>
         </div>

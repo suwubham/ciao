@@ -3,11 +3,9 @@ import "../../styles/FromTemplate.css";
 import Navbar from "../../components/Navbar";
 import Wavy from "../../components/art/Wavy";
 import Slider from "@mui/material/Slider";
-import { styled } from "@mui/material/styles";
-import { SketchPicker } from "react-color";
-import { CirclePicker } from "react-color";
-import { BlockPicker } from "react-color";
+import { SwatchesPicker } from "react-color";
 import Stack from "@mui/material/Stack";
+import { styled } from "@mui/material/styles";
 import authService from "../../services/auth.service";
 import LoggedNavbar from "../../components/Navbar_logged";
 
@@ -52,41 +50,36 @@ const PrettoSlider = styled(Slider)({
   },
 });
 
-export default function Tree() {
-  const [branchlength, setbranchlength] = useState(100);
-  const [leafcolor, setleafcolor] = useState({
-    rgb: { r: 191, g: 63, b: 63 },
+export default function Rdraw() {
+  const [increment2d,setincrement2d] = useState(50);
+  const [bold2d, setbold2d] = useState(3);
+  const [layers, setlayers] = useState(15);
+  const [rotate3d, setrotate3d] = useState(3);
+  const [bordercolor, setbordercolor] = useState({
+    rgb: { r: 0, g: 19, b: 20 },
   });
-
-  const [trunkcolor, settrunkcolor] = useState({
-    rgb: { r: 51, g: 51, b: 51 },
-  });
-
-  const [backgroundcolor, setbackgroundcolor] = useState({
-    rgb: { r: 255, g: 194, b: 209 },
-  });
-
-  const handlebranchlength = (e) => {
-    setbranchlength(e.target.value);
+  
+  const handleincrement2d= (e) => {
+    setincrement2d(e.target.value);
   };
-
-  const handleleafcolor = (color) => {
-    setleafcolor(color);
+  const handlebold2d= (e) => {
+    setbold2d(e.target.value);
   };
-
-  const handletrunkcolor = (color) => {
-    settrunkcolor(color);
+  const handlelayers= (e) => {
+    setlayers(e.target.value);
   };
-
-  const handlebackgroundcolor = (color) => {
-    setbackgroundcolor(color);
+  const handlerotate3d= (e) => {
+    setrotate3d(e.target.value);
+  };
+  const handlebordercolor  = (color) => {
+    setbordercolor(color);
   };
 
   return (
     <>
       <div className="containerrrrr">
         {authService.getCurrentUser() ? <LoggedNavbar /> : <Navbar />}
-        <h1 className="header-title">Wavy</h1>
+        <h1 className="header-title">Wavy line</h1>
         <div className="main-area">
           <nav className="descriptionbar">
             <div className="logo description-link">
@@ -116,57 +109,88 @@ export default function Tree() {
               </svg>
             </div>
             <span className="link-text">
-              Recursive Tree (also known as fractal tree) bla bla
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat
+              fugit beatae, dignissimos, ducimus exercitationem culpa a quo
+              aperiam quibusdam aliquid autem delectus quos soluta eos sint ex
+              vero doloribus. Iste?
             </span>
           </nav>
           <div className="main-art">
             <Wavy
-              branch={branchlength}
-              leaf={leafcolor}
-              trunk={trunkcolor}
-              background={backgroundcolor}
+              increment={increment2d}
+              bold={bold2d}
+              layer={layers}
+              rotate={rotate3d}
+              border={bordercolor}
             />
           </div>
           <div className="editor">
             <h2>Editor</h2>
-            <div className="branch">
-              <h5>Branch Length</h5>
+            <div className="slider1">
+              <h5>Size Increment</h5>
+              <Stack direction="row" alignItems="center" className="slider">
+                5
+                <PrettoSlider
+                  min={5}
+                  max={150}
+                  valueLabelDisplay="auto"
+                  aria-label="pretto slider"
+                  value={increment2d}
+                  onChange={handleincrement2d}
+                />
+                150
+              </Stack>
+            </div>
+            <div className="slider2">
+              <h5>BOLDNESS OF BORDER</h5>
               <Stack direction="row" alignItems="center" className="slider">
                 0
                 <PrettoSlider
                   min={0}
-                  max={120}
+                  max={20}
                   valueLabelDisplay="auto"
                   aria-label="pretto slider"
-                  defaultValue={branchlength}
-                  onChange={handlebranchlength}
+                  value={bold2d}
+                  onChange={handlebold2d}
                 />
-                120
+                20
               </Stack>
             </div>
-            <div className="editrow1">
-              <div className="leafcolor">
-                <h5>Leaf color</h5>
-                <SketchPicker
-                  color={leafcolor.rgb}
-                  onChangeComplete={handleleafcolor}
+            <div className="slider3">
+              <h5>Layers Increment</h5>
+              <Stack direction="row" alignItems="center" className="slider">
+                10
+                <PrettoSlider
+                  min={10}
+                  max={50}
+                  valueLabelDisplay="auto"
+                  aria-label="pretto slider"
+                  value={layers}
+                  onChange={handlelayers}
                 />
-              </div>
-              <div className="backgroundcolor">
-                <h5>Background color</h5>
-                <SketchPicker
-                  color={backgroundcolor.rgb}
-                  onChangeComplete={handlebackgroundcolor}
-                  triangle={"hide"}
-                />
-              </div>
+                50
+              </Stack>
             </div>
-
-            <div className="trunkcolor">
-              <h5>Trunk color</h5>
-              <CirclePicker
-                color={trunkcolor.rgb}
-                onChangeComplete={handletrunkcolor}
+            <div className="slider1">
+              <h5>Rotate</h5>
+              <Stack direction="row" alignItems="center" className="slider">
+                0
+                <PrettoSlider
+                  min={0}
+                  max={180}
+                  valueLabelDisplay="auto"
+                  aria-label="pretto slider"
+                  value={rotate3d}
+                  onChange={handlerotate3d}
+                />
+                180
+              </Stack>
+            </div>
+            <div className="colorpicker">
+              <h5>Border Color</h5>
+              <SwatchesPicker
+                color={bordercolor.rgb}
+                onChangeComplete={handlebordercolor}
               />
             </div>
           </div>

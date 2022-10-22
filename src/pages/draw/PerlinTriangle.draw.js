@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "../../styles/FromTemplate.css";
 import Navbar from "../../components/Navbar";
-import Perlin from "../../components/art/PerlinNoeseFlowField";
+import  Perlintriangle from "../../components/art/PerlinTriangle";
 import Slider from "@mui/material/Slider";
+import { styled } from "@mui/material/styles";
 import { SwatchesPicker } from "react-color";
 import Stack from "@mui/material/Stack";
-import { styled } from "@mui/material/styles";
 import authService from "../../services/auth.service";
 import LoggedNavbar from "../../components/Navbar_logged";
 
@@ -50,26 +50,34 @@ const PrettoSlider = styled(Slider)({
   },
 });
 
-export default function Pdraw() {
-  const [increment2d,setincrement2d] = useState(20);
-  const [bold2d, setbold2d] = useState(2);
-  const [layers, setlayers] = useState(10);
-  
-  const handleincrement2d= (e) => {
-    setincrement2d(e.target.value);
+export default function Rdraw() {
+  const [size2d,setsize2d] = useState(10);
+  const [alpha2d, setalpha2d] = useState(130);
+  const [triangle1color, settriangle1color] = useState({
+    rgb: { r: 25, g: 194, b: 209 },
+  });
+  const [triangle2color, settriangle2color] = useState({
+    rgb: { r: 255, g: 194, b: 209 },
+  });
+
+  const handlesize2d= (e) => {
+    setsize2d(e.target.value);
   };
-  const handlebold2d= (e) => {
-    setbold2d(e.target.value);
+  const handlealpha2d= (e) => {
+    setalpha2d(e.target.value);
   };
-  const handlelayers= (e) => {
-    setlayers(e.target.value);
+  const handletriangle1color  = (color) => {
+    settriangle1color(color);
+  };
+  const handletriangle2color = (color) => {
+    settriangle2color(color);
   };
 
   return (
     <>
       <div className="containerrrrr">
         {authService.getCurrentUser() ? <LoggedNavbar /> : <Navbar />}
-        <h1 className="header-title">Perlin noise flowfield</h1>
+        <h1 className="header-title">PERLIN TRIANGLE</h1>
         <div className="main-area">
           <nav className="descriptionbar">
             <div className="logo description-link">
@@ -106,60 +114,58 @@ export default function Pdraw() {
             </span>
           </nav>
           <div className="main-art">
-            <Perlin
-              increment={increment2d}
-              bold={bold2d}
-              layer={layers}
-              // rotate={rotate3d}
-              // border={bordercolor}
+            <Perlintriangle
+              size={size2d}
+              bold={alpha2d}
+              triangle1={triangle1color}
+              triangle2={triangle2color}
             />
           </div>
           <div className="editor">
             <h2>Editor</h2>
             <div className="slider1">
-              <h5>Speed Increment</h5>
+              <h5>Increment</h5>
               <Stack direction="row" alignItems="center" className="slider">
-                1
+                4
                 <PrettoSlider
-                  min={1}
-                  max={30}
+                  min={4}
+                  max={70}
                   valueLabelDisplay="auto"
                   aria-label="pretto slider"
-                  value={increment2d}
-                  onChange={handleincrement2d}
+                  value={size2d}
+                  onChange={handlesize2d}
                 />
-                30
+                70
               </Stack>
             </div>
-            <div className="slider2">
-              <h5>StrokeWeight</h5>
+            <div className="slider1">
+              <h5>ALPHA</h5>
               <Stack direction="row" alignItems="center" className="slider">
-                1
+                0
                 <PrettoSlider
-                  min={1.4}
-                  max={8}
+                  min={0}
+                  max={250}
                   valueLabelDisplay="auto"
                   aria-label="pretto slider"
-                  value={bold2d}
-                  onChange={handlebold2d}
+                  value={alpha2d}
+                  onChange={handlealpha2d}
                 />
-                8
+                250
               </Stack>
             </div>
-            <div className="slider3">
-              <h5>Layers Increment</h5>
-              <Stack direction="row" alignItems="center" className="slider">
-                5
-                <PrettoSlider
-                  min={5}
-                  max={50}
-                  valueLabelDisplay="auto"
-                  aria-label="pretto slider"
-                  value={layers}
-                  onChange={handlelayers}
-                />
-                50
-              </Stack>
+            <div className="colorpicker">
+              <h5>Triangle1 Color</h5>
+              <SwatchesPicker
+                color={triangle1color.rgb}
+                onChangeComplete={handletriangle1color}
+              />
+            </div>
+            <div className="colorpicker">
+              <h5>Triangle2 Color</h5>
+              <SwatchesPicker
+                color={triangle2color.rgb}
+                onChangeComplete={handletriangle2color}
+              />
             </div>
           </div>
         </div>

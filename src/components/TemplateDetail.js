@@ -129,7 +129,7 @@ export default function TemplateDetail(props) {
           open={open}
           onClose={handleClose}
           autoHideDuration={3000}
-          message="This feature is only available for registered in users."
+          message="This feature is only available for registered users."
           action={action}
         />
       </>
