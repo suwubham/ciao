@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/ciao/static/css/main.46f66251.css",
-    "main.js": "/ciao/static/js/main.0b0c0934.js",
+    "main.css": "/ciao/static/css/main.96f54567.css",
+    "main.js": "/ciao/static/js/main.050434ca.js",
     "static/media/ciao-3.png": "/ciao/static/media/ciao-3.dbf64658d302dc4fae6b.png",
     "static/media/instagram-logo-2433.png": "/ciao/static/media/instagram-logo-2433.4e8a15165e70f320be60.png",
     "static/media/twlogo2.png": "/ciao/static/media/twlogo2.0b54323e12dcccf51b64.png",
@@ -12,11 +12,11 @@
     "static/media/layered-waves-haikei.svg": "/ciao/static/media/layered-waves-haikei.41afb62e70d5a3580132.svg",
     "static/media/description-bar.svg": "/ciao/static/media/description-bar.343319cd1ffe98e15e41.svg",
     "index.html": "/ciao/index.html",
-    "main.46f66251.css.map": "/ciao/static/css/main.46f66251.css.map",
-    "main.0b0c0934.js.map": "/ciao/static/js/main.0b0c0934.js.map"
+    "main.96f54567.css.map": "/ciao/static/css/main.96f54567.css.map",
+    "main.050434ca.js.map": "/ciao/static/js/main.050434ca.js.map"
   },
   "entrypoints": [
-    "static/css/main.46f66251.css",
-    "static/js/main.0b0c0934.js"
+    "static/css/main.96f54567.css",
+    "static/js/main.050434ca.js"
   ]
 }
