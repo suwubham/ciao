@@ -1,36 +1,22 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "../../styles/FromTemplate.css";
 import Navbar from "../../components/Navbar";
 import Lorentz from "../../components/art/LorentzAttractor";
-import { SketchPicker } from "react-color";
-import { CirclePicker } from "react-color";
 import Stack from "@mui/material/Stack";
 import authService from "../../services/auth.service";
 import LoggedNavbar from "../../components/Navbar_logged";
 import { PrettoSlider } from "../../styles/PrettoSlider";
 
 export default function Rdraw() {
-  const [increment2d,setincrement2d] = useState(60);
+  const [increment2d, setincrement2d] = useState(60);
   const [sizef, setsizef] = useState(60);
-  // const [bordercolor, setbordercolor] = useState({
-  //   rgb: { r: 25, g: 194, b: 209 },
-  // });
-  // const [backgroundcolor, setbackgroundcolor] = useState({
-  //   rgb: { r: 255, g: 194, b: 209 },
-  // });
 
-  const handleincrement2d= (e) => {
+  const handleincrement2d = (e) => {
     setincrement2d(e.target.value);
   };
-  const handlesizef= (e) => {
+  const handlesizef = (e) => {
     setsizef(e.target.value);
   };
-  // const handlebordercolor  = (color) => {
-  //   setbordercolor(color);
-  // };
-  // const handlebackgroundcolor = (color) => {
-  //   setbackgroundcolor(color);
-  // };
 
   return (
     <>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "../../styles/FromTemplate.css";
 import Navbar from "../../components/Navbar";
 import Supershape from "../../components/art/SuperShape";

@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "../../styles/FromTemplate.css";
 import Navbar from "../../components/Navbar";
 import PerlinNoiseRandomness from "../../components/art/PerlinNoiseRandomness";
 import { SwatchesPicker } from "react-color";
-
 import Stack from "@mui/material/Stack";
 import authService from "../../services/auth.service";
 import LoggedNavbar from "../../components/Navbar_logged";
