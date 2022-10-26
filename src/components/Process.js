@@ -2,8 +2,6 @@ import React from "react";
 import { useRef, useEffect } from "react";
 import p5 from "p5";
 
-import photo from "../assets/ciao-3.png";
-
 export default function FromImage(props) {
   const containerRef = useRef();
 
