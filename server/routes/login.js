@@ -39,6 +39,7 @@ router.post("/", async (req, res) => {
   res.status(200).json({
     accessToken,
   });
+  console.log(accessToken);
 });
 
 export default router;

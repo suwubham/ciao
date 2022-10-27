@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import getUserData from "../services/test.service";
+import getUserData from "../services/userdata.service";
 import "../styles/Navbar.css";
 import Authservice from "../services/auth.service";
 
 export default function Navbar() {
   let navigate = useNavigate();
-
-  const handleClick = (e) => {
+  const handleClick = () => {
     Authservice.logout();
     navigate("/home", { state: true });
   };
@@ -167,18 +166,6 @@ export default function Navbar() {
               Search
             </button>
           </div>
-
-          {/* <ul className="navbar-nav">
-            <li className="nav-item">
-              <a
-                className="nav-link navbar-custom"
-                id="Profile-btn"
-                onClick={() => navigate("/profile")}
-              >
-                Profile
-              </a>
-            </li>
-          </ul> */}
         </div>
       </div>
     </nav>

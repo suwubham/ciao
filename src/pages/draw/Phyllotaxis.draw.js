@@ -5,8 +5,10 @@ import Phyllotaxis from "../../components/art/Phyllotaxis";
 import { SwatchesPicker } from "react-color";
 import Stack from "@mui/material/Stack";
 import authService from "../../services/auth.service";
+import saveService from "../../services/save.service";
 import LoggedNavbar from "../../components/Navbar_logged";
 import { PrettoSlider } from "../../styles/PrettoSlider";
+import Menu from "../../components/ArtMenu";
 
 export default function Phyllotaxisdraw() {
   const [pelletgap, setpelletgap] = useState(3);
@@ -23,6 +25,22 @@ export default function Phyllotaxisdraw() {
   };
   const handlebackgroundcolor = (color) => {
     setbackgroundcolor(color);
+  };
+
+  const save = async () => {
+    let data = {
+      pelletgap,
+      pelletradius,
+      backgroundcolor: { rgb: backgroundcolor.rgb },
+      id: 1,
+    };
+    try {
+      await saveService.save(data).then((res) => {
+        console.log(res);
+      });
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (
@@ -114,6 +132,18 @@ export default function Phyllotaxisdraw() {
           </div>
         </div>
       </div>
+      <Menu
+        share={() => {
+          navigator.clipboard.writeText(
+            `https://suwubham.github.io/template/phyllotaxis`
+          );
+          alert("Copied to clipboard");
+        }}
+        download={() => {
+          window.dispatchEvent(new KeyboardEvent("keydown", { key: "a" }));
+        }}
+        save={save}
+      />
     </>
   );
 }

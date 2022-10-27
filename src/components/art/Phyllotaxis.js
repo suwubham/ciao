@@ -6,6 +6,7 @@ export default function Tree(props) {
   var c = props.pgap;
   var col = 1;
   const containerRef = useRef();
+
   const Sketch = (p5) => {
     p5.setup = () => {
       p5.createCanvas(900, 650);
@@ -29,6 +30,12 @@ export default function Tree(props) {
       p5.circle(x, y, props.pradius);
       n++;
       col++;
+    };
+
+    p5.keyPressed = () => {
+      if (p5.key == "a") {
+        p5.saveCanvas("myCanvas", "jpg");
+      }
     };
   };
 
