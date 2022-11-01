@@ -3,19 +3,22 @@ import User from "../models/user.model.js";
 import authToken from "../middleware/authenticateToken.js";
 
 const router = express.Router();
-router.post("/", authToken, async (req, res) => {
-  const username = req.user;
+router.get("/", authToken, async (req, res) => {
   try {
+    let username = req.user;
     const currentUser = await User.findOne({ username });
-    currentUser.favorites = req.body;
-    currentUser.arts.push({ rand: Math.random(10) });
-    await currentUser.save();
+    let saved = currentUser.arts;
     return res.status(200).json({
-      currentUser,
+      saved,
     });
   } catch (err) {
+    console.log(err);
     return res.status(500).json({
-      message: err.message,
+      errors: [
+        {
+          msg: "Server error",
+        },
+      ],
     });
   }
 });

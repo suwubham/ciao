@@ -1,54 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "../../styles/FromTemplate.css";
 import Navbar from "../../components/Navbar";
 import Phyllotaxis from "../../components/art/Phyllotaxis";
-import Slider from "@mui/material/Slider";
-import { styled } from "@mui/material/styles";
 import { SwatchesPicker } from "react-color";
 import Stack from "@mui/material/Stack";
 import authService from "../../services/auth.service";
+import saveService from "../../services/save.service";
 import LoggedNavbar from "../../components/Navbar_logged";
-
-const PrettoSlider = styled(Slider)({
-  color: "#7b2cbf",
-  height: 8,
-  "& .MuiSlider-track": {
-    border: "none",
-  },
-  "& .MuiSlider-thumb": {
-    height: 24,
-    width: 24,
-    backgroundColor: "#7b2cbf",
-    border: "2px solid currentColor",
-    "&:focus, &:hover, &.Mui-active, &.Mui-focusVisible": {
-      boxShadow: "inherit",
-    },
-    "&:before": {
-      display: "none",
-    },
-  },
-  "& .MuiSlider-valueLabel": {
-    lineHeight: 1.2,
-    fontSize: 12,
-    background: "unset",
-    padding: 0,
-    width: 32,
-    FontFace: "Roboto",
-    fontWeight: "bold",
-    height: 32,
-    borderRadius: "50% 50% 50% 0",
-    backgroundColor: "#7b2cbf",
-    transformOrigin: "bottom left",
-    transform: "translate(50%, -100%) rotate(-45deg) scale(0)",
-    "&:before": { display: "none" },
-    "&.MuiSlider-valueLabelOpen": {
-      transform: "translate(50%, -100%) rotate(-45deg) scale(1)",
-    },
-    "& > *": {
-      transform: "rotate(45deg)",
-    },
-  },
-});
+import { PrettoSlider } from "../../styles/PrettoSlider";
+import Menu from "../../components/ArtMenu";
 
 export default function Phyllotaxisdraw() {
   const [pelletgap, setpelletgap] = useState(3);
@@ -65,6 +25,22 @@ export default function Phyllotaxisdraw() {
   };
   const handlebackgroundcolor = (color) => {
     setbackgroundcolor(color);
+  };
+
+  const save = async () => {
+    let data = {
+      pelletgap,
+      pelletradius,
+      backgroundcolor: { rgb: backgroundcolor.rgb },
+      id: 1,
+    };
+    try {
+      await saveService.save(data).then((res) => {
+        console.log(res);
+      });
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (
@@ -156,6 +132,18 @@ export default function Phyllotaxisdraw() {
           </div>
         </div>
       </div>
+      <Menu
+        share={() => {
+          navigator.clipboard.writeText(
+            `https://suwubham.github.io/template/phyllotaxis`
+          );
+          alert("Copied to clipboard");
+        }}
+        download={() => {
+          window.dispatchEvent(new KeyboardEvent("keydown", { key: "a" }));
+        }}
+        save={save}
+      />
     </>
   );
 }

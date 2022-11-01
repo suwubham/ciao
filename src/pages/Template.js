@@ -9,8 +9,7 @@ import favService from "../services/fav.service";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
-import Select, { SelectChangeEvent } from "@mui/material/Select";
-import { maxWidth } from "@mui/system";
+import Select from "@mui/material/Select";
 
 export default function Template() {
   const [favorites, setFavorites] = useState({
@@ -75,7 +74,7 @@ export default function Template() {
           Filter
           <FormControl sx={{ m: 1, minWidth: 100, maxWidth: 100 }} size="small">
             <InputLabel id="demo-select-small">
-              <span class="material-symbols-outlined">filter_alt</span>
+              <span className="material-symbols-outlined">filter_alt</span>
             </InputLabel>
             <Select>
               <MenuItem
@@ -85,13 +84,13 @@ export default function Template() {
                 }}
               >
                 All
-                <span class="material-symbols-outlined ico">
+                <span className="material-symbols-outlined ico">
                   filter_alt_off
                 </span>
               </MenuItem>
               <MenuItem value={2} onClick={handleFilter}>
                 Favorites
-                <span class="material-symbols-outlined ico">favorite</span>
+                <span className="material-symbols-outlined ico">favorite</span>
               </MenuItem>
             </Select>
           </FormControl>

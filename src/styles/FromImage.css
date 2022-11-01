@@ -1,0 +1,7 @@
+.wrapper-image{
+  background-image: url("../assets/backgrounds/template-page.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'Montserrat', sans-serif;
+  height:100vh;
+}

@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import getUserData from "../services/test.service";
+import getUserData from "../services/userdata.service";
 import "../styles/Navbar.css";
 import Authservice from "../services/auth.service";
 
 export default function Navbar() {
   let navigate = useNavigate();
-
-  const handleClick = (e) => {
+  const handleClick = () => {
     Authservice.logout();
     navigate("/home", { state: true });
   };
@@ -21,11 +20,9 @@ export default function Navbar() {
   const [currentUser, setCurrentUser] = useState({});
 
   useEffect(() => {
-    getUserData().then(
-      (res) => {
-        setCurrentUser(res.data.currentUser);
-      }
-    );
+    getUserData().then((res) => {
+      setCurrentUser(res.data.currentUser);
+    });
   }, []);
 
   return (
@@ -87,7 +84,6 @@ export default function Navbar() {
             <li className="nav-item dropdown">
               <a
                 className="nav-link dropdown-toggle"
-                href="#"
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
@@ -104,7 +100,10 @@ export default function Navbar() {
                   </a>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="#">
+                  <a
+                    className="dropdown-item"
+                    onClick={() => navigate("/image")}
+                  >
                     From Image
                   </a>
                 </li>
@@ -149,7 +148,7 @@ export default function Navbar() {
                     <hr className="dropdown-divider" />
                   </li>
                   <li>
-                    <a className="dropdown-item" onClick={handleClick}>
+                    <a className="dropdown-item special" onClick={handleClick}>
                       Log Out
                       <span className="material-symbols-outlined">logout</span>
                     </a>
@@ -167,18 +166,6 @@ export default function Navbar() {
               Search
             </button>
           </div>
-
-          {/* <ul className="navbar-nav">
-            <li className="nav-item">
-              <a
-                className="nav-link navbar-custom"
-                id="Profile-btn"
-                onClick={() => navigate("/profile")}
-              >
-                Profile
-              </a>
-            </li>
-          </ul> */}
         </div>
       </div>
     </nav>

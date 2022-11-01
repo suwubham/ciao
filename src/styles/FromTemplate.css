@@ -5,11 +5,11 @@
   display: flex;
 }
 
-canvas{
-  resize: both;
-  overflow: auto;
+.menu{
+  position: absolute;
+  top:60%;
+  right:2%;
 }
-
 
 :root {
   font-size: 16px;

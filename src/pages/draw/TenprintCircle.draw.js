@@ -1,57 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "../../styles/FromTemplate.css";
 import Navbar from "../../components/Navbar";
 import Tenprintcircle from "../../components/art/TenprintCircle";
-import Slider from "@mui/material/Slider";
-import { styled } from "@mui/material/styles";
 import { SwatchesPicker } from "react-color";
 import Stack from "@mui/material/Stack";
 import authService from "../../services/auth.service";
 import LoggedNavbar from "../../components/Navbar_logged";
-            
-const PrettoSlider = styled(Slider)({
-  color: "#7b2cbf",
-  height: 8,
-  "& .MuiSlider-track": {
-    border: "none",
-  },
-  "& .MuiSlider-thumb": {
-    height: 24,
-    width: 24,
-    backgroundColor: "#7b2cbf",
-    border: "2px solid currentColor",
-    "&:focus, &:hover, &.Mui-active, &.Mui-focusVisible": {
-      boxShadow: "inherit",
-    },
-    "&:before": {
-      display: "none",
-    },
-  },
-  "& .MuiSlider-valueLabel": {
-    lineHeight: 1.2,
-    fontSize: 12,
-    background: "unset",
-    padding: 0,
-    width: 32,
-    FontFace: "Roboto",
-    fontWeight: "bold",
-    height: 32,
-    borderRadius: "50% 50% 50% 0",
-    backgroundColor: "#7b2cbf",
-    transformOrigin: "bottom left",
-    transform: "translate(50%, -100%) rotate(-45deg) scale(0)",
-    "&:before": { display: "none" },
-    "&.MuiSlider-valueLabelOpen": {
-      transform: "translate(50%, -100%) rotate(-45deg) scale(1)",
-    },
-    "& > *": {
-      transform: "rotate(45deg)",
-    },
-  },
-});
+import { PrettoSlider } from "../../styles/PrettoSlider";
 
 export default function Tdraw() {
-  const [spacing2d,setspacing2d] = useState(10);
+  const [spacing2d, setspacing2d] = useState(10);
   const [incrementc, setincrementc] = useState(5);
   const [bordercolor, setbordercolor] = useState({
     rgb: { r: 25, g: 194, b: 209 },
@@ -60,13 +18,13 @@ export default function Tdraw() {
     rgb: { r: 255, g: 194, b: 209 },
   });
 
-  const handlespacing2d= (e) => {
+  const handlespacing2d = (e) => {
     setspacing2d(e.target.value);
   };
-  const handleincrementc= (e) => {
+  const handleincrementc = (e) => {
     setincrementc(e.target.value);
   };
-  const handlebordercolor  = (color) => {
+  const handlebordercolor = (color) => {
     setbordercolor(color);
   };
   const handlebackgroundcolor = (color) => {

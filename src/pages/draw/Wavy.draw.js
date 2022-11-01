@@ -1,77 +1,35 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "../../styles/FromTemplate.css";
 import Navbar from "../../components/Navbar";
 import Wavy from "../../components/art/Wavy";
-import Slider from "@mui/material/Slider";
 import { SwatchesPicker } from "react-color";
 import Stack from "@mui/material/Stack";
-import { styled } from "@mui/material/styles";
 import authService from "../../services/auth.service";
 import LoggedNavbar from "../../components/Navbar_logged";
-
-const PrettoSlider = styled(Slider)({
-  color: "#7b2cbf",
-  height: 8,
-  "& .MuiSlider-track": {
-    border: "none",
-  },
-  "& .MuiSlider-thumb": {
-    height: 24,
-    width: 24,
-    backgroundColor: "#7b2cbf",
-    border: "2px solid currentColor",
-    "&:focus, &:hover, &.Mui-active, &.Mui-focusVisible": {
-      boxShadow: "inherit",
-    },
-    "&:before": {
-      display: "none",
-    },
-  },
-  "& .MuiSlider-valueLabel": {
-    lineHeight: 1.2,
-    fontSize: 12,
-    background: "unset",
-    padding: 0,
-    width: 32,
-    FontFace: "Roboto",
-    fontWeight: "bold",
-    height: 32,
-    borderRadius: "50% 50% 50% 0",
-    backgroundColor: "#7b2cbf",
-    transformOrigin: "bottom left",
-    transform: "translate(50%, -100%) rotate(-45deg) scale(0)",
-    "&:before": { display: "none" },
-    "&.MuiSlider-valueLabelOpen": {
-      transform: "translate(50%, -100%) rotate(-45deg) scale(1)",
-    },
-    "& > *": {
-      transform: "rotate(45deg)",
-    },
-  },
-});
+import { PrettoSlider } from "../../styles/PrettoSlider";
 
 export default function Rdraw() {
-  const [increment2d,setincrement2d] = useState(50);
+  const [increment2d, setincrement2d] = useState(50);
   const [bold2d, setbold2d] = useState(3);
   const [layers, setlayers] = useState(15);
   const [rotate3d, setrotate3d] = useState(3);
   const [bordercolor, setbordercolor] = useState({
     rgb: { r: 0, g: 19, b: 20 },
   });
-  
-  const handleincrement2d= (e) => {
+
+  const handleincrement2d = (e) => {
     setincrement2d(e.target.value);
   };
-  const handlebold2d= (e) => {
+  const handlebold2d = (e) => {
     setbold2d(e.target.value);
   };
-  const handlelayers= (e) => {
+  const handlelayers = (e) => {
     setlayers(e.target.value);
   };
-  const handlerotate3d= (e) => {
+  const handlerotate3d = (e) => {
     setrotate3d(e.target.value);
   };
-  const handlebordercolor  = (color) => {
+  const handlebordercolor = (color) => {
     setbordercolor(color);
   };
 
