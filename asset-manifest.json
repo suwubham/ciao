@@ -1,7 +1,8 @@
 {
   "files": {
-    "main.css": "/ciao/static/css/main.96f54567.css",
-    "main.js": "/ciao/static/js/main.050434ca.js",
+    "main.css": "/ciao/static/css/main.667dbe6e.css",
+    "main.js": "/ciao/static/js/main.47ab648e.js",
+    "static/media/boy1.jpg": "/ciao/static/media/boy1.98e82e5e9b10f307cf81.jpg",
     "static/media/ciao-3.png": "/ciao/static/media/ciao-3.dbf64658d302dc4fae6b.png",
     "static/media/instagram-logo-2433.png": "/ciao/static/media/instagram-logo-2433.4e8a15165e70f320be60.png",
     "static/media/twlogo2.png": "/ciao/static/media/twlogo2.0b54323e12dcccf51b64.png",
@@ -9,14 +10,14 @@
     "static/media/template-page.svg": "/ciao/static/media/template-page.1ba6a54b353827496823.svg",
     "static/media/blob-scene-haikei.svg": "/ciao/static/media/blob-scene-haikei.a3d6860295b8833806c9.svg",
     "static/media/loginbox.svg": "/ciao/static/media/loginbox.d5419cc0a138c0fc85e7684617882a6b.svg",
-    "static/media/layered-waves-haikei.svg": "/ciao/static/media/layered-waves-haikei.41afb62e70d5a3580132.svg",
+    "static/media/layered-waves-haikei.svg": "/ciao/static/media/layered-waves-haikei.804aa3e149e179c8a457.svg",
     "static/media/description-bar.svg": "/ciao/static/media/description-bar.343319cd1ffe98e15e41.svg",
     "index.html": "/ciao/index.html",
-    "main.96f54567.css.map": "/ciao/static/css/main.96f54567.css.map",
-    "main.050434ca.js.map": "/ciao/static/js/main.050434ca.js.map"
+    "main.667dbe6e.css.map": "/ciao/static/css/main.667dbe6e.css.map",
+    "main.47ab648e.js.map": "/ciao/static/js/main.47ab648e.js.map"
   },
   "entrypoints": [
-    "static/css/main.96f54567.css",
-    "static/js/main.050434ca.js"
+    "static/css/main.667dbe6e.css",
+    "static/js/main.47ab648e.js"
   ]
 }
