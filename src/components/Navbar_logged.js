@@ -148,7 +148,7 @@ export default function Navbar() {
                     <hr className="dropdown-divider" />
                   </li>
                   <li>
-                    <a className="dropdown-item" onClick={handleClick}>
+                    <a className="dropdown-item special" onClick={handleClick}>
                       Log Out
                       <span className="material-symbols-outlined">logout</span>
                     </a>
