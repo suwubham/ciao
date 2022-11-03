@@ -49,6 +49,12 @@ export default function Tree(props) {
       }
       p5.pop();
     };
+
+    p5.keyPressed = () => {
+      if (p5.key === "a") {
+        p5.saveCanvas("myCanvas", "jpg");
+      }
+    };
   };
 
   useEffect(() => {

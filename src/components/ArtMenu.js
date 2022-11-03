@@ -5,10 +5,6 @@ import CloudUploadIcon from "@mui/icons-material/CloudUpload";
 import SaveIcon from "@mui/icons-material/Save";
 import ShareIcon from "@mui/icons-material/Share";
 
-function help() {
-  console.log("hello world");
-}
-
 export default function ArtMenu(props) {
   const actions = [
     { icon: <CloudUploadIcon />, name: "Save", click: props.save },

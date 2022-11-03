@@ -7,12 +7,14 @@ import Stack from "@mui/material/Stack";
 import authService from "../../services/auth.service";
 import LoggedNavbar from "../../components/Navbar_logged";
 import { PrettoSlider } from "../../styles/PrettoSlider";
+import saveService from "../../services/save.service";
+import Menu from "../../components/ArtMenu";
 
 export default function Mdraw() {
   const [incrementm, setincrementm] = useState(100);
   const [transparencym, settransparencym] = useState(255);
   const [backgroundcolor, setbackgroundcolor] = useState({
-    rgb: { r: 255, g: 194, b: 209 },
+    rgb: { r: 0, g: 0, b: 0 },
   });
 
   const handleincrementm = (e) => {
@@ -23,6 +25,22 @@ export default function Mdraw() {
   };
   const handlebackgroundcolor = (color) => {
     setbackgroundcolor(color);
+  };
+
+  const save = async () => {
+    let data = {
+      incrementm,
+      transparencym,
+      backgroundcolor: { rgb: backgroundcolor.rgb },
+      id: 4,
+    };
+    try {
+      await saveService.save(data).then((res) => {
+        console.log(res);
+      });
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (
@@ -114,6 +132,18 @@ export default function Mdraw() {
           </div>
         </div>
       </div>
+      <Menu
+        share={() => {
+          navigator.clipboard.writeText(
+            `https://suwubham.github.io/template/mandelbrotset`
+          );
+          alert("Copied to clipboard");
+        }}
+        download={() => {
+          window.dispatchEvent(new KeyboardEvent("keydown", { key: "a" }));
+        }}
+        save={save}
+      />
     </>
   );
 }

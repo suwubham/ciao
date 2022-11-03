@@ -8,6 +8,8 @@ import Stack from "@mui/material/Stack";
 import authService from "../../services/auth.service";
 import LoggedNavbar from "../../components/Navbar_logged";
 import { PrettoSlider } from "../../styles/PrettoSlider";
+import Menu from "../../components/ArtMenu";
+import saveService from "../../services/save.service";
 
 export default function Tree() {
   const [branchlength, setbranchlength] = useState(100);
@@ -23,20 +25,21 @@ export default function Tree() {
     rgb: { r: 255, g: 194, b: 209 },
   });
 
-  const handlebranchlength = (e) => {
-    setbranchlength(e.target.value);
-  };
-
-  const handleleafcolor = (color) => {
-    setleafcolor(color);
-  };
-
-  const handletrunkcolor = (color) => {
-    settrunkcolor(color);
-  };
-
-  const handlebackgroundcolor = (color) => {
-    setbackgroundcolor(color);
+  const save = async () => {
+    let data = {
+      branchlength,
+      leafcolor,
+      backgroundcolor: { rgb: backgroundcolor.rgb },
+      trunkcolor: { rgb: trunkcolor.rgb },
+      id: 5,
+    };
+    try {
+      await saveService.save(data).then((res) => {
+        console.log(res);
+      });
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (
@@ -96,7 +99,9 @@ export default function Tree() {
                   valueLabelDisplay="auto"
                   aria-label="pretto slider"
                   defaultValue={branchlength}
-                  onChange={handlebranchlength}
+                  onChange={(e) => {
+                    setbranchlength(e.target.value);
+                  }}
                 />
                 120
               </Stack>
@@ -106,14 +111,18 @@ export default function Tree() {
                 <h5>Leaf color</h5>
                 <SketchPicker
                   color={leafcolor.rgb}
-                  onChangeComplete={handleleafcolor}
+                  onChangeComplete={(color) => {
+                    setleafcolor(color);
+                  }}
                 />
               </div>
               <div className="backgroundcolor">
                 <h5>Background color</h5>
                 <SketchPicker
                   color={backgroundcolor.rgb}
-                  onChangeComplete={handlebackgroundcolor}
+                  onChangeComplete={(color) => {
+                    setbackgroundcolor(color);
+                  }}
                   triangle={"hide"}
                 />
               </div>
@@ -123,12 +132,26 @@ export default function Tree() {
               <h5>Trunk color</h5>
               <CirclePicker
                 color={trunkcolor.rgb}
-                onChangeComplete={handletrunkcolor}
+                onChangeComplete={(color) => {
+                  settrunkcolor(color);
+                }}
               />
             </div>
           </div>
         </div>
       </div>
+      <Menu
+        share={() => {
+          navigator.clipboard.writeText(
+            `https://suwubham.github.io/template/recursivetree`
+          );
+          alert("Copied to clipboard");
+        }}
+        download={() => {
+          window.dispatchEvent(new KeyboardEvent("keydown", { key: "a" }));
+        }}
+        save={save}
+      />
     </>
   );
 }

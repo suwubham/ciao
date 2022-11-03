@@ -1,16 +1,22 @@
 import React, { useState } from "react";
 import "../../styles/FromTemplate.css";
 import Navbar from "../../components/Navbar";
-import Perlin from "../../components/art/PerlinNoeseFlowField";
+import Perlin from "../../components/art/PerlinNoiseFlowField";
 import Stack from "@mui/material/Stack";
 import authService from "../../services/auth.service";
 import LoggedNavbar from "../../components/Navbar_logged";
 import { PrettoSlider } from "../../styles/PrettoSlider";
+import saveService from "../../services/save.service";
+import Menu from "../../components/ArtMenu";
+import { SwatchesPicker } from "react-color";
 
 export default function Pdraw() {
   const [increment2d, setincrement2d] = useState(20);
   const [bold2d, setbold2d] = useState(2);
   const [layers, setlayers] = useState(10);
+  const [backgroundcolor, setbackgroundcolor] = useState({
+    rgb: { r: 0, g: 19, b: 20 },
+  });
 
   const handleincrement2d = (e) => {
     setincrement2d(e.target.value);
@@ -20,6 +26,26 @@ export default function Pdraw() {
   };
   const handlelayers = (e) => {
     setlayers(e.target.value);
+  };
+  const handlebackgroundcolor = (color) => {
+    setbackgroundcolor(color);
+  };
+
+  const save = async () => {
+    let data = {
+      increment2d,
+      bold2d,
+      layers,
+      backgroundcolor: { rgb: backgroundcolor.rgb },
+      id: 2,
+    };
+    try {
+      await saveService.save(data).then((res) => {
+        console.log(res);
+      });
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (
@@ -67,8 +93,7 @@ export default function Pdraw() {
               increment={increment2d}
               bold={bold2d}
               layer={layers}
-              // rotate={rotate3d}
-              // border={bordercolor}
+              background={backgroundcolor}
             />
           </div>
           <div className="editor">
@@ -118,9 +143,28 @@ export default function Pdraw() {
                 50
               </Stack>
             </div>
+            <div className="colorpicker">
+              <h5>Background Color</h5>
+              <SwatchesPicker
+                color={backgroundcolor.rgb}
+                onChangeComplete={handlebackgroundcolor}
+              />
+            </div>
           </div>
         </div>
       </div>
+      <Menu
+        share={() => {
+          navigator.clipboard.writeText(
+            `https://suwubham.github.io/template/perlinnoiseflowfield`
+          );
+          alert("Copied to clipboard");
+        }}
+        download={() => {
+          window.dispatchEvent(new KeyboardEvent("keydown", { key: "a" }));
+        }}
+        save={save}
+      />
     </>
   );
 }

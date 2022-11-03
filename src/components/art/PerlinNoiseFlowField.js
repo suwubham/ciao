@@ -5,7 +5,7 @@ export default function Pdraw(props) {
   const containerRef = useRef();
 
   var inc = 0.1;
-  var scl = props.layer;//10
+  var scl = props.layer; //10
   var zoff = 0;
   var particles = [];
   var flowfield = [];
@@ -17,7 +17,7 @@ export default function Pdraw(props) {
         this.pos = p5.createVector(p5.random(p5.width), p5.random(p5.height));
         this.vel = p5.createVector(p5.random(p5.width), p5.random(p5.height));
         this.acc = p5.createVector(p5.random(p5.width), p5.random(p5.height));
-        this.maxspeed = props.increment/10;//1/10-3/10
+        this.maxspeed = props.increment / 10; //1/10-3/10
         this.prevPos = this.pos.copy();
         this.col = 0;
       }
@@ -88,7 +88,11 @@ export default function Pdraw(props) {
         particles[i] = new Particle(p5);
       }
       p5.colorMode(p5.HSB, 255);
-      p5.background(0);
+      p5.background(
+        props.background.rgb.r,
+        props.background.rgb.g,
+        props.background.rgb.b
+      );
     };
 
     p5.draw = () => {
@@ -108,7 +112,7 @@ export default function Pdraw(props) {
           flowfield[index] = v;
           xoff += inc;
           // p5.stroke(123, 21, 321, 50);
-          
+
           p5.strokeWeight(1);
         }
         yoff += inc;

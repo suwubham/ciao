@@ -6,16 +6,43 @@ import Stack from "@mui/material/Stack";
 import authService from "../../services/auth.service";
 import LoggedNavbar from "../../components/Navbar_logged";
 import { PrettoSlider } from "../../styles/PrettoSlider";
+import saveService from "../../services/save.service";
+import Menu from "../../components/ArtMenu";
+import { SwatchesPicker } from "react-color";
 
 export default function Rdraw() {
   const [increment2d, setincrement2d] = useState(60);
   const [sizef, setsizef] = useState(60);
+  const [backgroundcolor, setbackgroundcolor] = useState({
+    rgb: { r: 0, g: 0, b: 0 },
+  });
 
   const handleincrement2d = (e) => {
     setincrement2d(e.target.value);
   };
+
   const handlesizef = (e) => {
     setsizef(e.target.value);
+  };
+
+  const handlebackgroundcolor = (color) => {
+    setbackgroundcolor(color);
+  };
+
+  const save = async () => {
+    let data = {
+      increment2d,
+      sizef,
+      backgroundcolor: { rgb: backgroundcolor.rgb },
+      id: 3,
+    };
+    try {
+      await saveService.save(data).then((res) => {
+        console.log(res);
+      });
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (
@@ -63,7 +90,7 @@ export default function Rdraw() {
               increment={increment2d}
               size={sizef}
               // border={bordercolor}
-              // background={backgroundcolor}
+              background={backgroundcolor}
             />
           </div>
           <div className="editor">
@@ -98,23 +125,28 @@ export default function Rdraw() {
                 90
               </Stack>
             </div>
-            {/* <div className="colorpicker">
-              <h5>Border Color</h5>
-              <SwatchesPicker
-                color={bordercolor.rgb}
-                onChangeComplete={handlebordercolor}
-              />
-            </div>
             <div className="colorpicker">
               <h5>Background Color</h5>
               <SwatchesPicker
                 color={backgroundcolor.rgb}
                 onChangeComplete={handlebackgroundcolor}
               />
-            </div> */}
+            </div>
           </div>
         </div>
       </div>
+      <Menu
+        share={() => {
+          navigator.clipboard.writeText(
+            `https://suwubham.github.io/template/lorentzattractor`
+          );
+          alert("Copied to clipboard");
+        }}
+        download={() => {
+          window.dispatchEvent(new KeyboardEvent("keydown", { key: "a" }));
+        }}
+        save={save}
+      />
     </>
   );
 }

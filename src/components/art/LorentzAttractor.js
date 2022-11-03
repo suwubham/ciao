@@ -3,28 +3,32 @@ import p5 from "p5";
 
 export default function Rdraw(props) {
   const containerRef = useRef();
-  let x = 0.01;//0.01
+  let x = 0.01; //0.01
   let y = 0;
   let z = 0;
 
-  let a = 10;//10
+  let a = 10; //10
   let b = 28;
-  let c = 8/ 3.0;//8/3
+  let c = 8 / 3.0; //8/3
 
   let points = new Array();
 
   const Sketch = (p5) => {
     p5.setup = () => {
       p5.createCanvas(900, 900, p5.WEBGL);
-      p5.colorMode(p5.HSB);
-      
+      p5.colorMode(p5.RGB);
     };
 
     p5.draw = () => {
-      p5.background(0);
-      p5.orbitControl(4,4);
-      p5.frameRate(props.increment);//40-100
-      let dt = 0.01;//0.01
+      p5.background(
+        props.background.rgb.r,
+        props.background.rgb.g,
+        props.background.rgb.b
+      );
+
+      p5.orbitControl(4, 4);
+      p5.frameRate(props.increment); //40-100
+      let dt = 0.01; //0.01
       let dx = a * (y - x) * dt;
       let dy = (x * (b - z) - y) * dt;
       let dz = (x * y - c * z) * dt;
@@ -32,8 +36,8 @@ export default function Rdraw(props) {
       y += dy;
       z += dz;
       points.push(p5.createVector(x, y, z));
-      p5.translate(0, 0, -80);//-80
-      p5.scale(props.size*0.1);//5-9
+      p5.translate(0, 0, -80); //-80
+      p5.scale(props.size * 0.1); //5-9
       p5.stroke(255);
       p5.noFill();
       let hu = 0;
@@ -53,7 +57,7 @@ export default function Rdraw(props) {
   useEffect(() => {
     let inst = new p5(Sketch, containerRef.current);
     return () => inst.remove();
-  }, [props.increment,props.size]);
+  }, [props.increment, props.size, props.background]);
 
   return <div ref={containerRef}></div>;
 }

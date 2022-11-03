@@ -44,7 +44,7 @@ export default function Rdraw(props) {
       for (let i = 0; i < symmetry; i++) {
         p5.rotate(angle);
         p5.stroke(255, 0, 0);
-        p5.strokeWeight(3/ 499);
+        p5.strokeWeight(3 / 499);
         p5.line(0, 0, p5.width, 0);
       }
 
@@ -78,7 +78,13 @@ export default function Rdraw(props) {
   useEffect(() => {
     let inst = new p5(Sketch, containerRef.current);
     return () => inst.remove();
-  }, [props.background, props.increment, props.bold, props.border]);
+  }, [
+    props.background,
+    props.increment,
+    props.bold,
+    props.border,
+    props.symmetry,
+  ]);
 
   return <div ref={containerRef}></div>;
 }

@@ -7,6 +7,8 @@ import Stack from "@mui/material/Stack";
 import authService from "../../services/auth.service";
 import LoggedNavbar from "../../components/Navbar_logged";
 import { PrettoSlider } from "../../styles/PrettoSlider";
+import saveService from "../../services/save.service";
+import Menu from "../../components/ArtMenu";
 
 export default function Rdraw() {
   const [dflower2d, setdflower2d] = useState(3);
@@ -25,6 +27,22 @@ export default function Rdraw() {
   };
   const handlebackgroundcolor = (color) => {
     setbackgroundcolor(color);
+  };
+
+  const save = async () => {
+    let data = {
+      dflower2d,
+      flowercolor2d,
+      backgroundcolor: { rgb: backgroundcolor.rgb },
+      id: 15,
+    };
+    try {
+      await saveService.save(data).then((res) => {
+        console.log(res);
+      });
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (
@@ -108,6 +126,18 @@ export default function Rdraw() {
           </div>
         </div>
       </div>
+      <Menu
+        share={() => {
+          navigator.clipboard.writeText(
+            `https://suwubham.github.io/template/asciifabric`
+          );
+          alert("Copied to clipboard");
+        }}
+        download={() => {
+          window.dispatchEvent(new KeyboardEvent("keydown", { key: "a" }));
+        }}
+        save={save}
+      />
     </>
   );
 }

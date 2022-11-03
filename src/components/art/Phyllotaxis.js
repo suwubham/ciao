@@ -33,7 +33,7 @@ export default function Tree(props) {
     };
 
     p5.keyPressed = () => {
-      if (p5.key == "a") {
+      if (p5.key === "a") {
         p5.saveCanvas("myCanvas", "jpg");
       }
     };

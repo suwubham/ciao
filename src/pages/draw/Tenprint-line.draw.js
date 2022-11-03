@@ -7,6 +7,8 @@ import Stack from "@mui/material/Stack";
 import authService from "../../services/auth.service";
 import LoggedNavbar from "../../components/Navbar_logged";
 import { PrettoSlider } from "../../styles/PrettoSlider";
+import saveService from "../../services/save.service";
+import Menu from "../../components/ArtMenu";
 
 export default function Tdraw() {
   const [spacing2d, setspacing2d] = useState(9);
@@ -29,6 +31,23 @@ export default function Tdraw() {
   };
   const handlebackgroundcolor = (color) => {
     setbackgroundcolor(color);
+  };
+
+  const save = async () => {
+    let data = {
+      spacing2d,
+      inclination,
+      bordercolor: { rgb: bordercolor.rgb },
+      backgroundcolor: { rgb: backgroundcolor.rgb },
+      id: 6,
+    };
+    try {
+      await saveService.save(data).then((res) => {
+        console.log(res);
+      });
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (
@@ -128,6 +147,18 @@ export default function Tdraw() {
           </div>
         </div>
       </div>
+      <Menu
+        share={() => {
+          navigator.clipboard.writeText(
+            `https://suwubham.github.io/template/Tenprint`
+          );
+          alert("Copied to clipboard");
+        }}
+        download={() => {
+          window.dispatchEvent(new KeyboardEvent("keydown", { key: "a" }));
+        }}
+        save={save}
+      />
     </>
   );
 }

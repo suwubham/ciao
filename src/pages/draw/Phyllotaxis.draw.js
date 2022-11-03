@@ -5,9 +5,9 @@ import Phyllotaxis from "../../components/art/Phyllotaxis";
 import { SwatchesPicker } from "react-color";
 import Stack from "@mui/material/Stack";
 import authService from "../../services/auth.service";
-import saveService from "../../services/save.service";
 import LoggedNavbar from "../../components/Navbar_logged";
 import { PrettoSlider } from "../../styles/PrettoSlider";
+import saveService from "../../services/save.service";
 import Menu from "../../components/ArtMenu";
 
 export default function Phyllotaxisdraw() {
@@ -16,16 +16,6 @@ export default function Phyllotaxisdraw() {
   const [backgroundcolor, setbackgroundcolor] = useState({
     rgb: { r: 255, g: 194, b: 209 },
   });
-
-  const handlepelletgap = (e) => {
-    setpelletgap(e.target.value);
-  };
-  const handlepelletradius = (e) => {
-    setpelletradius(e.target.value);
-  };
-  const handlebackgroundcolor = (color) => {
-    setbackgroundcolor(color);
-  };
 
   const save = async () => {
     let data = {
@@ -102,7 +92,9 @@ export default function Phyllotaxisdraw() {
                   valueLabelDisplay="auto"
                   aria-label="pretto slider"
                   value={pelletgap}
-                  onChange={handlepelletgap}
+                  onChange={(e) => {
+                    setpelletgap(e.target.value);
+                  }}
                 />
                 10
               </Stack>
@@ -117,7 +109,9 @@ export default function Phyllotaxisdraw() {
                   valueLabelDisplay="auto"
                   aria-label="pretto slider"
                   value={pelletradius}
-                  onChange={handlepelletradius}
+                  onChange={(e) => {
+                    setpelletradius(e.target.value);
+                  }}
                 />
                 10
               </Stack>
@@ -126,7 +120,9 @@ export default function Phyllotaxisdraw() {
               <h5>Background Color</h5>
               <SwatchesPicker
                 color={backgroundcolor.rgb}
-                onChangeComplete={handlebackgroundcolor}
+                onChangeComplete={(color) => {
+                  setbackgroundcolor(color);
+                }}
               />
             </div>
           </div>
