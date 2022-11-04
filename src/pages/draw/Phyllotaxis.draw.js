@@ -9,7 +9,7 @@ import LoggedNavbar from "../../components/Navbar_logged";
 import { PrettoSlider } from "../../styles/PrettoSlider";
 import saveService from "../../services/save.service";
 import Menu from "../../components/ArtMenu";
-import { ReactComponent as YourSvg } from "../../assets/icons/description.svg";
+import { ReactComponent as DescriptionIcon } from "../../assets/icons/description.svg";
 import TextField from "@mui/material/TextField";
 
 export default function Phyllotaxisdraw() {
@@ -46,7 +46,7 @@ export default function Phyllotaxisdraw() {
           <nav className="descriptionbar">
             <div className="logo description-link">
               <span className="link-text">Description</span>
-              <YourSvg />
+              <DescriptionIcon />
             </div>
             <span className="link-text">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat
