@@ -15,11 +15,8 @@ export default function Rcircle(props) {
     };
 
     p5.setup = () => {
-      p5.createCanvas(600, 600);
-      p5.translate(p5.width / 2, p5.height / 2);
-    };
-
-    p5.draw = () => {
+      p5.createCanvas(props.resolution.x, props.resolution.y);
+      p5.angleMode(p5.DEGREES);
       p5.background(
         props.background.rgb.r,
         props.background.rgb.g,
@@ -45,7 +42,7 @@ export default function Rcircle(props) {
   useEffect(() => {
     let inst = new p5(Sketch, containerRef.current);
     return () => inst.remove();
-  }, [props.border, props.background, props.bold, props.increment]);
+  }, [props]);
 
   return <div ref={containerRef}></div>;
 }

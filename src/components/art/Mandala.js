@@ -14,7 +14,7 @@ export default function Mdraw(props) {
       }
     };
     p5.setup = () => {
-      p5.createCanvas(500, 500);
+      p5.createCanvas(props.resolution.x,props.resolution.y);
       p5.background(
         props.background.rgb.r,
         props.background.rgb.g,
@@ -78,7 +78,7 @@ export default function Mdraw(props) {
   useEffect(() => {
     let inst = new p5(Sketch, containerRef.current);
     return () => inst.remove();
-  }, [props.background, props.border, props.bold, props.alph]);
+  }, [props]);
 
   return <div ref={containerRef}></div>;
 }

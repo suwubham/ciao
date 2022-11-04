@@ -11,7 +11,7 @@ export default function Mdraw(props) {
     };
 
     p5.setup = () => {
-      p5.createCanvas(900, 650);
+      p5.createCanvas(props.resolution.x,props.resolution.y);
       p5.pixelDensity(1);
       p5.noLoop();
     };
@@ -61,7 +61,7 @@ export default function Mdraw(props) {
   useEffect(() => {
     let inst = new p5(Sketch, containerRef.current);
     return () => inst.remove();
-  }, [props.background, props.increment, props.transparency]);
+  }, [props]);
 
   return <div ref={containerRef}></div>;
 }

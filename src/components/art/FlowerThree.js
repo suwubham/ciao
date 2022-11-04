@@ -11,7 +11,7 @@ export default function Rdraw(props) {
       }
     };
     p5.setup = () => {
-      p5.createCanvas(750, 750, p5.WEBGL);
+      p5.createCanvas(props.resolution.x,props.resolution.y, p5.WEBGL);
       p5.colorMode("RGB");
       p5.angleMode(p5.DEGREES);
       p5.stroke(props.border.rgb.r, props.border.rgb.g, props.border.rgb.b);
@@ -70,7 +70,7 @@ export default function Rdraw(props) {
   useEffect(() => {
     let inst = new p5(Sketch, containerRef.current);
     return () => inst.remove();
-  }, [props.background, props.increment, props.rotate, props.border]);
+  }, [props]);
 
   return <div ref={containerRef}></div>;
 }

@@ -19,7 +19,7 @@ export default function Phyllotaxisdraw() {
     rgb: { r: 255, g: 194, b: 209 },
   });
   const [resolution, setresolution] = useState({ x: 900, y: 650 });
-
+  
   const save = async () => {
     let data = {
       pelletgap,
@@ -61,10 +61,12 @@ export default function Phyllotaxisdraw() {
               pradius={pelletradius}
               background={backgroundcolor}
               resolution={resolution}
+              
             />
           </div>
           <div className="editor">
             <h2>Editor</h2>
+            
             <div className="resolution">
               <h5>Resolution</h5>
               <div className="fields">

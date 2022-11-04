@@ -8,7 +8,7 @@ export default function Adraw(props) {
 
   const Sketch = (p5) => {
     p5.setup = () => {
-      p5.createCanvas(700, 700); //size
+      p5.createCanvas(props.resolution.x,props.resolution.y); //size
       p5.background(
         props.background.rgb.r,
         props.background.rgb.g,
@@ -48,7 +48,7 @@ export default function Adraw(props) {
   useEffect(() => {
     let inst = new p5(Sketch, containerRef.current);
     return () => inst.remove();
-  }, [props.size, props.background]);
+  }, [props]);
 
   return <div ref={containerRef}></div>;
 }

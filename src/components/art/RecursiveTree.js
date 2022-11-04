@@ -11,7 +11,7 @@ export default function Tree(props) {
     };
 
     p5.setup = () => {
-      p5.createCanvas(900, 650);
+      p5.createCanvas(props.resolution.x, props.resolution.y);
       p5.angleMode(p5.DEGREES);
       p5.noLoop();
     };
@@ -66,7 +66,7 @@ export default function Tree(props) {
   useEffect(() => {
     let inst = new p5(Sketch, containerRef.current);
     return () => inst.remove();
-  }, [props]);
+  }, [props.resolution]);
 
   return <div ref={containerRef}></div>;
 }

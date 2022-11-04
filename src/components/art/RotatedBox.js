@@ -15,7 +15,7 @@ export default function Rbox(props) {
     };
 
     p5.setup = () => {
-      p5.createCanvas(700, 700);
+      p5.createCanvas(props.resolution.x,props.resolution.y);
       // p5.saveButton = p5.createButton("save jpg");
       // //  p5.saveButton.p5.position(10, p5.height+10);
       //  p5.saveButton.p5.mousePressed(p5.saveArt);
@@ -59,7 +59,7 @@ export default function Rbox(props) {
   useEffect(() => {
     let inst = new p5(Sketch, containerRef.current);
     return () => inst.remove();
-  }, [props.border, props.background, props.bold, props.increment]);
+  }, [props]);
 
   return <div ref={containerRef}></div>;
 }

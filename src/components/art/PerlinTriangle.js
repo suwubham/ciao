@@ -12,7 +12,7 @@ export default function Rdraw(props) {
     };
 
     p5.setup = () => {
-      p5.createCanvas(500, 500);
+      p5.createCanvas(props.resolution.x,props.resolution.y);
       p5.colorMode(p5.RGB);
       p5.colorStart = p5.random(260);
       p5.noLoop();
@@ -70,7 +70,7 @@ export default function Rdraw(props) {
   useEffect(() => {
     let inst = new p5(Sketch, containerRef.current);
     return () => inst.remove();
-  }, [props.triangle2, props.alpha, props.size, props.triangle1]);
+  }, [props]);
 
   return <div ref={containerRef}></div>;
 }
