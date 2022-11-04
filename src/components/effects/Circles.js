@@ -24,6 +24,11 @@ export default function FromImage(props) {
     };
 
     p5.draw = () => {};
+    p5.keyPressed = () => {
+      if (p5.key === "d") {
+        p5.saveCanvas("myCanvas", "jpg");
+      }
+    };
   };
 
   useEffect(() => {

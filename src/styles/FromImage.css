@@ -3,5 +3,118 @@
   background-size: cover;
   background-repeat: no-repeat;
   font-family: 'Montserrat', sans-serif;
-  height:100vh;
+  height: 190vh;
+}
+
+.image-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #353535;
+    font-size: 3rem;
+    color: #fff;
+    box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+    height: 100%;
+    width: 100%;
+    border-radius: 4px;
+    transition: all 500ms;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgb(36, 243, 147);
+    animation: cardEntrance 700ms ease-out;
+    animation-fill-mode: backwards;
+ }
+  
+.image-card:hover {
+    box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
+    transform: translateY(-3px) scale(1.1);
+}
+
+.animated-grid {
+  margin:50px;
+  padding:0;
+  height: 80vh;
+  display: grid;
+  gap: 2rem;
+
+  grid-template-areas:
+    'a  a  a  d'
+    'k  🌟 🌟 d'
+    'k  🌟 🌟 d'
+    'h  h  h  d';
+
+  grid-template-rows: repeat(4, 25%);
+  grid-template-columns: auto auto auto auto;
+  --stagger-delay: 100ms;
+}
+
+@keyframes cardEntrance {
+  from {
+    opacity: 0;
+    transform: scale(0.3);
+    filter: hue-rotate(180deg);
+  }
+  to {  
+    opacity: 1;
+    transform: scale(1);
+    filter: hue-rotate(0deg);
+  }
+}
+
+.image-card:nth-child(1) {
+  grid-area: a;
+  animation-delay: calc(1 * var(--stagger-delay));
+  background-image:url('../assets/artfromimage/circles.jpg')
+}
+
+.image-card:nth-child(2) {
+  grid-area: d;
+  animation-delay: calc(2 * var(--stagger-delay));
+  background-image:url('https://i.pinimg.com/236x/cd/93/4e/cd934ee5625bc22475efdaeb20880f58--painting-clouds-pink-painting.jpg')
+}
+
+.image-card:nth-child(3) {
+  grid-area: k;
+  animation-delay: calc(3 * var(--stagger-delay));
+  background-image:url('https://images.unsplash.com/photo-1583426573939-97d09302d76a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=968&q=80')
+}
+
+.image-card:nth-child(4) {
+  grid-area: h;
+  animation-delay: calc(4 * var(--stagger-delay));
+  background-image:url('https://images.unsplash.com/photo-1583531172005-814191b8b6c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=975&q=80')
+
+}
+
+.image-card:last-child {
+  grid-area: 🌟;
+  animation-delay: calc(5 * var(--stagger-delay));
+  background-image:url('https://images.unsplash.com/photo-1502134249126-9f3755a50d78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80')
+}
+
+.upload{
+  border-radius: 20px;
+  border: none;
+  background: linear-gradient(
+    135deg,
+    rgba(0,18,32,0.4),
+    rgba(0,18,32,0.2)
+  );
+  border: 1px solid rgba(255,255,255, 0.2);
+  backdrop-filter: blur(2px);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.output{
+  margin-top: 150px;
+  display: flex;
+  justify-content: center;
 }
