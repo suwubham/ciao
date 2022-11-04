@@ -109,7 +109,7 @@ export default function Rdraw() {
       <Menu
         share={() => {
           navigator.clipboard.writeText(
-            `https://suwubham.github.io/template/asciifabric`
+            `https://suwubham.github.io/template/Grid`
           );
           alert("Copied to clipboard");
         }}

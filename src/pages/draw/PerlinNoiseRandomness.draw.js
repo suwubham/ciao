@@ -149,7 +149,7 @@ export default function Pdraw() {
       <Menu
         share={() => {
           navigator.clipboard.writeText(
-            `https://suwubham.github.io/template/asciifabric`
+            `https://suwubham.github.io/template/pnrandom`
           );
           alert("Copied to clipboard");
         }}

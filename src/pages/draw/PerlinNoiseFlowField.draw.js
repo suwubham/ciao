@@ -135,7 +135,7 @@ export default function Pdraw() {
       <Menu
         share={() => {
           navigator.clipboard.writeText(
-            `https://suwubham.github.io/template/perlinnoiseflowfield`
+            `https://suwubham.github.io/template/perlinnoise`
           );
           alert("Copied to clipboard");
         }}

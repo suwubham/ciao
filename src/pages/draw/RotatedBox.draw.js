@@ -129,7 +129,7 @@ export default function Rbox() {
       <Menu
         share={() => {
           navigator.clipboard.writeText(
-            `https://suwubham.github.io/template/asciifabric`
+            `https://suwubham.github.io/template/rotatedbox`
           );
           alert("Copied to clipboard");
         }}
