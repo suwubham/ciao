@@ -37,12 +37,18 @@ export default function Adraw(props) {
         }
       }
     };
+
+    p5.keyPressed = () => {
+      if (p5.key === "a") {
+        p5.saveCanvas("myCanvas", "jpg");
+      }
+    };
   };
 
   useEffect(() => {
     let inst = new p5(Sketch, containerRef.current);
     return () => inst.remove();
-  }, [props.size,props.background]);
+  }, [props.size, props.background]);
 
   return <div ref={containerRef}></div>;
 }

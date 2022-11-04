@@ -4,6 +4,12 @@ import p5 from "p5";
 export default function Tree(props) {
   const containerRef = useRef();
   const Sketch = (p5) => {
+    p5.keyPressed = () => {
+      if (p5.key === "a") {
+        p5.saveCanvas("myCanvas", "jpg");
+      }
+    };
+
     p5.setup = () => {
       p5.createCanvas(900, 650);
       p5.angleMode(p5.DEGREES);

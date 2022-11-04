@@ -20,9 +20,6 @@ export default function Rdraw(props) {
         props.background.rgb.b
       );
       p5.translate(p5.width / 2, p5.height / 2);
-      p5.createP("Save your art");
-      saveButton = p5.createButton("save");
-      saveButton.mousePressed(p5.saveSnowflake);
       p5.createP("Clear your canvas");
       clearButton = p5.createButton("clear");
       clearButton.mousePressed(p5.clearCanvas);
@@ -63,8 +60,10 @@ export default function Rdraw(props) {
         }
       }
     };
-    p5.saveSnowflake = () => {
-      p5.save("snowflake.png");
+    p5.keyPressed = () => {
+      if (p5.key === "a") {
+        p5.saveCanvas("myCanvas", "jpg");
+      }
     };
     p5.clearCanvas = () => {
       p5.background(0);

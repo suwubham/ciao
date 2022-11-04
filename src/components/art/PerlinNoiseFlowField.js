@@ -95,6 +95,12 @@ export default function Pdraw(props) {
       );
     };
 
+    p5.keyPressed = () => {
+      if (p5.key === "a") {
+        p5.saveCanvas("myCanvas", "jpg");
+      }
+    };
+
     p5.draw = () => {
       var yoff = 0;
       for (var y = 0; y < window.rows; y++) {

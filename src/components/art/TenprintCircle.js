@@ -2,14 +2,20 @@ import { useRef, useEffect } from "react";
 import p5 from "p5";
 export default function Printcircle(props) {
   const containerRef = useRef();
-  let a = props.increment;//4-7
+  let a = props.increment; //4-7
   let x = 5;
   let y = 0;
-  let spacing = props.space;//5-30
+  let spacing = props.space; //5-30
   const Sketch = (p5) => {
+    p5.keyPressed = () => {
+      if (p5.key === "a") {
+        p5.saveCanvas("myCanvas", "jpg");
+      }
+    };
+
     p5.setup = () => {
       p5.createCanvas(400, 400);
-      p5.colorMode('RGB')
+      p5.colorMode("RGB");
       p5.background(
         props.background.rgb.r,
         props.background.rgb.g,
@@ -18,11 +24,9 @@ export default function Printcircle(props) {
     };
 
     p5.draw = () => {
-      p5.stroke(p5.mouseX,0,p5.mouseY );
+      p5.stroke(p5.mouseX, 0, p5.mouseY);
       if (p5.random(1) < 0.1 * a) {
-        p5.fill( props.border.rgb.r,
-          props.border.rgb.g,
-          props.border.rgb.b);
+        p5.fill(props.border.rgb.r, props.border.rgb.g, props.border.rgb.b);
         p5.circle(x + 3, y + 2, spacing);
       } else {
         // line(x,y+spacing,x+spacing,y);
@@ -38,7 +42,7 @@ export default function Printcircle(props) {
   useEffect(() => {
     let inst = new p5(Sketch, containerRef.current);
     return () => inst.remove();
-  }, [props.increment,props.space,props.background,props.border]);
+  }, [props.increment, props.space, props.background, props.border]);
 
   return <div ref={containerRef}></div>;
 }

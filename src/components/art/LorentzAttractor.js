@@ -14,6 +14,11 @@ export default function Rdraw(props) {
   let points = new Array();
 
   const Sketch = (p5) => {
+    p5.keyPressed = () => {
+      if (p5.key === "a") {
+        p5.saveCanvas("myCanvas", "jpg");
+      }
+    };
     p5.setup = () => {
       p5.createCanvas(900, 900, p5.WEBGL);
       p5.colorMode(p5.RGB);
