@@ -26,6 +26,7 @@ export default function SavedDetail(props) {
           pgap={props.data.pelletgap}
           pradius={props.data.pelletradius}
           background={props.data.backgroundcolor}
+          resolution={props.data.resolution}
         />
       );
 
