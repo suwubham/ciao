@@ -23,6 +23,7 @@ export default function FromImage(props) {
     };
 
     p5.draw = () => {
+        p5.background(255);
         //p5.background(225, 27, 10,100);
         p5.image(p5.imageDots(img, 4, 1, 2, 0.5), 0, 0);
     };
