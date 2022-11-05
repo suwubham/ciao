@@ -18,7 +18,7 @@ export default function Rdraw(props) {
     };
 
     p5.setup = () => {
-      p5.createCanvas(500, 500);
+      p5.createCanvas(props.resolution.x,props.resolution.y);
       // slider = p5.createSlider(0.1, 10, 2, 1);
       p5.background(
         props.background.rgb.r,
@@ -87,7 +87,7 @@ export default function Rdraw(props) {
   useEffect(() => {
     let inst = new p5(Sketch, containerRef.current);
     return () => inst.remove();
-  }, [props.background, props.increment, props.bold, props.border]);
+  }, [props]);
 
   return <div ref={containerRef}></div>;
 }

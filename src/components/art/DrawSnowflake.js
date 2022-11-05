@@ -12,7 +12,7 @@ export default function Rdraw(props) {
   const containerRef = useRef();
   const Sketch = (p5) => {
     p5.setup = () => {
-      p5.createCanvas(500, 500);
+      p5.createCanvas(props.resolution.x,props.resolution.y);
       p5.angleMode(p5.DEGREES);
       p5.background(
         props.background.rgb.r,
@@ -77,13 +77,7 @@ export default function Rdraw(props) {
   useEffect(() => {
     let inst = new p5(Sketch, containerRef.current);
     return () => inst.remove();
-  }, [
-    props.background,
-    props.increment,
-    props.bold,
-    props.border,
-    props.symmetry,
-  ]);
+  }, [props]);
 
   return <div ref={containerRef}></div>;
 }

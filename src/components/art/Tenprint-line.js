@@ -15,7 +15,7 @@ export default function Tdraw(props) {
       }
     };
     p5.setup = () => {
-      p5.createCanvas(400, 400);
+      p5.createCanvas(props.resolution.x,props.resolution.y);
       p5.background(
         props.background.rgb.r,
         props.background.rgb.g,
@@ -41,7 +41,7 @@ export default function Tdraw(props) {
   useEffect(() => {
     let inst = new p5(Sketch, containerRef.current);
     return () => inst.remove();
-  }, [props.space, props.background, props.border, props.incline]);
+  }, [props]);
 
   return <div ref={containerRef}></div>;
 }

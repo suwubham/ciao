@@ -10,6 +10,7 @@ import LoggedNavbar from "../../components/Navbar_logged";
 import saveService from "../../services/save.service";
 import Menu from "../../components/ArtMenu";
 import { ReactComponent as DescriptionIcon } from "../../assets/icons/description.svg";
+import TextField from "@mui/material/TextField";
 
 export default function Adraw() {
   const [sizef, setsizef] = useState(30);
@@ -24,13 +25,15 @@ export default function Adraw() {
   const handlebackgroundcolor = (color) => {
     setbackgroundcolor(color);
   };
+  const [resolution, setresolution] = useState({ x: 900, y: 650 });
 
   const save = async () => {
     let data = {
       sizef,
       backgroundcolor: { rgb: backgroundcolor.rgb },
       id: 14,
-    };
+    resolution,};
+    
     try {
       await saveService.save(data).then((res) => {
         console.log(res);
@@ -59,10 +62,46 @@ export default function Adraw() {
             </span>
           </nav>
           <div className="main-art">
-            <ASCIIFabric size={sizef} background={backgroundcolor} />
+            <ASCIIFabric size={sizef}
+             background={backgroundcolor} 
+            resolution={resolution}/>
           </div>
+
           <div className="editor">
             <h2>Editor</h2>
+            <div className="resolution">
+              <h5>Resolution</h5>
+              <div className="fields">
+                <TextField
+                  sx={{ input: { color: "white" } }}
+                  defaultValue={resolution.x}
+                  label="Width"
+                  type="number"
+                  color="secondary"
+                  focused
+                  onChange={(e) => {
+                    setresolution({
+                      x: parseInt(e.target.value),
+                      y: resolution.y,
+                    });
+                  }}
+                />
+                <TextField
+                  sx={{ input: { color: "white" } }}
+                  defaultValue={resolution.y}
+                  label="Height"
+                  type="number"
+                  color="secondary"
+                  focused
+                  onChange={(e) => {
+                    setresolution({
+                      x: resolution.x,
+                      y: parseInt(e.target.value),
+                    });
+                  }}
+                />
+              </div>
+            </div>
 
             <div className="slider1">
               <h5>Size Increment</h5>

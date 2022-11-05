@@ -14,7 +14,7 @@ export default function Pdraw(props) {
     };
 
     p5.setup = () => {
-      p5.createCanvas(600, 600);
+      p5.createCanvas(props.resolution.x,props.resolution.y);
     };
 
     p5.draw = () => {
@@ -47,7 +47,7 @@ export default function Pdraw(props) {
   useEffect(() => {
     let inst = new p5(Sketch, containerRef.current);
     return () => inst.remove(); // eslint-disable-next-line
-  }, [props.border, props.background, props.size, props.bold, props.increment]);
+  }, [props]);
 
   return <div ref={containerRef}></div>;
 }

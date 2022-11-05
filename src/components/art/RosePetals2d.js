@@ -15,7 +15,7 @@ export default function Rdraw(props) {
     };
 
     p5.setup = () => {
-      p5.createCanvas(700, 700);
+      p5.createCanvas(props.resolution.x,props.resolution.y);
       p5.colorMode(p5.RGB);
     };
 
@@ -55,7 +55,7 @@ export default function Rdraw(props) {
   useEffect(() => {
     let inst = new p5(Sketch, containerRef.current);
     return () => inst.remove();
-  }, [props.background, props.dflower, props.flowercolor]);
+  }, [props]);
 
   return <div ref={containerRef}></div>;
 }

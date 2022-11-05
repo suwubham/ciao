@@ -11,7 +11,7 @@ export default function Tree(props) {
       }
     };
     p5.setup = () => {
-      p5.createCanvas(500, 500);
+      p5.createCanvas(props.resolution.x,props.resolution.y);
       // p5.fill(200,50,40);
       p5.strokeWeight(props.bold / 10); //create line 1-30
       p5.rectMode(1);
@@ -40,7 +40,7 @@ export default function Tree(props) {
   useEffect(() => {
     let inst = new p5(Sketch, containerRef.current);
     return () => inst.remove();
-  }, [props.background, props.border, props.bold]);
+  }, [props]);
 
   return <div ref={containerRef}></div>;
 }

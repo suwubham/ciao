@@ -30,7 +30,7 @@ export default function Rdraw(props) {
     // };
 
     p5.setup = () => {
-      p5.createCanvas(650, 650); // eslint-disable-next-line
+      p5.createCanvas(props.resolution.x,props.resolution.y); // eslint-disable-next-line
       if (lines == true) {
         p5.stroke(
           props.border.rgb.r,
@@ -122,7 +122,7 @@ export default function Rdraw(props) {
   useEffect(() => {
     let inst = new p5(Sketch, containerRef.current);
     return () => inst.remove(); // eslint-disable-next-line
-  }, [props.increment, props.layer, props.bold, props.border, props.rotate]);
+  }, [props]);
 
   return <div ref={containerRef}></div>;
 }

@@ -10,6 +10,7 @@ import { PrettoSlider } from "../../styles/PrettoSlider";
 import saveService from "../../services/save.service";
 import Menu from "../../components/ArtMenu";
 import { ReactComponent as DescriptionIcon } from "../../assets/icons/description.svg";
+import TextField from "@mui/material/TextField";
 
 export default function Rdraw() {
   const [increment2d, setincrement2d] = useState(50);
@@ -35,6 +36,7 @@ export default function Rdraw() {
   const handlebordercolor = (color) => {
     setbordercolor(color);
   };
+  const [resolution, setresolution] = useState({ x: 900, y: 650 });
 
   const save = async () => {
     let data = {
@@ -44,7 +46,7 @@ export default function Rdraw() {
       rotate3d,
       bordercolor: { rgb: bordercolor.rgb },
       id: 10,
-    };
+      resolution, };
     try {
       await saveService.save(data).then((res) => {
         console.log(res);
@@ -79,10 +81,44 @@ export default function Rdraw() {
               layer={layers}
               rotate={rotate3d}
               border={bordercolor}
+              resolution={resolution}
             />
           </div>
           <div className="editor">
             <h2>Editor</h2>
+            <div className="resolution">
+              <h5>Resolution</h5>
+              <div className="fields">
+                <TextField
+                  sx={{ input: { color: "white" } }}
+                  defaultValue={resolution.x}
+                  label="Width"
+                  type="number"
+                  color="secondary"
+                  focused
+                  onChange={(e) => {
+                    setresolution({
+                      x: parseInt(e.target.value),
+                      y: resolution.y,
+                    });
+                  }}
+                />
+                <TextField
+                  sx={{ input: { color: "white" } }}
+                  defaultValue={resolution.y}
+                  label="Height"
+                  type="number"
+                  color="secondary"
+                  focused
+                  onChange={(e) => {
+                    setresolution({
+                      x: resolution.x,
+                      y: parseInt(e.target.value),
+                    });
+                  }}
+                />
+              </div>
+            </div>
             <div className="slider1">
               <h5>Size Increment</h5>
               <Stack direction="row" alignItems="center" className="slider">

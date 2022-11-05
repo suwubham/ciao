@@ -14,7 +14,7 @@ export default function Printcircle(props) {
     };
 
     p5.setup = () => {
-      p5.createCanvas(400, 400);
+      p5.createCanvas(props.resolution.x,props.resolution.y);
       p5.colorMode("RGB");
       p5.background(
         props.background.rgb.r,
@@ -42,7 +42,7 @@ export default function Printcircle(props) {
   useEffect(() => {
     let inst = new p5(Sketch, containerRef.current);
     return () => inst.remove();
-  }, [props.increment, props.space, props.background, props.border]);
+  }, [props]);
 
   return <div ref={containerRef}></div>;
 }
