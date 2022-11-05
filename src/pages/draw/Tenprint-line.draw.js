@@ -43,7 +43,8 @@ export default function Tdraw() {
       bordercolor: { rgb: bordercolor.rgb },
       backgroundcolor: { rgb: backgroundcolor.rgb },
       id: 6,
-      resolution,};
+      resolution,
+    };
     try {
       await saveService.save(data).then((res) => {
         console.log(res);

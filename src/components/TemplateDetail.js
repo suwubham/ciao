@@ -69,7 +69,7 @@ export default function TemplateDetail(props) {
     updateFavorites(updatedFavs);
   };
 
-  const nav = (e) => {
+  const nav = () => {
     navigate(props.cardLink);
   };
 

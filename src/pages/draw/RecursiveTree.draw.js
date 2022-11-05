@@ -13,7 +13,6 @@ import saveService from "../../services/save.service";
 import { ReactComponent as DescriptionIcon } from "../../assets/icons/description.svg";
 import TextField from "@mui/material/TextField";
 
-
 export default function Tree() {
   const [branchlength, setbranchlength] = useState(100);
   const [leafcolor, setleafcolor] = useState({
@@ -34,6 +33,7 @@ export default function Tree() {
       leafcolor,
       backgroundcolor: { rgb: backgroundcolor.rgb },
       trunkcolor: { rgb: trunkcolor.rgb },
+      resolution,
       id: 5,
     };
     try {

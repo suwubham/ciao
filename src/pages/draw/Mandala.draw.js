@@ -42,7 +42,8 @@ export default function Rdraw() {
       boldness,
       bordercolor: { rgb: bordercolor.rgb },
       backgroundcolor: { rgb: backgroundcolor.rgb },
-      id: 11,resolution,
+      id: 11,
+      resolution,
     };
     try {
       await saveService.save(data).then((res) => {

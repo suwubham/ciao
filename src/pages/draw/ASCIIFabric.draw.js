@@ -32,8 +32,9 @@ export default function Adraw() {
       sizef,
       backgroundcolor: { rgb: backgroundcolor.rgb },
       id: 14,
-    resolution,};
-    
+      resolution,
+    };
+
     try {
       await saveService.save(data).then((res) => {
         console.log(res);
@@ -62,9 +63,11 @@ export default function Adraw() {
             </span>
           </nav>
           <div className="main-art">
-            <ASCIIFabric size={sizef}
-             background={backgroundcolor} 
-            resolution={resolution}/>
+            <ASCIIFabric
+              size={sizef}
+              background={backgroundcolor}
+              resolution={resolution}
+            />
           </div>
 
           <div className="editor">

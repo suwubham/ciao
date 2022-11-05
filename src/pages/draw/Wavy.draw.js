@@ -46,7 +46,8 @@ export default function Rdraw() {
       rotate3d,
       bordercolor: { rgb: bordercolor.rgb },
       id: 10,
-      resolution, };
+      resolution,
+    };
     try {
       await saveService.save(data).then((res) => {
         console.log(res);

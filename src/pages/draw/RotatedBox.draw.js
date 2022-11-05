@@ -43,7 +43,8 @@ export default function Rbox() {
       bordercolor: { rgb: bordercolor.rgb },
       backgroundcolor: { rgb: backgroundcolor.rgb },
       id: 9,
-      resolution,};
+      resolution,
+    };
     try {
       await saveService.save(data).then((res) => {
         console.log(res);

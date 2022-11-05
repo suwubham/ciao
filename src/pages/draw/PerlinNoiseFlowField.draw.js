@@ -40,7 +40,8 @@ export default function Pdraw() {
       bold2d,
       layers,
       backgroundcolor: { rgb: backgroundcolor.rgb },
-      id: 2,resolution,
+      id: 2,
+      resolution,
     };
     try {
       await saveService.save(data).then((res) => {

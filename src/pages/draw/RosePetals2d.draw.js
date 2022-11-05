@@ -37,7 +37,8 @@ export default function Rdraw() {
       dflower2d,
       flowercolor2d,
       backgroundcolor: { rgb: backgroundcolor.rgb },
-      id: 15,resolution,
+      id: 15,
+      resolution,
     };
     try {
       await saveService.save(data).then((res) => {

@@ -47,7 +47,8 @@ export default function Pdraw() {
       sizef,
       bordercolor: { rgb: bordercolor.rgb },
       backgroundcolor: { rgb: backgroundcolor.rgb },
-      id: 12,resolution,
+      id: 12,
+      resolution,
     };
     try {
       await saveService.save(data).then((res) => {

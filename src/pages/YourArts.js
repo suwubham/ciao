@@ -12,14 +12,22 @@ export default function YourArts() {
       setData(res.data.saved); //res.data is an object containing saved:[data..]
     });
   }, []);
-  return (
+
+  return data.length ? (
     <>
       <div className="wrapper-yourarts">
         {authService.getCurrentUser() ? <LoggedNavbar /> : <Navbar />}
-        <div>Your Arts</div>
         {data.map((art, index) => {
           return <SavedDetail key={index} data={art} />;
         })}
+      </div>
+    </>
+  ) : (
+    <>
+      <div className="wrapper-yourarts">
+        {authService.getCurrentUser() ? <LoggedNavbar /> : <Navbar />}
+        {/* how to add inline style to a div with reg background */}
+        <div className="title">Add arts to favorties to view them here</div>
       </div>
     </>
   );

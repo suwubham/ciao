@@ -35,7 +35,8 @@ export default function Mdraw() {
       incrementm,
       transparencym,
       backgroundcolor: { rgb: backgroundcolor.rgb },
-      id: 4,resolution,
+      id: 4,
+      resolution,
     };
     try {
       await saveService.save(data).then((res) => {

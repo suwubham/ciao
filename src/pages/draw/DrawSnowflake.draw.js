@@ -77,7 +77,7 @@ export default function Rdraw() {
               bold={bold2d}
               border={bordercolor}
               background={backgroundcolor}
-                resolution={resolution}
+              resolution={resolution}
             />
           </div>
           <div className="editor">

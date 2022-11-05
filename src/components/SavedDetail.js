@@ -37,6 +37,7 @@ export default function SavedDetail(props) {
           bold={props.data.bold2d}
           layer={props.data.layers}
           background={props.data.backgroundcolor}
+          resolution={props.data.resolution}
         />
       );
 
@@ -47,6 +48,7 @@ export default function SavedDetail(props) {
           size={props.data.sizef}
           // border={bordercolor}
           // background={backgroundcolor}
+          resolution={props.data.resolution}
         />
       );
 
@@ -56,6 +58,7 @@ export default function SavedDetail(props) {
           increment={props.data.incrementm}
           transparency={props.data.transparencym}
           background={props.data.backgroundcolor}
+          resolution={props.data.resolution}
         />
       );
 
@@ -66,6 +69,7 @@ export default function SavedDetail(props) {
           leaf={props.data.leafcolor}
           trunk={props.data.trunkcolor}
           background={props.data.backgroundcolor}
+          resolution={props.data.resolution}
         />
       );
 
@@ -76,6 +80,7 @@ export default function SavedDetail(props) {
           incline={props.data.inclination}
           border={props.data.bordercolor}
           background={props.data.backgroundcolor}
+          resolution={props.data.resolution}
         />
       );
 
@@ -86,6 +91,7 @@ export default function SavedDetail(props) {
           increment={props.data.incrementc}
           border={props.data.bordercolor}
           background={props.data.backgroundcolor}
+          resolution={props.data.resolution}
         />
       );
 
@@ -96,6 +102,7 @@ export default function SavedDetail(props) {
           bold={props.data.boldness}
           border={props.data.bordercolor}
           background={props.data.backgroundcolor}
+          resolution={props.data.resolution}
         />
       );
 
@@ -106,6 +113,7 @@ export default function SavedDetail(props) {
           bold={props.data.boldness}
           border={props.data.bordercolor}
           background={props.data.backgroundcolor}
+          resolution={props.data.resolution}
         />
       );
 
@@ -117,6 +125,7 @@ export default function SavedDetail(props) {
           layer={props.data.layers}
           rotate={props.data.rotate3d}
           border={props.data.bordercolor}
+          resolution={props.data.resolution}
         />
       );
 
@@ -127,6 +136,7 @@ export default function SavedDetail(props) {
           bold={props.data.boldness}
           border={props.data.bordercolor}
           background={props.data.backgroundcolor}
+          resolution={props.data.resolution}
         />
       );
 
@@ -138,6 +148,7 @@ export default function SavedDetail(props) {
           size={props.data.sizef}
           border={props.data.bordercolor}
           background={props.data.backgroundcolor}
+          resolution={props.data.resolution}
         />
       );
 
@@ -147,6 +158,7 @@ export default function SavedDetail(props) {
           bold={props.data.boldness}
           background={props.data.backgroundcolor}
           border={props.data.bordercolor}
+          resolution={props.data.resolution}
         />
       );
 
@@ -155,6 +167,7 @@ export default function SavedDetail(props) {
         <ASCIIFabric
           size={props.data.sizef}
           background={props.data.backgroundcolor}
+          resolution={props.data.resolution}
         />
       );
 
@@ -164,6 +177,7 @@ export default function SavedDetail(props) {
           dflower={props.data.dflower2d}
           flowercolor={props.data.flowercolor2d}
           background={props.data.backgroundcolor}
+          resolution={props.data.resolution}
         />
       );
 
@@ -174,6 +188,7 @@ export default function SavedDetail(props) {
           bold={props.data.bold2d}
           border={props.data.bordercolor}
           background={props.data.backgroundcolor}
+          resolution={props.data.resolution}
         />
       );
 
@@ -184,6 +199,7 @@ export default function SavedDetail(props) {
           bold={props.data.alpha2d}
           triangle1={props.data.triangle1color}
           triangle2={props.data.triangle2color}
+          resolution={props.data.resolution}
         />
       );
 
@@ -194,6 +210,7 @@ export default function SavedDetail(props) {
           rotate={props.data.rotate3d}
           border={props.data.bordercolor}
           background={props.data.backgroundcolor}
+          resolution={props.data.resolution}
         />
       );
 
@@ -204,10 +221,11 @@ export default function SavedDetail(props) {
           bold={props.data.bold2d}
           border={props.data.bordercolor}
           background={props.data.backgroundcolor}
+          resolution={props.data.resolution}
         />
       );
 
     default:
-      <div>aaa</div>;
+      return <div className="headers">Save arts to view them here!</div>;
   }
 }

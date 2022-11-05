@@ -22,7 +22,7 @@ export default function Tree(props) {
         props.background.rgb.g,
         props.background.rgb.b
       );
-      p5.translate(p5.width / 2, p5.height / 2 + 250);
+      p5.translate(p5.width / 2, p5.height / 2 + p5.height / 2.6);
       p5.branch(props.branch);
     };
 
@@ -66,7 +66,7 @@ export default function Tree(props) {
   useEffect(() => {
     let inst = new p5(Sketch, containerRef.current);
     return () => inst.remove();
-  }, [props.resolution]);
+  }, [props]);
 
   return <div ref={containerRef}></div>;
 }

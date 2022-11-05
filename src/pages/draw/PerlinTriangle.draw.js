@@ -42,7 +42,8 @@ export default function Rdraw() {
       alpha2d,
       triangle1color: { rgb: triangle1color.rgb },
       triangle2color: { rgb: triangle2color.rgb },
-      id: 17,resolution,
+      id: 17,
+      resolution,
     };
     try {
       await saveService.save(data).then((res) => {

@@ -70,31 +70,39 @@ export default function Template() {
     <>
       <div className="wrapper-template">
         {authService.getCurrentUser() ? <LoggedNavbar /> : <Navbar />}
-        <div className="filter">
-          Filter
-          <FormControl sx={{ m: 1, minWidth: 100, maxWidth: 100 }} size="small">
-            <InputLabel id="demo-select-small">
-              <span className="material-symbols-outlined">filter_alt</span>
-            </InputLabel>
-            <Select>
-              <MenuItem
-                value={1}
-                onClick={() => {
-                  setFilter(templates);
-                }}
-              >
-                All
-                <span className="material-symbols-outlined ico">
-                  filter_alt_off
-                </span>
-              </MenuItem>
-              <MenuItem value={2} onClick={handleFilter}>
-                Favorites
-                <span className="material-symbols-outlined ico">favorite</span>
-              </MenuItem>
-            </Select>
-          </FormControl>
-        </div>
+        {authService.getCurrentUser() ? (
+          <div className="filter">
+            Filter
+            <FormControl
+              sx={{ m: 1, minWidth: 100, maxWidth: 100 }}
+              size="small"
+            >
+              <InputLabel id="demo-select-small">
+                <span className="material-symbols-outlined">filter_alt</span>
+              </InputLabel>
+              <Select>
+                <MenuItem
+                  value={1}
+                  onClick={() => {
+                    setFilter(templates);
+                  }}
+                >
+                  All
+                  <span className="material-symbols-outlined ico">
+                    filter_alt_off
+                  </span>
+                </MenuItem>
+                <MenuItem value={2} onClick={handleFilter}>
+                  Favs
+                  <span className="material-symbols-outlined ico">
+                    favorite
+                  </span>
+                </MenuItem>
+              </Select>
+            </FormControl>
+          </div>
+        ) : null}
+
         <div className="templatecards">
           {filter.map((drawTemplate, index) => {
             return (
