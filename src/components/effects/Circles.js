@@ -4,7 +4,8 @@ import p5 from "p5";
 
 export default function FromImage(props) {
   const containerRef = useRef();
-
+  let img;
+  let smallPoint, largePoint;
   const Sketch = (p5) => {
     let img;
     p5.preload = () => {
@@ -12,18 +13,26 @@ export default function FromImage(props) {
     };
 
     p5.setup = () => {
-      p5.createCanvas(img.width, img.height);
-      for (let col = 0; col < img.width; col += 10) {
-        for (let row = 0; row < img.height; row += 10) {
-          let c = img.get(col, row);
-          p5.stroke(p5.color(c));
-          p5.strokeWeight(10);
-          p5.point(col, row);
-        }
-      }
+      p5.createCanvas(img.width,img.height)
+      smallPoint = 10;
+      largePoint = 20;
+      p5.imageMode(p5.CENTER);
+      p5.noStroke();
+      p5.background(255);
+      img.loadPixels();
+      p5.noLoop();
     };
 
-    p5.draw = () => {};
+    p5.draw = () => {
+      p5.background(225, 27, 10,100);
+      for(let i=0;i<100000;i++){
+      let pointillize = p5.map(p5.mouseX, 0, p5.width, smallPoint, largePoint);
+      let x = p5.floor(p5.random(img.width));
+      let y = p5.floor(p5.random(img.height));
+      let pix = img.get(x, y);
+      p5.fill(pix,128);
+      p5.ellipse(x, y, pointillize, pointillize);}
+    };
     p5.keyPressed = () => {
       if (p5.key === "d") {
         p5.saveCanvas("myCanvas", "jpg");
