@@ -3,6 +3,7 @@ import Circles from "./effects/Circles";
 import Filter from "./effects/Filter";
 import Imagedots from "./effects/Imagedots";
 import Imagenoise from "./effects/Imagenoise";
+import Imageglow from "./effects/Imageglow";
 
 export default function Artoutput(props) {
   console.log(props.which, props.url);
@@ -16,7 +17,7 @@ export default function Artoutput(props) {
   case 4:
        return <Imagenoise src ={props.url}/>;
   case 5:
-      return <Filter src ={props.url}/>;
+      return <Imageglow src ={props.url}/>;
     default:
       return "";
   }
