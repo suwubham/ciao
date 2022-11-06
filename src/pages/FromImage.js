@@ -53,7 +53,7 @@ export default function FromImage() {
               accept="image/*"
               className="upload"
               onChange={(e) => {
-                handleType(e, 1);
+                handleType(e, 3);
               }}
             />
           </div>
@@ -64,7 +64,7 @@ export default function FromImage() {
               accept="image/*"
               className="upload"
               onChange={(e) => {
-                handleType(e, 1);
+                handleType(e, 4);
               }}
             />
           </div>
@@ -75,7 +75,7 @@ export default function FromImage() {
               accept="image/*"
               className="upload"
               onChange={(e) => {
-                handleType(e, 1);
+                handleType(e, 5);
               }}
             />
           </div>

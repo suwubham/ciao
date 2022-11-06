@@ -67,32 +67,32 @@
 .image-card:nth-child(1) {
   grid-area: a;
   animation-delay: calc(1 * var(--stagger-delay));
-  background-image:url('../assets/artfromimage/circles.jpg')
+  background-image:url('../assets/artfromimage/nature-circles.jpg')
 }
 
 .image-card:nth-child(2) {
   grid-area: d;
   animation-delay: calc(2 * var(--stagger-delay));
-  background-image:url('https://i.pinimg.com/236x/cd/93/4e/cd934ee5625bc22475efdaeb20880f58--painting-clouds-pink-painting.jpg')
+  background-image:url('../assets/artfromimage/negative-g.jpg')
 }
 
 .image-card:nth-child(3) {
   grid-area: k;
   animation-delay: calc(3 * var(--stagger-delay));
-  background-image:url('https://images.unsplash.com/photo-1583426573939-97d09302d76a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=968&q=80')
+  background-image:url('../assets/artfromimage/elephant-imagedots.jpg')
 }
 
 .image-card:nth-child(4) {
   grid-area: h;
   animation-delay: calc(4 * var(--stagger-delay));
-  background-image:url('https://images.unsplash.com/photo-1583531172005-814191b8b6c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=975&q=80')
+  background-image:url('../assets/artfromimage/ship-imagenoise.jpg')
 
 }
 
 .image-card:last-child {
   grid-area: 🌟;
   animation-delay: calc(5 * var(--stagger-delay));
-  background-image:url('https://images.unsplash.com/photo-1502134249126-9f3755a50d78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80')
+  background-image:url('../assets/artfromimage/spaceglow.jpg')
 }
 
 .upload{
