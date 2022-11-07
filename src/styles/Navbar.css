@@ -68,6 +68,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: textclip 2s linear infinite;
+  border: none;
 }
 
 @keyframes textclip {
