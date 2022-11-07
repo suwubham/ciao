@@ -32,8 +32,7 @@ import FromImage from "../pages/FromImage";
 export default function AppRouter() {
   return (
     <Routes>
-      <Route path="*" element={<LandingPage />} />
-      <Route path="/home" element={<Homepage />} />
+      <Route path="*" element={<Homepage />} />
       <Route path="/signin" element={<RegisterLogin />} />
       <Route path="/about" element={<About />} />
       <Route path="/yourarts" element={<YourArts />} />

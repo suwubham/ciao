@@ -1,8 +1,6 @@
 import express from "express";
 import cors from "cors";
 import mongoose from "mongoose";
-import env from "dotenv";
-env.config();
 
 import registerRoute from "./routes/register.js";
 import loginRoute from "./routes/login.js";
@@ -11,6 +9,8 @@ import getFavoriteRoute from "./routes/getFavorite.js";
 import setFavoriteRoute from "./routes/setFavorite.js";
 import saveArt from "./routes/saveArt.js";
 import getSaved from "./routes/getSaved.js";
+import env from "dotenv";
+env.config();
 const app = express();
 
 app.use(cors());
@@ -27,9 +27,6 @@ app.use("/getsaved", getSaved);
 app.listen(process.env.PORT, () => {
   console.log(`app is listening in port ${process.env.PORT}`);
 });
-
-const uri =
-  "mongodb+srv://suwubham:suwubham123@ciao.jky7m.mongodb.net/?retryWrites=true&w=majority";
 
 mongoose
   .connect(process.env.MONGODB_URI, {
