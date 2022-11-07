@@ -6,10 +6,7 @@ export const Background = styled.div`
   background-image: url(${img2});
   background-size: cover;
   background-repeat: no-repeat;
-<<<<<<< HEAD
   position: relative;
-=======
->>>>>>> 32fa55bc2fd2072625f2a6090941010800f8dae7
 `;
 
 export const wrapper = styled.div`

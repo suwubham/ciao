@@ -21,13 +21,18 @@ import Mandala from "../pages/draw/Mandala.draw";
 import PerlinNoiseRandomness from "../pages/draw/PerlinNoiseRandomness.draw";
 import Grid from "../pages/draw/Grid.draw";
 import ASCIIFabric from "../pages/draw/ASCIIFabric.draw";
+import RosePetals2d from "../pages/draw/RosePetals2d.draw";
+import SuperShape from "../pages/draw/SuperShape.draw";
+import PerlinTriangle from "../pages/draw/PerlinTriangle.draw";
+import FlowerThree from "../pages/draw/FlowerThree.draw";
+import DrawSnowflake from "../pages/draw/DrawSnowflake.draw";
 import Dashboard from "../pages/Dashboard";
+import FromImage from "../pages/FromImage";
 
 export default function AppRouter() {
   return (
     <Routes>
-      <Route path="/" element={<LandingPage />} />
-      <Route path="/home" element={<Homepage />} />
+      <Route path="*" element={<Homepage />} />
       <Route path="/signin" element={<RegisterLogin />} />
       <Route path="/about" element={<About />} />
       <Route path="/yourarts" element={<YourArts />} />
@@ -42,12 +47,19 @@ export default function AppRouter() {
       <Route path="template/tenprintcircle" element={<TenprintCircle />} />
       <Route path="template/recursioncircle" element={<RecursionCircle />} />
       <Route path="template/rotatedbox" element={<RotatedBox />} />
+      <Route path="/dashboard" element={<Dashboard />} />
       <Route path="template/wavy" element={<Wavy />} />
       <Route path="template/Mandala" element={<Mandala />} />
       <Route path="template/pnrandom" element={<PerlinNoiseRandomness />} />
       <Route path="template/Grid" element={<Grid />} />
       <Route path="template/ASCIIFabric" element={<ASCIIFabric />} />
+      <Route path="template/rosepetals2d" element={<RosePetals2d />} />
+      <Route path="template/supershape2d" element={<SuperShape />} />
+      <Route path="template/perlintriangle" element={<PerlinTriangle />} />
+      <Route path="template/flowerthree" element={<FlowerThree />} />
+      <Route path="template/drawsnowflake" element={<DrawSnowflake />} />
       <Route path="dashboard" element={<Dashboard />} />
+      <Route path="image" element={<FromImage />} />
     </Routes>
   );
 }

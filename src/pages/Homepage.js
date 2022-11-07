@@ -33,9 +33,11 @@ export default function Homepage() {
             <p className="subtitle">
               A webapp for creating interactive and dynamic generative art.
             </p>
-            <button className="btn-1" onClick={handleClick}>
-              Not a user? Signup
-            </button>
+            {authService.getCurrentUser() ? null : (
+              <button className="btn-1" onClick={handleClick}>
+                Not a user? Signup
+              </button>
+            )}
           </div>
         </section>
         <div className="spacer layer1"></div>

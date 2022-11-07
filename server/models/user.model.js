@@ -21,7 +21,13 @@ const UserDetailSchema = new mongoose.Schema(
       12: { type: Boolean, default: false },
       13: { type: Boolean, default: false },
       14: { type: Boolean, default: false },
+      15: { type: Boolean, default: false },
+      16: { type: Boolean, default: false },
+      17: { type: Boolean, default: false },
+      18: { type: Boolean, default: false },
+      19: { type: Boolean, default: false },
     },
+    arts: [],
   },
   {
     collection: "UserInfo",

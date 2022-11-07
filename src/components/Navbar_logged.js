@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import getUserData from "../services/test.service";
+import getUserData from "../services/userdata.service";
 import "../styles/Navbar.css";
 import Authservice from "../services/auth.service";
 
 export default function Navbar() {
   let navigate = useNavigate();
-
-  const handleClick = (e) => {
+  const handleClick = () => {
     Authservice.logout();
-    navigate("/home", { state: true });
+    navigate("/*", { state: true });
   };
 
   useEffect(() => {
@@ -21,11 +20,9 @@ export default function Navbar() {
   const [currentUser, setCurrentUser] = useState({});
 
   useEffect(() => {
-    getUserData().then(
-      (res) => {
-        setCurrentUser(res.data.currentUser);
-      }
-    );
+    getUserData().then((res) => {
+      setCurrentUser(res.data.currentUser);
+    });
   }, []);
 
   return (
@@ -34,9 +31,9 @@ export default function Navbar() {
       style={{ postion: "fixed" }}
     >
       <div className="container-fluid">
-        <a className="navbar-title" onClick={() => navigate("/home")}>
+        <button className="navbar-title" onClick={() => navigate("/*")}>
           CIAO
-        </a>
+        </button>
 
         <button
           className="navbar-toggler custom-toggler"
@@ -53,68 +50,64 @@ export default function Navbar() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a
-                className="nav-link"
+              <button
+                className="nav-link nav-btn"
                 aria-current="page"
-                onClick={() => navigate("/home")}
+                onClick={() => navigate("/*")}
               >
                 Home
-              </a>
+              </button>
             </li>
             <li className="nav-item">
-              <a
-                className="nav-link"
+              <button
+                className="nav-link nav-btn"
                 aria-current="page"
                 onClick={() => navigate("/dashboard")}
               >
                 Dashboard
-              </a>
+              </button>
             </li>
             <li className="nav-item">
-              <a
-                className="nav-link"
+              <button
+                className="nav-link nav-btn"
                 aria-current="page"
                 onClick={() => navigate("/about")}
               >
                 About
-              </a>
+              </button>
             </li>
             <li className="nav-item">
-              <a className="nav-link" onClick={() => navigate("/yourarts")}>
+              <button
+                className="nav-link nav-btn"
+                onClick={() => navigate("/yourarts")}
+              >
                 Your Arts{" "}
-              </a>
+              </button>
             </li>
             <li className="nav-item dropdown">
-              <a
-                className="nav-link dropdown-toggle"
-                href="#"
-                role="button"
+              <button
+                className="nav-link dropdown-toggle nav-btn"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
                 Draw
-              </a>
+              </button>
               <ul className="dropdown-menu navbar-custom">
                 <li>
-                  <a
-                    className="dropdown-item"
+                  <button
+                    className="dropdown-item nav-btn"
                     onClick={() => navigate("/template")}
                   >
                     From Template
-                  </a>
+                  </button>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="#">
+                  <button
+                    className="dropdown-item nav-btn"
+                    onClick={() => navigate("/image")}
+                  >
                     From Image
-                  </a>
-                </li>
-                <li>
-                  <hr className="dropdown-divider" />
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#">
-                    ASCII art
-                  </a>
+                  </button>
                 </li>
               </ul>
             </li>
@@ -122,39 +115,15 @@ export default function Navbar() {
 
           <div className="d-flex" role="search">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item dropdown">
-                <a
-                  className="nav-link dropdown-toggle" /*className="nav-link special"*/
-                  /*aria-current="page"*/
-                  hfer="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                /*onClick={handleClick}*/
+              <li>
+                <button
+                  className="nav-link nav-btn profile-nav"
+                  aria-current="page"
+                  onClick={() => navigate("/profile")}
                 >
-                  Profile
-                </a>
-                <ul className="dropdown-menu navbar-custom">
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      {currentUser.username}
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Settings
-                    </a>
-                  </li>
-                  <li>
-                    <hr className="dropdown-divider" />
-                  </li>
-                  <li>
-                    <a className="dropdown-item" onClick={handleClick}>
-                      Log Out
-                      <span className="material-symbols-outlined">logout</span>
-                    </a>
-                  </li>
-                </ul>
+                  <p className="username">{currentUser.username}</p>
+                  <span class="material-symbols-outlined">account_circle</span>
+                </button>
               </li>
             </ul>
             <input
@@ -167,18 +136,6 @@ export default function Navbar() {
               Search
             </button>
           </div>
-
-          {/* <ul className="navbar-nav">
-            <li className="nav-item">
-              <a
-                className="nav-link navbar-custom"
-                id="Profile-btn"
-                onClick={() => navigate("/profile")}
-              >
-                Profile
-              </a>
-            </li>
-          </ul> */}
         </div>
       </div>
     </nav>

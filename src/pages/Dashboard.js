@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar_logged";
-import getUserData from "../services/test.service";
+import getUserData from "../services/userdata.service";
 import AuthService from "../services/auth.service";
 import "../styles/Dashboard.css";
 export default function Dashboard() {

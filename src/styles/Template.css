@@ -4,10 +4,22 @@
     justify-content: space-evenly;
     flex-wrap: wrap;
     width: auto;
+    margin-top: 50px;
 }
 
 .wrapper-template{
     background-image: url("../assets/backgrounds/template-page.svg");
     background-size: cover;
     background-repeat: no-repeat;
+
+}
+
+.filter{
+    position: absolute;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    text-align: center;
+    right: 0;
 }

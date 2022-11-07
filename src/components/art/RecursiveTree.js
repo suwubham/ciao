@@ -4,8 +4,14 @@ import p5 from "p5";
 export default function Tree(props) {
   const containerRef = useRef();
   const Sketch = (p5) => {
+    p5.keyPressed = () => {
+      if (p5.key === "a") {
+        p5.saveCanvas("myCanvas", "jpg");
+      }
+    };
+
     p5.setup = () => {
-      p5.createCanvas(900, 650);
+      p5.createCanvas(props.resolution.x, props.resolution.y);
       p5.angleMode(p5.DEGREES);
       p5.noLoop();
     };
@@ -16,7 +22,7 @@ export default function Tree(props) {
         props.background.rgb.g,
         props.background.rgb.b
       );
-      p5.translate(p5.width / 2, p5.height / 2 + 250);
+      p5.translate(p5.width / 2, p5.height / 2 + p5.height / 2.6);
       p5.branch(props.branch);
     };
 
@@ -48,6 +54,12 @@ export default function Tree(props) {
         p5.endShape(p5.CLOSE);
       }
       p5.pop();
+    };
+
+    p5.keyPressed = () => {
+      if (p5.key === "a") {
+        p5.saveCanvas("myCanvas", "jpg");
+      }
     };
   };
 

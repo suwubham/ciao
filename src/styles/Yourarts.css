@@ -1,0 +1,6 @@
+.wrapper-yourarts{
+  background-image: url("../assets/backgrounds/template-page.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}

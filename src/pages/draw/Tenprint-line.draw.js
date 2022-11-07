@@ -1,148 +1,180 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "../../styles/FromTemplate.css";
 import Navbar from "../../components/Navbar";
 import Tenprintline from "../../components/art/Tenprint-line";
-import Slider from "@mui/material/Slider";
-import { styled } from "@mui/material/styles";
+import { SwatchesPicker } from "react-color";
+import Stack from "@mui/material/Stack";
 import authService from "../../services/auth.service";
 import LoggedNavbar from "../../components/Navbar_logged";
+import { PrettoSlider } from "../../styles/PrettoSlider";
+import saveService from "../../services/save.service";
+import Menu from "../../components/ArtMenu";
+import { ReactComponent as DescriptionIcon } from "../../assets/icons/description.svg";
+import TextField from "@mui/material/TextField";
 
-const PrettoSlider = styled(Slider)({
-  color: "#fff",
-  height: 8,
-  "& .MuiSlider-track": {
-    border: "none",
-  },
-  "& .MuiSlider-thumb": {
-    height: 24,
-    width: 24,
-    backgroundColor: "#7b2cbf",
-    border: "2px solid currentColor",
-    "&:focus, &:hover, &.Mui-active, &.Mui-focusVisible": {
-      boxShadow: "inherit",
-    },
-    "&:before": {
-      display: "none",
-    },
-  },
-  "& .MuiSlider-valueLabel": {
-    lineHeight: 1.2,
-    fontSize: 12,
-    background: "unset",
-    padding: 0,
-    width: 32,
-    height: 32,
-    borderRadius: "50% 50% 50% 0",
-    backgroundColor: "#c77dff",
-    transformOrigin: "bottom left",
-    transform: "translate(50%, -100%) rotate(-45deg) scale(0)",
-    "&:before": { display: "none" },
-    "&.MuiSlider-valueLabelOpen": {
-      transform: "translate(50%, -100%) rotate(-45deg) scale(1)",
-    },
-    "& > *": {
-      transform: "rotate(45deg)",
-    },
-  },
-});
+export default function Tdraw() {
+  const [spacing2d, setspacing2d] = useState(9);
+  const [inclination, setinclination] = useState(5);
+  const [bordercolor, setbordercolor] = useState({
+    rgb: { r: 25, g: 194, b: 209 },
+  });
+  const [backgroundcolor, setbackgroundcolor] = useState({
+    rgb: { r: 255, g: 194, b: 209 },
+  });
 
-export default function Tree() {
-  const [value, setvalue] = useState(100);
-  const handleChange = (e) => {
-    setvalue(e.target.value);
+  const handlespacing2d = (e) => {
+    setspacing2d(e.target.value);
   };
+  const handleinclination = (e) => {
+    setinclination(e.target.value);
+  };
+  const handlebordercolor = (color) => {
+    setbordercolor(color);
+  };
+  const handlebackgroundcolor = (color) => {
+    setbackgroundcolor(color);
+  };
+  const [resolution, setresolution] = useState({ x: 900, y: 650 });
+
+  const save = async () => {
+    let data = {
+      spacing2d,
+      inclination,
+      bordercolor: { rgb: bordercolor.rgb },
+      backgroundcolor: { rgb: backgroundcolor.rgb },
+      id: 6,
+      resolution,
+    };
+    try {
+      await saveService.save(data).then((res) => {
+        console.log(res);
+      });
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   return (
     <>
       <div className="containerrrrr">
         {authService.getCurrentUser() ? <LoggedNavbar /> : <Navbar />}
-        <h1 className="header-title">Tenprintline</h1>
+        <h1 className="header-title">Ten Print Line</h1>
         <div className="main-area">
-          <div className="description">
-            <h1>Description</h1>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac
-            facilisis leo, ac sodales mi. Praesent id libero a urna porttitor
-            auctor vitae vel nibh. Suspendisse potenti. Aliquam ac tellus quis
-            turpis placerat facilisis. Phasellus quam leo, placerat in viverra
-            id, aliquam congue felis. Fusce non mauris purus. Suspendisse
-            condimentum rutrum justo, sed tempor enim. Morbi vitae eros cursus,
-            dictum massa vel, rhoncus quam. Fusce nibh nisi, eleifend eget
-            dignissim vel, sodales nec justo. Nunc tincidunt orci ut nunc
-            vulputate sagittis. Cras elit erat, dapibus eget mollis sed,
-            fringilla a sapien. Integer pulvinar eleifend ex, quis facilisis dui
-            lacinia facilisis. Suspendisse quis erat id elit vehicula lacinia
-            sollicitudin id elit. Ut nec lobortis sem, in ornare sapien. Sed
-            sodales, odio luctus vulputate tempor, libero magna tempor arcu,
-            quis tincidunt arcu justo congue tortor. Suspendisse quis tortor
-            rhoncus mi cursus tincidunt. Aliquam a dolor lorem. Aenean
-            ullamcorper mattis lorem sit amet aliquet. In dignissim metus sit
-            amet justo porta commodo. Integer sit amet leo lectus. Quisque
-            iaculis odio in tellus porttitor, ac finibus risus sollicitudin.
-            Donec aliquet, quam nec consectetur consectetur, tortor tellus
-            pulvinar odio, at aliquet dui sem quis erat. Proin est tortor,
-            placerat vitae justo vitae, congue molestie neque. Vestibulum at
-            sapien et turpis efficitur ultrices. Vivamus at eros a mi porttitor
-            tristique ut eu urna. Aenean dapibus enim eu venenatis porttitor.
-            Sed erat arcu, tincidunt et imperdiet sed, pellentesque at risus.
-            Duis semper scelerisque justo non egestas. Suspendisse vehicula
-            nulla sit amet lorem laoreet, consequat mollis odio fringilla.
-          </div>
+          <nav className="descriptionbar">
+            <div className="logo description-link">
+              <span className="link-text">Description</span>
+              <DescriptionIcon />
+            </div>
+            <span className="link-text">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat
+              fugit beatae, dignissimos, ducimus exercitationem culpa a quo
+              aperiam quibusdam aliquid autem delectus quos soluta eos sint ex
+              vero doloribus. Iste?
+            </span>
+          </nav>
           <div className="main-art">
-            <Tenprintline text={value} />
+            <Tenprintline
+              space={spacing2d}
+              incline={inclination}
+              border={bordercolor}
+              background={backgroundcolor}
+              resolution={resolution}
+            />
           </div>
           <div className="editor">
             <h2>Editor</h2>
-            <h5>Branch Length</h5>
-            <div class="brancheditor">
-              50
-              <PrettoSlider
-                min={50}
-                max={200}
-                valueLabelDisplay="auto"
-                aria-label="pretto slider"
-                defaultValue={100}
-                onChange={handleChange}
+            <div className="resolution">
+              <h5>Resolution</h5>
+              <div className="fields">
+                <TextField
+                  sx={{ input: { color: "white" } }}
+                  defaultValue={resolution.x}
+                  label="Width"
+                  type="number"
+                  color="secondary"
+                  focused
+                  onChange={(e) => {
+                    setresolution({
+                      x: parseInt(e.target.value),
+                      y: resolution.y,
+                    });
+                  }}
+                />
+                <TextField
+                  sx={{ input: { color: "white" } }}
+                  defaultValue={resolution.y}
+                  label="Height"
+                  type="number"
+                  color="secondary"
+                  focused
+                  onChange={(e) => {
+                    setresolution({
+                      x: resolution.x,
+                      y: parseInt(e.target.value),
+                    });
+                  }}
+                />
+              </div>
+            </div>
+            <div className="slider1">
+              <h5>Spacing</h5>
+              <Stack direction="row" alignItems="center" className="slider">
+                6
+                <PrettoSlider
+                  min={6}
+                  max={20}
+                  valueLabelDisplay="auto"
+                  aria-label="pretto slider"
+                  value={spacing2d}
+                  onChange={handlespacing2d}
+                />
+                20
+              </Stack>
+            </div>
+            <div className="slider1">
+              <h5>Inclination Shift</h5>
+              <Stack direction="row" alignItems="center" className="slider">
+                left
+                <PrettoSlider
+                  min={1}
+                  max={10}
+                  valueLabelDisplay="auto"
+                  aria-label="pretto slider"
+                  value={inclination}
+                  onChange={handleinclination}
+                />
+                Right
+              </Stack>
+            </div>
+            <div className="colorpicker">
+              <h5>Border Color</h5>
+              <SwatchesPicker
+                color={bordercolor.rgb}
+                onChangeComplete={handlebordercolor}
               />
-              100
+            </div>
+            <div className="colorpicker">
+              <h5>Background Color</h5>
+              <SwatchesPicker
+                color={backgroundcolor.rgb}
+                onChangeComplete={handlebackgroundcolor}
+              />
             </div>
           </div>
         </div>
       </div>
+      <Menu
+        share={() => {
+          navigator.clipboard.writeText(
+            `https://suwubham.github.io/template/Tenprint`
+          );
+          alert("Copied to clipboard");
+        }}
+        download={() => {
+          window.dispatchEvent(new KeyboardEvent("keydown", { key: "a" }));
+        }}
+        save={save}
+      />
     </>
-    // <div className="header">
-    //   <h2 className="header-title">Recursive Tree</h2>
-    // </div>
-    // <div className="drawfromTemplateArea">
-    //   <div className="box-1">
-    //     <b>Description</b>
-    //     <br />
-    //     Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
-    //     doloremque quis a atque quidem esse excepturi, architecto amet
-    //     pariatur impedit. Fuga perspiciatis pariatur temporibus veniam. Quod
-    //     repudiandae eligendi impedit beatae! Lorem ipsum dolor sit amet
-    //     consectetur adipisicing elit. Rem doloremque quis a atque quidem esse
-    //     excepturi, architecto amet pariatur impedit. Fuga perspiciatis
-    //     pariatur temporibus veniam. Quod repudiandae eligendi impedit beatae!
-    //     Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
-    //     doloremque quis a atque quidem esse excepturi, architecto amet
-    //     pariatur impedit. Fuga perspiciatis pariatur temporibus veniam. Quod
-    //     repudiandae eligendi impedit beatae! Lorem ipsum dolor sit amet
-    //     consectetur adipisicing elit. Rem doloremque quis a atque quidem esse
-    //     excepturi, architecto amet pariatur impedit. Fuga perspiciatis
-    //     pariatur temporibus veniam. Quod repudiandae eligendi impedit beatae!
-    //   </div>
-    //   <div className="box-2">
-    //     {" "}
-    //     <Recursivetree />{" "}
-    //   </div>
-    //   <div className="box-3">
-    //     <h1>Sliders</h1>
-    //     <h2>Button-1</h2>
-    //     <h2>Button-2</h2>
-    //     <h2>Button-3</h2>
-    //     <h2>Button-4</h2>
-    //     <h2>Button-5</h2>
-    //     <h2>Button-6</h2>
-    //   </div>
-    // </div>
   );
 }

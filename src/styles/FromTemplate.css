@@ -5,6 +5,18 @@
   display: flex;
 }
 
+.menu{
+  position: absolute;
+  top:60%;
+  right:2%;
+}
+
+.fields{
+  display: flex;
+  gap: 20px;
+  color: purple
+}
+
 :root {
   font-size: 16px;
   font-family: 'Open Sans';

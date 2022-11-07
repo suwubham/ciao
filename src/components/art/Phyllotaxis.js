@@ -8,7 +8,7 @@ export default function Tree(props) {
   const containerRef = useRef();
   const Sketch = (p5) => {
     p5.setup = () => {
-      p5.createCanvas(900, 650);
+      p5.createCanvas(props.resolution.x, props.resolution.y);
       p5.angleMode(p5.DEGREES);
       p5.background(
         props.background.rgb.r,
@@ -30,12 +30,18 @@ export default function Tree(props) {
       n++;
       col++;
     };
+
+    p5.keyPressed = () => {
+      if (p5.key === "a") {
+        p5.saveCanvas("myCanvas", "jpg");
+      }
+    };
   };
 
   useEffect(() => {
     let inst = new p5(Sketch, containerRef.current);
     return () => inst.remove();
-  }, [props.background, props.pradius, props.pgap]);
+  }, [props.background, props.pradius, props.pgap, props.resolution]);
 
   return <div ref={containerRef}></div>;
 }

@@ -13,9 +13,9 @@ export default function Navbar() {
       style={{ postion: "fixed" }}
     >
       <div className="container-fluid">
-        <a className="navbar-title" onClick={() => navigate("/home")}>
+        <button className="navbar-title" onClick={() => navigate("/*")}>
           CIAO
-        </a>
+        </button>
 
         <button
           className="navbar-toggler custom-toggler"
@@ -32,54 +32,47 @@ export default function Navbar() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a
-                className="nav-link"
+              <button
+                className="nav-link nav-btn"
                 aria-current="page"
                 onClick={() => navigate("/home")}
               >
                 Home
-              </a>
+              </button>
             </li>
             <li className="nav-item">
-              <a
-                className="nav-link"
+              <button
+                className="nav-link nav-btn"
                 aria-current="page"
                 onClick={() => navigate("/about")}
               >
                 About
-              </a>
+              </button>
             </li>
             <li className="nav-item dropdown">
-              <a
-                className="nav-link dropdown-toggle"
-                href="#"
-                role="button"
+              <button
+                className="nav-link dropdown-toggle nav-btn"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
                 Draw
-              </a>
+              </button>
               <ul className="dropdown-menu navbar-custom">
                 <li>
-                  <a
-                    className="dropdown-item"
+                  <button
+                    className="dropdown-item nav-btn"
                     onClick={() => navigate("/template")}
                   >
                     From Template
-                  </a>
+                  </button>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="#">
+                  <button
+                    className="dropdown-item nav-btn"
+                    onClick={() => navigate("/image")}
+                  >
                     From Image
-                  </a>
-                </li>
-                <li>
-                  <hr className="dropdown-divider" />
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#">
-                    ASCII art
-                  </a>
+                  </button>
                 </li>
               </ul>
             </li>
@@ -88,14 +81,14 @@ export default function Navbar() {
           <form className="d-flex" role="search">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a
+                <button
                   className="nav-link special"
                   aria-current="page"
                   onClick={handleClick}
                 >
                   Login
                   <span className="material-symbols-outlined">login</span>
-                </a>
+                </button>
               </li>
             </ul>
             <input

@@ -37,7 +37,7 @@ export default function TemplateDetail(props) {
     }
   };
 
-  const handleClose = (event) => {
+  const handleClose = () => {
     setOpen(false);
   };
 
@@ -69,12 +69,14 @@ export default function TemplateDetail(props) {
     updateFavorites(updatedFavs);
   };
 
-  const nav = (e) => {
+  const nav = () => {
     navigate(props.cardLink);
   };
 
-  const handleShare = (e) => {
-    navigator.clipboard.writeText(`https://ciao.com${props.cardLink}`);
+  const handleShare = () => {
+    navigator.clipboard.writeText(
+      `https://suwubham.github.io/ciao/${props.cardLink}`
+    );
     alert("Coped to clipboard");
   };
 
@@ -129,7 +131,7 @@ export default function TemplateDetail(props) {
           open={open}
           onClose={handleClose}
           autoHideDuration={3000}
-          message="This feature is only available for registered in users."
+          message="This feature is only available for registered users."
           action={action}
         />
       </>
