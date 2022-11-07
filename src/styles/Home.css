@@ -20,7 +20,6 @@
   background-clip: border-box;
   background-size: 200% auto;
   background-clip: text;
-  text-fill-color: transparent;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: textclip 2s linear infinite;
@@ -66,14 +65,14 @@
   box-shadow: inset 300px 0 0 0 #e0aaff;
 }
 
-section{
+/* section{
   position: relative;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   align-items: center; 
   min-height: 100px;
   padding: 60px 20vw;
-}
+} */
 
 
 .second-div-start{
@@ -82,17 +81,38 @@ section{
   background: #001220;
   margin-top:30px;
 }
-
+/* 
 .template-descp {
   top:0px;
   background-color: #001220;
   padding: 4.5rem;
   display: flex;
+  width: auto;
+  flex-direction: row;
   justify-content: space-between;
-/* flex-wrap: nowrap; */
+} */
+
+.template-descp{
+  background-color: #001220;
+  display: flex;
+  margin:50px;
+  justify-content: space-between;
+  flex-wrap: nowrap;
 }
 
- .main-page-left , .main-page-right, .main-page-down{
+
+@media (max-width: 1003.1px) {
+
+.template-descp {
+  flex-wrap: wrap;
+}
+
+.main-page-left , .main-page-right{
+  flex:50%;
+}
+}
+
+ .main-page-left , .main-page-right{
   position: relative;
   padding: 4.5rem;
 }
@@ -138,8 +158,13 @@ section{
 
 
 .bottom-page{
+  margin:50px 50px 150px 50px;
   background-color:  #001220;
   padding-top:25px;
+  display:grid;
+  row-gap: 35px;
+  column-gap: 50px;
+  grid-template-columns: repeat(auto-fit,minmax(275px,1fr));
 }
 
 .quote{
@@ -147,15 +172,6 @@ section{
 }
 
 .services{
-  display:grid;
-  row-gap: 15px;
-  grid-template-columns: 450px 450px;
-  column-gap: 15px;
-  align-items: center;
-  justify-content: center;
-}
-
-.service1{
   position: relative;
   background-color: rgb(49, 47, 47);
   opacity: 0.5;
@@ -175,8 +191,6 @@ section{
   border-radius: 5px;
 }
 
-
-
 .title{
   font-weight: bold;
   font-size: 50px;
@@ -193,22 +207,6 @@ section{
   background: #7b2cbf;
 }
 
-.yellow{
-  background: #E9C46A;
-}
-
-.orange{
-  background: #F4A261;
-}
-
-.darkorange{
-  background: #E76F51;
-}
-
-.green{
-  background: #2A9D8F;
-}
-
 .spacer{
   aspect-ratio: 960/150;
   width: 100%;
@@ -223,4 +221,16 @@ section{
 
 .flip{
   transform: rotate(180deg);
+}
+
+.footer-custom{
+  margin-top:50px;
+}
+
+
+.icons-custom{
+  position: relative;
+  padding:15px;
+  top:0;
+  left:0;
 }
