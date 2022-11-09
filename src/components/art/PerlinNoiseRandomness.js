@@ -4,7 +4,7 @@ import p5 from "p5";
 
 export default function Pdraw(props) {
   const containerRef = useRef();
-  let rez = 0.9; //0.5 resolution number //how quickly perlin noise changes
+  let rez = 0.5; //0.5 resolution number //how quickly perlin noise changes
   let t = 10;
   const Sketch = (p5) => {
     p5.keyPressed = () => {

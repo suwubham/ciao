@@ -66,10 +66,7 @@ export default function Rdraw() {
               <DescriptionIcon />
             </div>
             <span className="link-text">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat
-              fugit beatae, dignissimos, ducimus exercitationem culpa a quo
-              aperiam quibusdam aliquid autem delectus quos soluta eos sint ex
-              vero doloribus. Iste?
+            Because of random variables, every time we hit an editor, a new design mandala appears that has never existed before or will never appear again. The art becomes transparent when alpha is reduced all the way, yet it remains opaque when alpha is increased. To make the art pop a little bit more, we can also lengthen and shorten the mandala's stroke lines. We can even alter the mandala's border and background colors.
             </span>
           </nav>
           <div className="main-art">

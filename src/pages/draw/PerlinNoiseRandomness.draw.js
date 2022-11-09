@@ -70,10 +70,7 @@ export default function Pdraw() {
               <DescriptionIcon />
             </div>
             <span className="link-text">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat
-              fugit beatae, dignissimos, ducimus exercitationem culpa a quo
-              aperiam quibusdam aliquid autem delectus quos soluta eos sint ex
-              vero doloribus. Iste?
+            Perlin noise, a particular variety of gradient noise, can be used to produce randomness that is "smooth" in one or more dimensions. Here, we've merely added some noise and created a rectangle and added greyscale value in every cell of the  artwork where randomness is created and moved at random across the canvas. We can change the boldness of the border, the size increase, and the speed increment of the randomly generated lines. The color of the background and border can also be changed.
             </span>
           </nav>
           <div className="main-art">
