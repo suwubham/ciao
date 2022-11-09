@@ -61,10 +61,8 @@ export default function Rdraw() {
               <DescriptionIcon />
             </div>
             <span className="link-text">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat
-              fugit beatae, dignissimos, ducimus exercitationem culpa a quo
-              aperiam quibusdam aliquid autem delectus quos soluta eos sint ex
-              vero doloribus. Iste?
+            Edward Lorentz discovered the Lorentz attractor, a 3D work of art, while researching the atmosphere. There are ordinary differential equations in it. We obtain the image on the canvas using the variables x, y, and z. The first point in the Lorenz attractor is arbitrary located, but the second point is determined by observing the first. This attractor never travels to the same spot twice and changes location at random. We have the ability to modify the attractor's size, speed, and backdrop color.
+
             </span>
           </nav>
           <div className="main-art">

@@ -64,10 +64,9 @@ export default function Pdraw() {
               <DescriptionIcon />
             </div>
             <span className="link-text">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat
-              fugit beatae, dignissimos, ducimus exercitationem culpa a quo
-              aperiam quibusdam aliquid autem delectus quos soluta eos sint ex
-              vero doloribus. Iste?
+            It is possible to create "smooth" randomness in one or more dimensions by using Perlin noise, a type of gradient noise.
+Flow fields are a traditional creative coding technique that results in strands that appear to be spontaneous on the screen. We modified the vector by changing the lines. We basically produced 3D Perlin noise using a 2D flow field representation. We have included a speed increment editor that allows us to manage the flow field's pace while also allowing us to add more layers to our artwork. It is also possible to change the background's color.
+
             </span>
           </nav>
           <div className="main-art">

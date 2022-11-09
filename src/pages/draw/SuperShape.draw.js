@@ -66,11 +66,9 @@ export default function Rdraw() {
               <DescriptionIcon />
             </div>
             <span className="link-text">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat
-              fugit beatae, dignissimos, ducimus exercitationem culpa a quo
-              aperiam quibusdam aliquid autem delectus quos soluta eos sint ex
-              vero doloribus. Iste?
-            </span>
+            Supershape simulates amazing shapes in a two-dimensional plane using a visual representation of a certain type of parametric equation. In accordance with a specific value of u, we simulated a supershape.
+The fundamental concept is that we operate with a function that receives an angle and returns a value, and we do this for each circle. We get the shape altering on the fly by employing a variety of functions. With the help of the backdrop and border colors, we may change the supershape's boldness and size.
+</span>
           </nav>
           <div className="main-art">
             <Supershape

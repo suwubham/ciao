@@ -65,10 +65,7 @@ export default function Rdraw() {
               <DescriptionIcon />
             </div>
             <span className="link-text">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat
-              fugit beatae, dignissimos, ducimus exercitationem culpa a quo
-              aperiam quibusdam aliquid autem delectus quos soluta eos sint ex
-              vero doloribus. Iste?
+            Using the mathematical principles of the polar coordinates system, we have produced a three-dimensional flower pattern. A spiraling flower-like design can be made by altering a circle's radius and phi value. We are able to produce the desired outcome with the help of the ellipse. By first adding trigonometric terms, we alter the flower's radius. The design can be rotated by using the mouse to play around. In a same manner, we may quicken the rotation and change the flower's border and background colors.
             </span>
           </nav>
           <div className="main-art">
