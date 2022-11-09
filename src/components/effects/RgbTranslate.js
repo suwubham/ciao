@@ -62,7 +62,7 @@ export default function FromImage(props) {
         }
         imgOut.updatePixels();
         return imgOut;
-      }
+      };
       
 
 

@@ -6,6 +6,8 @@ import Imagenoise from "./effects/Imagenoise";
 import Imageglow from "./effects/Imageglow";
 import RgbTranslate from "./effects/RgbTranslate";
 import Posterize from "./effects/Posterize";
+import Threshold from "./effects/Threshold";
+import Imagelines from "./effects/Imagelines";
 
 export default function Artoutput(props) {
   console.log(props.which, props.url);
@@ -22,8 +24,12 @@ export default function Artoutput(props) {
       return <Imageglow src={props.url} />;
     case 6:
       return <RgbTranslate src={props.url} />;
-    case 6:
+    case 7:
       return <Posterize src={props.url} />;
+    case 8:
+        return <Threshold src={props.url} />;
+    case 9:
+          return <Imagelines src={props.url} />;
     default:
       return "";
   }
