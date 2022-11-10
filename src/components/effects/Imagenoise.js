@@ -12,7 +12,7 @@ export default function FromImage(props) {
     };
 
     p5.setup = () => {
-        img.resize(p5.windowWidth,0)
+        img.resize(p5.windowWidth/2,0)
         p5.createCanvas(img.width, img.height);
         p5.fill(255);
         p5.noLoop();
