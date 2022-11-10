@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 import "../styles/About.css";
 import LoggedNavbar from "../components/Navbar_logged";
 import authService from "../services/auth.service";
-import girl1 from "../assets/girl1.jpg";
+import prasiddhi from "../assets/prasiddhi.jpg";
 import boy1 from "../assets/boy1.jpg";
 import boy2 from "../assets/boy2.jpg";
 import logo from "../assets/ciaologo3.png";
@@ -25,7 +25,7 @@ export default function About() {
         <div class="row">
           <div class="column">
             <div class="card">
-              <img src={girl1} alt="girl1" />
+              <img src={prasiddhi} alt="Prasiddhi" />
               <div class="container">
                 <h2>Prasiddhi Dahal</h2>
                 <p class="title"></p>

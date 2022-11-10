@@ -4,6 +4,8 @@ import Filter from "./effects/Filter";
 import Imagedots from "./effects/Imagedots";
 import Imagenoise from "./effects/Imagenoise";
 import Imageglow from "./effects/Imageglow";
+import Collage from "./effects/Collage";
+import Collage2 from "./effects/Collage2";
 
 export default function Artoutput(props) {
   console.log(props.which, props.url);
@@ -18,6 +20,10 @@ export default function Artoutput(props) {
       return <Imagenoise src={props.url} />;
     case 5:
       return <Imageglow src={props.url} />;
+      case 6:
+        return<Collage src={props.url}/>;
+        case 7:
+        return<Collage2 src={props.url}/>;
     default:
       return "";
   }
