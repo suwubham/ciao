@@ -114,6 +114,7 @@ export default function FromImage() {
                 handleType(e, 6);
               }}
             />
+            6
           </div>
 
           <div className="image-card">
@@ -125,6 +126,7 @@ export default function FromImage() {
                 handleType(e, 7);
               }}
             />
+            7
           </div>
 
           <div className="image-card">
