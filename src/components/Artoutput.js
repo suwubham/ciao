@@ -8,6 +8,8 @@ import RgbTranslate from "./effects/RgbTranslate";
 import Posterize from "./effects/Posterize";
 import Threshold from "./effects/Threshold";
 import Imagelines from "./effects/Imagelines";
+import SwapRB from "./effects/SwapRB";
+import Asciiart from "./effects/Asciiart";
 
 export default function Artoutput(props) {
   console.log(props.which, props.url);
@@ -30,6 +32,15 @@ export default function Artoutput(props) {
         return <Threshold src={props.url} />;
     case 9:
           return <Imagelines src={props.url} />;
+    case 10:
+       return <SwapRB src={props.url} />;
+    case 11:
+        return <Asciiart src={props.url} />;
+    case 12:
+          return <Circles src={props.url} />;
+          //change Circles into something after adding image effects
+    case 13:
+            return <Circles src={props.url} />;//change Circles into something after adding image effects
     default:
       return "";
   }
