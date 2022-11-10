@@ -57,7 +57,7 @@ export default function Tree() {
               <DescriptionIcon />
             </div>
             <span className="link-text">
-              Recursive Tree (also known as fractal tree) bla bla
+            Recursion is a self-referential concept. A recursive function has its own definition. add more on this hai
             </span>
           </nav>
           <div className="main-art">

@@ -5,7 +5,7 @@ export default function Rdraw(props) {
   var n1 = 0.3;
   var n2 = 0.3;
   var n3 = 0.3;
-  var m = 100;
+  var u = 100;
   var a = 1;
   var b = 100;
   var osc = 0;
@@ -29,12 +29,12 @@ export default function Rdraw(props) {
     };
 
     p5.supershape = (theta) => {
-      var part1 = (1 / a) * p5.cos((theta * m) / 4);
+      var part1 = (1 / a) * p5.cos((theta * u) / 4);
       part1 = p5.abs(part1);
       part1 = p5.pow(part1, n2);
       //  b=slider.value();
       b = props.increment;
-      var part2 = (1 / b) * p5.sin((theta * m) / 4);
+      var part2 = (1 / b) * p5.sin((theta * u) / 4);
       part2 = p5.abs(part2);
       part2 = p5.pow(part2, n3);
 
@@ -48,7 +48,7 @@ export default function Rdraw(props) {
     };
 
     p5.draw = () => {
-      m = p5.map(p5.sin(osc), -1, 1, 0, 10);
+      u = p5.map(p5.sin(osc), -1, 1, 0, 10);
       osc += 0.02;
 
       p5.background(

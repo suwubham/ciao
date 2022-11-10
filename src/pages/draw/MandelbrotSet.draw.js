@@ -59,10 +59,7 @@ export default function Mdraw() {
               <DescriptionIcon />
             </div>
             <span className="link-text">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat
-              fugit beatae, dignissimos, ducimus exercitationem culpa a quo
-              aperiam quibusdam aliquid autem delectus quos soluta eos sint ex
-              vero doloribus. Iste?
+            The Mandelbrot Set is a famously stunning collection of complicated numbers. We obtain the Mandelbrot set using the recursive formula Zn=Zn-1+C, where c is the complex number. If we color-code each plane according to how quickly the number increases, we have the Mandelbrot shape. Up to a certain point, we can zoom in. And we may alter the alpha value, which results  changing background color, as well as the color of the Mandelbrot set and the brightness of the border.
             </span>
           </nav>
           <div className="main-art">
