@@ -10,6 +10,8 @@ import Threshold from "./effects/Threshold";
 import Imagelines from "./effects/Imagelines";
 import SwapRB from "./effects/SwapRB";
 import Asciiart from "./effects/Asciiart";
+import Collage from "./effects/Collage";
+import Collage2 from "./effects/Collage2";
 
 export default function Artoutput(props) {
   console.log(props.which, props.url);
@@ -37,10 +39,9 @@ export default function Artoutput(props) {
     case 11:
         return <Asciiart src={props.url} />;
     case 12:
-          return <Circles src={props.url} />;
-          //change Circles into something after adding image effects
-    case 13:
-            return <Circles src={props.url} />;//change Circles into something after adding image effects
+        return<Collage src={props.url}/>;
+    case 3:
+        return<Collage2 src={props.url}/>;
     default:
       return "";
   }
