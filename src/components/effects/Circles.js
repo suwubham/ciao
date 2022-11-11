@@ -4,7 +4,6 @@ import p5 from "p5";
 
 export default function FromImage(props) {
   const containerRef = useRef();
-  let img;
   let smallPoint, largePoint;
   const Sketch = (p5) => {
     let img;
