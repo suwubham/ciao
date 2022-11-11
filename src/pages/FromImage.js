@@ -25,6 +25,41 @@ const Btn = styled.button`
   &:hover {
     background-color: #c77dff;
   }
+
+  .small-text{
+    display: none;
+  }
+
+  @media only screen and (max-width: 1100px) {
+    .orig-text {
+        display: none;
+    }
+
+    .small-text{
+      display: inline-block;
+    }
+
+    font-size: 12px;
+    border-radius: 10px;
+    border: none;
+    padding: 6px 20px;
+}
+
+@media only screen and (max-width: 320px) {
+  .orig-text {
+      display: none;
+  }
+
+  .small-text{
+    display: inline-block;
+  }
+
+  font-size: 8px;
+  border-radius: 5px;
+  border: none;
+  padding: 3px 10px;
+}
+}
 `;
 
 export default function FromImage() {
@@ -57,10 +92,6 @@ export default function FromImage() {
     }, 1000);
   };
 
-  // const handleClick = () => {
-  //   hiddenFileInput.current.click();
-  // };
-
   return (
     <>
       <div className="wrapper-image">
@@ -73,7 +104,8 @@ export default function FromImage() {
                 hiddenFileInput1.current.click();
               }}
             >
-              Click to try effect
+              <span className="orig-text">Click to try effect</span>
+              <span className="small-text">Try effect</span>
             </Btn>
             <input
               type="file"
@@ -93,7 +125,8 @@ export default function FromImage() {
                 hiddenFileInput2.current.click();
               }}
             >
-              Click to try effect
+              <span className="orig-text">Click to try effect</span>
+              <span className="small-text">Try effect</span>
             </Btn>
             <input
               type="file"
@@ -113,7 +146,8 @@ export default function FromImage() {
                 hiddenFileInput3.current.click();
               }}
             >
-              Click to try effect
+              <span className="orig-text">Click to try effect</span>
+              <span className="small-text">Try effect</span>
             </Btn>
             <input
               type="file"
@@ -133,7 +167,8 @@ export default function FromImage() {
                 hiddenFileInput4.current.click();
               }}
             >
-              Click to try effect
+              <span className="orig-text">Click to try effect</span>
+              <span className="small-text">Try effect</span>
             </Btn>
             <input
               type="file"
@@ -153,7 +188,8 @@ export default function FromImage() {
                 hiddenFileInput5.current.click();
               }}
             >
-              Click to try effect
+              <span className="orig-text">Click to try effect</span>
+              <span className="small-text">Try effect</span>
             </Btn>
             <input
               type="file"
@@ -173,7 +209,8 @@ export default function FromImage() {
                 hiddenFileInput6.current.click();
               }}
             >
-              Click to try effect
+              <span className="orig-text">Click to try effect</span>
+              <span className="small-text">Try effect</span>
             </Btn>
             <input
               type="file"
@@ -193,7 +230,8 @@ export default function FromImage() {
                 hiddenFileInput7.current.click();
               }}
             >
-              Click to try effect
+              <span className="orig-text">Click to try effect</span>
+              <span className="small-text">Try effect</span>
             </Btn>
             <input
               type="file"
@@ -213,7 +251,8 @@ export default function FromImage() {
                 hiddenFileInput8.current.click();
               }}
             >
-              Click to try effect
+              <span className="orig-text">Click to try effect</span>
+              <span className="small-text">Try effect</span>
             </Btn>
             <input
               type="file"
@@ -233,7 +272,8 @@ export default function FromImage() {
                 hiddenFileInput9.current.click();
               }}
             >
-              Click to try effect
+              <span className="orig-text">Click to try effect</span>
+              <span className="small-text">Try effect</span>
             </Btn>
             <input
               type="file"
@@ -253,7 +293,8 @@ export default function FromImage() {
                 hiddenFileInput10.current.click();
               }}
             >
-              Click to try effect
+              <span className="orig-text">Click to try effect</span>
+              <span className="small-text">Try effect</span>
             </Btn>
             <input
               type="file"
@@ -273,7 +314,8 @@ export default function FromImage() {
                 hiddenFileInput11.current.click();
               }}
             >
-              Click to try effect
+              <span className="orig-text">Click to try effect</span>
+              <span className="small-text">Try effect</span>
             </Btn>
             <input
               type="file"
@@ -293,7 +335,8 @@ export default function FromImage() {
                 hiddenFileInput12.current.click();
               }}
             >
-              Click to try effect
+              <span className="orig-text">Click to try effect</span>
+              <span className="small-text">Try effect</span>
             </Btn>
             <input
               type="file"
@@ -313,7 +356,8 @@ export default function FromImage() {
                 hiddenFileInput13.current.click();
               }}
             >
-              Click to try effect
+              <span className="orig-text">Click to try effect</span>
+              <span className="small-text">Try effect</span>
             </Btn>
             <input
               type="file"

@@ -16,9 +16,8 @@
 .profile-nav{
   display: flex;
   flex-direction: row;
-  padding: 0px;
-  margin:0px;
   padding-top: 10px;
+  padding-bottom: 0px;
 }
 .nav-btn{
   background-color: transparent;
@@ -44,7 +43,6 @@
 
 .nav-link:focus{
   background: #7b2cbf;
-
 }
 
 .navbar-title {
@@ -108,9 +106,6 @@
   color: white;
 }
 
-#Profile-btn {
-  padding: 0px 15px 0px 15px;
-}
 
 .custom-toggler.navbar-toggler {
   border: 2px solid rgb(90, 25, 119);
@@ -121,9 +116,3 @@
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(90, 25, 119)' stroke-width='4' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
-@media (max-width: 991.5px) {
-  #Profile-btn {
-    padding: 15px 0px 0px 0px;
-  }
-
-}

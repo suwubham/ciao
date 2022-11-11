@@ -1,21 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;800&display=swap');
 
-#wrapper{
+#wrapper {
   font-family: 'Montserrat', sans-serif;
-  margin:0px;
-  color:white;
+  margin: 0px;
+  color: white;
   background: #001220;
 }
 
-.headers
-{
-  background-image: linear-gradient(
-    -225deg,
-    #231557 0%,
-    #44107a 29%,
-    #ff1361 67%,
-    #fff800 100%
-  );
+.headers {
+  background-image: linear-gradient(-225deg,
+      #231557 0%,
+      #44107a 29%,
+      #ff1361 67%,
+      #fff800 100%);
   background-size: auto auto;
   background-clip: border-box;
   background-size: 200% auto;
@@ -32,25 +29,26 @@
 }
 
 .ani {
-  animation : fade 1s ease-in;
+  animation: fade 1s ease-in;
   display: flex;
   flex-direction: column;
-  align-items: center; 
+  align-items: center;
 }
 
 @keyframes fade {
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
 }
 
-.btn-1{
+.btn-1 {
   width: 300px;
   height: 50px;
-  color:white;
+  color: white;
   border: none;
   background-color: #10002b;
   border-radius: 4px;
@@ -61,7 +59,7 @@
   outline: none;
 }
 
-.btn-1:hover{
+.btn-1:hover {
   box-shadow: inset 300px 0 0 0 #e0aaff;
 }
 
@@ -75,12 +73,13 @@
 } */
 
 
-.second-div-start{
+.second-div-start {
   text-align: center;
   width: 100%;
   background: #001220;
-  margin-top:30px;
+  margin-top: 30px;
 }
+
 /* 
 .template-descp {
   top:0px;
@@ -92,10 +91,10 @@
   justify-content: space-between;
 } */
 
-.template-descp{
+.template-descp {
   background-color: #001220;
   display: flex;
-  margin:50px;
+  margin: 50px;
   justify-content: space-between;
   flex-wrap: nowrap;
 }
@@ -103,22 +102,25 @@
 
 @media (max-width: 1003.1px) {
 
-.template-descp {
-  flex-wrap: wrap;
+  .template-descp {
+    flex-wrap: wrap;
+  }
+
+  .main-page-left,
+  .main-page-right {
+    flex: 50%;
+  }
 }
 
-.main-page-left , .main-page-right{
-  flex:50%;
-}
-}
-
- .main-page-left , .main-page-right{
+.main-page-left,
+.main-page-right {
   position: relative;
   padding: 4.5rem;
 }
 
 
-.shape, .shape2{ 
+.shape,
+.shape2 {
   position: absolute;
   height: 125px;
   width: 125px;
@@ -129,13 +131,14 @@
   transition: 1s;
 }
 
-.shape-text{
+.shape-text {
   position: relative;
-  left:15px;
-  top:30px;
+  left: 15px;
+  top: 30px;
 }
 
-.shape:hover, .shape2:hover{
+.shape:hover,
+.shape2:hover {
   transform: scale(1.05);
   transition: 1s;
 }
@@ -157,57 +160,101 @@
 }
 
 
-.bottom-page{
-  margin:50px 50px 150px 50px;
-  background-color:  #001220;
-  padding-top:25px;
-  display:grid;
+.bottom-page {
+  margin: 50px 50px 150px 50px;
+  background-color: #001220;
+  padding-top: 25px;
+  display: grid;
   row-gap: 35px;
   column-gap: 50px;
-  grid-template-columns: repeat(auto-fit,minmax(275px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
 }
 
-.quote{
+.quote {
   text-align: center;
 }
 
-.services{
+.services {
   position: relative;
   background-color: rgb(49, 47, 47);
   opacity: 0.5;
-  height:250px;
+  height: 250px;
   margin: 15px;
-  padding:15px;
+  padding: 15px;
   border-radius: 15px;
-  color:black;
+  color: white;
 }
 
-.nothing{
-  position: absolute ;
+.serv1 {
+  background-image: url("https://i.pinimg.com/originals/ae/96/f7/ae96f79588b0a8af9f2db2b94782e295.png");
+}
+
+.serv1 {
+  background-image: url("https://i.pinimg.com/originals/ae/96/f7/ae96f79588b0a8af9f2db2b94782e295.png");
+}
+
+.serv1 {
+  background-image: url("https://i.pinimg.com/originals/ae/96/f7/ae96f79588b0a8af9f2db2b94782e295.png");
+}
+
+.serv1 {
+  background-image: url("https://i.pinimg.com/originals/ae/96/f7/ae96f79588b0a8af9f2db2b94782e295.png");
+}
+
+.tryitout1, .tryitout2, .tryitout3, .tryitout4 {
+  position: absolute;
   bottom: 25px;
-  right:25px;
+  right: 25px;
   background-color: black;
-  padding:5px 25px;
+  padding: 5px 25px;
   border-radius: 5px;
+  color: white;
+  transition: 500ms linear;
+  opacity: 0.8;
 }
 
-.title{
+.tryitout1:hover, .tryitout2:hover, .tryitout3:hover, .tryitout4:hover {
+  opacity: 1;
+  transition: 500ms linear;
+}
+
+.tryitout1::after{
+  content: 'Perlin Noise';
+}
+
+.tryitout1:hover::after, .tryitout2:hover::after, .tryitout3:hover::after, .tryitout4:hover::after{
+  content: 'Try it out';
+}
+
+.tryitout2::after{
+  content: 'Mandala';
+}
+
+.tryitout3::after{
+  content: 'Grid';
+}
+
+.tryitout4::after{
+  content: 'Flower 3D';
+}
+
+.title {
   font-weight: bold;
   font-size: 50px;
-  color:white;
+  color: white;
   display: flex;
   gap: 12px;
 }
 
-.subtitle{
+.subtitle {
   font-size: 20px;
 }
 
-.purple{
+.purple {
   background: #7b2cbf;
 }
 
-.spacer{
+.spacer {
   aspect-ratio: 960/150;
   width: 100%;
   background-repeat: no-repeat;
@@ -215,22 +262,22 @@
   background-size: cover;
 }
 
-.layer1{
+.layer1 {
   background-image: url("../assets/backgrounds/layered-waves-haikei.svg")
 }
 
-.flip{
+.flip {
   transform: rotate(180deg);
 }
 
-.footer-custom{
-  margin-top:50px;
+.footer-custom {
+  margin-top: 50px;
 }
 
 
-.icons-custom{
+.icons-custom {
   position: relative;
-  padding:15px;
-  top:0;
-  left:0;
+  padding: 15px;
+  top: 0;
+  left: 0;
 }
