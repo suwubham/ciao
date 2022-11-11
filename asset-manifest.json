@@ -1,7 +1,8 @@
 {
   "files": {
-    "main.css": "/ciao/static/css/main.0dc8e76e.css",
-    "main.js": "/ciao/static/js/main.748d76f2.js",
+    "main.css": "/ciao/static/css/main.1102179a.css",
+    "main.js": "/ciao/static/js/main.d71f8d1e.js",
+    "static/media/prasiddhi.jpg": "/ciao/static/media/prasiddhi.13d51b1acdf46dbbf161.jpg",
     "static/media/boy1.jpg": "/ciao/static/media/boy1.98e82e5e9b10f307cf81.jpg",
     "static/media/ciao-3.png": "/ciao/static/media/ciao-3.dbf64658d302dc4fae6b.png",
     "static/media/instagram-logo-2433.png": "/ciao/static/media/instagram-logo-2433.4e8a15165e70f320be60.png",
@@ -13,11 +14,12 @@
     "static/media/layered-waves-haikei.svg": "/ciao/static/media/layered-waves-haikei.804aa3e149e179c8a457.svg",
     "static/media/description-bar.svg": "/ciao/static/media/description-bar.343319cd1ffe98e15e41.svg",
     "index.html": "/ciao/index.html",
-    "main.0dc8e76e.css.map": "/ciao/static/css/main.0dc8e76e.css.map",
-    "main.748d76f2.js.map": "/ciao/static/js/main.748d76f2.js.map"
+    "static/media/description.svg": "/ciao/static/media/description.53ca750cedefa47b6e95f7c3ad2540fb.svg",
+    "main.1102179a.css.map": "/ciao/static/css/main.1102179a.css.map",
+    "main.d71f8d1e.js.map": "/ciao/static/js/main.d71f8d1e.js.map"
   },
   "entrypoints": [
-    "static/css/main.0dc8e76e.css",
-    "static/js/main.748d76f2.js"
+    "static/css/main.1102179a.css",
+    "static/js/main.d71f8d1e.js"
   ]
 }
