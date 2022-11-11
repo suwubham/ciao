@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState} from "react";
 import "../styles/FromImage.css";
 import authService from "../services/auth.service";
 import LoggedNavbar from "../components/Navbar_logged";
