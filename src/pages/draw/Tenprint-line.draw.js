@@ -66,10 +66,8 @@ export default function Tdraw() {
               <DescriptionIcon />
             </div>
             <span className="link-text">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat
-              fugit beatae, dignissimos, ducimus exercitationem culpa a quo
-              aperiam quibusdam aliquid autem delectus quos soluta eos sint ex
-              vero doloribus. Iste?
+            The use of the if else statement to construct forward and backward slashes results in the creation of an interesting maze pattern. To print 10 lines in horizontal order, we utilized a universal variable and a random variable.
+Additionally, we have added certain editors, such as spacing, and we have the ability to change the inclination from extreme right to extreme left. We can experiment with background and border colors as well.
             </span>
           </nav>
           <div className="main-art">

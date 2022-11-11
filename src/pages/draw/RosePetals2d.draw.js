@@ -61,10 +61,7 @@ export default function Rdraw() {
               <DescriptionIcon />
             </div>
             <span className="link-text">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat
-              fugit beatae, dignissimos, ducimus exercitationem culpa a quo
-              aperiam quibusdam aliquid autem delectus quos soluta eos sint ex
-              vero doloribus. Iste?
+            A rose petel curve is a sinusoid with no phase angle that is determined by either the sine or cosine functions and shown in polar coordinates. The complexity of the petal decreses as the editor is shifted to the extreme left, while the complexity increases when shifted to the extreme right. We have also included a resolution feature, which enables the canvas's size to be adjusted as well as the background and border colors to be changed.
             </span>
           </nav>
           <div className="main-art">

@@ -56,10 +56,10 @@ export default function Adraw() {
               <DescriptionIcon />
             </div>
             <span className="link-text">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat
-              fugit beatae, dignissimos, ducimus exercitationem culpa a quo
-              aperiam quibusdam aliquid autem delectus quos soluta eos sint ex
-              vero doloribus. Iste?
+            Using a grid approach, ASCII fabric patterns are created. We have utilized four different font styles , along with some ASCII characters that we found on a website in a variety of forms.Here we have used 176,177,178 and 219.
+We can alter the pattern's size as well as the background color to suit our preferences.
+link of the website https://www.asciitable.com/
+
             </span>
           </nav>
           <div className="main-art">

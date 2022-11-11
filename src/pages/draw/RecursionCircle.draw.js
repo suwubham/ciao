@@ -66,10 +66,7 @@ export default function Rdraw() {
               <DescriptionIcon />
             </div>
             <span className="link-text">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat
-              fugit beatae, dignissimos, ducimus exercitationem culpa a quo
-              aperiam quibusdam aliquid autem delectus quos soluta eos sint ex
-              vero doloribus. Iste?
+            The idea of recursion involves self-reference. recursive function is defined within itself. It is a simple method of generating an art form, or a pattern. In a recursive circle, we start with a single circle, and as the number of iterations rises, a new circle is generated on it from three different angles. It is merely the fundamental idea of recursion. We now have iteration and the ability to increase and decrease the boldness of the border. We can alter the background and border colors similarly.
             </span>
           </nav>
           <div className="main-art">

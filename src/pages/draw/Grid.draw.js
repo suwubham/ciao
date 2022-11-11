@@ -60,10 +60,7 @@ export default function Rdraw() {
               <DescriptionIcon />
             </div>
             <span className="link-text">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat
-              fugit beatae, dignissimos, ducimus exercitationem culpa a quo
-              aperiam quibusdam aliquid autem delectus quos soluta eos sint ex
-              vero doloribus. Iste?
+            This design is grid-based. In this template, the items have been positioned in the grid's middle. In addition to adding a strokeweight of a border slider, we also introduced border dominant color and grid dominant color so that the user can work with different color schemes and resolutions for the sketch in accordance with their preferences.
             </span>
           </nav>
           <div className="main-art">
