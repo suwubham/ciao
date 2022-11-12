@@ -34,6 +34,7 @@ const getCurrentUser = () => {
   return JSON.parse(sessionStorage.getItem("user"));
 };
 
+
 const authService = {
   login,
   signup,

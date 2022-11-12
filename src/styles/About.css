@@ -6,12 +6,24 @@
   background: #001220;
 }
 
-.column {
-  float: left;
-  width: 22.3%;
-  margin-bottom: 20px;
-  padding: 0 8px;
+.about{
+  height: 250px;
 }
+
+.aboutus{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+  padding-bottom: 100px;
+}
+
+@media (max-width: 1024px) {
+  .aboutus{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  }
 
 .headers
 {
@@ -19,17 +31,17 @@
   background-clip: border-box;
   background-size: 200% auto;
   background-clip: text;
-  text-fill-color: transparent;
+
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: textclip 2s linear infinite;
 
 }
-.ani {
-  animation : fade 1s ease-in;
+
+.aboutpg{
+  margin:50px;
   display: flex;
-  flex-direction: column;
-  align-items: center; 
+  justify-content: center; 
 }
 
 @keyframes fade {
@@ -41,31 +53,34 @@
   }
 }
 
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+.card-cus {
   margin: 8px;
+  width:min-content;
+  background: linear-gradient(
+  135deg,
+  rgba(0, 18, 32, 0.4),
+  rgba(0, 18, 32, 0.2)
+  );
+  backdrop-filter: blur(3px);
+  transition: 1s;
 }
 
-.about-section {
-  padding: 10px;
-  text-align: center;
-  background-color: rgb(29, 28, 30) ;
-  color: rgb(223, 226, 231);
+.card-cus:hover {
+  transform: scale(1.05);
+  transition: 0.75s;
 }
 
-.container {
-  padding: 0 16px;
+.roundedimg {
+  width: 200px;
+  height:200px;
+  object-fit: cover;
+  border-radius:50%;
 }
 
-.container::after, .row::after { 
-  content: "";
-  clear: both;
-  display: table;
+.container-cus{
+  padding-top:35px;
 }
 
-.title {
-  color: rgb(238, 240, 244);
-}
 
 .button {
   border: none;
@@ -82,6 +97,7 @@
 .button:hover {
   background-color: rgb(47, 44, 44);
 }
+/*
 
 @media screen and (max-width: 600px) {
   .column {
@@ -101,5 +117,5 @@
     60deg,
     rgba(255,255,255) 0%,
     rgba(0,172,193,1) 100%);
-}
+} */
 
