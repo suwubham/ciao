@@ -89,76 +89,76 @@
 .image-card:nth-child(1) {
   grid-area: a;
   animation-delay: calc(1 * var(--stagger-delay));
-  background-image:url('https://images.unsplash.com/photo-1583585635793-0e1894c169bd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=913&q=80')
+  background-image:url('../assets/artfromimage/Circles.jpg')
 
 }
 .image-card:nth-child(2) {
   grid-area: b;
   animation-delay: calc(2 * var(--stagger-delay));
-  background-image:url('https://play-lh.googleusercontent.com/XVHP0sBKrRJYZq_dB1RalwSmx5TcYYRRfYMFO18jgNAnxHAIA1osxM55XHYTb3LpkV8')
+  background-image:url('../assets/artfromimage/Imagenoise.jpg')
 }
 .image-card:nth-child(3) {
   grid-area: c;
   animation-delay: calc(3 * var(--stagger-delay));
-  background-image:url('https://images.unsplash.com/photo-1611675745374-34fa54cc3c98?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fGphcGFuZXNlJTIwYWVzdGhldGljfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60')
+  background-image:url('../assets/artfromimage/Posterize.jpg')
 }
 .image-card:nth-child(4) {
   grid-area: d;
   animation-delay: calc(4 * var(--stagger-delay));
-  background-image:url('https://i.pinimg.com/236x/03/f9/08/03f908bbd547071af3a25d9b0ccbe381.jpg')
+  background-image:url('../assets/artfromimage/Collage.jpg')
 
 }
 .image-card:nth-child(5) {
   grid-area: e;
   animation-delay: calc(5 * var(--stagger-delay));
-  background-image:url('https://images.unsplash.com/photo-1563830198204-5b21a012ef81?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGphcGFuZXNlJTIwYWVzdGhldGljfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60')
+  background-image:url('../assets/artfromimage/Imageglow.jpg')
 
 }
 .image-card:nth-child(6) {
   grid-area: f;
   animation-delay: calc(6 * var(--stagger-delay));
-  background-image:url('https://images.unsplash.com/photo-1583483425010-c566431a7710?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80')
+  background-image:url('../assets/artfromimage/RgbTranslate.jpg')
 
 }
 .image-card:nth-child(7) {
   grid-area: g;
   animation-delay: calc(7 * var(--stagger-delay));
-  background-image:url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8778de9c-d957-4219-a12f-9b59b3dd6899/de946pr-5cffe389-8860-4c0e-8edb-917a812efb2d.png/v1/fit/w_375,h_265,q_70,strp/homework_by_silkanide_de946pr-375w.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MjYwNiIsInBhdGgiOiJcL2ZcLzg3NzhkZTljLWQ5NTctNDIxOS1hMTJmLTliNTliM2RkNjg5OVwvZGU5NDZwci01Y2ZmZTM4OS04ODYwLTRjMGUtOGVkYi05MTdhODEyZWZiMmQucG5nIiwid2lkdGgiOiI8PTM2ODcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.hA9sxKSYBogEFXgu6soI-RLuqUQjJr7hOOX6taR_dTM')
+  background-image:url('../assets/artfromimage/Imagedots.jpg')
 
 }
 .image-card:nth-child(8) {
   grid-area: h;
   animation-delay: calc(8 * var(--stagger-delay));
-  background-image:url('https://images.unsplash.com/photo-1583468323330-9032ad490fed?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1955&q=80')
+  background-image:url('../assets/artfromimage/Threshold.jpg')
 
 }
 .image-card:nth-child(9) {
   grid-area: i;
   animation-delay: calc(9 * var(--stagger-delay));
-  background-image:url('https://images.unsplash.com/photo-1583562835057-a62d1beffbf3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=949&q=80')
+  background-image:url('../assets/artfromimage/Imagelines.jpg')
 
 }
 .image-card:nth-child(10) {
   grid-area: j;
   animation-delay: calc(10 * var(--stagger-delay));
-  background-image:url('https://images.unsplash.com/photo-1583518257225-f9a8081f6a84?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80')
+  background-image:url('../assets/artfromimage/Collage2.jpg')
 
 }
 .image-card:nth-child(11) {
   grid-area: k;
   animation-delay: calc(11 * var(--stagger-delay));
-  background-image:url('https://wallpapercave.com/wp/wp5134857.png')
+  background-image:url('../assets/artfromimage/Asciiart.jpg')
 
 }
 .image-card:nth-child(12) {
   grid-area: l;
   animation-delay: calc(12 * var(--stagger-delay));
-  background-image:url('https://images8.alphacoders.com/921/921329.jpg')
+  background-image:url('../assets/artfromimage/Invert.jpg')
 
 }
 .image-card:last-child {
   grid-area: m;
   animation-delay: calc(13 * var(--stagger-delay));
-  background-image:url('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/fuji-and-sakura-royalty-free-image-144483163-1562593125.jpg')
+  background-image:url('../assets/artfromimage/SwapRB.jpg')
 
 }
