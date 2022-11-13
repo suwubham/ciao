@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans&display=swap');
 
 .wrapper-image{
@@ -91,6 +90,7 @@
   animation-delay: calc(1 * var(--stagger-delay));
   background-image:url('../assets/artfromimage/circles.jpg')
 
+}
 .image-card:nth-child(2) {
   grid-area: b;
   animation-delay: calc(2 * var(--stagger-delay));

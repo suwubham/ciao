@@ -25,27 +25,23 @@ const Btn = styled.button`
   &:hover {
     background-color: #c77dff;
   }
-  
+
   &:hover .orig-text {
-    display:none;
+    display: none;
   }
 
-  &:hover .effect-name{
+  &:hover .effect-name {
     display: block;
-
-  .small-text {
-    display: none;
   }
 
   .orig-text {
     display: inline-block;
-}
+  }
 
-.small-text ,.effect-name{
-  display: none;
-}
-
-
+  .small-text,
+  .effect-name {
+    display: none;
+  }
 
   @media only screen and (max-width: 1100px) {
     .orig-text {
@@ -56,11 +52,11 @@ const Btn = styled.button`
       display: inline-block;
     }
 
-    &:hover .effect-name{
+    &:hover .effect-name {
       display: block;
     }
 
-    &:hover .small-text{
+    &:hover .small-text {
       display: none;
     }
 
@@ -79,21 +75,19 @@ const Btn = styled.button`
       display: inline-block;
     }
 
+    &:hover .effect-name {
+      display: block;
+    }
 
-  &:hover .effect-name{
-    display: block;
+    &:hover .small-text {
+      display: none;
+    }
+
+    font-size: 6px;
+    border-radius: 5px;
+    border: none;
+    padding: 3px 10px;
   }
-
-  &:hover .small-text{
-    display: none;
-  }
-
-  font-size: 6px;
-  border-radius: 5px;
-  border: none;
-  padding: 3px 10px;
-}
-
 `;
 
 export default function FromImage() {
