@@ -1,11 +1,14 @@
 .ProfileDiv {
     background-image: url("../assets/backgrounds/template-page.svg");
     background-size: cover;
-    height: auto;
+    position: absolute; 
+    /* top: 0; 
+    left: 0;  */
+    min-width: 100%;
+    min-height: 100%;
 }
 
 .profilediv-custom {
-    background: rgb(99, 39, 120);
     border-radius: 50px;
     backdrop-filter: blur(2px);
     background: linear-gradient(
@@ -22,6 +25,8 @@
     image-rendering: auto;
     border-radius:50%;
 }
+
+
 
 .logoutbutton{
     /* background-color: transparent; */
@@ -48,7 +53,6 @@
 .editprof{
     margin:35px 15px 15px 35px;
 }
-
 
 .RecentBtn:hover{
 cursor: pointer;
