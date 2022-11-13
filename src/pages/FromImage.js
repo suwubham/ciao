@@ -25,13 +25,16 @@ const Btn = styled.button`
   &:hover {
     background-color: #c77dff;
   }
-
+  
   &:hover .orig-text {
     display:none;
   }
 
   &:hover .effect-name{
     display: block;
+
+  .small-text {
+    display: none;
   }
 
   .orig-text {
@@ -46,10 +49,10 @@ const Btn = styled.button`
 
   @media only screen and (max-width: 1100px) {
     .orig-text {
-        display: none;
+      display: none;
     }
 
-    .small-text{
+    .small-text {
       display: inline-block;
     }
 
@@ -65,16 +68,16 @@ const Btn = styled.button`
     border-radius: 10px;
     border: none;
     padding: 6px 20px;
-}
+  }
 
-@media only screen and (max-width: 320px) {
-  .orig-text {
+  @media only screen and (max-width: 320px) {
+    .orig-text {
       display: none;
-  }
+    }
 
-  .small-text{
-    display: inline-block;
-  }
+    .small-text {
+      display: inline-block;
+    }
 
 
   &:hover .effect-name{
