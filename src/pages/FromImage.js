@@ -26,16 +26,16 @@ const Btn = styled.button`
     background-color: #c77dff;
   }
 
-  .small-text{
+  .small-text {
     display: none;
   }
 
   @media only screen and (max-width: 1100px) {
     .orig-text {
-        display: none;
+      display: none;
     }
 
-    .small-text{
+    .small-text {
       display: inline-block;
     }
 
@@ -43,23 +43,22 @@ const Btn = styled.button`
     border-radius: 10px;
     border: none;
     padding: 6px 20px;
-}
+  }
 
-@media only screen and (max-width: 320px) {
-  .orig-text {
+  @media only screen and (max-width: 320px) {
+    .orig-text {
       display: none;
-  }
+    }
 
-  .small-text{
-    display: inline-block;
-  }
+    .small-text {
+      display: inline-block;
+    }
 
-  font-size: 8px;
-  border-radius: 5px;
-  border: none;
-  padding: 3px 10px;
-}
-}
+    font-size: 8px;
+    border-radius: 5px;
+    border: none;
+    padding: 3px 10px;
+  }
 `;
 
 export default function FromImage() {
