@@ -14,12 +14,12 @@ export default function FromImage(props) {
     p5.setup = () => {
       p5.createCanvas(img.width, img.height);
       p5.image(img, 0, 0);
-      p5.filter(p5.THRESHOLD,0.4);//0.2-0.8
+      p5.filter(p5.THRESHOLD, 0.4); //0.2-0.8
       // filter(BLUR);
       // filter(GRAY);
       // filter(OPAQUE);
-    //   p5.filter(p5.INVERT);
-     // p5.filter(p5.POSTERIZE,3);//2-7
+      //   p5.filter(p5.INVERT);
+      // p5.filter(p5.POSTERIZE,3);//2-7
       // filter(DILATE);
       // filter(ERODE);
     };

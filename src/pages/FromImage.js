@@ -416,17 +416,34 @@ export default function FromImage() {
         <div className="output">
           <Artoutput which={which} url={url} />
         </div>
-
-        <Btn
-          className="upload"
-          onClick={() => {
-            setUrl("");
-            setWhich("");
-            window.scrollTo({ top: 0, behavior: "smooth" });
-          }}
-        >
-          Clear
-        </Btn>
+        <div className="button-others">
+          {url ? (
+            <>
+              <Btn
+                className="upload"
+                onClick={() => {
+                  setUrl("");
+                  setWhich("");
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+              >
+                Clear
+              </Btn>
+              <Btn
+                className="upload"
+                onClick={() => {
+                  window.dispatchEvent(
+                    new KeyboardEvent("keydown", { key: "d" })
+                  );
+                }}
+              >
+                Download
+              </Btn>
+            </>
+          ) : (
+            ""
+          )}
+        </div>
       </div>
     </>
   );

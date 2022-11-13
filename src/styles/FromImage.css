@@ -36,6 +36,10 @@
     transform: translateY(-3px) scale(1.03);
 }
 
+.button-others{
+  display: flex;
+  gap: 10px;
+}
 .output{
   margin: 30px;
   padding: 0px;
