@@ -90,7 +90,6 @@
   grid-area: a;
   animation-delay: calc(1 * var(--stagger-delay));
   background-image:url('../assets/artfromimage/circles.jpg')
-}
 
 .image-card:nth-child(2) {
   grid-area: b;

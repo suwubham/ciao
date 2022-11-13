@@ -25,10 +25,27 @@ const Btn = styled.button`
   &:hover {
     background-color: #c77dff;
   }
+  
+  &:hover .orig-text {
+    display:none;
+  }
+
+  &:hover .effect-name{
+    display: block;
 
   .small-text {
     display: none;
   }
+
+  .orig-text {
+    display: inline-block;
+}
+
+.small-text ,.effect-name{
+  display: none;
+}
+
+
 
   @media only screen and (max-width: 1100px) {
     .orig-text {
@@ -37,6 +54,14 @@ const Btn = styled.button`
 
     .small-text {
       display: inline-block;
+    }
+
+    &:hover .effect-name{
+      display: block;
+    }
+
+    &:hover .small-text{
+      display: none;
     }
 
     font-size: 12px;
@@ -54,11 +79,21 @@ const Btn = styled.button`
       display: inline-block;
     }
 
-    font-size: 8px;
-    border-radius: 5px;
-    border: none;
-    padding: 3px 10px;
+
+  &:hover .effect-name{
+    display: block;
   }
+
+  &:hover .small-text{
+    display: none;
+  }
+
+  font-size: 6px;
+  border-radius: 5px;
+  border: none;
+  padding: 3px 10px;
+}
+
 `;
 
 export default function FromImage() {
@@ -104,6 +139,7 @@ export default function FromImage() {
               }}
             >
               <span className="orig-text">Click to try effect</span>
+              <span className="effect-name">Blur Effect</span>
               <span className="small-text">Try effect</span>
             </Btn>
             <input
@@ -125,6 +161,7 @@ export default function FromImage() {
               }}
             >
               <span className="orig-text">Click to try effect</span>
+              <span className="effect-name">Blur Effect</span>
               <span className="small-text">Try effect</span>
             </Btn>
             <input
@@ -146,6 +183,7 @@ export default function FromImage() {
               }}
             >
               <span className="orig-text">Click to try effect</span>
+              <span className="effect-name">Blur Effect</span>
               <span className="small-text">Try effect</span>
             </Btn>
             <input
@@ -167,6 +205,7 @@ export default function FromImage() {
               }}
             >
               <span className="orig-text">Click to try effect</span>
+              <span className="effect-name">Blur Effect</span>
               <span className="small-text">Try effect</span>
             </Btn>
             <input
@@ -188,6 +227,7 @@ export default function FromImage() {
               }}
             >
               <span className="orig-text">Click to try effect</span>
+              <span className="effect-name">Blur Effect</span>
               <span className="small-text">Try effect</span>
             </Btn>
             <input
@@ -209,6 +249,7 @@ export default function FromImage() {
               }}
             >
               <span className="orig-text">Click to try effect</span>
+              <span className="effect-name">Blur Effect</span>
               <span className="small-text">Try effect</span>
             </Btn>
             <input
@@ -230,6 +271,7 @@ export default function FromImage() {
               }}
             >
               <span className="orig-text">Click to try effect</span>
+              <span className="effect-name">Blur Effect</span>
               <span className="small-text">Try effect</span>
             </Btn>
             <input
@@ -251,6 +293,7 @@ export default function FromImage() {
               }}
             >
               <span className="orig-text">Click to try effect</span>
+              <span className="effect-name">Blur Effect</span>
               <span className="small-text">Try effect</span>
             </Btn>
             <input
@@ -272,6 +315,7 @@ export default function FromImage() {
               }}
             >
               <span className="orig-text">Click to try effect</span>
+              <span className="effect-name">Blur Effect</span>
               <span className="small-text">Try effect</span>
             </Btn>
             <input
@@ -293,6 +337,7 @@ export default function FromImage() {
               }}
             >
               <span className="orig-text">Click to try effect</span>
+              <span className="effect-name">Blur Effect</span>
               <span className="small-text">Try effect</span>
             </Btn>
             <input
@@ -314,6 +359,7 @@ export default function FromImage() {
               }}
             >
               <span className="orig-text">Click to try effect</span>
+              <span className="effect-name">Blur Effect</span>
               <span className="small-text">Try effect</span>
             </Btn>
             <input
@@ -335,6 +381,7 @@ export default function FromImage() {
               }}
             >
               <span className="orig-text">Click to try effect</span>
+              <span className="effect-name">Blur Effect</span>
               <span className="small-text">Try effect</span>
             </Btn>
             <input
@@ -356,6 +403,7 @@ export default function FromImage() {
               }}
             >
               <span className="orig-text">Click to try effect</span>
+              <span className="effect-name">Blur Effect</span>
               <span className="small-text">Try effect</span>
             </Btn>
             <input
