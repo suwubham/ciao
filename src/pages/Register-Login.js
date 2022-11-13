@@ -171,7 +171,7 @@ export default function RegisterLogin() {
                     Register now and discover awesome generative arts!
                   </Components.Paragraph>
                   <Components.GhostButton onClick={() => toggle(false)}>
-                    Sigin Up
+                    Sign Up
                   </Components.GhostButton>
                 </Components.RightOverlayPanel>
               </Components.Overlay>
