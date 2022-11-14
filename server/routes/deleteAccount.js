@@ -3,12 +3,12 @@ import User from "../models/user.model.js";
 import authToken from "../middleware/authenticateToken.js";
 
 const router = express.Router();
-router.post("/", authToken, async (req, res) => {
+router.delete("/", authToken, async (req, res) => {
   const username = req.user;
   try {
     const currentUser = await User.findOne({ username });
-    currentUser.favorites = req.body;
-    await currentUser.save();
+
+    await currentUser.delete();
     return res.status(200).json({
       currentUser,
     });

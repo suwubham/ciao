@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar_logged";
-import getUserData from "../services/userdata.service";
+import profileService from "../services/profile.service";
 import AuthService from "../services/auth.service";
 import "../styles/Dashboard.css";
 export default function Dashboard() {
   let navigate = useNavigate();
   const [currentUser, setCurrentUser] = useState({});
   useEffect(() => {
-    getUserData().then(
+    profileService.getProfile().then(
       (res) => {
         setCurrentUser(res.data.currentUser);
       },
