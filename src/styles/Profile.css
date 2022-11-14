@@ -54,6 +54,12 @@
     margin:35px 15px 15px 35px;
 }
 
+
+.inputfields{
+    width: 90%;
+    border-radius: 10px;
+}
+
 .RecentBtn:hover{
 cursor: pointer;
 }

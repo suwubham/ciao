@@ -40,6 +40,7 @@
   display: flex;
   gap: 10px;
 }
+
 .output{
   margin: 30px;
   padding: 0px;
@@ -51,7 +52,6 @@
   font-size: 8pt;
   line-height: 7pt;
   overflow-x: visible;
-
 }
 
 .animated-grid {

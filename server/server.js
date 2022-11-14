@@ -9,6 +9,8 @@ import getFavoriteRoute from "./routes/getFavorite.js";
 import setFavoriteRoute from "./routes/setFavorite.js";
 import saveArt from "./routes/saveArt.js";
 import getSaved from "./routes/getSaved.js";
+import changeProfile from "./routes/changeProfile.js";
+
 import env from "dotenv";
 env.config();
 const app = express();
@@ -23,6 +25,7 @@ app.use("/getfavorite", getFavoriteRoute);
 app.use("/setfavorite", setFavoriteRoute);
 app.use("/saveart", saveArt);
 app.use("/getsaved", getSaved);
+app.use("/changeprofile", changeProfile);
 
 app.listen(process.env.PORT, () => {
   console.log(`app is listening in port ${process.env.PORT}`);
