@@ -102,17 +102,6 @@ export default function Navbar() {
             </button>
           </form>
 
-          {/* <ul className="navbar-nav">
-            <li className="nav-item">
-              <a
-                className="nav-link navbar-custom"
-                id="Profile-btn"
-                onClick={() => navigate("/profile")}
-              >
-                Profile
-              </a>
-            </li>
-          </ul> */}
         </div>
       </div>
     </nav>

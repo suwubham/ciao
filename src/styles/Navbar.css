@@ -19,7 +19,7 @@
   padding-top: 10px;
   padding-bottom: 0px;
 }
-.nav-btn{
+.nav-btn{ 
   background-color: transparent;
 }
 .dropdown-item{
@@ -108,8 +108,8 @@
 
 
 .custom-toggler.navbar-toggler {
-  border: 2px solid rgb(90, 25, 119);
-  color: rgb(90, 25, 119);
+  border: 2px solid #7b2cbf;
+  color: #7b2cbf;
 }
 
 .custom-toggler .navbar-toggler-icon {

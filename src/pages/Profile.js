@@ -38,12 +38,7 @@ export default function Profile() {
                         alt="Avatar" className="img-fluid my-5 profileimage" />
                       <h5>{currentUser.username}</h5>
                       <p>Web Designer</p>
-                      {/* <div className="d-flex justify-content-center iconsDiv">
-                        <a href="#!"><i className="fab fa-facebook-f fa-lg me-3 iconslink-custom"></i></a>
-                        <a href="#!"><i className="fab fa-twitter fa-lg me-3 iconslink-custom"></i></a>
-                        <a href="#!"><i className="fab fa-instagram fa-lg iconslink-custom"></i></a>
-                      </div> */}
-                      <button className="logoutbutton editprof" onClick={() => navigate("/dashboard")}>
+                      <button className="logoutbutton editprof" onClick={() => navigate("/dashboard")}> 
                         Edit Profile</button>
                     </div>
                     <div className="col-md-8">
