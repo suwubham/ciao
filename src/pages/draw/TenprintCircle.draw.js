@@ -66,10 +66,9 @@ export default function Tdraw() {
               <DescriptionIcon />
             </div>
             <span className="link-text">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat
-              fugit beatae, dignissimos, ducimus exercitationem culpa a quo
-              aperiam quibusdam aliquid autem delectus quos soluta eos sint ex
-              vero doloribus. Iste?
+            Circles that do not overlap one another completely cover the canvas. Even the circle's size and its frequency in the data can be increased.
+Aside from changing the backdrop color and the circle's color, we can also change the canvas's size by adjusting the resolution.
+
             </span>
           </nav>
           <div className="main-art">

@@ -1,0 +1,100 @@
+.ProfileDiv {
+    background-image: url("../assets/backgrounds/template-page.svg");
+    background-size: cover;
+    position: absolute; 
+    /* top: 0; 
+    left: 0;  */
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.profilediv-custom {
+    border-radius: 50px;
+    backdrop-filter: blur(2px);
+    background: linear-gradient(
+        135deg,
+        rgba(0,18,32,0.4),
+        rgba(0,18,32,0.2)
+      );
+}
+
+.profileimage{
+    width: 100px;
+    height:100px;
+    object-fit: cover;
+    image-rendering: auto;
+    border-radius:50%;
+}
+
+
+
+.logoutbutton{
+    /* background-color: transparent; */
+    background-color: #7b2cbf;
+    box-shadow: inset 0 0 0 0 #10002b;
+    transition: ease-out 0.4s;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    padding:10px;
+}
+
+.iconsDiv{
+    margin:35px 15px 15px 15px;
+}
+
+.iconslink-custom{
+    position: relative;
+    padding: 15px;
+    top: 0;
+    left: 0;
+}
+
+.editprof{
+    margin:35px 15px 15px 35px;
+}
+
+.RecentBtn:hover{
+cursor: pointer;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #BA68C8
+}
+
+.profile-button {
+    background: rgb(99, 39, 120);
+    box-shadow: none;
+    border: none
+}
+
+.profile-button:hover {
+    background: #682773
+}
+
+.profile-button:focus {
+    background: #682773;
+    box-shadow: none
+}
+
+.profile-button:active {
+    background: #682773;
+    box-shadow: none
+}
+
+.back:hover {
+    color: #682773;
+    cursor: pointer
+}
+
+.labels {
+    font-size: 11px
+}
+
+.add-experience:hover {
+    background: #BA68C8;
+    color: #fff;
+    cursor: pointer;
+    border: solid 1px #BA68C8
+}

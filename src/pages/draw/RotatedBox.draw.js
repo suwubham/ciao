@@ -66,10 +66,8 @@ export default function Rbox() {
               <DescriptionIcon />
             </div>
             <span className="link-text">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat
-              fugit beatae, dignissimos, ducimus exercitationem culpa a quo
-              aperiam quibusdam aliquid autem delectus quos soluta eos sint ex
-              vero doloribus. Iste?
+            The rectangles can also be turned around and positioned at a 45-degree angle. As a result of different types of rectangles covering one another, an intriguing work of art results. We can alter both the dominant and background colors. The line's stroke and the rectangle's size can both be increased in a similar manner.
+
             </span>
           </nav>
           <div className="main-art">

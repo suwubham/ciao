@@ -22,8 +22,9 @@ h5{
 .btn-start:hover {
   background-color: #c77dff;
 }
+
 .card {
-  margin: 100px;
+  margin: 35px;
   background: linear-gradient(
   135deg,
   rgba(0, 18, 32, 0.4),
@@ -34,6 +35,7 @@ h5{
   transition: 1s;
   border-radius: 10px;
   border: 1px solid white;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .card:hover {
@@ -65,8 +67,4 @@ h5{
 
 .card-text{
   color: #a8a5aa;
-}
-
-.card{
-  font-family: 'Montserrat', sans-serif;
 }

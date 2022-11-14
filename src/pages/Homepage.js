@@ -5,6 +5,7 @@ import "../styles/Home.css";
 import { useNavigate } from "react-router-dom";
 import authService from "../services/auth.service";
 
+
 export default function Homepage() {
   const navigate = useNavigate();
   const handleClick = (e) => {
@@ -83,17 +84,17 @@ export default function Homepage() {
 
         <div className="bottom-page">
 
-          <div className="services">
-            <p>Review</p>
+          <div className="services serv1">
+            <button className="tryitout1"></button>
           </div>
-          <div className="services">
-            <p>Review</p>
+          <div className="services serv2">
+            <button className="tryitout2"></button>
           </div>
-          <div className="services">
-            <p>Review</p>
+          <div className="services serv3">
+            <button className="tryitout3"></button>
           </div>
-          <div className="services">
-            <p>Review</p>
+          <div className="services serv4">
+            <button className="tryitout4"></button>
           </div>
 
         </div>

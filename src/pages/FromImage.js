@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import "../styles/FromImage.css";
 import authService from "../services/auth.service";
 import LoggedNavbar from "../components/Navbar_logged";
@@ -25,17 +25,96 @@ const Btn = styled.button`
   &:hover {
     background-color: #c77dff;
   }
+
+  &:hover .orig-text {
+    display:none;
+  }
+
+  &:hover .effect-name{
+    display: block;
+  }
+
+  .orig-text {
+    display: inline-block;
+}
+
+.small-text ,.effect-name{
+  display: none;
+}
+
+
+
+  @media only screen and (max-width: 1100px) {
+    .orig-text {
+        display: none;
+    }
+
+    .small-text{
+      display: inline-block;
+    }
+
+    &:hover .effect-name{
+      display: block;
+    }
+
+    &:hover .small-text{
+      display: none;
+    }
+
+    font-size: 12px;
+    border-radius: 10px;
+    border: none;
+    padding: 6px 20px;
+}
+
+@media only screen and (max-width: 320px) {
+  .orig-text {
+      display: none;
+  }
+
+  .small-text{
+    display: inline-block;
+  }
+
+
+  &:hover .effect-name{
+    display: block;
+  }
+
+  &:hover .small-text{
+    display: none;
+  }
+
+  font-size: 6px;
+  border-radius: 5px;
+  border: none;
+  padding: 3px 10px;
+}
+
 `;
 
 export default function FromImage() {
   const [url, setUrl] = useState();
   const [which, setWhich] = useState();
 
+  const hiddenFileInput1 = useRef();
+  const hiddenFileInput2 = useRef();
+  const hiddenFileInput3 = useRef();
+  const hiddenFileInput4 = useRef();
+  const hiddenFileInput5 = useRef();
+  const hiddenFileInput6 = useRef();
+  const hiddenFileInput7 = useRef();
+  const hiddenFileInput8 = useRef();
+  const hiddenFileInput9 = useRef();
+  const hiddenFileInput10 = useRef();
+  const hiddenFileInput11 = useRef();
+  const hiddenFileInput12 = useRef();
+  const hiddenFileInput13 = useRef();
+
   const handleType = (e, type) => {
     const [file] = e.target.files;
     setUrl(URL.createObjectURL(file));
     setWhich(type);
-
     setTimeout(() => {
       window.scrollTo({
         top: document.documentElement.scrollHeight,
@@ -51,10 +130,21 @@ export default function FromImage() {
 
         <section className="animated-grid">
           <div className="image-card">
+            <Btn
+              onClick={() => {
+                hiddenFileInput1.current.click();
+              }}
+            >
+              <span className="orig-text">Click to try effect</span>
+              <span className="effect-name">Blur Effect</span>
+              <span className="small-text">Try effect</span>
+            </Btn>
             <input
               type="file"
               accept="image/*"
+              ref={hiddenFileInput1}
               className="upload"
+              style={{ display: "none" }}
               onChange={(e) => {
                 handleType(e, 1);
               }}
@@ -62,10 +152,21 @@ export default function FromImage() {
           </div>
 
           <div className="image-card">
+            <Btn
+              onClick={() => {
+                hiddenFileInput2.current.click();
+              }}
+            >
+              <span className="orig-text">Click to try effect</span>
+              <span className="effect-name">Blur Effect</span>
+              <span className="small-text">Try effect</span>
+            </Btn>
             <input
               type="file"
               accept="image/*"
+              ref={hiddenFileInput2}
               className="upload"
+              style={{ display: "none" }}
               onChange={(e) => {
                 handleType(e, 2);
               }}
@@ -73,10 +174,21 @@ export default function FromImage() {
           </div>
 
           <div className="image-card">
+            <Btn
+              onClick={() => {
+                hiddenFileInput3.current.click();
+              }}
+            >
+              <span className="orig-text">Click to try effect</span>
+              <span className="effect-name">Blur Effect</span>
+              <span className="small-text">Try effect</span>
+            </Btn>
             <input
               type="file"
               accept="image/*"
+              ref={hiddenFileInput3}
               className="upload"
+              style={{ display: "none" }}
               onChange={(e) => {
                 handleType(e, 3);
               }}
@@ -84,10 +196,21 @@ export default function FromImage() {
           </div>
 
           <div className="image-card">
+            <Btn
+              onClick={() => {
+                hiddenFileInput4.current.click();
+              }}
+            >
+              <span className="orig-text">Click to try effect</span>
+              <span className="effect-name">Blur Effect</span>
+              <span className="small-text">Try effect</span>
+            </Btn>
             <input
               type="file"
               accept="image/*"
+              ref={hiddenFileInput4}
               className="upload"
+              style={{ display: "none" }}
               onChange={(e) => {
                 handleType(e, 4);
               }}
@@ -95,10 +218,21 @@ export default function FromImage() {
           </div>
 
           <div className="image-card">
+            <Btn
+              onClick={() => {
+                hiddenFileInput5.current.click();
+              }}
+            >
+              <span className="orig-text">Click to try effect</span>
+              <span className="effect-name">Blur Effect</span>
+              <span className="small-text">Try effect</span>
+            </Btn>
             <input
               type="file"
               accept="image/*"
+              ref={hiddenFileInput5}
               className="upload"
+              style={{ display: "none" }}
               onChange={(e) => {
                 handleType(e, 5);
               }}
@@ -106,10 +240,21 @@ export default function FromImage() {
           </div>
 
           <div className="image-card">
+            <Btn
+              onClick={() => {
+                hiddenFileInput6.current.click();
+              }}
+            >
+              <span className="orig-text">Click to try effect</span>
+              <span className="effect-name">Blur Effect</span>
+              <span className="small-text">Try effect</span>
+            </Btn>
             <input
               type="file"
               accept="image/*"
+              ref={hiddenFileInput6}
               className="upload"
+              style={{ display: "none" }}
               onChange={(e) => {
                 handleType(e, 6);
               }}
@@ -117,10 +262,21 @@ export default function FromImage() {
           </div>
 
           <div className="image-card">
+            <Btn
+              onClick={() => {
+                hiddenFileInput7.current.click();
+              }}
+            >
+              <span className="orig-text">Click to try effect</span>
+              <span className="effect-name">Blur Effect</span>
+              <span className="small-text">Try effect</span>
+            </Btn>
             <input
               type="file"
               accept="image/*"
+              ref={hiddenFileInput7}
               className="upload"
+              style={{ display: "none" }}
               onChange={(e) => {
                 handleType(e, 7);
               }}
@@ -128,10 +284,21 @@ export default function FromImage() {
           </div>
 
           <div className="image-card">
+            <Btn
+              onClick={() => {
+                hiddenFileInput8.current.click();
+              }}
+            >
+              <span className="orig-text">Click to try effect</span>
+              <span className="effect-name">Blur Effect</span>
+              <span className="small-text">Try effect</span>
+            </Btn>
             <input
               type="file"
               accept="image/*"
+              ref={hiddenFileInput8}
               className="upload"
+              style={{ display: "none" }}
               onChange={(e) => {
                 handleType(e, 8);
               }}
@@ -139,10 +306,21 @@ export default function FromImage() {
           </div>
 
           <div className="image-card">
+            <Btn
+              onClick={() => {
+                hiddenFileInput9.current.click();
+              }}
+            >
+              <span className="orig-text">Click to try effect</span>
+              <span className="effect-name">Blur Effect</span>
+              <span className="small-text">Try effect</span>
+            </Btn>
             <input
               type="file"
               accept="image/*"
+              ref={hiddenFileInput9}
               className="upload"
+              style={{ display: "none" }}
               onChange={(e) => {
                 handleType(e, 9);
               }}
@@ -150,10 +328,21 @@ export default function FromImage() {
           </div>
 
           <div className="image-card">
+            <Btn
+              onClick={() => {
+                hiddenFileInput10.current.click();
+              }}
+            >
+              <span className="orig-text">Click to try effect</span>
+              <span className="effect-name">Blur Effect</span>
+              <span className="small-text">Try effect</span>
+            </Btn>
             <input
               type="file"
               accept="image/*"
+              ref={hiddenFileInput10}
               className="upload"
+              style={{ display: "none" }}
               onChange={(e) => {
                 handleType(e, 10);
               }}
@@ -161,10 +350,21 @@ export default function FromImage() {
           </div>
 
           <div className="image-card">
+            <Btn
+              onClick={() => {
+                hiddenFileInput11.current.click();
+              }}
+            >
+              <span className="orig-text">Click to try effect</span>
+              <span className="effect-name">Blur Effect</span>
+              <span className="small-text">Try effect</span>
+            </Btn>
             <input
               type="file"
               accept="image/*"
+              ref={hiddenFileInput11}
               className="upload"
+              style={{ display: "none" }}
               onChange={(e) => {
                 handleType(e, 11);
               }}
@@ -172,10 +372,21 @@ export default function FromImage() {
           </div>
 
           <div className="image-card">
+            <Btn
+              onClick={() => {
+                hiddenFileInput12.current.click();
+              }}
+            >
+              <span className="orig-text">Click to try effect</span>
+              <span className="effect-name">Blur Effect</span>
+              <span className="small-text">Try effect</span>
+            </Btn>
             <input
               type="file"
               accept="image/*"
+              ref={hiddenFileInput12}
               className="upload"
+              style={{ display: "none" }}
               onChange={(e) => {
                 handleType(e, 12);
               }}
@@ -183,10 +394,21 @@ export default function FromImage() {
           </div>
 
           <div className="image-card">
+            <Btn
+              onClick={() => {
+                hiddenFileInput13.current.click();
+              }}
+            >
+              <span className="orig-text">Click to try effect</span>
+              <span className="effect-name">Blur Effect</span>
+              <span className="small-text">Try effect</span>
+            </Btn>
             <input
               type="file"
               accept="image/*"
+              ref={hiddenFileInput13}
               className="upload"
+              style={{ display: "none" }}
               onChange={(e) => {
                 handleType(e, 13);
               }}
