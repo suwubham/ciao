@@ -15,7 +15,8 @@ export default function FromImage(props) {
     p5.setup = () => {
       // p5.createCanvas(100,100);
       p5.noCanvas();
-      gloria.resize(200, 143);
+      gloria.resize(200,143);
+      //gloria.resize(gloria.width, gloria.height);
       gloria.loadPixels();
       for (let j = 0; j < gloria.height; j++) {
         let row = "";

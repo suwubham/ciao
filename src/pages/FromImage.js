@@ -133,7 +133,7 @@ export default function FromImage() {
               }}
             >
               <span className="orig-text">Click to try effect</span>
-              <span className="effect-name">Blur Effect</span>
+              <span className="effect-name">Circles Effect</span>
               <span className="small-text">Try effect</span>
             </Btn>
             <input
@@ -155,7 +155,7 @@ export default function FromImage() {
               }}
             >
               <span className="orig-text">Click to try effect</span>
-              <span className="effect-name">Blur Effect</span>
+              <span className="effect-name">Imagenoise Effect</span>
               <span className="small-text">Try effect</span>
             </Btn>
             <input
@@ -177,7 +177,7 @@ export default function FromImage() {
               }}
             >
               <span className="orig-text">Click to try effect</span>
-              <span className="effect-name">Blur Effect</span>
+              <span className="effect-name">Posterize Effect</span>
               <span className="small-text">Try effect</span>
             </Btn>
             <input
@@ -199,7 +199,7 @@ export default function FromImage() {
               }}
             >
               <span className="orig-text">Click to try effect</span>
-              <span className="effect-name">Blur Effect</span>
+              <span className="effect-name">Collage1</span>
               <span className="small-text">Try effect</span>
             </Btn>
             <input
@@ -221,7 +221,7 @@ export default function FromImage() {
               }}
             >
               <span className="orig-text">Click to try effect</span>
-              <span className="effect-name">Blur Effect</span>
+              <span className="effect-name">Imageglow Effect</span>
               <span className="small-text">Try effect</span>
             </Btn>
             <input
@@ -243,7 +243,7 @@ export default function FromImage() {
               }}
             >
               <span className="orig-text">Click to try effect</span>
-              <span className="effect-name">Blur Effect</span>
+              <span className="effect-name">RGB Translate</span>
               <span className="small-text">Try effect</span>
             </Btn>
             <input
@@ -265,7 +265,7 @@ export default function FromImage() {
               }}
             >
               <span className="orig-text">Click to try effect</span>
-              <span className="effect-name">Blur Effect</span>
+              <span className="effect-name">Imagedots Effect</span>
               <span className="small-text">Try effect</span>
             </Btn>
             <input
@@ -287,7 +287,7 @@ export default function FromImage() {
               }}
             >
               <span className="orig-text">Click to try effect</span>
-              <span className="effect-name">Blur Effect</span>
+              <span className="effect-name">Threshold Effect</span>
               <span className="small-text">Try effect</span>
             </Btn>
             <input
@@ -309,7 +309,7 @@ export default function FromImage() {
               }}
             >
               <span className="orig-text">Click to try effect</span>
-              <span className="effect-name">Blur Effect</span>
+              <span className="effect-name">Imagelines Effect</span>
               <span className="small-text">Try effect</span>
             </Btn>
             <input
@@ -331,7 +331,7 @@ export default function FromImage() {
               }}
             >
               <span className="orig-text">Click to try effect</span>
-              <span className="effect-name">Blur Effect</span>
+              <span className="effect-name">Collage2</span>
               <span className="small-text">Try effect</span>
             </Btn>
             <input
@@ -353,7 +353,7 @@ export default function FromImage() {
               }}
             >
               <span className="orig-text">Click to try effect</span>
-              <span className="effect-name">Blur Effect</span>
+              <span className="effect-name">Asciiart</span>
               <span className="small-text">Try effect</span>
             </Btn>
             <input
@@ -375,7 +375,7 @@ export default function FromImage() {
               }}
             >
               <span className="orig-text">Click to try effect</span>
-              <span className="effect-name">Blur Effect</span>
+              <span className="effect-name">Invert Effect</span>
               <span className="small-text">Try effect</span>
             </Btn>
             <input
@@ -397,7 +397,7 @@ export default function FromImage() {
               }}
             >
               <span className="orig-text">Click to try effect</span>
-              <span className="effect-name">Blur Effect</span>
+              <span className="effect-name">SwapRB Effect</span>
               <span className="small-text">Try effect</span>
             </Btn>
             <input
