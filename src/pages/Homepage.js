@@ -118,7 +118,7 @@ export default function Homepage() {
                 <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                   <h6 className="text-uppercase fw-bold mb-4">
                     <i className="fas fa-gem me-3 text-secondary icons-custom"></i>
-                    Company name
+                    CIAO
                   </h6>
                   <p>
                     Here you can use rows and columns to organize your footer
@@ -128,25 +128,20 @@ export default function Homepage() {
                 </div>
 
                 <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                  <h6 className="text-uppercase fw-bold mb-4">Products</h6>
+                  <h6 className="text-uppercase fw-bold mb-4">Tools</h6>
                   <p>
                     <a href="#!" className="text-reset">
-                      Angular
+                      Draw From Template
                     </a>
                   </p>
                   <p>
                     <a href="#!" className="text-reset">
-                      React
+                      Draw From Image
                     </a>
                   </p>
                   <p>
                     <a href="#!" className="text-reset">
                       Vue
-                    </a>
-                  </p>
-                  <p>
-                    <a href="#!" className="text-reset">
-                      Laravel
                     </a>
                   </p>
                 </div>
@@ -155,17 +150,17 @@ export default function Homepage() {
                   <h6 className="text-uppercase fw-bold mb-4">Useful links</h6>
                   <p>
                     <a href="#!" className="text-reset">
-                      Pricing
+                      p5.js
                     </a>
                   </p>
                   <p>
                     <a href="#!" className="text-reset">
-                      Settings
+                      ASCII Art
                     </a>
                   </p>
                   <p>
                     <a href="#!" className="text-reset">
-                      Orders
+                      About this website
                     </a>
                   </p>
                   <p>
@@ -179,11 +174,11 @@ export default function Homepage() {
                   <h6 className="text-uppercase fw-bold mb-4">Contact</h6>
                   <p>
                     <i className="fas fa-home me-3 text-secondary icons-custom"></i>{" "}
-                    New York, NY 10012, US
+                    KU, Dhulikhel, Nepal
                   </p>
                   <p>
                     <i className="fas fa-envelope me-3 text-secondary icons-custom"></i>
-                    info@example.com
+                    ciao.art@gmail.com
                   </p>
                   <p>
                     <i className="fas fa-phone me-3 text-secondary icons-custom"></i>{" "}
@@ -199,10 +194,7 @@ export default function Homepage() {
           </section>
 
           <div className="text-center p-4">
-            © 2021 Copyright:
-            <a className="text-reset fw-bold" href="https://mdbootstrap.com/">
-              MDBootstrap.com
-            </a>
+            © 2022 Copyright
           </div>
         </footer>
       </div>

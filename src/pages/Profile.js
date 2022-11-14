@@ -229,7 +229,7 @@ export default function Profile() {
                                 setOpen(true);
                               }}
                             >
-                              <span class="material-symbols-outlined">
+                              <span className="material-symbols-outlined">
                                 delete
                               </span>
                             </Btn>
@@ -243,9 +243,6 @@ export default function Profile() {
                               }}
                             >
                               Log Out
-                              <span className="material-symbols-outlined control">
-                                logout
-                              </span>
                             </Btn>
                           </div>
                         </div>
