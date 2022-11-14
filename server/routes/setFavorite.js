@@ -8,7 +8,6 @@ router.post("/", authToken, async (req, res) => {
   try {
     const currentUser = await User.findOne({ username });
     currentUser.favorites = req.body;
-    currentUser.arts.push({ rand: Math.random(10) });
     await currentUser.save();
     return res.status(200).json({
       currentUser,
