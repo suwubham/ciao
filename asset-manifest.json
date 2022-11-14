@@ -1,13 +1,25 @@
 {
   "files": {
-    "main.css": "/ciao/static/css/main.1102179a.css",
-    "main.js": "/ciao/static/js/main.d71f8d1e.js",
+    "main.css": "/ciao/static/css/main.ba80af2e.css",
+    "main.js": "/ciao/static/js/main.56eb42fd.js",
     "static/media/prasiddhi.jpg": "/ciao/static/media/prasiddhi.13d51b1acdf46dbbf161.jpg",
+    "static/media/Imagedots.jpg": "/ciao/static/media/Imagedots.aefba24d74869acf5356.jpg",
+    "static/media/circles.jpg": "/ciao/static/media/circles.6fc37b72b93521203815.jpg",
+    "static/media/Imagenoise.jpg": "/ciao/static/media/Imagenoise.963b3cb99727908d41d8.jpg",
+    "static/media/Imagelines.jpg": "/ciao/static/media/Imagelines.63720feed034ba29b733.jpg",
+    "static/media/Imageglow.jpg": "/ciao/static/media/Imageglow.d59ec2e1560a2b3d1345.jpg",
+    "static/media/Collage.jpg": "/ciao/static/media/Collage.bfae53825df549e88204.jpg",
     "static/media/boy1.jpg": "/ciao/static/media/boy1.98e82e5e9b10f307cf81.jpg",
+    "static/media/SwapRB.jpg": "/ciao/static/media/SwapRB.36ae9e37a66f0372e6cf.jpg",
     "static/media/ciao-3.png": "/ciao/static/media/ciao-3.dbf64658d302dc4fae6b.png",
+    "static/media/Asciiart.jpg": "/ciao/static/media/Asciiart.5ad4ed6623c0b2e1b7d7.jpg",
+    "static/media/RgbTranslate.jpg": "/ciao/static/media/RgbTranslate.32a3767126cd2365c1ac.jpg",
     "static/media/instagram-logo-2433.png": "/ciao/static/media/instagram-logo-2433.4e8a15165e70f320be60.png",
+    "static/media/Collage2.jpg": "/ciao/static/media/Collage2.81e071ef68263caef6a8.jpg",
     "static/media/twlogo2.png": "/ciao/static/media/twlogo2.0b54323e12dcccf51b64.png",
+    "static/media/Invert.jpg": "/ciao/static/media/Invert.935e15c39eaf2ed173a2.jpg",
     "static/media/loginregister.svg": "/ciao/static/media/loginregister.2f2dad71656350daaa7b580af9c7dbfb.svg",
+    "static/media/Posterize.jpg": "/ciao/static/media/Posterize.85c177cfd2a3d720946d.jpg",
     "static/media/template-page.svg": "/ciao/static/media/template-page.1ba6a54b353827496823.svg",
     "static/media/blob-scene-haikei.svg": "/ciao/static/media/blob-scene-haikei.a3d6860295b8833806c9.svg",
     "static/media/loginbox.svg": "/ciao/static/media/loginbox.d5419cc0a138c0fc85e7684617882a6b.svg",
@@ -15,11 +27,11 @@
     "static/media/description-bar.svg": "/ciao/static/media/description-bar.343319cd1ffe98e15e41.svg",
     "index.html": "/ciao/index.html",
     "static/media/description.svg": "/ciao/static/media/description.53ca750cedefa47b6e95f7c3ad2540fb.svg",
-    "main.1102179a.css.map": "/ciao/static/css/main.1102179a.css.map",
-    "main.d71f8d1e.js.map": "/ciao/static/js/main.d71f8d1e.js.map"
+    "main.ba80af2e.css.map": "/ciao/static/css/main.ba80af2e.css.map",
+    "main.56eb42fd.js.map": "/ciao/static/js/main.56eb42fd.js.map"
   },
   "entrypoints": [
-    "static/css/main.1102179a.css",
-    "static/js/main.d71f8d1e.js"
+    "static/css/main.ba80af2e.css",
+    "static/js/main.56eb42fd.js"
   ]
 }
