@@ -118,80 +118,102 @@ export default function Homepage() {
                 <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                   <h6 className="text-uppercase fw-bold mb-4">
                     <i className="fas fa-gem me-3 text-secondary icons-custom"></i>
-                    Company name
+                    CIAO
                   </h6>
                   <p>
-                    Here you can use rows and columns to organize your footer
-                    content. Lorem ipsum dolor sit amet, consectetur adipisicing
-                    elit.
+                   A webapp for rendering generative art 
                   </p>
                 </div>
 
                 <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                  <h6 className="text-uppercase fw-bold mb-4">Products</h6>
+                  <h6 className="text-uppercase fw-bold mb-4">Authors</h6>
                   <p>
-                    <a href="#!" className="text-reset">
-                      Angular
-                    </a>
+                   
+                      Shubham Shakya
+                    
                   </p>
                   <p>
-                    <a href="#!" className="text-reset">
-                      React
-                    </a>
+                    
+                      Saral Sainju
+                    
                   </p>
                   <p>
-                    <a href="#!" className="text-reset">
-                      Vue
-                    </a>
+                    
+                      Kriti Gautam
+                    
                   </p>
                   <p>
-                    <a href="#!" className="text-reset">
-                      Laravel
-                    </a>
+                    
+                      Prasiddhi Dahal
+                    
                   </p>
                 </div>
+                <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                  <h6 className="text-uppercase fw-bold mb-4">Resources</h6>
+                  <a href="#!" className="text-reset">
+                  
+                    </a>
+                    <a className="text-reset fw-bold" href="https://docs.google.com/document/d/1yhrkCX3PeZUtzaWJtJDaD91i18XrzzIN/edit#heading=h.le8z3ynlhtuc">
+              Documentation
+            </a>
+                  <p> </p> </div>
+                  
+                  
+                  
 
                 <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
                   <h6 className="text-uppercase fw-bold mb-4">Useful links</h6>
                   <p>
                     <a href="#!" className="text-reset">
-                      Pricing
+                     
                     </a>
+                  
+            <a className="text-reset fw-bold" href="http://localhost:3001/image">
+              Art from Image
+            </a>
                   </p>
                   <p>
                     <a href="#!" className="text-reset">
-                      Settings
+                      
                     </a>
+
                   </p>
+                
+            
+            <a className="text-reset fw-bold" href="http://localhost:3001/template">
+              Art from template
+            </a>
+          
                   <p>
+            
+                  
                     <a href="#!" className="text-reset">
-                      Orders
+                      
                     </a>
                   </p>
-                  <p>
-                    <a href="#!" className="text-reset">
-                      Help
-                    </a>
-                  </p>
+                 
+            <a className="text-reset fw-bold" href="http://localhost:3001/signin?">
+              Signin
+            </a>
                 </div>
 
                 <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
                   <h6 className="text-uppercase fw-bold mb-4">Contact</h6>
                   <p>
                     <i className="fas fa-home me-3 text-secondary icons-custom"></i>{" "}
-                    New York, NY 10012, US
+                     Dhulikhel, Kavre, Nepal
                   </p>
                   <p>
                     <i className="fas fa-envelope me-3 text-secondary icons-custom"></i>
-                    info@example.com
+                    carreratciao@gmail.com
                   </p>
                   <p>
                     <i className="fas fa-phone me-3 text-secondary icons-custom"></i>{" "}
-                    + 01 234 567 88
+                    9865532450
                   </p>
                   <p>
                     <i className="fas fa-print me-3 text-secondary icons-custom"></i>{" "}
-                    + 01 234 567 89
+                    + 021 556621
                   </p>
                 </div>
               </div>
