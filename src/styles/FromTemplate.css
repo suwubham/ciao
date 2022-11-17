@@ -35,6 +35,7 @@
   padding: 10px;
   width: auto;
   height: max-content;
+  overflow-x: auto;
 }
 
 .menu {

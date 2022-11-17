@@ -39,7 +39,7 @@ export default function Homepage() {
         </section>
         <div className="spacer layer1"></div>
 
-        <h1 className="second-div-start">What you can do in CIAO</h1>
+        <h1 className="second-div-start">What you can do here</h1>
 
         <div className="template-descp">
           <div className="main-page-left">
