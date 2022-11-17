@@ -125,13 +125,13 @@ export default function Profile() {
                         <>
                           <Btn onClick={handleSubmit}>
                             Submit
-                            <span class="material-symbols-outlined control">
+                            <span className="material-symbols-outlined control">
                               done
                             </span>
                           </Btn>
                           <Btn onClick={handleCancel}>
                             Cancel
-                            <span class="material-symbols-outlined control">
+                            <span className="material-symbols-outlined control">
                               close
                             </span>
                           </Btn>
@@ -144,7 +144,7 @@ export default function Profile() {
                           }}
                         >
                           Edit Profile
-                          <span class="material-symbols-outlined control">
+                          <span className="material-symbols-outlined control">
                             edit
                           </span>
                         </Btn>

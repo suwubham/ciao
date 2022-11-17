@@ -5,9 +5,26 @@
 }
 
 .SavedDiv{
-  height: auto;
+  height: 100vh;
 }
 
 .UnsavedDiv{
   height: 100vh;
+}
+
+.savedarts{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.yohohamroslider{
+  margin: 30px;
+}
+
+.yourartsdel{
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }

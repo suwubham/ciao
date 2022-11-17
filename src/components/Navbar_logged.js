@@ -109,7 +109,9 @@ export default function Navbar() {
                   onClick={() => navigate("/profile")}
                 >
                   <p className="username">{currentUser.username}</p>
-                  <span class="material-symbols-outlined">account_circle</span>
+                  <span className="material-symbols-outlined">
+                    account_circle
+                  </span>
                 </button>
               </li>
             </ul>

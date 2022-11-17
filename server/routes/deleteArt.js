@@ -3,7 +3,7 @@ import User from "../models/user.model.js";
 import authToken from "../middleware/authenticateToken.js";
 
 const router = express.Router();
-router.delete("/", authToken, async (req, res) => {
+router.post("/", authToken, async (req, res) => {
   const username = req.user;
   try {
     let currentUser = await User.findOne({ username });

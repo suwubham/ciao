@@ -16,14 +16,16 @@ export default function Homepage() {
   const [currentUser, setCurrentUser] = useState({});
   useEffect(() => {
     window.scrollTo(0, 0);
-    profileService.getProfile().then(
-      (res) => {
-        setCurrentUser(res.data.currentUser);
-      },
-      (error) => {
-        console.log("Private page", error.response);
-      }
-    );
+    if (authService.getCurrentUser()) {
+      profileService.getProfile().then(
+        (res) => {
+          setCurrentUser(res.data.currentUser);
+        },
+        (error) => {
+          console.log("Private page", error.response);
+        }
+      );
+    }
   }, []);
 
   return (
