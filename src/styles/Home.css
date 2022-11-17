@@ -161,8 +161,7 @@
 
 
 .bottom-page {
-  margin: 50px 50px 150px 50px;
-  background-color: #001220;
+  /* margin: 50px 50px 150px 50px; */
   padding-top: 25px;
   display: grid;
   row-gap: 35px;
@@ -256,6 +255,7 @@
   background: #7b2cbf;
 }
 
+
 .spacer {
   aspect-ratio: 960/150;
   width: 100%;
@@ -282,18 +282,4 @@
   padding: 15px;
   top: 0;
   left: 0;
-}
-
-.icons-custom1{
-  position: relative;
-  top: 0;
-  left: 0;
-}
-
-.usefullLink{
-  text-decoration: none;
-}
-
-.usefullLink:hover{
-  cursor: pointer;
 }

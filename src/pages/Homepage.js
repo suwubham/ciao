@@ -39,7 +39,7 @@ export default function Homepage() {
         </section>
         <div className="spacer layer1"></div>
 
-        <h1 className="second-div-start">What you can do here</h1>
+        <h1 className="second-div-start">What you can do in CIAO</h1>
 
         <div className="template-descp">
           <div className="main-page-left">
@@ -72,23 +72,26 @@ export default function Homepage() {
             </div>
           </div>
         </div>
+        <div className="spacer layer1 flip"></div>
+        <div className="purple">
+          <h1 className="quote">Popular Arts</h1>
 
-        <h1 className="quote">Popular Arts</h1>
-
-        <div className="bottom-page">
-          <div className="services serv1">
-            <button className="tryitout1"></button>
-          </div>
-          <div className="services serv2">
-            <button className="tryitout2"></button>
-          </div>
-          <div className="services serv3">
-            <button className="tryitout3"></button>
-          </div>
-          <div className="services serv4">
-            <button className="tryitout4"></button>
+          <div className="bottom-page">
+            <div className="services serv1 7b2cbf">
+              <button className="tryitout1"></button>
+            </div>
+            <div className="services serv2">
+              <button className="tryitout2"></button>
+            </div>
+            <div className="services serv3">
+              <button className="tryitout3"></button>
+            </div>
+            <div className="services serv4">
+              <button className="tryitout4"></button>
+            </div>
           </div>
         </div>
+        <div className="spacer layer1"></div>
 
         <footer className="text-center text-lg-start text-muted">
           <section className="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
@@ -117,83 +120,64 @@ export default function Homepage() {
               <div className="row mt-3">
                 <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                   <h6 className="text-uppercase fw-bold mb-4">
-                    <i className="fas fa-gem me-3 text-secondary icons-custom1"></i>
+                    <i className="fas fa-gem me-3 text-secondary icons-custom"></i>
                     CIAO
                   </h6>
-                  <p>
-                    CIAO is a webapp for rendering generative art. You can create your own art by drawing
-                    from templates or by uploading your own image. By login in, you can even save your arts.
-                  </p>
+                  <p>A webapp for rendering generative art</p>
                 </div>
 
                 <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
                   <h6 className="text-uppercase fw-bold mb-4">Authors</h6>
-                  <p>
-
-                    Shubham Shakya
-
-                  </p>
-                  <p>
-
-                    Saral Sainju
-
-                  </p>
-                  <p>
-
-                    Kriti Gautam
-
-                  </p>
-                  <p>
-
-                    Prasiddhi Dahal
-
-                  </p>
+                  <p>Shubham Shakya</p>
+                  <p>Saral Sainju</p>
+                  <p>Kriti Gautam</p>
+                  <p>Prasiddhi Dahal</p>
                 </div>
                 <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
                   <h6 className="text-uppercase fw-bold mb-4">Resources</h6>
-                  <p>
-                    <a className="text-reset usefullLink" href="https://docs.google.com/document/d/1yhrkCX3PeZUtzaWJtJDaD91i18XrzzIN/edit#heading=h.le8z3ynlhtuc" target="_blank" rel="noopener noreferrer">
-                      Documentation
-                    </a>
-                  </p>
-                  <p>
-                    <a href="https://p5js.org/" className="text-reset usefullLink" target="_blank" rel="noopener noreferrer">
-                      p5.js
-                    </a>
-                  </p>
-                  <p>
-                    <a href="https://www.javatpoint.com/what-is-ascii-art" className="text-reset usefullLink" target="_blank" rel="noopener noreferrer">
-                      ASCII Art
-                    </a>
-                  </p>
+                  <a href="#!" className="text-reset"></a>
+                  <a
+                    className="text-reset fw-bold"
+                    href="https://docs.google.com/document/d/1yhrkCX3PeZUtzaWJtJDaD91i18XrzzIN/edit#heading=h.le8z3ynlhtuc"
+                  >
+                    Documentation
+                  </a>
+                  <p> </p>{" "}
                 </div>
 
                 <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
                   <h6 className="text-uppercase fw-bold mb-4">Useful links</h6>
                   <p>
-                    <a className="text-reset usefullLink" onClick={() => navigate("/image")}>
+                    <a href="#!" className="text-reset"></a>
+
+                    <a
+                      className="text-reset fw-bold"
+                      href="http://localhost:3001/image"
+                    >
                       Art from Image
                     </a>
                   </p>
                   <p>
-                    <a className="text-reset usefullLink" onClick={() => navigate("/template")}>
-                      Art from template
-                    </a>
+                    <a href="#!" className="text-reset"></a>
                   </p>
-                  {authService.getCurrentUser() ?
-                    // <p>
-                    //   <a className="text-reset usefullLink" href="#!">
-                    //     Help
-                    //   </a>
-                    // </p>
-                    <p></p>
-                    :
-                    <p>
-                      <a className="text-reset usefullLink" onClick={() => navigate("/signin")}>
-                        Signin
-                      </a>
-                    </p>
-                  }
+
+                  <a
+                    className="text-reset fw-bold"
+                    href="http://localhost:3001/template"
+                  >
+                    Art from template
+                  </a>
+
+                  <p>
+                    <a href="#!" className="text-reset"></a>
+                  </p>
+
+                  <a
+                    className="text-reset fw-bold"
+                    href="http://localhost:3001/signin?"
+                  >
+                    Signin
+                  </a>
                 </div>
 
                 <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
@@ -208,22 +192,25 @@ export default function Homepage() {
                   </p>
                   <p>
                     <i className="fas fa-phone me-3 text-secondary icons-custom"></i>{" "}
-                    +977 9865532450
+                    9865532450
                   </p>
                   <p>
                     <i className="fas fa-print me-3 text-secondary icons-custom"></i>{" "}
                     + 021 556621
                   </p>
-                </div >
-              </div >
-            </div >
-          </section >
+                </div>
+              </div>
+            </div>
+          </section>
 
           <div className="text-center p-4">
-            © 2022 Copyright
+            © 2021 Copyright:
+            <a className="text-reset fw-bold" href="https://mdbootstrap.com/">
+              MDBootstrap.com
+            </a>
           </div>
-        </footer >
-      </div >
+        </footer>
+      </div>
     </>
   );
 }
