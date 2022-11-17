@@ -15,7 +15,7 @@ export default function YourArts() {
 
   return data.length ? (
     <>
-      <div className="wrapper-yourarts">
+      <div className="wrapper-yourarts SavedDiv ">
         {authService.getCurrentUser() ? <LoggedNavbar /> : <Navbar />}
         {data.map((art, index) => {
           return <SavedDetail key={index} data={art} />;
@@ -24,7 +24,7 @@ export default function YourArts() {
     </>
   ) : (
     <>
-      <div className="wrapper-yourarts">
+      <div className="wrapper-yourarts UnsavedDiv">
         {authService.getCurrentUser() ? <LoggedNavbar /> : <Navbar />}
         {/* how to add inline style to a div with reg background */}
         <div className="title">Add arts to favorties to view them here</div>
@@ -32,3 +32,4 @@ export default function YourArts() {
     </>
   );
 }
+

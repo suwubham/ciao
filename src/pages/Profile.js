@@ -140,6 +140,7 @@ export default function Profile() {
                         <Btn
                           onClick={() => {
                             setEdit(true);
+                            alert("please enter password before submitting");
                           }}
                         >
                           Edit Profile
@@ -212,7 +213,7 @@ export default function Profile() {
                           <div className="col-6 mb-3">
                             <h6>Recent Arts</h6>
                             <a
-                              onClick={() => navigate("/dashboard")}
+                              onClick={() => navigate("/yourarts")}
                               className="text-muted RecentBtn"
                             >
                               Recents
@@ -229,7 +230,7 @@ export default function Profile() {
                                 setOpen(true);
                               }}
                             >
-                              <span class="material-symbols-outlined">
+                              <span className="material-symbols-outlined">
                                 delete
                               </span>
                             </Btn>
@@ -243,9 +244,6 @@ export default function Profile() {
                               }}
                             >
                               Log Out
-                              <span className="material-symbols-outlined control">
-                                logout
-                              </span>
                             </Btn>
                           </div>
                         </div>

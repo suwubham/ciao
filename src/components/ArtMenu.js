@@ -3,6 +3,7 @@ import Box from "@mui/material/Box";
 import { SpeedDial, SpeedDialIcon, SpeedDialAction } from "@mui/material";
 import CloudUploadIcon from "@mui/icons-material/CloudUpload";
 import SaveIcon from "@mui/icons-material/Save";
+import DownloadIcon from "@mui/icons-material/Download";
 import ShareIcon from "@mui/icons-material/Share";
 import authService from "../services/auth.service";
 import Button from "@mui/material/Button";
@@ -45,13 +46,13 @@ export default function ArtMenu(props) {
 
   const actions = authService.getCurrentUser()
     ? [
-        { icon: <CloudUploadIcon />, name: "Save", click: props.save },
-        { icon: <SaveIcon />, name: "Download", click: props.download },
+        { icon: <SaveIcon />, name: "Save", click: props.save },
+        { icon: <DownloadIcon />, name: "Download", click: props.download },
         { icon: <ShareIcon />, name: "Share", click: props.share },
       ]
     : [
-        { icon: <CloudUploadIcon />, name: "Savee", click: warning },
-        { icon: <SaveIcon />, name: "Download", click: props.download },
+        { icon: <SaveIcon />, name: "Savee", click: warning },
+        { icon: <DownloadIcon />, name: "Download", click: warning },
         { icon: <ShareIcon />, name: "Share", click: props.share },
       ];
 
