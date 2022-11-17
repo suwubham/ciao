@@ -117,31 +117,25 @@ export default function Homepage() {
               <div className="row mt-3">
                 <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                   <h6 className="text-uppercase fw-bold mb-4">
-                    <i className="fas fa-gem me-3 text-secondary icons-custom"></i>
+                    <i className="fas fa-gem me-3 text-secondary icons-custom1"></i>
                     CIAO
                   </h6>
                   <p>
-                    Here you can use rows and columns to organize your footer
-                    content. Lorem ipsum dolor sit amet, consectetur adipisicing
-                    elit.
+                    CIAO is a webapp for rendering generative art. You can create your own art by drawing 
+                    from templates or by uploading your own image. By login in, you can even save your arts.
                   </p>
                 </div>
 
                 <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
                   <h6 className="text-uppercase fw-bold mb-4">Tools</h6>
                   <p>
-                    <a href="#!" className="text-reset">
+                    <a onClick={() => navigate("/template")} className="text-reset usefullLink">
                       Draw From Template
                     </a>
                   </p>
                   <p>
-                    <a href="#!" className="text-reset">
+                    <a onClick={() => navigate("/image")} className="text-reset usefullLink">
                       Draw From Image
-                    </a>
-                  </p>
-                  <p>
-                    <a href="#!" className="text-reset">
-                      Vue
                     </a>
                   </p>
                 </div>
@@ -149,22 +143,22 @@ export default function Homepage() {
                 <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
                   <h6 className="text-uppercase fw-bold mb-4">Useful links</h6>
                   <p>
-                    <a href="#!" className="text-reset">
+                    <a href="https://p5js.org/" className="text-reset" target="_blank" rel="noopener noreferrer">
                       p5.js
                     </a>
                   </p>
                   <p>
-                    <a href="#!" className="text-reset">
+                    <a href="https://www.javatpoint.com/what-is-ascii-art" className="text-reset" target="_blank" rel="noopener noreferrer">
                       ASCII Art
                     </a>
                   </p>
                   <p>
-                    <a href="#!" className="text-reset">
+                    <a onClick={() => navigate("/about")} className="text-reset usefullLink">
                       About this website
                     </a>
                   </p>
                   <p>
-                    <a href="#!" className="text-reset">
+                    <a onClick={() => navigate("/about")} className="text-reset usefullLink">
                       Help
                     </a>
                   </p>

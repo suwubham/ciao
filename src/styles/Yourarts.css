@@ -3,3 +3,11 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+.SavedDiv{
+  height: auto;
+}
+
+.UnsavedDiv{
+  height: 100vh;
+}

@@ -212,7 +212,7 @@ export default function Profile() {
                           <div className="col-6 mb-3">
                             <h6>Recent Arts</h6>
                             <a
-                              onClick={() => navigate("/dashboard")}
+                              onClick={() => navigate("/yourarts")}
                               className="text-muted RecentBtn"
                             >
                               Recents

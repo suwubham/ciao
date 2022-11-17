@@ -171,7 +171,10 @@ Snowflakes develops a significant concept of how basic input can be instantaneou
         download={() => {
           window.dispatchEvent(new KeyboardEvent("keydown", { key: "a" }));
         }}
-        save={save}
+        save={() =>{
+          save();
+          alert("Saved");
+        }}
       />
     </>
   );

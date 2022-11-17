@@ -172,7 +172,10 @@ Aside from changing the backdrop color and the circle's color, we can also chang
         download={() => {
           window.dispatchEvent(new KeyboardEvent("keydown", { key: "a" }));
         }}
-        save={save}
+        save={() =>{
+          save();
+          alert("Saved");
+        }}
       />
     </>
   );

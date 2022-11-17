@@ -283,3 +283,13 @@
   top: 0;
   left: 0;
 }
+
+.icons-custom1{
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.usefullLink:hover{
+  cursor: pointer;
+}
