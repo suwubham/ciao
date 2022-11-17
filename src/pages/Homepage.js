@@ -39,7 +39,7 @@ export default function Homepage() {
         </section>
         <div className="spacer layer1"></div>
 
-        <h1 className="second-div-start">What you can do in CIAO</h1>
+        <h1 className="second-div-start">What you can do here</h1>
 
         <div className="template-descp">
           <div className="main-page-left">
@@ -121,21 +121,49 @@ export default function Homepage() {
                     CIAO
                   </h6>
                   <p>
-                    CIAO is a webapp for rendering generative art. You can create your own art by drawing 
+                    CIAO is a webapp for rendering generative art. You can create your own art by drawing
                     from templates or by uploading your own image. By login in, you can even save your arts.
                   </p>
                 </div>
 
                 <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                  <h6 className="text-uppercase fw-bold mb-4">Tools</h6>
+                  <h6 className="text-uppercase fw-bold mb-4">Authors</h6>
                   <p>
-                    <a onClick={() => navigate("/template")} className="text-reset usefullLink">
-                      Draw From Template
+
+                    Shubham Shakya
+
+                  </p>
+                  <p>
+
+                    Saral Sainju
+
+                  </p>
+                  <p>
+
+                    Kriti Gautam
+
+                  </p>
+                  <p>
+
+                    Prasiddhi Dahal
+
+                  </p>
+                </div>
+                <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                  <h6 className="text-uppercase fw-bold mb-4">Resources</h6>
+                  <p>
+                    <a className="text-reset usefullLink" href="https://docs.google.com/document/d/1yhrkCX3PeZUtzaWJtJDaD91i18XrzzIN/edit#heading=h.le8z3ynlhtuc" target="_blank" rel="noopener noreferrer">
+                      Documentation
                     </a>
                   </p>
                   <p>
-                    <a onClick={() => navigate("/image")} className="text-reset usefullLink">
-                      Draw From Image
+                    <a href="https://p5js.org/" className="text-reset usefullLink" target="_blank" rel="noopener noreferrer">
+                      p5.js
+                    </a>
+                  </p>
+                  <p>
+                    <a href="https://www.javatpoint.com/what-is-ascii-art" className="text-reset usefullLink" target="_blank" rel="noopener noreferrer">
+                      ASCII Art
                     </a>
                   </p>
                 </div>
@@ -143,55 +171,59 @@ export default function Homepage() {
                 <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
                   <h6 className="text-uppercase fw-bold mb-4">Useful links</h6>
                   <p>
-                    <a href="https://p5js.org/" className="text-reset" target="_blank" rel="noopener noreferrer">
-                      p5.js
+                    <a className="text-reset usefullLink" onClick={() => navigate("/image")}>
+                      Art from Image
                     </a>
                   </p>
                   <p>
-                    <a href="https://www.javatpoint.com/what-is-ascii-art" className="text-reset" target="_blank" rel="noopener noreferrer">
-                      ASCII Art
+                    <a className="text-reset usefullLink" onClick={() => navigate("/template")}>
+                      Art from template
                     </a>
                   </p>
-                  <p>
-                    <a onClick={() => navigate("/about")} className="text-reset usefullLink">
-                      About this website
-                    </a>
-                  </p>
-                  <p>
-                    <a onClick={() => navigate("/about")} className="text-reset usefullLink">
-                      Help
-                    </a>
-                  </p>
+                  {authService.getCurrentUser() ?
+                    // <p>
+                    //   <a className="text-reset usefullLink" href="#!">
+                    //     Help
+                    //   </a>
+                    // </p>
+                    <p></p>
+                    :
+                    <p>
+                      <a className="text-reset usefullLink" onClick={() => navigate("/signin")}>
+                        Signin
+                      </a>
+                    </p>
+                  }
                 </div>
 
                 <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
                   <h6 className="text-uppercase fw-bold mb-4">Contact</h6>
                   <p>
                     <i className="fas fa-home me-3 text-secondary icons-custom"></i>{" "}
-                    KU, Dhulikhel, Nepal
+                    Dhulikhel, Kavre, Nepal
                   </p>
                   <p>
                     <i className="fas fa-envelope me-3 text-secondary icons-custom"></i>
-                    ciao.art@gmail.com
+                    carreratciao@gmail.com
                   </p>
                   <p>
                     <i className="fas fa-phone me-3 text-secondary icons-custom"></i>{" "}
-                    + 01 234 567 88
+                    +977 9865532450
                   </p>
                   <p>
                     <i className="fas fa-print me-3 text-secondary icons-custom"></i>{" "}
-                    + 01 234 567 89
+                    + 021 556621
                   </p>
-                </div>
-              </div>
-            </div>
-          </section>
+                </div >
+              </div >
+            </div >
+          </section >
 
           <div className="text-center p-4">
             © 2022 Copyright
           </div>
-        </footer>
-      </div>
+        </footer >
+      </div >
     </>
   );
 }

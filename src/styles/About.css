@@ -8,6 +8,15 @@
 
 .about{
   height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+
+.CIAOAbout{
+  margin:50px;
+  font-size: 20px;
+  text-align: center;
 }
 
 .aboutus{
@@ -97,6 +106,13 @@
 .button:hover {
   background-color: rgb(47, 44, 44);
 }
+
+.p5Link {
+  text-decoration: none;
+  color: rgb(127, 32, 168);
+}
+
+
 /*
 
 @media screen and (max-width: 600px) {
