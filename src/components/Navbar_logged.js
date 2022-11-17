@@ -58,15 +58,6 @@ export default function Navbar() {
               <button
                 className="nav-link nav-btn"
                 aria-current="page"
-                onClick={() => navigate("/dashboard")}
-              >
-                Dashboard
-              </button>
-            </li>
-            <li className="nav-item">
-              <button
-                className="nav-link nav-btn"
-                aria-current="page"
                 onClick={() => navigate("/about")}
               >
                 About

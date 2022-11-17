@@ -1,9 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import LoggedNavbar from "../components/Navbar_logged";
 import "../styles/Home.css";
 import { useNavigate } from "react-router-dom";
 import authService from "../services/auth.service";
+import profileService from "../services/profile.service";
 
 export default function Homepage() {
   const navigate = useNavigate();
@@ -12,8 +13,17 @@ export default function Homepage() {
       state: false,
     });
   };
+  const [currentUser, setCurrentUser] = useState({});
   useEffect(() => {
     window.scrollTo(0, 0);
+    profileService.getProfile().then(
+      (res) => {
+        setCurrentUser(res.data.currentUser);
+      },
+      (error) => {
+        console.log("Private page", error.response);
+      }
+    );
   }, []);
 
   return (
@@ -30,7 +40,16 @@ export default function Homepage() {
             <p className="subtitle">
               A webapp for creating interactive and dynamic generative art.
             </p>
-            {authService.getCurrentUser() ? null : (
+            {authService.getCurrentUser() ? (
+              <button
+                className="btn-1"
+                onClick={() => {
+                  navigate("/profile");
+                }}
+              >
+                Loged in as {currentUser.username}
+              </button>
+            ) : (
               <button className="btn-1" onClick={handleClick}>
                 Not a user? Signup
               </button>
