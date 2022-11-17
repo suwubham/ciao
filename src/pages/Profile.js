@@ -140,6 +140,7 @@ export default function Profile() {
                         <Btn
                           onClick={() => {
                             setEdit(true);
+                            alert("please enter password before submitting");
                           }}
                         >
                           Edit Profile

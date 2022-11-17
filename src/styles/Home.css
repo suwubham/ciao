@@ -290,6 +290,10 @@
   left: 0;
 }
 
+.usefullLink{
+  text-decoration: none;
+}
+
 .usefullLink:hover{
   cursor: pointer;
 }

@@ -17,22 +17,30 @@ export default function About() {
     <>
       <div className="wrapper-about">
         {authService.getCurrentUser() ? <LoggedNavbar /> : <Navbar />}
-        
+
         <div className="spacer layer1 flip"></div>
         <section className="purple">
-        <div className="about">
-          Something
-        </div>
+          <div className="about">
+            <p className="CIAOAbout">
+              <strong>CIAO</strong> is a webapp for rendering generative art.
+              You can create your own art by drawing from templates or by uploading your own image.
+              Generative art refers to any art practice where the artist uses a system,
+              such as a set of natural language rules, a computer program, a machine, or other procedural invention,
+              which is set into motion with some degree of autonomy contributing to or resulting in a completed work of art.
+              This app uses p5.js library to render the art. You can learn more about p5.js from
+              <a href="https://p5js.org/" className="text-reset p5Link" target="_blank" rel="noopener noreferrer"> here.</a>
+            </p>
+          </div>
         </section>
 
         <div className="spacer layer1"></div>
-          <div className="aboutpg">
-              <h1>About Us</h1>
-          </div>
+        <div className="aboutpg">
+          <h1>About Us</h1>
+        </div>
 
         <div className="aboutus">
           <div className="card-cus">
-            <img src={prasiddhi}  alt="Prasiddhi" className="roundedimg" />
+            <img src={prasiddhi} alt="Prasiddhi" className="roundedimg" />
             <div className="container-cus">
               <h3>Prasiddhi Dahal</h3>
               <p className="title-cus"></p>

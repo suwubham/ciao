@@ -151,13 +151,22 @@ export default function Homepage() {
                 </div>
                 <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
                   <h6 className="text-uppercase fw-bold mb-4">Resources</h6>
-                  <a href="#!" className="text-reset">
-
-                  </a>
-                  <a className="text-reset" href="https://docs.google.com/document/d/1yhrkCX3PeZUtzaWJtJDaD91i18XrzzIN/edit#heading=h.le8z3ynlhtuc">
-                    Documentation
-                  </a>
-                  <p> </p> </div>
+                  <p>
+                    <a className="text-reset usefullLink" href="https://docs.google.com/document/d/1yhrkCX3PeZUtzaWJtJDaD91i18XrzzIN/edit#heading=h.le8z3ynlhtuc" target="_blank" rel="noopener noreferrer">
+                      Documentation
+                    </a>
+                  </p>
+                  <p>
+                    <a href="https://p5js.org/" className="text-reset usefullLink" target="_blank" rel="noopener noreferrer">
+                      p5.js
+                    </a>
+                  </p>
+                  <p>
+                    <a href="https://www.javatpoint.com/what-is-ascii-art" className="text-reset usefullLink" target="_blank" rel="noopener noreferrer">
+                      ASCII Art
+                    </a>
+                  </p>
+                </div>
 
                 <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
                   <h6 className="text-uppercase fw-bold mb-4">Useful links</h6>
@@ -172,11 +181,12 @@ export default function Homepage() {
                     </a>
                   </p>
                   {authService.getCurrentUser() ?
-                    <p>
-                      <a className="text-reset usefullLink" href="#!">
-                        Help
-                      </a>
-                    </p>
+                    // <p>
+                    //   <a className="text-reset usefullLink" href="#!">
+                    //     Help
+                    //   </a>
+                    // </p>
+                    <p></p>
                     :
                     <p>
                       <a className="text-reset usefullLink" onClick={() => navigate("/signin")}>
@@ -198,7 +208,7 @@ export default function Homepage() {
                   </p>
                   <p>
                     <i className="fas fa-phone me-3 text-secondary icons-custom"></i>{" "}
-                    9865532450
+                    +977 9865532450
                   </p>
                   <p>
                     <i className="fas fa-print me-3 text-secondary icons-custom"></i>{" "}
