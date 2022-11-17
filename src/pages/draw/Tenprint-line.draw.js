@@ -171,7 +171,10 @@ Additionally, we have added certain editors, such as spacing, and we have the ab
         download={() => {
           window.dispatchEvent(new KeyboardEvent("keydown", { key: "a" }));
         }}
-        save={save}
+        save={() =>{
+          save();
+          alert("Saved");
+        }}
       />
     </>
   );

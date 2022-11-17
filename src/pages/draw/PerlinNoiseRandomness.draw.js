@@ -190,7 +190,10 @@ export default function Pdraw() {
         download={() => {
           window.dispatchEvent(new KeyboardEvent("keydown", { key: "a" }));
         }}
-        save={save}
+        save={() =>{
+          save();
+          alert("Saved");
+        }}
       />
     </>
   );

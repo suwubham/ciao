@@ -18,7 +18,26 @@ export default function Phyllotaxisdraw() {
   const [backgroundcolor, setbackgroundcolor] = useState({
     rgb: { r: 255, g: 194, b: 209 },
   });
-  const [resolution, setresolution] = useState({ x: 900, y: 650 });
+
+  let w = window.innerWidth;
+  let h = window.innerHeight;
+
+  const [resolution, setresolution ] = useState({ x: 800, y: 600 });
+
+  useState(() => {
+    if (w>1200 || h>700) {
+      resolution.x=700;
+      resolution.y=700;
+      return resolution;
+    }
+    else if (w<1200 || h<700) {
+      resolution.x=400;
+      resolution.y=400;
+      return resolution;
+    }
+  });
+
+
 
   const save = async () => {
     let data = {
@@ -49,7 +68,7 @@ export default function Phyllotaxisdraw() {
               <DescriptionIcon />
             </div>
             <span className="link-text">
-            A notable instance of self-organized patterning in plants and more broadly in developmental biology is phyllotaxis. By varying the radius and phi value of a circle, a spiraling sunflower-like pattern is created. . To code phyllotaxis pattern we have a formula which is given as φ = n * 137.5◦ and r=c√n , where n is the number of dots and c is the number of scaling pattern. X= r* cos() and Y= r* sin() are used to convert polar coordinates to cartesian coordinates. Playing with the pelletradius and pelletgap allows us to create a variety of pattern forms. We can also alter the resolution and background color of one choice.
+              A notable instance of self-organized patterning in plants and more broadly in developmental biology is phyllotaxis. By varying the radius and phi value of a circle, a spiraling sunflower-like pattern is created. . To code phyllotaxis pattern we have a formula which is given as φ = n * 137.5◦ and r=c√n , where n is the number of dots and c is the number of scaling pattern. X= r* cos() and Y= r* sin() are used to convert polar coordinates to cartesian coordinates. Playing with the pelletradius and pelletgap allows us to create a variety of pattern forms. We can also alter the resolution and background color of one choice.
 
             </span>
           </nav>
@@ -154,7 +173,10 @@ export default function Phyllotaxisdraw() {
         download={() => {
           window.dispatchEvent(new KeyboardEvent("keydown", { key: "a" }));
         }}
-        save={save}
+        save={() =>{
+          save();
+          alert("Saved");
+        }}
       />
     </>
   );
