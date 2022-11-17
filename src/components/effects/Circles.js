@@ -11,8 +11,14 @@ export default function FromImage(props) {
       img = p5.loadImage(props.src);
     };
 
+    p5.keyPressed = () => {
+      if (p5.key === "d") {
+        p5.saveCanvas("myCanvas", "jpg");
+      }
+    };
+
     p5.setup = () => {
-      p5.createCanvas(img.width,img.height)
+      p5.createCanvas(img.width, img.height);
       smallPoint = 10;
       largePoint = 20;
       p5.imageMode(p5.CENTER);
@@ -23,14 +29,21 @@ export default function FromImage(props) {
     };
 
     p5.draw = () => {
-      p5.background(225, 27, 10,100);
-      for(let i=0;i<100000;i++){
-      let pointillize = p5.map(p5.mouseX, 0, p5.width, smallPoint, largePoint);
-      let x = p5.floor(p5.random(img.width));
-      let y = p5.floor(p5.random(img.height));
-      let pix = img.get(x, y);
-      p5.fill(pix,128);
-      p5.ellipse(x, y, pointillize, pointillize);}
+      p5.background(225, 27, 10, 100);
+      for (let i = 0; i < 100000; i++) {
+        let pointillize = p5.map(
+          p5.mouseX,
+          0,
+          p5.width,
+          smallPoint,
+          largePoint
+        );
+        let x = p5.floor(p5.random(img.width));
+        let y = p5.floor(p5.random(img.height));
+        let pix = img.get(x, y);
+        p5.fill(pix, 128);
+        p5.ellipse(x, y, pointillize, pointillize);
+      }
     };
     p5.keyPressed = () => {
       if (p5.key === "d") {

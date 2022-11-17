@@ -18,8 +18,8 @@ export default function FromImage(props) {
       // filter(BLUR);
       // filter(GRAY);
       // filter(OPAQUE);
-    //   p5.filter(p5.INVERT);
-      p5.filter(p5.POSTERIZE,3);//2-7
+      //   p5.filter(p5.INVERT);
+      p5.filter(p5.POSTERIZE, 3); //2-7
       // filter(DILATE);
       // filter(ERODE);
     };

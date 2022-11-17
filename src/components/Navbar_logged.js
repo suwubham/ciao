@@ -1,15 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import getUserData from "../services/userdata.service";
+import profileService from "../services/profile.service";
 import "../styles/Navbar.css";
 import Authservice from "../services/auth.service";
 
 export default function Navbar() {
   let navigate = useNavigate();
-  const handleClick = () => {
-    Authservice.logout();
-    navigate("/*", { state: true });
-  };
 
   useEffect(() => {
     if (Authservice.getCurrentUser() === null) {
@@ -20,7 +16,7 @@ export default function Navbar() {
   const [currentUser, setCurrentUser] = useState({});
 
   useEffect(() => {
-    getUserData().then((res) => {
+    profileService.getProfile().then((res) => {
       setCurrentUser(res.data.currentUser);
     });
   }, []);

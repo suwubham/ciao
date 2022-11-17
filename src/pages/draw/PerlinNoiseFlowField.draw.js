@@ -178,7 +178,10 @@ Flow fields are a traditional creative coding technique that results in strands 
         download={() => {
           window.dispatchEvent(new KeyboardEvent("keydown", { key: "a" }));
         }}
-        save={save}
+        save={() =>{
+          save();
+          alert("Saved");
+        }}
       />
     </>
   );

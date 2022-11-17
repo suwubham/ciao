@@ -13,8 +13,8 @@ export default function FromImage(props) {
     };
 
     p5.setup = () => {
-      img.resize(p5.windowWidth/3,0)
-      p5.createCanvas(img.width,img.height)
+      img.resize(p5.windowWidth / 3, 0);
+      p5.createCanvas(img.width, img.height);
       smallPoint = 10;
       largePoint = 20;
       // p5.imageMode(p5.CENTER);
@@ -34,16 +34,14 @@ export default function FromImage(props) {
       // + width/height to extract
       // let leftCorner = img.get(0, 0, img.width/2, img.height/2);
       // p5.image(leftCorner, 0, 0);
-    
+
       // a bit fancier: draw random strips from the image
       // (note the for-loop starts halfway down the screen)
-      for (let y=0; y<p5.height; y+=10) {
-   
-        let stripYPosition = p5.int(p5.random(0, img.height-10));
+      for (let y = 0; y < p5.height; y += 10) {
+        let stripYPosition = p5.int(p5.random(0, img.height - 10));
         let strip = img.get(0, stripYPosition, img.width, 10);
         p5.image(strip, 0, y);
-        
-}
+      }
     };
     p5.keyPressed = () => {
       if (p5.key === "d") {

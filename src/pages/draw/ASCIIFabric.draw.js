@@ -25,6 +25,7 @@ export default function Adraw() {
   const handlebackgroundcolor = (color) => {
     setbackgroundcolor(color);
   };
+
   const [resolution, setresolution] = useState({ x: 900, y: 650 });
 
   const save = async () => {
@@ -56,10 +57,12 @@ export default function Adraw() {
               <DescriptionIcon />
             </div>
             <span className="link-text">
-            Using a grid approach, ASCII fabric patterns are created. We have utilized four different font styles , along with some ASCII characters that we found on a website in a variety of forms.Here we have used 176,177,178 and 219.
-We can alter the pattern's size as well as the background color to suit our preferences.
-link of the website https://www.asciitable.com/
-
+              Using a grid approach, ASCII fabric patterns are created. We have
+              utilized four different font styles , along with some ASCII
+              characters that we found on a website in a variety of forms.Here
+              we have used 176,177,178 and 219. We can alter the pattern's size
+              as well as the background color to suit our preferences. link of
+              the website https://www.asciitable.com/
             </span>
           </nav>
           <div className="main-art">
@@ -142,7 +145,10 @@ link of the website https://www.asciitable.com/
         download={() => {
           window.dispatchEvent(new KeyboardEvent("keydown", { key: "a" }));
         }}
-        save={save}
+        save={() =>{
+          save();
+          alert("Saved");
+        }}
       />
     </>
   );
