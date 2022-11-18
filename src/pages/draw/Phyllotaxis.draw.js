@@ -22,12 +22,12 @@ export default function Phyllotaxisdraw() {
   let w = window.innerWidth;
   let h = window.innerHeight;
 
-  const [resolution, setresolution ] = useState({ x: 800, y: 600 });
+  const [resolution, setresolution] = useState({ x: 600, y: 600 });
 
   useState(() => {
     if (w>1200 || h>700) {
-      resolution.x=700;
-      resolution.y=700;
+      resolution.x=600;
+      resolution.y=600;
       return resolution;
     }
     else if (w<1200 || h<700) {

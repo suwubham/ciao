@@ -34,7 +34,7 @@ export default function Rdraw() {
   const handlebackgroundcolor = (color) => {
     setbackgroundcolor(color);
   };
-  const [resolution, setresolution] = useState({ x: 900, y: 650 });
+  const [resolution, setresolution] = useState({ x: 600, y: 600 });
 
   const save = async () => {
     let data = {
@@ -119,13 +119,13 @@ export default function Rdraw() {
                 20
                 <PrettoSlider
                   min={20}
-                  max={60}
+                  max={50}
                   valueLabelDisplay="auto"
                   aria-label="pretto slider"
                   value={increment2d}
                   onChange={handleincrement2d}
                 />
-                60
+                50
               </Stack>
             </div>
             <div className="slider1">

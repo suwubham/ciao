@@ -14,7 +14,7 @@ import { ReactComponent as DescriptionIcon } from "../../assets/icons/descriptio
 import TextField from "@mui/material/TextField";
 
 export default function Tree() {
-  const [branchlength, setbranchlength] = useState(100);
+  const [branchlength, setbranchlength] = useState(65);
   const [leafcolor, setleafcolor] = useState({
     rgb: { r: 191, g: 63, b: 63 },
   });
@@ -26,7 +26,7 @@ export default function Tree() {
   const [backgroundcolor, setbackgroundcolor] = useState({
     rgb: { r: 255, g: 194, b: 209 },
   });
-  const [resolution, setresolution] = useState({ x: 900, y: 650 });
+  const [resolution, setresolution] = useState({ x: 600, y: 600 });
   const save = async () => {
     let data = {
       branchlength,
