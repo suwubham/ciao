@@ -28,7 +28,7 @@ export default function Mdraw() {
   const handlebackgroundcolor = (color) => {
     setbackgroundcolor(color);
   };
-  const [resolution, setresolution] = useState({ x: 900, y: 650 });
+  const [resolution, setresolution] = useState({ x: 600, y: 600 });
 
   const save = async () => {
     let data = {
