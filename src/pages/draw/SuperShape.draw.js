@@ -34,7 +34,7 @@ export default function Rdraw() {
   const handlebackgroundcolor = (color) => {
     setbackgroundcolor(color);
   };
-  const [resolution, setresolution] = useState({ x: 600, y: 600 });
+  const [resolution, setresolution] = useState({ x: 900, y: 650 });
 
   const save = async () => {
     let data = {
@@ -66,9 +66,16 @@ export default function Rdraw() {
               <DescriptionIcon />
             </div>
             <span className="link-text">
-            Supershape simulates amazing shapes in a two-dimensional plane using a visual representation of a certain type of parametric equation. In accordance with a specific value of u, we simulated a supershape.
-The fundamental concept is that we operate with a function that receives an angle and returns a value, and we do this for each circle. We get the shape altering on the fly by employing a variety of functions. With the help of the backdrop and border colors, we may change the supershape's boldness and size.
-</span>
+              Supershape simulates amazing shapes in a two-dimensional plane
+              using a visual representation of a certain type of parametric
+              equation. In accordance with a specific value of u, we simulated a
+              supershape. The fundamental concept is that we operate with a
+              function that receives an angle and returns a value, and we do
+              this for each circle. We get the shape altering on the fly by
+              employing a variety of functions. With the help of the backdrop
+              and border colors, we may change the supershape's boldness and
+              size.
+            </span>
           </nav>
           <div className="main-art">
             <Supershape
@@ -171,7 +178,7 @@ The fundamental concept is that we operate with a function that receives an angl
         download={() => {
           window.dispatchEvent(new KeyboardEvent("keydown", { key: "a" }));
         }}
-        save={() =>{
+        save={() => {
           save();
           alert("Saved");
         }}

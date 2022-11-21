@@ -26,7 +26,7 @@ export default function Adraw() {
     setbackgroundcolor(color);
   };
 
-  const [resolution, setresolution] = useState({ x: 600, y: 600 });
+  const [resolution, setresolution] = useState({ x: 900, y: 650 });
 
   const save = async () => {
     let data = {
@@ -145,7 +145,7 @@ export default function Adraw() {
         download={() => {
           window.dispatchEvent(new KeyboardEvent("keydown", { key: "a" }));
         }}
-        save={() =>{
+        save={() => {
           save();
           alert("Saved");
         }}

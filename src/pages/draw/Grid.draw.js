@@ -30,8 +30,8 @@ export default function Rdraw() {
   };
   const handlebackgroundcolor = (color) => {
     setbackgroundcolor(color);
-  }; 
-  const [resolution, setresolution] = useState({ x: 600, y: 600 });
+  };
+  const [resolution, setresolution] = useState({ x: 900, y: 650 });
   const save = async () => {
     let data = {
       boldness,
@@ -60,7 +60,12 @@ export default function Rdraw() {
               <DescriptionIcon />
             </div>
             <span className="link-text">
-            This design is grid-based. In this template, the items have been positioned in the grid's middle. In addition to adding a strokeweight of a border slider, we also introduced border dominant color and grid dominant color so that the user can work with different color schemes and resolutions for the sketch in accordance with their preferences.
+              This design is grid-based. In this template, the items have been
+              positioned in the grid's middle. In addition to adding a
+              strokeweight of a border slider, we also introduced border
+              dominant color and grid dominant color so that the user can work
+              with different color schemes and resolutions for the sketch in
+              accordance with their preferences.
             </span>
           </nav>
           <div className="main-art">
@@ -148,7 +153,7 @@ export default function Rdraw() {
         download={() => {
           window.dispatchEvent(new KeyboardEvent("keydown", { key: "a" }));
         }}
-        save={() =>{
+        save={() => {
           save();
           alert("Saved");
         }}

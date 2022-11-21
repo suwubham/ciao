@@ -34,7 +34,7 @@ export default function Tdraw() {
   const handlebackgroundcolor = (color) => {
     setbackgroundcolor(color);
   };
-  const [resolution, setresolution] = useState({ x: 600, y: 600 });
+  const [resolution, setresolution] = useState({ x: 900, y: 650 });
 
   const save = async () => {
     let data = {
@@ -66,9 +66,11 @@ export default function Tdraw() {
               <DescriptionIcon />
             </div>
             <span className="link-text">
-            Circles that do not overlap one another completely cover the canvas. Even the circle's size and its frequency in the data can be increased.
-Aside from changing the backdrop color and the circle's color, we can also change the canvas's size by adjusting the resolution.
-
+              Circles that do not overlap one another completely cover the
+              canvas. Even the circle's size and its frequency in the data can
+              be increased. Aside from changing the backdrop color and the
+              circle's color, we can also change the canvas's size by adjusting
+              the resolution.
             </span>
           </nav>
           <div className="main-art">
@@ -172,7 +174,7 @@ Aside from changing the backdrop color and the circle's color, we can also chang
         download={() => {
           window.dispatchEvent(new KeyboardEvent("keydown", { key: "a" }));
         }}
-        save={() =>{
+        save={() => {
           save();
           alert("Saved");
         }}

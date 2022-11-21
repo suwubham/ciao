@@ -26,7 +26,7 @@ export default function Tree() {
   const [backgroundcolor, setbackgroundcolor] = useState({
     rgb: { r: 255, g: 194, b: 209 },
   });
-  const [resolution, setresolution] = useState({ x: 600, y: 600 });
+  const [resolution, setresolution] = useState({ x: 900, y: 650 });
   const save = async () => {
     let data = {
       branchlength,
@@ -57,7 +57,8 @@ export default function Tree() {
               <DescriptionIcon />
             </div>
             <span className="link-text">
-            Recursion is a self-referential concept. A recursive function has its own definition. add more on this hai
+              Recursion is a self-referential concept. A recursive function has
+              its own definition. add more on this hai
             </span>
           </nav>
           <div className="main-art">
@@ -165,7 +166,7 @@ export default function Tree() {
         download={() => {
           window.dispatchEvent(new KeyboardEvent("keydown", { key: "a" }));
         }}
-        save={() =>{
+        save={() => {
           save();
           alert("Saved");
         }}

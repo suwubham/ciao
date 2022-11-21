@@ -30,7 +30,7 @@ export default function Rdraw() {
   const handlebackgroundcolor = (color) => {
     setbackgroundcolor(color);
   };
-  const [resolution, setresolution] = useState({ x: 600, y: 600 });
+  const [resolution, setresolution] = useState({ x: 900, y: 650 });
 
   const save = async () => {
     let data = {
@@ -61,8 +61,14 @@ export default function Rdraw() {
               <DescriptionIcon />
             </div>
             <span className="link-text">
-            Edward Lorentz discovered the Lorentz attractor, a 3D work of art, while researching the atmosphere. There are ordinary differential equations in it. We obtain the image on the canvas using the variables x, y, and z. The first point in the Lorenz attractor is arbitrary located, but the second point is determined by observing the first. This attractor never travels to the same spot twice and changes location at random. We have the ability to modify the attractor's size, speed, and backdrop color.
-
+              Edward Lorentz discovered the Lorentz attractor, a 3D work of art,
+              while researching the atmosphere. There are ordinary differential
+              equations in it. We obtain the image on the canvas using the
+              variables x, y, and z. The first point in the Lorenz attractor is
+              arbitrary located, but the second point is determined by observing
+              the first. This attractor never travels to the same spot twice and
+              changes location at random. We have the ability to modify the
+              attractor's size, speed, and backdrop color.
             </span>
           </nav>
           <div className="main-art">
@@ -159,7 +165,7 @@ export default function Rdraw() {
         download={() => {
           window.dispatchEvent(new KeyboardEvent("keydown", { key: "a" }));
         }}
-        save={() =>{
+        save={() => {
           save();
           alert("Saved");
         }}

@@ -33,8 +33,8 @@ export default function Tdraw() {
   };
   const handlebackgroundcolor = (color) => {
     setbackgroundcolor(color);
-  }; 
-  const [resolution, setresolution] = useState({ x: 600, y: 600 });
+  };
+  const [resolution, setresolution] = useState({ x: 900, y: 650 });
 
   const save = async () => {
     let data = {
@@ -66,8 +66,13 @@ export default function Tdraw() {
               <DescriptionIcon />
             </div>
             <span className="link-text">
-            The use of the if else statement to construct forward and backward slashes results in the creation of an interesting maze pattern. To print 10 lines in horizontal order, we utilized a universal variable and a random variable.
-Additionally, we have added certain editors, such as spacing, and we have the ability to change the inclination from extreme right to extreme left. We can experiment with background and border colors as well.
+              The use of the if else statement to construct forward and backward
+              slashes results in the creation of an interesting maze pattern. To
+              print 10 lines in horizontal order, we utilized a universal
+              variable and a random variable. Additionally, we have added
+              certain editors, such as spacing, and we have the ability to
+              change the inclination from extreme right to extreme left. We can
+              experiment with background and border colors as well.
             </span>
           </nav>
           <div className="main-art">
@@ -171,7 +176,7 @@ Additionally, we have added certain editors, such as spacing, and we have the ab
         download={() => {
           window.dispatchEvent(new KeyboardEvent("keydown", { key: "a" }));
         }}
-        save={() =>{
+        save={() => {
           save();
           alert("Saved");
         }}

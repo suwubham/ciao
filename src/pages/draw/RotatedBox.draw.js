@@ -34,7 +34,7 @@ export default function Rbox() {
   const handlebackgroundcolor = (color) => {
     setbackgroundcolor(color);
   };
-  const [resolution, setresolution] = useState({ x: 600, y: 600 });
+  const [resolution, setresolution] = useState({ x: 900, y: 650 });
 
   const save = async () => {
     let data = {
@@ -66,8 +66,12 @@ export default function Rbox() {
               <DescriptionIcon />
             </div>
             <span className="link-text">
-            The rectangles can also be turned around and positioned at a 45-degree angle. As a result of different types of rectangles covering one another, an intriguing work of art results. We can alter both the dominant and background colors. The line's stroke and the rectangle's size can both be increased in a similar manner.
-
+              The rectangles can also be turned around and positioned at a
+              45-degree angle. As a result of different types of rectangles
+              covering one another, an intriguing work of art results. We can
+              alter both the dominant and background colors. The line's stroke
+              and the rectangle's size can both be increased in a similar
+              manner.
             </span>
           </nav>
           <div className="main-art">
@@ -171,7 +175,7 @@ export default function Rbox() {
         download={() => {
           window.dispatchEvent(new KeyboardEvent("keydown", { key: "a" }));
         }}
-        save={() =>{
+        save={() => {
           save();
           alert("Saved");
         }}

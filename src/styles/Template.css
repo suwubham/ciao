@@ -11,8 +11,16 @@
     background-image: url("../assets/backgrounds/template-page.svg");
     background-size: cover;
     background-repeat: no-repeat;
-
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    overflow-x: auto;
 }
+
+html, body {
+    width: 100%;
+    height: 100%;
+  }
 
 .filter{
     position: absolute;

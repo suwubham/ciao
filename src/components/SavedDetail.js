@@ -41,6 +41,7 @@ export default function SavedDetail(props) {
             layer={props.data.layers}
             background={props.data.backgroundcolor}
             resolution={props.data.resolution}
+            stroke={props.data.strokecolor}
           />
         </div>
       );

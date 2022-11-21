@@ -34,7 +34,7 @@ export default function Rdraw() {
   const handlebackgroundcolor = (color) => {
     setbackgroundcolor(color);
   };
-  const [resolution, setresolution] = useState({ x: 600, y: 600 });
+  const [resolution, setresolution] = useState({ x: 900, y: 650 });
   const save = async () => {
     let data = {
       symmetry2d,
@@ -65,8 +65,16 @@ export default function Rdraw() {
               <DescriptionIcon />
             </div>
             <span className="link-text">
-            The fact that this templete is made up of a snowflake design is obvious from the name alone. As we all know, the design of snowflakes is fairly close to a hexagonal pattern, and the placement of triangular forms within the hexagonal pattern provides us the correct representation of snowflakes. With just a brush of the finger, it can also produce stunning designs.
-Snowflakes develops a significant concept of how basic input can be instantaneously transformed into far more intricate, complicated, and advanced forms by using simple guidelines like having symmetrical mirroring of the lines.
+              The fact that this templete is made up of a snowflake design is
+              obvious from the name alone. As we all know, the design of
+              snowflakes is fairly close to a hexagonal pattern, and the
+              placement of triangular forms within the hexagonal pattern
+              provides us the correct representation of snowflakes. With just a
+              brush of the finger, it can also produce stunning designs.
+              Snowflakes develops a significant concept of how basic input can
+              be instantaneously transformed into far more intricate,
+              complicated, and advanced forms by using simple guidelines like
+              having symmetrical mirroring of the lines.
             </span>
           </nav>
           <div className="main-art">
@@ -171,7 +179,7 @@ Snowflakes develops a significant concept of how basic input can be instantaneou
         download={() => {
           window.dispatchEvent(new KeyboardEvent("keydown", { key: "a" }));
         }}
-        save={() =>{
+        save={() => {
           save();
           alert("Saved");
         }}

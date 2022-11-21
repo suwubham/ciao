@@ -34,7 +34,7 @@ export default function Rdraw() {
   const handlebackgroundcolor = (color) => {
     setbackgroundcolor(color);
   };
-  const [resolution, setresolution] = useState({ x: 600, y: 600 });
+  const [resolution, setresolution] = useState({ x: 900, y: 650 });
   const save = async () => {
     let data = {
       increment2d,
@@ -65,7 +65,14 @@ export default function Rdraw() {
               <DescriptionIcon />
             </div>
             <span className="link-text">
-            Using the mathematical principles of the polar coordinates system, we have produced a three-dimensional flower pattern. A spiraling flower-like design can be made by altering a circle's radius and phi value. We are able to produce the desired outcome with the help of the ellipse. By first adding trigonometric terms, we alter the flower's radius. The design can be rotated by using the mouse to play around. In a same manner, we may quicken the rotation and change the flower's border and background colors.
+              Using the mathematical principles of the polar coordinates system,
+              we have produced a three-dimensional flower pattern. A spiraling
+              flower-like design can be made by altering a circle's radius and
+              phi value. We are able to produce the desired outcome with the
+              help of the ellipse. By first adding trigonometric terms, we alter
+              the flower's radius. The design can be rotated by using the mouse
+              to play around. In a same manner, we may quicken the rotation and
+              change the flower's border and background colors.
             </span>
           </nav>
           <div className="main-art">
@@ -170,7 +177,7 @@ export default function Rdraw() {
         download={() => {
           window.dispatchEvent(new KeyboardEvent("keydown", { key: "a" }));
         }}
-        save={() =>{
+        save={() => {
           save();
           alert("Saved");
         }}
