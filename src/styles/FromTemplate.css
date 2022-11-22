@@ -7,7 +7,7 @@
 
 .menu{
   position: fixed;
-  top:60%;
+  top:50%;
   right:2%;
 }
 
@@ -47,9 +47,9 @@
   background-image: url(../assets/backgrounds/blob-scene-haikei.svg);
   background-repeat: no-repeat;
   background-size: cover;
-  overflow: auto;
+  /* overflow: auto;
   height: 100%;
-  width: 100%;
+  width: 100%; */
   font-family: 'Montserrat', sans-serif;
   margin: 0px;
   color: white;
