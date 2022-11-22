@@ -54,7 +54,7 @@ export default function RegisterLogin() {
       await AuthService.login(username, password).then(
         (res) => {
           if (res.status === 200) {
-            navigate("/dashboard");
+            navigate("/home");
           } else if (res.status === 201) {
             alert("Invalid credentials");
           } else if (res.status === 202) {
@@ -74,7 +74,7 @@ export default function RegisterLogin() {
     <>
       <Components.Background>
         <Navbar />
-        <Components.wrapper>
+        <Components.Wrapper>
           <Components.Container className="itsmemario">
             <Components.SignUpContainer signinIn={signIn}>
               <Components.Form>
@@ -177,7 +177,7 @@ export default function RegisterLogin() {
               </Components.Overlay>
             </Components.OverlayContainer>
           </Components.Container>
-        </Components.wrapper>
+        </Components.Wrapper>
       </Components.Background>
     </>
   );

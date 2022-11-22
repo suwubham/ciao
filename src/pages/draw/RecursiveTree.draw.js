@@ -14,7 +14,7 @@ import { ReactComponent as DescriptionIcon } from "../../assets/icons/descriptio
 import TextField from "@mui/material/TextField";
 
 export default function Tree() {
-  const [branchlength, setbranchlength] = useState(100);
+  const [branchlength, setbranchlength] = useState(65);
   const [leafcolor, setleafcolor] = useState({
     rgb: { r: 191, g: 63, b: 63 },
   });
@@ -57,7 +57,8 @@ export default function Tree() {
               <DescriptionIcon />
             </div>
             <span className="link-text">
-            Recursion is a self-referential concept. A recursive function has its own definition. add more on this hai
+              Recursion is a self-referential concept. A recursive function has
+              its own definition. add more on this hai
             </span>
           </nav>
           <div className="main-art">
@@ -165,7 +166,7 @@ export default function Tree() {
         download={() => {
           window.dispatchEvent(new KeyboardEvent("keydown", { key: "a" }));
         }}
-        save={() =>{
+        save={() => {
           save();
           alert("Saved");
         }}

@@ -17,9 +17,20 @@ const getSaved = async () => {
   });
 };
 
+const deleteSaved = (data) => {
+  return axios
+    .post("http://localhost:5000/deleteart", data, {
+      headers: authHeader(),
+    })
+    .then((response) => {
+      return response;
+    });
+};
+
 const saveService = {
   save,
   getSaved,
+  deleteSaved,
 };
 
 export default saveService;

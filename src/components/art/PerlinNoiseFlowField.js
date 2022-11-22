@@ -1,5 +1,6 @@
 import { useRef, useEffect } from "react";
 import p5 from "p5";
+import convert from "color-convert";
 
 export default function Pdraw(props) {
   const containerRef = useRef();
@@ -9,7 +10,12 @@ export default function Pdraw(props) {
   var zoff = 0;
   var particles = [];
   var flowfield = [];
-
+  var hsl = convert.rgb.hsl(
+    props.background.rgb.r,
+    props.background.rgb.g,
+    props.background.rgb.b
+  );
+  console.log(hsl);
   const Sketch = (p5) => {
     class Particle {
       constructor(p5) {
@@ -39,7 +45,12 @@ export default function Pdraw(props) {
         this.p5.strokeCap(this.p5.PROJECT);
         this.p5.beginShape();
         this.p5.vertex(this.pos.x, this.pos.y);
-        this.p5.stroke(this.col, 255, 255, 16);
+        this.p5.stroke(
+          props.stroke.rgb.r,
+          props.stroke.rgb.g,
+          props.stroke.rgb.b,
+          16
+        );
         this.p5.vertex(
           (this.pos.x + this.prevPos.x) / 2,
           (this.pos.y + this.prevPos.y) / 2
@@ -80,14 +91,15 @@ export default function Pdraw(props) {
       }
     }
     p5.setup = () => {
-      p5.createCanvas(900, 650);
+      p5.createCanvas(props.resolution.x, props.resolution.y);
       window.cols = p5.floor(p5.width / scl);
       window.rows = p5.floor(p5.height / scl);
 
       for (let i = 0; i < 1000; i++) {
         particles[i] = new Particle(p5);
       }
-      p5.colorMode(p5.HSB, 255);
+      // p5.colorMode(p5.HSB, 255);
+
       p5.background(
         props.background.rgb.r,
         props.background.rgb.g,

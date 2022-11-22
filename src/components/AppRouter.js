@@ -26,7 +26,6 @@ import SuperShape from "../pages/draw/SuperShape.draw";
 import PerlinTriangle from "../pages/draw/PerlinTriangle.draw";
 import FlowerThree from "../pages/draw/FlowerThree.draw";
 import DrawSnowflake from "../pages/draw/DrawSnowflake.draw";
-import Dashboard from "../pages/Dashboard";
 import FromImage from "../pages/FromImage";
 
 export default function AppRouter() {
@@ -47,7 +46,6 @@ export default function AppRouter() {
       <Route path="template/tenprintcircle" element={<TenprintCircle />} />
       <Route path="template/recursioncircle" element={<RecursionCircle />} />
       <Route path="template/rotatedbox" element={<RotatedBox />} />
-      <Route path="/dashboard" element={<Dashboard />} />
       <Route path="template/wavy" element={<Wavy />} />
       <Route path="template/Mandala" element={<Mandala />} />
       <Route path="template/pnrandom" element={<PerlinNoiseRandomness />} />
@@ -58,7 +56,6 @@ export default function AppRouter() {
       <Route path="template/perlintriangle" element={<PerlinTriangle />} />
       <Route path="template/flowerthree" element={<FlowerThree />} />
       <Route path="template/drawsnowflake" element={<DrawSnowflake />} />
-      <Route path="dashboard" element={<Dashboard />} />
       <Route path="image" element={<FromImage />} />
     </Routes>
   );

@@ -200,7 +200,7 @@ export default function Rdraw() {
         download={() => {
           window.dispatchEvent(new KeyboardEvent("keydown", { key: "a" }));
         }}
-        save={() =>{
+        save={() => {
           save();
           alert("Saved");
         }}

@@ -66,7 +66,13 @@ export default function Rdraw() {
               <DescriptionIcon />
             </div>
             <span className="link-text">
-            Because of random variables, every time we hit an editor, a new design mandala appears that has never existed before or will never appear again. The art becomes transparent when alpha is reduced all the way, yet it remains opaque when alpha is increased. To make the art pop a little bit more, we can also lengthen and shorten the mandala's stroke lines. We can even alter the mandala's border and background colors.
+              Because of random variables, every time we hit an editor, a new
+              design mandala appears that has never existed before or will never
+              appear again. The art becomes transparent when alpha is reduced
+              all the way, yet it remains opaque when alpha is increased. To
+              make the art pop a little bit more, we can also lengthen and
+              shorten the mandala's stroke lines. We can even alter the
+              mandala's border and background colors.
             </span>
           </nav>
           <div className="main-art">
@@ -170,7 +176,7 @@ export default function Rdraw() {
         download={() => {
           window.dispatchEvent(new KeyboardEvent("keydown", { key: "a" }));
         }}
-        save={() =>{
+        save={() => {
           save();
           alert("Saved");
         }}

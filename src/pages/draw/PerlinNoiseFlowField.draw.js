@@ -9,6 +9,7 @@ import { PrettoSlider } from "../../styles/PrettoSlider";
 import saveService from "../../services/save.service";
 import Menu from "../../components/ArtMenu";
 import { SwatchesPicker } from "react-color";
+import { SketchPicker } from "react-color";
 import { ReactComponent as DescriptionIcon } from "../../assets/icons/description.svg";
 import TextField from "@mui/material/TextField";
 
@@ -18,6 +19,9 @@ export default function Pdraw() {
   const [layers, setlayers] = useState(10);
   const [backgroundcolor, setbackgroundcolor] = useState({
     rgb: { r: 0, g: 19, b: 20 },
+  });
+  const [strokecolor, setstrokecolor] = useState({
+    rgb: { r: 160, g: 19, b: 20 },
   });
 
   const handleincrement2d = (e) => {
@@ -32,6 +36,10 @@ export default function Pdraw() {
   const handlebackgroundcolor = (color) => {
     setbackgroundcolor(color);
   };
+  const handlestrokecolor = (color) => {
+    setstrokecolor(color);
+  };
+
   const [resolution, setresolution] = useState({ x: 900, y: 650 });
 
   const save = async () => {
@@ -40,6 +48,7 @@ export default function Pdraw() {
       bold2d,
       layers,
       backgroundcolor: { rgb: backgroundcolor.rgb },
+      strokecolor: { rgb: strokecolor.rgb },
       id: 2,
       resolution,
     };
@@ -64,9 +73,15 @@ export default function Pdraw() {
               <DescriptionIcon />
             </div>
             <span className="link-text">
-            It is possible to create "smooth" randomness in one or more dimensions by using Perlin noise, a type of gradient noise.
-Flow fields are a traditional creative coding technique that results in strands that appear to be spontaneous on the screen. We modified the vector by changing the lines. We basically produced 3D Perlin noise using a 2D flow field representation. We have included a speed increment editor that allows us to manage the flow field's pace while also allowing us to add more layers to our artwork. It is also possible to change the background's color.
-
+              It is possible to create "smooth" randomness in one or more
+              dimensions by using Perlin noise, a type of gradient noise. Flow
+              fields are a traditional creative coding technique that results in
+              strands that appear to be spontaneous on the screen. We modified
+              the vector by changing the lines. We basically produced 3D Perlin
+              noise using a 2D flow field representation. We have included a
+              speed increment editor that allows us to manage the flow field's
+              pace while also allowing us to add more layers to our artwork. It
+              is also possible to change the background's color.
             </span>
           </nav>
           <div className="main-art">
@@ -76,6 +91,7 @@ Flow fields are a traditional creative coding technique that results in strands 
               layer={layers}
               background={backgroundcolor}
               resolution={resolution}
+              stroke={strokecolor}
             />
           </div>
           <div className="editor">
@@ -110,6 +126,22 @@ Flow fields are a traditional creative coding technique that results in strands 
                       y: parseInt(e.target.value),
                     });
                   }}
+                />
+              </div>
+            </div>
+            <div className="editrow1">
+              <div className="backgroundcolor">
+                <h5>Background Color</h5>
+                <SketchPicker
+                  color={backgroundcolor.rgb}
+                  onChangeComplete={handlebackgroundcolor}
+                />
+              </div>
+              <div className="strokecolor">
+                <h5>Stroke Color</h5>
+                <SketchPicker
+                  color={strokecolor.rgb}
+                  onChangeComplete={handlestrokecolor}
                 />
               </div>
             </div>
@@ -158,13 +190,6 @@ Flow fields are a traditional creative coding technique that results in strands 
                 50
               </Stack>
             </div>
-            <div className="colorpicker">
-              <h5>Background Color</h5>
-              <SwatchesPicker
-                color={backgroundcolor.rgb}
-                onChangeComplete={handlebackgroundcolor}
-              />
-            </div>
           </div>
         </div>
       </div>
@@ -178,7 +203,7 @@ Flow fields are a traditional creative coding technique that results in strands 
         download={() => {
           window.dispatchEvent(new KeyboardEvent("keydown", { key: "a" }));
         }}
-        save={() =>{
+        save={() => {
           save();
           alert("Saved");
         }}

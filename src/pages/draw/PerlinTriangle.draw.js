@@ -66,7 +66,12 @@ export default function Rdraw() {
               <DescriptionIcon />
             </div>
             <span className="link-text">
-            In the Perlin noise triangle, we used a straightforward grid system of logic. Here, triangles are formed using four different sorts of parameters and three different color palettes. While the remaining triangles are colored using the editor's alpha value, the two sorts of triangles can have their colors selected using the color palette.
+              In the Perlin noise triangle, we used a straightforward grid
+              system of logic. Here, triangles are formed using four different
+              sorts of parameters and three different color palettes. While the
+              remaining triangles are colored using the editor's alpha value,
+              the two sorts of triangles can have their colors selected using
+              the color palette.
             </span>
           </nav>
           <div className="main-art">
@@ -170,7 +175,7 @@ export default function Rdraw() {
         download={() => {
           window.dispatchEvent(new KeyboardEvent("keydown", { key: "a" }));
         }}
-        save={() =>{
+        save={() => {
           save();
           alert("Saved");
         }}

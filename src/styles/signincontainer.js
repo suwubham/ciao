@@ -9,7 +9,7 @@ export const Background = styled.div`
   position: relative;
 `;
 
-export const wrapper = styled.div`
+export const Wrapper = styled.div`
   height: 100vh;
   display: flex;
   justify-content: center;

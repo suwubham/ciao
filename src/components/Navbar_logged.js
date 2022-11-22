@@ -58,15 +58,6 @@ export default function Navbar() {
               <button
                 className="nav-link nav-btn"
                 aria-current="page"
-                onClick={() => navigate("/dashboard")}
-              >
-                Dashboard
-              </button>
-            </li>
-            <li className="nav-item">
-              <button
-                className="nav-link nav-btn"
-                aria-current="page"
                 onClick={() => navigate("/about")}
               >
                 About
@@ -118,7 +109,9 @@ export default function Navbar() {
                   onClick={() => navigate("/profile")}
                 >
                   <p className="username">{currentUser.username}</p>
-                  <span class="material-symbols-outlined">account_circle</span>
+                  <span className="material-symbols-outlined">
+                    account_circle
+                  </span>
                 </button>
               </li>
             </ul>
