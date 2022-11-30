@@ -188,7 +188,7 @@ export default function Homepage() {
                   <p>
                     <a
                       className="text-reset footer-link-custom"
-                      href="http://localhost:3000/image"
+                      onClick={() => navigate("/image")}
                     >
                       Art from Image
                     </a>
@@ -196,7 +196,7 @@ export default function Homepage() {
                   <p>
                     <a
                       className="text-reset footer-link-custom"
-                      href="http://localhost:3000/template"
+                      onClick={() => navigate("/template")}
                     >
                       Art from template
                     </a>
@@ -207,7 +207,7 @@ export default function Homepage() {
                     <p>
                       <a
                         className="text-reset footer-link-custom"
-                        href="http://localhost:3001/signin?"
+                        onClick={() => navigate("/signin")}
                       >
                         Signin
                       </a>

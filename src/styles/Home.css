@@ -288,6 +288,10 @@
   text-decoration: none;
 }
 
+.footer-link-custom:hover{  
+  cursor: pointer;
+}
+
 .readMore-link{
   text-decoration: none;
 }
