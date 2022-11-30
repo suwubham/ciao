@@ -23,6 +23,7 @@ const theme = createTheme({
   },
 });
 
+
 export default function TemplateDetail(props) {
   let navigate = useNavigate();
   const [open, setOpen] = useState(false);
@@ -40,7 +41,7 @@ export default function TemplateDetail(props) {
   const handleClose = () => {
     setOpen(false);
   };
-
+  
   const action = (
     <React.Fragment>
       <Button
@@ -98,11 +99,10 @@ export default function TemplateDetail(props) {
           <div className="card-body">
             <h5 className="card-title">{props.cardTitle}</h5>
             <p className="card-text">
-              Some quick example text to build on the {props.cardTitle} and make
-              up the bulk of the card's content.
+              {props.templateDescp}
             </p>
             <button className="btn-start" onClick={nav}>
-              Start Drawing
+              Start Drawing.
             </button>
             <div className="others">
               <ThemeProvider theme={theme}>
@@ -144,8 +144,7 @@ export default function TemplateDetail(props) {
       <div className="card-body">
         <h5 className="card-title">{props.cardTitle}</h5>
         <p className="card-text">
-          Some quick example text to build on the {props.cardTitle} and make up
-          the bulk of the card's content.
+          {props.cardDescp}
         </p>
         <button className="btn-start" onClick={nav}>
           Start Drawing

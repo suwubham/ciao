@@ -3,60 +3,70 @@
         "templateTitle": "Phyllotaxis",
         "templateImage": "https://bl.ocks.org/jhubley/raw/48406982f6988b626d9527d75a98b062/322fed41c76c6e46132eceb4917958a6c8ffd9c5/preview.png",
         "redirectTo": "/template/phyllotaxis",
+        "templateDescp":"A notable instance of self-organized patterning in plants and more broadly in developmental biology is phyllotaxis. By varying the radius and phi value of a circle, a spiraling sunflower-like pattern is created.",
         "id" : 1
     },
     {
         "templateTitle": "Perlin Noise Flow Field",
         "templateImage": "https://www.tomesoftware.com/wp-content/uploads/2018/03/Screen-Shot-2018-03-29-at-11.14.20-AM.png",
         "redirectTo": "/template/perlinnoise",
+        "templateDescp":"Perlin noise is a type of gradient noise developed by Ken Perlin in 1985. It is a mathematical function that generates a seemingly random sequence of numbers that have a smooth, continuous transition between them. This is useful for creating procedural textures, patterns, and animations.",
         "id" : 2
     },
     {
         "templateTitle": "Lorentz Attractor",
         "templateImage": "https://scipython.com/static/media/blog/lorenz/lorenz2.png",
         "redirectTo": "/template/lorentzattractor",
+        "templateDescp":"The Lorenz attractor is a set of chaotic solutions of the Lorenz system. It is named after Edward Lorenz, who first studied it in 1963. The attractor is a set of chaotic solutions of the Lorenz system. It is named after Edward Lorenz, who first studied it in 1963.",
         "id" : 3
     },
     {
         "templateTitle": "Mandelbrot Set",
         "templateImage": "https://upload.wikimedia.org/wikipedia/commons/2/21/Mandel_zoom_00_mandelbrot_set.jpg",
         "redirectTo": "/template/mandelbrotset",
+        "templateDescp":"The Mandelbrot set is the set of complex numbers c for which the function f(z) = z2 + c does not diverge when iterated from z = 0, i.e., for which the sequence f(0), f(f(0)), f(f(f(0))), ... remains bounded in absolute value.",
         "id" : 4
     },
     {
         "templateTitle": "Recursive Tree",
         "templateImage": "https://i.stack.imgur.com/WMRSU.gif",
         "redirectTo": "/template/recursivetree",
+        "templateDescp":"A recursive tree is a fractal, a never-ending pattern that can be approximated by repeating a simple process over and over in an ongoing feedback loop. Driven by recursion, each branch of the tree recalls the same structure (a miniature version of itself).",
         "id" : 5
     },
     {
         "templateTitle": "10PRINT LINE",
         "templateImage": "https://res.cloudinary.com/practicaldev/image/fetch/s--jS6XD10b--/c_imagga_scale,f_auto,fl_progressive,h_1080,q_auto,w_1080/https://dev-to-uploads.s3.amazonaws.com/i/dd707r3swyqoa1e0giqz.png",
         "redirectTo": "/template/Tenprint",
+        "templateDescp":"The use of the if else statement to construct forward and backward slashes results in the creation of an interesting maze pattern. To print 10 lines in horizontal order, we utilized a universal variable and a random variable.",
         "id" : 6
     },
     {
         "templateTitle": "TEN-PRINT Circle",
         "templateImage": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTBmBpt7OPeP9E5GjzYayA4l-N3i08dhksZTjEzQV-TkMjf4qkz",
         "redirectTo": "/template/tenprintcircle",
+        "templateDescp":"Circles that do not overlap one another completely cover the canvas. Even the circle's size and its frequency in the data can be increased.",
         "id" : 7
     },
     {
         "templateTitle": "Recursion Circle",
         "templateImage": "https://i.stack.imgur.com/RStyg.jpg",
         "redirectTo": "/template/recursioncircle",
+        "templateDescp":"A recursive function is defined within itself. It is a simple method of generating an art form, or a pattern. In a recursive circle, we start with a single circle, and as the number of iterations rises, a new circle is generated on it from three different angles.",
         "id" : 8
     },
     {
         "templateTitle": "Rotated Box",
         "templateImage": "https://c4.wallpaperflare.com/wallpaper/244/736/34/pattern-texture-square-pastel-wallpaper-preview.jpg",
         "redirectTo": "/template/rotatedbox",
+        "templateDescp":"A rotated box is a simple pattern that can be created by rotating a square around its center. The pattern is created by rotating a square around its center. The pattern is created by rotating a square around its center.",
         "id" : 9
     },
     {
         "templateTitle": "Wavy",
         "templateImage":"https://i.pinimg.com/564x/b8/44/86/b8448666885c0324010bce0d1f38ea27.jpg" ,
         "redirectTo": "/template/Wavy",
+        "templateDescp":"A wavy pattern is a simple pattern that can be created by rotating a square around its center. The pattern is created by rotating a square around its center. The pattern is created by rotating a square around its center.",
         "id" : 10
     },
 
@@ -64,6 +74,7 @@
         "templateTitle": "Mandala",
         "templateImage":"https://image.shutterstock.com/image-vector/new-flower-mandala-design-background-600w-1826619995.jpg" ,
         "redirectTo": "/template/Mandala",
+        "templateDescp":"A mandala is a geometric pattern that represents the cosmos metaphysically or symbolically. In common use, mandala has become a generic term for any diagram, chart or geometric pattern that represents the cosmos metaphysically or symbolically.",
         "id" : 11
     },
 
@@ -71,6 +82,7 @@
         "templateTitle": "Perlin Noise Randomness",
         "templateImage":"https://miro.medium.com/max/720/1*0xdJqtsSCh0W081Vw9GcUQ.png" ,
         "redirectTo": "/template/pnrandom",
+        "templateDescp":"Perlin noise, a particular variety of gradient noise, can be used to produce randomness that is 'smooth' in one or more dimensions.",
         "id" : 12
     },
 
@@ -78,6 +90,7 @@
         "templateTitle": "Grid",
         "templateImage":"https://csee.bangor.ac.uk/wp-content/uploads/2022/01/line-art-set-of-horizontal-vert-lines.png" ,
         "redirectTo": "/template/Grid",
+        "templateDescp":"A grid is a pattern that can be created by drawing a series of horizontal and vertical lines. The pattern is created by drawing a series of horizontal and vertical lines. The pattern is created by drawing a series of horizontal and vertical lines.",
         "id" : 13
     },
 
@@ -85,36 +98,42 @@
         "templateTitle": "ASCII Fabric",
         "templateImage":"https://i.pinimg.com/564x/49/cb/8a/49cb8aecacec5088248722d3397531a2.jpg" ,
         "redirectTo": "/template/ASCIIFabric",
+        "templateDescp":"ASCII art is a graphic design technique that uses computers for presentation and consists of pictures pieced together from the 95 printable (from a total of 128) characters defined by the ASCII Standard from 1963 and ASCII compliant character sets with proprietary extended characters (beyond the 128 characters of standard 7-bit ASCII).",
         "id": 14
     },
     {
         "templateTitle": "Rose Petals 2d",
         "templateImage":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsXk3CONQ6NU3YXaQGzTVwtPbNy4uMt5yC9g&usqp=CAU" ,
         "redirectTo": "/template/rosepetals2d",
+        "templateDescp":"A rose petal is a simple pattern that can be created by rotating a square around its center. The pattern is created by rotating a square around its center. The pattern is created by rotating a square around its center.",
         "id": 15
     },
     {
         "templateTitle": "Supershape",
         "templateImage":"https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQXccFp9a2RfEQ-mdT9V56qDMUoaQxchyFCYW1Ul8W7u_sk8CK4" ,
         "redirectTo": "/template/supershape2d",
+        "templateDescp":"A supershape is a simple pattern that can be created by rotating a square around its center. The pattern is created by rotating a square around its center. The pattern is created by rotating a square around its center.",
         "id": 16
     },
     {
         "templateTitle": "Perlin triangle",
         "templateImage":"https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQSFdC7Y8g7tDDN-xi-0EoOcxLSuqcmrbdcTF-4gk41HZmLBlqX" ,
         "redirectTo": "/template/perlintriangle",
+        "templateDescp":"A perlin triangle is a simple pattern that can be created by rotating a square around its center. The pattern is created by rotating a square around its center. The pattern is created by rotating a square around its center.",
         "id": 17
     },
     {
         "templateTitle": "FLOWER 3D",
         "templateImage":"https://miro.medium.com/max/1100/1*yuFABEOtAM5oGrUyoGVWjQ.jpeg" ,
         "redirectTo": "/template/flowerthree",
+        "templateDescp":"A flower is a simple pattern that can be created by rotating a square around its center. The pattern is created by rotating a square around its center. The pattern is created by rotating a square around its center.",
         "id": 18
     },
     {
         "templateTitle": "DRAW SNOWFLAKE",
         "templateImage":"https://png.pngtree.com/png-clipart/20201216/original/pngtree-islamic-geometrical-floral-design-with-arabic-style-repeat-pattern-and-invitation-png-image_5717998.jpg" ,
         "redirectTo": "/template/drawsnowflake",
+        "templateDescp":"A snowflake is a simple pattern that can be created by rotating a square around its center. The pattern is created by rotating a square around its center. The pattern is created by rotating a square around its center.",
         "id": 19
     }
 ]

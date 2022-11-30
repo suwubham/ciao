@@ -111,6 +111,7 @@ export default function Template() {
                 cardTitle={drawTemplate.templateTitle}
                 cardImage={drawTemplate.templateImage}
                 cardLink={drawTemplate.redirectTo}
+                cardDescp={drawTemplate.templateDescp}
                 id={drawTemplate.id}
                 favs={favorites}
                 setfavs={setFavorites}

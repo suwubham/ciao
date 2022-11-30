@@ -69,10 +69,9 @@ export default function Rdraw() {
               <DescriptionIcon />
             </div>
             <span className="link-text">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat
-              fugit beatae, dignissimos, ducimus exercitationem culpa a quo
-              aperiam quibusdam aliquid autem delectus quos soluta eos sint ex
-              vero doloribus. Iste?
+              A wavy pattern is a simple pattern that can be created by rotating a square around its center.
+              The pattern is created by rotating a square around its center. The pattern is created by rotating
+              a square around its center.
             </span>
           </nav>
           <div className="main-art">

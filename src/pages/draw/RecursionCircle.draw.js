@@ -66,7 +66,7 @@ export default function Rdraw() {
               <DescriptionIcon />
             </div>
             <span className="link-text">
-              The idea of recursion involves self-reference. recursive function
+              The idea of recursion involves self-reference.A recursive function
               is defined within itself. It is a simple method of generating an
               art form, or a pattern. In a recursive circle, we start with a
               single circle, and as the number of iterations rises, a new circle
