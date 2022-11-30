@@ -57,8 +57,9 @@ export default function Tree() {
               <DescriptionIcon />
             </div>
             <span className="link-text">
-              Recursion is a self-referential concept. A recursive function has
-              its own definition. add more on this hai
+              Recursion is a self-referential concept. Recursion is powerful tool for creating detailed, 
+              complex patterns with code. Recursion occurs when a function definition includes the use of 
+              the function itself.
             </span>
           </nav>
           <div className="main-art">

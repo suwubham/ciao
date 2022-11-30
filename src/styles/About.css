@@ -6,17 +6,48 @@
   background: #001220;
 }
 
+.purple{
+  padding:25px;
+}
+
+
 .about{
-  height: 250px;
-  display: flex;
+  height: auto;
+  margin:25px;
+  /* display: flex;
   justify-content: center;
-  align-items: center;  
+  align-items: center;   */
 }
 
 .CIAOAbout{
-  margin:50px;
+  padding:50px;
   font-size: 20px;
   text-align: center;
+  backdrop-filter: blur(14px) saturate(180%);
+  -webkit-backdrop-filter: blur(14px) saturate(180%);
+  background-color: rgb(141, 53, 179);
+
+  border-radius: 15px;
+}
+.drawAboutTitle{
+  text-align: center;
+}
+
+.drawAbout{
+  padding: 50px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.drawText{
+  text-align: justify;
+  font-size: 17px;
+  padding:50px;
+  margin:30px 30px 30px 30px;
+  backdrop-filter: blur(14px) saturate(180%);
+  -webkit-backdrop-filter: blur(14px) saturate(180%);
+  background-color: rgb(141, 53, 179);
+  border-radius: 15px;
 }
 
 .aboutus{
@@ -108,9 +139,9 @@
 }
 
 .p5Link {
-  text-decoration: none;
   color: rgb(127, 32, 168);
 }
+
 
 
 /*

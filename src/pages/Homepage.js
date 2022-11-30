@@ -60,7 +60,7 @@ export default function Homepage() {
         </section>
         <div className="spacer layer1"></div>
 
-        <h1 className="second-div-start">What you can do in CIAO</h1>
+        <h1 className="second-div-start">Things you can do</h1>
 
         <div className="template-descp">
           <div className="main-page-left">
@@ -70,11 +70,9 @@ export default function Homepage() {
             <div className="divi">
               <h2 className="divi-title">Draw From Template</h2>
               <p>
-                A modern CSS UI library based on the glassmorphism design
-                principles that will help you quickly design and build beautiful
-                websites and applications.
+                Pick your favourite template to work with and save them to your profile. You can also edit the template to your liking.
               </p>
-              <a href="https://ui.glass">Read more</a>
+              <a href="https://ui.glass" className="readMore-link">Read more</a>
             </div>
           </div>
 
@@ -85,11 +83,9 @@ export default function Homepage() {
             <div className="divi">
               <h2 className="divi-title">Draw from Image</h2>
               <p>
-                A modern CSS UI library based on the glassmorphism design
-                principles that will help you quickly design and build beautiful
-                websites and applications.
+                Upload your own image and the app will translate your art to the selected effect. You can also save the image to your profile.
               </p>
-              <a href="https://ui.glass">Read more</a>
+              <a href="https://ui.glass" className="readMore-link">Read more</a>
             </div>
           </div>
         </div>
@@ -99,16 +95,16 @@ export default function Homepage() {
 
           <div className="bottom-page">
             <div className="services serv1 7b2cbf">
-              <button className="tryitout1"></button>
+              <button className="tryitout1" onClick={() => navigate("/template/perlinnoise")}></button>
             </div>
             <div className="services serv2">
-              <button className="tryitout2"></button>
+              <button className="tryitout2" onClick={() => navigate("/template/Mandala")}></button>
             </div>
             <div className="services serv3">
-              <button className="tryitout3"></button>
+              <button className="tryitout3" onClick={() => navigate("/template/Grid")}></button>
             </div>
             <div className="services serv4">
-              <button className="tryitout4"></button>
+              <button className="tryitout4" onClick={() => navigate("/template/flowerthree")}></button>
             </div>
           </div>
         </div>
@@ -144,7 +140,8 @@ export default function Homepage() {
                     <i className="fas fa-gem me-3 text-secondary icons-custom"></i>
                     CIAO
                   </h6>
-                  <p>A webapp for rendering generative art</p>
+                  <p>CIAO is a webapp for rendering generative art. You can create your own art by drawing
+                    from templates or by uploading your own image. By login in, you can even save your arts.</p>
                 </div>
 
                 <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
@@ -156,49 +153,67 @@ export default function Homepage() {
                 </div>
                 <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
                   <h6 className="text-uppercase fw-bold mb-4">Resources</h6>
-                  <a href="#!" className="text-reset"></a>
-                  <a
-                    className="text-reset fw-bold"
-                    href="https://docs.google.com/document/d/1yhrkCX3PeZUtzaWJtJDaD91i18XrzzIN/edit#heading=h.le8z3ynlhtuc"
-                  >
-                    Documentation
-                  </a>
-                  <p> </p>{" "}
+                  <p>
+                    <a
+                      className="text-reset footer-link-custom"
+                      href="https://docs.google.com/document/d/1yhrkCX3PeZUtzaWJtJDaD91i18XrzzIN/edit#heading=h.le8z3ynlhtuc"
+                      target="_blank" rel="noopener noreferrer"
+                    >
+                      Documentation
+                    </a>
+                  </p>
+                  <p>
+                    <a
+                      className="text-reset footer-link-custom"
+                      href="https://www.javatpoint.com/what-is-ascii-art"
+                      target="_blank" rel="noopener noreferrer"
+                    >
+                      p5.js
+                    </a>
+                  </p>
+                  <p>
+                    <a
+                      className="text-reset footer-link-custom"
+                      href="https://www.javatpoint.com/what-is-ascii-art"
+                      target="_blank" rel="noopener noreferrer"
+                    >
+                      ASCII Art
+                    </a>
+                  </p>
+
                 </div>
 
                 <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
                   <h6 className="text-uppercase fw-bold mb-4">Useful links</h6>
                   <p>
-                    <a href="#!" className="text-reset"></a>
-
                     <a
-                      className="text-reset fw-bold"
-                      href="http://localhost:3001/image"
+                      className="text-reset footer-link-custom"
+                      href="http://localhost:3000/image"
                     >
                       Art from Image
                     </a>
                   </p>
                   <p>
-                    <a href="#!" className="text-reset"></a>
+                    <a
+                      className="text-reset footer-link-custom"
+                      href="http://localhost:3000/template"
+                    >
+                      Art from template
+                    </a>
                   </p>
+                  {authService.getCurrentUser() ?
+                    <p>
+                    </p> :
+                    <p>
+                      <a
+                        className="text-reset footer-link-custom"
+                        href="http://localhost:3001/signin?"
+                      >
+                        Signin
+                      </a>
+                    </p>
+                  }
 
-                  <a
-                    className="text-reset fw-bold"
-                    href="http://localhost:3001/template"
-                  >
-                    Art from template
-                  </a>
-
-                  <p>
-                    <a href="#!" className="text-reset"></a>
-                  </p>
-
-                  <a
-                    className="text-reset fw-bold"
-                    href="http://localhost:3001/signin?"
-                  >
-                    Signin
-                  </a>
                 </div>
 
                 <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
@@ -227,7 +242,7 @@ export default function Homepage() {
           <div className="text-center p-4">
             © 2021 Copyright:
             <a className="text-reset fw-bold" href="https://mdbootstrap.com/">
-                CIAO
+              CIAO
             </a>
           </div>
         </footer>
