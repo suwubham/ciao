@@ -99,7 +99,7 @@ export default function TemplateDetail(props) {
           <div className="card-body">
             <h5 className="card-title">{props.cardTitle}</h5>
             <p className="card-text">
-              {props.templateDescp}
+              {props.cardDescp}
             </p>
             <button className="btn-start" onClick={nav}>
               Start Drawing.
