@@ -77,7 +77,7 @@ export default function TemplateDetail(props) {
     navigator.clipboard.writeText(
       `https://suwubham.github.io/ciao/${props.cardLink}`
     );
-    alert("Coped to clipboard");
+    alert("Copied to clipboard");
   };
 
   if (props.isLoading && authService.getCurrentUser()) {
@@ -99,7 +99,7 @@ export default function TemplateDetail(props) {
             <h5 className="card-title">{props.cardTitle}</h5>
             <p className="card-text">
               Some quick example text to build on the {props.cardTitle} and make
-              up the bulk of the card's contenttt.
+              up the bulk of the card's content.
             </p>
             <button className="btn-start" onClick={nav}>
               Start Drawing
@@ -145,7 +145,7 @@ export default function TemplateDetail(props) {
         <h5 className="card-title">{props.cardTitle}</h5>
         <p className="card-text">
           Some quick example text to build on the {props.cardTitle} and make up
-          the bulk of the card's contenttt.
+          the bulk of the card's content.
         </p>
         <button className="btn-start" onClick={nav}>
           Start Drawing

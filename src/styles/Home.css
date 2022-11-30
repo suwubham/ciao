@@ -287,3 +287,11 @@
 .footer-link-custom{
   text-decoration: none;
 }
+
+.readMore-link{
+  text-decoration: none;
+}
+
+.readMore-link:hover{
+  color:rgb(127, 32, 168);
+}

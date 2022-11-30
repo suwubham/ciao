@@ -70,11 +70,9 @@ export default function Homepage() {
             <div className="divi">
               <h2 className="divi-title">Draw From Template</h2>
               <p>
-                A modern CSS UI library based on the glassmorphism design
-                principles that will help you quickly design and build beautiful
-                websites and applications.
+                Pick your favourite template to work with and save them to your profile. You can also edit the template to your liking.
               </p>
-              <a href="https://ui.glass">Read more</a>
+              <a href="https://ui.glass" className="readMore-link">Read more</a>
             </div>
           </div>
 
@@ -85,11 +83,9 @@ export default function Homepage() {
             <div className="divi">
               <h2 className="divi-title">Draw from Image</h2>
               <p>
-                A modern CSS UI library based on the glassmorphism design
-                principles that will help you quickly design and build beautiful
-                websites and applications.
+                Upload your own image and the app will translate your art to the selected effect. You can also save the image to your profile.
               </p>
-              <a href="https://ui.glass">Read more</a>
+              <a href="https://ui.glass" className="readMore-link">Read more</a>
             </div>
           </div>
         </div>
@@ -192,7 +188,7 @@ export default function Homepage() {
                   <p>
                     <a
                       className="text-reset footer-link-custom"
-                      href="http://localhost:3001/image"
+                      href="http://localhost:3000/image"
                     >
                       Art from Image
                     </a>
@@ -200,7 +196,7 @@ export default function Homepage() {
                   <p>
                     <a
                       className="text-reset footer-link-custom"
-                      href="http://localhost:3001/template"
+                      href="http://localhost:3000/template"
                     >
                       Art from template
                     </a>
