@@ -1,15 +1,17 @@
 {
   "files": {
-    "main.css": "/ciao/static/css/main.ba80af2e.css",
-    "main.js": "/ciao/static/js/main.56eb42fd.js",
+    "main.css": "/ciao/static/css/main.825267bd.css",
+    "main.js": "/ciao/static/js/main.e5ddfede.js",
     "static/media/prasiddhi.jpg": "/ciao/static/media/prasiddhi.13d51b1acdf46dbbf161.jpg",
     "static/media/Imagedots.jpg": "/ciao/static/media/Imagedots.aefba24d74869acf5356.jpg",
     "static/media/circles.jpg": "/ciao/static/media/circles.6fc37b72b93521203815.jpg",
     "static/media/Imagenoise.jpg": "/ciao/static/media/Imagenoise.963b3cb99727908d41d8.jpg",
     "static/media/Imagelines.jpg": "/ciao/static/media/Imagelines.63720feed034ba29b733.jpg",
     "static/media/Imageglow.jpg": "/ciao/static/media/Imageglow.d59ec2e1560a2b3d1345.jpg",
+    "static/media/flower3d.jpg": "/ciao/static/media/flower3d.526e8eddbedfcdd0123d.jpg",
     "static/media/Collage.jpg": "/ciao/static/media/Collage.bfae53825df549e88204.jpg",
-    "static/media/boy1.jpg": "/ciao/static/media/boy1.98e82e5e9b10f307cf81.jpg",
+    "static/media/mandala.jpg": "/ciao/static/media/mandala.2314b56c9c8a11b19da2.jpg",
+    "static/media/grid.jpg": "/ciao/static/media/grid.de5a354c7b1bf0667023.jpg",
     "static/media/SwapRB.jpg": "/ciao/static/media/SwapRB.36ae9e37a66f0372e6cf.jpg",
     "static/media/ciao-3.png": "/ciao/static/media/ciao-3.dbf64658d302dc4fae6b.png",
     "static/media/Asciiart.jpg": "/ciao/static/media/Asciiart.5ad4ed6623c0b2e1b7d7.jpg",
@@ -24,14 +26,18 @@
     "static/media/blob-scene-haikei.svg": "/ciao/static/media/blob-scene-haikei.a3d6860295b8833806c9.svg",
     "static/media/loginbox.svg": "/ciao/static/media/loginbox.d5419cc0a138c0fc85e7684617882a6b.svg",
     "static/media/layered-waves-haikei.svg": "/ciao/static/media/layered-waves-haikei.804aa3e149e179c8a457.svg",
+    "static/media/slick.svg": "/ciao/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/ciao/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/ciao/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/description-bar.svg": "/ciao/static/media/description-bar.343319cd1ffe98e15e41.svg",
+    "static/media/slick.woff": "/ciao/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/ciao/index.html",
     "static/media/description.svg": "/ciao/static/media/description.53ca750cedefa47b6e95f7c3ad2540fb.svg",
-    "main.ba80af2e.css.map": "/ciao/static/css/main.ba80af2e.css.map",
-    "main.56eb42fd.js.map": "/ciao/static/js/main.56eb42fd.js.map"
+    "main.825267bd.css.map": "/ciao/static/css/main.825267bd.css.map",
+    "main.e5ddfede.js.map": "/ciao/static/js/main.e5ddfede.js.map"
   },
   "entrypoints": [
-    "static/css/main.ba80af2e.css",
-    "static/js/main.56eb42fd.js"
+    "static/css/main.825267bd.css",
+    "static/js/main.e5ddfede.js"
   ]
 }
