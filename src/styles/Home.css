@@ -283,3 +283,19 @@
   top: 0;
   left: 0;
 }
+
+.footer-link-custom{
+  text-decoration: none;
+}
+
+.footer-link-custom:hover{  
+  cursor: pointer;
+}
+
+.readMore-link{
+  text-decoration: none;
+}
+
+.readMore-link:hover{
+  color:rgb(127, 32, 168);
+}

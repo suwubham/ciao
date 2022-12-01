@@ -5,11 +5,12 @@
 }
 
 .SavedDiv{
-  height: 100vh;
+  height: 125vh;
 }
 
 .UnsavedDiv{
   height: 100vh;
+
 }
 
 .savedarts{
@@ -27,4 +28,12 @@
   width: 100%;
   display: flex;
   justify-content: center;
+}
+
+.unsaved-text{
+  display: flex;
+  padding-top: 25px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

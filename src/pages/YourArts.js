@@ -89,7 +89,10 @@ export default function YourArts() {
       <div className="wrapper-yourarts UnsavedDiv">
         {authService.getCurrentUser() ? <LoggedNavbar /> : <Navbar />}
         {/* how to add inline style to a div with reg background */}
-        <div className="title">Add arts to favorties to view them here</div>
+        <div className="unsaved-text">
+          <h5 style={{color:"red"}}>No arts saved</h5>
+          <h4>Save arts to view them here</h4>
+        </div>
       </div>
     </>
   );
