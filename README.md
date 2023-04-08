@@ -1,7 +1,7 @@
 
 # CIAO - Code In Art Out
 
-CIAO is a webapp for rendering generative art built as a project for COMP 206 course by 3rd semester CS students at Kathmanu University, Dhulikhel.
+CIAO is a webapp for rendering generative art built as a project for COMP 206 course by 3rd semester CS students at Kathmandu University, Dhulikhel.
 
 ## Demo
 
